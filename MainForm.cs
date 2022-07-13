@@ -9,9 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class MainForm : Form {
+        public MainForm() {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            Opstine o = new Opstine();
+            o.Show();
         }
     }
 }
