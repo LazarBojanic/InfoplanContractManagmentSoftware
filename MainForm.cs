@@ -15,7 +15,7 @@ namespace CSharp_SQL_App {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            Opstine o = new Opstine();
+            OpstineForm o = new OpstineForm();
             o.Show();
         }
     }
