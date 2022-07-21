@@ -587,7 +587,7 @@ namespace CSharp_SQL_App {
             
             private global::System.Data.DataColumn columndatumUgovora;
             
-            private global::System.Data.DataColumn columnrokPoDogovoru;
+            private global::System.Data.DataColumn columnrokPoUgovoru;
             
             private global::System.Data.DataColumn columnobim;
             
@@ -686,9 +686,9 @@ namespace CSharp_SQL_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn rokPoDogovoruColumn {
+            public global::System.Data.DataColumn rokPoUgovoruColumn {
                 get {
-                    return this.columnrokPoDogovoru;
+                    return this.columnrokPoUgovoru;
                 }
             }
             
@@ -753,7 +753,7 @@ namespace CSharp_SQL_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ugovorRow AddugovorRow(string opstina, string nazivPlana, string urbanista, string faza, string napomena, System.DateTime datumUgovora, string rokPoDogovoru, int obim, System.DateTime krajnjiRok, int prioritet) {
+            public ugovorRow AddugovorRow(string opstina, string nazivPlana, string urbanista, string faza, string napomena, System.DateTime datumUgovora, string rokPoUgovoru, int obim, System.DateTime krajnjiRok, int prioritet) {
                 ugovorRow rowugovorRow = ((ugovorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -763,7 +763,7 @@ namespace CSharp_SQL_App {
                         faza,
                         napomena,
                         datumUgovora,
-                        rokPoDogovoru,
+                        rokPoUgovoru,
                         obim,
                         krajnjiRok,
                         prioritet};
@@ -803,7 +803,7 @@ namespace CSharp_SQL_App {
                 this.columnfaza = base.Columns["faza"];
                 this.columnnapomena = base.Columns["napomena"];
                 this.columndatumUgovora = base.Columns["datumUgovora"];
-                this.columnrokPoDogovoru = base.Columns["rokPoDogovoru"];
+                this.columnrokPoUgovoru = base.Columns["rokPoUgovoru"];
                 this.columnobim = base.Columns["obim"];
                 this.columnkrajnjiRok = base.Columns["krajnjiRok"];
                 this.columnprioritet = base.Columns["prioritet"];
@@ -826,8 +826,8 @@ namespace CSharp_SQL_App {
                 base.Columns.Add(this.columnnapomena);
                 this.columndatumUgovora = new global::System.Data.DataColumn("datumUgovora", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndatumUgovora);
-                this.columnrokPoDogovoru = new global::System.Data.DataColumn("rokPoDogovoru", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrokPoDogovoru);
+                this.columnrokPoUgovoru = new global::System.Data.DataColumn("rokPoUgovoru", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrokPoUgovoru);
                 this.columnobim = new global::System.Data.DataColumn("obim", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnobim);
                 this.columnkrajnjiRok = new global::System.Data.DataColumn("krajnjiRok", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -846,7 +846,7 @@ namespace CSharp_SQL_App {
                 this.columnurbanista.MaxLength = 100;
                 this.columnfaza.MaxLength = 50;
                 this.columnnapomena.MaxLength = 255;
-                this.columnrokPoDogovoru.MaxLength = 50;
+                this.columnrokPoUgovoru.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1122,17 +1122,17 @@ namespace CSharp_SQL_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string rokPoDogovoru {
+            public string rokPoUgovoru {
                 get {
                     try {
-                        return ((string)(this[this.tableugovor.rokPoDogovoruColumn]));
+                        return ((string)(this[this.tableugovor.rokPoUgovoruColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'rokPoDogovoru\' in table \'ugovor\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'rokPoUgovoru\' in table \'ugovor\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableugovor.rokPoDogovoruColumn] = value;
+                    this[this.tableugovor.rokPoUgovoruColumn] = value;
                 }
             }
             
@@ -1258,14 +1258,14 @@ namespace CSharp_SQL_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsrokPoDogovoruNull() {
-                return this.IsNull(this.tableugovor.rokPoDogovoruColumn);
+            public bool IsrokPoUgovoruNull() {
+                return this.IsNull(this.tableugovor.rokPoUgovoruColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetrokPoDogovoruNull() {
-                this[this.tableugovor.rokPoDogovoruColumn] = global::System.Convert.DBNull;
+            public void SetrokPoUgovoruNull() {
+                this[this.tableugovor.rokPoUgovoruColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1812,14 +1812,14 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("faza", "faza");
             tableMapping.ColumnMappings.Add("napomena", "napomena");
             tableMapping.ColumnMappings.Add("datumUgovora", "datumUgovora");
-            tableMapping.ColumnMappings.Add("rokPoDogovoru", "rokPoDogovoru");
+            tableMapping.ColumnMappings.Add("rokPoUgovoru", "rokPoUgovoru");
             tableMapping.ColumnMappings.Add("obim", "obim");
             tableMapping.ColumnMappings.Add("krajnjiRok", "krajnjiRok");
             tableMapping.ColumnMappings.Add("prioritet", "prioritet");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `ugovor` WHERE ((`ID` = ?) AND ((? = 1 AND `opstina` IS NULL) OR (`opstina` = ?)) AND ((? = 1 AND `nazivPlana` IS NULL) OR (`nazivPlana` = ?)) AND ((? = 1 AND `urbanista` IS NULL) OR (`urbanista` = ?)) AND ((? = 1 AND `faza` IS NULL) OR (`faza` = ?)) AND ((? = 1 AND `napomena` IS NULL) OR (`napomena` = ?)) AND ((? = 1 AND `datumUgovora` IS NULL) OR (`datumUgovora` = ?)) AND ((? = 1 AND `rokPoDogovoru` IS NULL) OR (`rokPoDogovoru` = ?)) AND ((? = 1 AND `obim` IS NULL) OR (`obim` = ?)) AND ((? = 1 AND `krajnjiRok` IS NULL) OR (`krajnjiRok` = ?)) AND ((? = 1 AND `prioritet` IS NULL) OR (`prioritet` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `ugovor` WHERE ((`ID` = ?) AND ((? = 1 AND `opstina` IS NULL) OR (`opstina` = ?)) AND ((? = 1 AND `nazivPlana` IS NULL) OR (`nazivPlana` = ?)) AND ((? = 1 AND `urbanista` IS NULL) OR (`urbanista` = ?)) AND ((? = 1 AND `faza` IS NULL) OR (`faza` = ?)) AND ((? = 1 AND `napomena` IS NULL) OR (`napomena` = ?)) AND ((? = 1 AND `datumUgovora` IS NULL) OR (`datumUgovora` = ?)) AND ((? = 1 AND `rokPoUgovoru` IS NULL) OR (`rokPoUgovoru` = ?)) AND ((? = 1 AND `obim` IS NULL) OR (`obim` = ?)) AND ((? = 1 AND `krajnjiRok` IS NULL) OR (`krajnjiRok` = ?)) AND ((? = 1 AND `prioritet` IS NULL) OR (`prioritet` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_opstina", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "opstina", global::System.Data.DataRowVersion.Original, true, null));
@@ -1834,8 +1834,8 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_napomena", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "napomena", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_datumUgovora", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "datumUgovora", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_datumUgovora", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "datumUgovora", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_rokPoDogovoru", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "rokPoDogovoru", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_rokPoDogovoru", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "rokPoDogovoru", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_rokPoUgovoru", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "rokPoUgovoru", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_rokPoUgovoru", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "rokPoUgovoru", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_obim", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "obim", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_obim", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "obim", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_krajnjiRok", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "krajnjiRok", global::System.Data.DataRowVersion.Original, true, null));
@@ -1845,8 +1845,8 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `ugovor` (`opstina`, `nazivPlana`, `urbanista`, `faza`, `napomena`, `" +
-                "datumUgovora`, `rokPoDogovoru`, `obim`, `krajnjiRok`, `prioritet`) VALUES (?, ?," +
-                " ?, ?, ?, ?, ?, ?, ?, ?)";
+                "datumUgovora`, `rokPoUgovoru`, `obim`, `krajnjiRok`, `prioritet`) VALUES (?, ?, " +
+                "?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("opstina", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "opstina", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nazivPlana", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nazivPlana", global::System.Data.DataRowVersion.Current, false, null));
@@ -1854,13 +1854,13 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("faza", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "faza", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("napomena", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "napomena", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("datumUgovora", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "datumUgovora", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("rokPoDogovoru", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "rokPoDogovoru", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("rokPoUgovoru", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "rokPoUgovoru", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("obim", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "obim", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("krajnjiRok", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "krajnjiRok", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("prioritet", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "prioritet", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `ugovor` SET `opstina` = ?, `nazivPlana` = ?, `urbanista` = ?, `faza` = ?, `napomena` = ?, `datumUgovora` = ?, `rokPoDogovoru` = ?, `obim` = ?, `krajnjiRok` = ?, `prioritet` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `opstina` IS NULL) OR (`opstina` = ?)) AND ((? = 1 AND `nazivPlana` IS NULL) OR (`nazivPlana` = ?)) AND ((? = 1 AND `urbanista` IS NULL) OR (`urbanista` = ?)) AND ((? = 1 AND `faza` IS NULL) OR (`faza` = ?)) AND ((? = 1 AND `napomena` IS NULL) OR (`napomena` = ?)) AND ((? = 1 AND `datumUgovora` IS NULL) OR (`datumUgovora` = ?)) AND ((? = 1 AND `rokPoDogovoru` IS NULL) OR (`rokPoDogovoru` = ?)) AND ((? = 1 AND `obim` IS NULL) OR (`obim` = ?)) AND ((? = 1 AND `krajnjiRok` IS NULL) OR (`krajnjiRok` = ?)) AND ((? = 1 AND `prioritet` IS NULL) OR (`prioritet` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `ugovor` SET `opstina` = ?, `nazivPlana` = ?, `urbanista` = ?, `faza` = ?, `napomena` = ?, `datumUgovora` = ?, `rokPoUgovoru` = ?, `obim` = ?, `krajnjiRok` = ?, `prioritet` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `opstina` IS NULL) OR (`opstina` = ?)) AND ((? = 1 AND `nazivPlana` IS NULL) OR (`nazivPlana` = ?)) AND ((? = 1 AND `urbanista` IS NULL) OR (`urbanista` = ?)) AND ((? = 1 AND `faza` IS NULL) OR (`faza` = ?)) AND ((? = 1 AND `napomena` IS NULL) OR (`napomena` = ?)) AND ((? = 1 AND `datumUgovora` IS NULL) OR (`datumUgovora` = ?)) AND ((? = 1 AND `rokPoUgovoru` IS NULL) OR (`rokPoUgovoru` = ?)) AND ((? = 1 AND `obim` IS NULL) OR (`obim` = ?)) AND ((? = 1 AND `krajnjiRok` IS NULL) OR (`krajnjiRok` = ?)) AND ((? = 1 AND `prioritet` IS NULL) OR (`prioritet` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("opstina", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "opstina", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nazivPlana", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nazivPlana", global::System.Data.DataRowVersion.Current, false, null));
@@ -1868,7 +1868,7 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("faza", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "faza", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("napomena", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "napomena", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("datumUgovora", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "datumUgovora", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("rokPoDogovoru", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "rokPoDogovoru", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("rokPoUgovoru", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "rokPoUgovoru", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("obim", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "obim", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("krajnjiRok", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "krajnjiRok", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("prioritet", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "prioritet", global::System.Data.DataRowVersion.Current, false, null));
@@ -1885,8 +1885,8 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_napomena", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "napomena", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_datumUgovora", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "datumUgovora", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_datumUgovora", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "datumUgovora", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_rokPoDogovoru", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "rokPoDogovoru", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_rokPoDogovoru", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "rokPoDogovoru", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_rokPoUgovoru", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "rokPoUgovoru", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_rokPoUgovoru", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "rokPoUgovoru", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_obim", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "obim", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_obim", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "obim", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_krajnjiRok", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "krajnjiRok", global::System.Data.DataRowVersion.Original, true, null));
@@ -1908,8 +1908,8 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, opstina, nazivPlana, urbanista, faza, napomena, datumUgovora, rokPoDog" +
-                "ovoru, obim, krajnjiRok, prioritet FROM ugovor";
+            this._commandCollection[0].CommandText = "SELECT ID, opstina, nazivPlana, urbanista, faza, napomena, datumUgovora, rokPoUgo" +
+                "voru, obim, krajnjiRok, prioritet FROM ugovor";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1970,7 +1970,7 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_opstina, string Original_nazivPlana, string Original_urbanista, string Original_faza, string Original_napomena, global::System.Nullable<global::System.DateTime> Original_datumUgovora, string Original_rokPoDogovoru, global::System.Nullable<int> Original_obim, global::System.Nullable<global::System.DateTime> Original_krajnjiRok, global::System.Nullable<int> Original_prioritet) {
+        public virtual int Delete(int Original_ID, string Original_opstina, string Original_nazivPlana, string Original_urbanista, string Original_faza, string Original_napomena, global::System.Nullable<global::System.DateTime> Original_datumUgovora, string Original_rokPoUgovoru, global::System.Nullable<int> Original_obim, global::System.Nullable<global::System.DateTime> Original_krajnjiRok, global::System.Nullable<int> Original_prioritet) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_opstina == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -2020,13 +2020,13 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_rokPoDogovoru == null)) {
+            if ((Original_rokPoUgovoru == null)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_rokPoDogovoru));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_rokPoUgovoru));
             }
             if ((Original_obim.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
@@ -2072,7 +2072,7 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string opstina, string nazivPlana, string urbanista, string faza, string napomena, global::System.Nullable<global::System.DateTime> datumUgovora, string rokPoDogovoru, global::System.Nullable<int> obim, global::System.Nullable<global::System.DateTime> krajnjiRok, global::System.Nullable<int> prioritet) {
+        public virtual int Insert(string opstina, string nazivPlana, string urbanista, string faza, string napomena, global::System.Nullable<global::System.DateTime> datumUgovora, string rokPoUgovoru, global::System.Nullable<int> obim, global::System.Nullable<global::System.DateTime> krajnjiRok, global::System.Nullable<int> prioritet) {
             if ((opstina == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -2109,11 +2109,11 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((rokPoDogovoru == null)) {
+            if ((rokPoUgovoru == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(rokPoDogovoru));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(rokPoUgovoru));
             }
             if ((obim.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((int)(obim.Value));
@@ -2160,7 +2160,7 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
                     string faza, 
                     string napomena, 
                     global::System.Nullable<global::System.DateTime> datumUgovora, 
-                    string rokPoDogovoru, 
+                    string rokPoUgovoru, 
                     global::System.Nullable<int> obim, 
                     global::System.Nullable<global::System.DateTime> krajnjiRok, 
                     global::System.Nullable<int> prioritet, 
@@ -2171,7 +2171,7 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
                     string Original_faza, 
                     string Original_napomena, 
                     global::System.Nullable<global::System.DateTime> Original_datumUgovora, 
-                    string Original_rokPoDogovoru, 
+                    string Original_rokPoUgovoru, 
                     global::System.Nullable<int> Original_obim, 
                     global::System.Nullable<global::System.DateTime> Original_krajnjiRok, 
                     global::System.Nullable<int> Original_prioritet) {
@@ -2211,11 +2211,11 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((rokPoDogovoru == null)) {
+            if ((rokPoUgovoru == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(rokPoDogovoru));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(rokPoUgovoru));
             }
             if ((obim.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(obim.Value));
@@ -2284,13 +2284,13 @@ namespace CSharp_SQL_App.ugovoriDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            if ((Original_rokPoDogovoru == null)) {
+            if ((Original_rokPoUgovoru == null)) {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_rokPoDogovoru));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_rokPoUgovoru));
             }
             if ((Original_obim.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));

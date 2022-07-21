@@ -18,5 +18,10 @@ namespace CSharp_SQL_App {
             OpstineForm o = new OpstineForm();
             o.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e) {
+            UgovoriForm u = new UgovoriForm();
+            u.Show();
+        }
     }
 }
