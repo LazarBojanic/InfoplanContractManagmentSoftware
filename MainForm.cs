@@ -21,7 +21,7 @@ namespace CSharp_SQL_App {
 
         private void button2_Click(object sender, EventArgs e) {
             UgovoriForm u = new UgovoriForm();
-            u.Show();
+            u.ShowDialog();
         }
     }
 }

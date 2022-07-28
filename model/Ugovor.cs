@@ -98,6 +98,7 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);
                 command.Parameters.AddWithValue("@prioritet", prioritet);
                 int recordsAffected = command.ExecuteNonQuery();
+                //MessageBox.Show("inserted " + recordsAffected.ToString());
             }
             else {
                 string query = "UPDATE ugovor SET opstina = @opstina, nazivPlana = @nazivPlana, urbanista = @urbanista," +
@@ -116,7 +117,9 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@prioritet", prioritet);
                 command.Parameters.AddWithValue("@id", id);
                 int recordsAffected = command.ExecuteNonQuery();
+                //MessageBox.Show("updated " + recordsAffected.ToString());
             }
+            myConnection.Close();
         }
         private static OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
