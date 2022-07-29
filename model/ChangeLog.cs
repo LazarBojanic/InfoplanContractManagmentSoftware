@@ -25,7 +25,7 @@ namespace CSharp_SQL_App.model {
             command.Parameters.AddWithValue("@tableName", tableName);
             command.Parameters.AddWithValue("@fieldName", fieldName);
             command.Parameters.AddWithValue("@eventType", eventType);
-            command.Parameters.Add("@eventTime", OleDbType.DBDate).Value = eventTime;
+            command.Parameters.Add("@eventTime", OleDbType.DBTimeStamp).Value = eventTimeWithoutMilliseconds(eventTime);
             command.Parameters.AddWithValue("@userName", userName);
             command.Parameters.AddWithValue("@primaryKey", primaryKey);
             command.Parameters.AddWithValue("@oldValue", oldValue);
@@ -75,6 +75,9 @@ namespace CSharp_SQL_App.model {
 
         private static OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
+        }
+        public static DateTime eventTimeWithoutMilliseconds(DateTime eventTime) {
+            return new DateTime(eventTime.Year, eventTime.Month, eventTime.Day, eventTime.Hour, eventTime.Minute, eventTime.Second);
         }
     }
 }
