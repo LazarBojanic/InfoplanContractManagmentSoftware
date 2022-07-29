@@ -92,6 +92,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\ChangeLog.cs" />
     <Compile Include="model\Ugovor.cs" />
     <Compile Include="OpstineForm.cs">
       <SubType>Form</SubType>

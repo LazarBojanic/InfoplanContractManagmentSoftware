@@ -42,7 +42,11 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(9, 10);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -50,6 +54,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1114, 526);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -65,6 +70,7 @@
             // 
             // buttonDodaj
             // 
+            this.buttonDodaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonDodaj.Location = new System.Drawing.Point(193, 559);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
@@ -76,6 +82,7 @@
             // 
             // buttonIzmeni
             // 
+            this.buttonIzmeni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonIzmeni.Location = new System.Drawing.Point(684, 559);
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmeni.Name = "buttonIzmeni";
@@ -96,6 +103,7 @@
             // 
             // buttonRefresh
             // 
+            this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonRefresh.Location = new System.Drawing.Point(11, 559);
             this.buttonRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRefresh.Name = "buttonRefresh";

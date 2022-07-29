@@ -52,7 +52,7 @@ namespace CSharp_SQL_App {
             OleDbConnection myConnection;
             OleDbCommand command;
             DataTable dt;
-            String query = "SELECT * FROM ugovor";
+            String query = "SELECT * FROM ugovor ORDER BY id";
             myConnection = GetConnection();
             myConnection.Open();
             command = new OleDbCommand(query, myConnection);
@@ -61,7 +61,7 @@ namespace CSharp_SQL_App {
             dt.Load(command.ExecuteReader());
             bs.DataSource = dt;
             dataGridView1.DataSource = bs;
-
+            
         }
 
         private OleDbConnection GetConnection() {

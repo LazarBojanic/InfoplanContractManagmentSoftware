@@ -64,23 +64,31 @@ namespace CSharp_SQL_App {
         }
 
         private void buttonSacuvaj_Click(object sender, EventArgs e) {
-            newUgovor.id = oldUgovor.id;
-            newUgovor.opstina = comboBoxOpstina.Text;
-            newUgovor.nazivPlana = textBoxNazivPlana.Text;
-            newUgovor.urbanista = textBoxUrbanista.Text;
-            newUgovor.faza = textBoxFaza.Text;
-            newUgovor.napomena = textBoxNapomena.Text;
-            newUgovor.datumUgovora = dateTimeDatumUgovora.Value;
-            newUgovor.rokPoUgovoru = textBoxRokPoUgovoru.Text;
-            newUgovor.obim = Int32.Parse(textBoxObim.Text);
-            newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
-            newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
-            newUgovor.saveToDatabase();
+            try {
+                newUgovor.id = oldUgovor.id;
+                newUgovor.opstina = comboBoxOpstina.Text;
+                newUgovor.nazivPlana = textBoxNazivPlana.Text;
+                newUgovor.urbanista = textBoxUrbanista.Text;
+                newUgovor.faza = textBoxFaza.Text;
+                newUgovor.napomena = textBoxNapomena.Text;
+                newUgovor.datumUgovora = dateTimeDatumUgovora.Value;
+                newUgovor.rokPoUgovoru = textBoxRokPoUgovoru.Text;
+                newUgovor.obim = Int32.Parse(textBoxObim.Text);
+                newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
+                newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
+                newUgovor.saveToDatabase();
+                this.DialogResult = DialogResult.OK;
+            }
+            catch(FormatException ex) {
+                MessageBox.Show("Nekorektan format podataka.");
+                
+            }
         }
 
         private void buttonOtkazi_Click(object sender, EventArgs e) {
 
         }
 
+       
     }
 }
