@@ -64,6 +64,7 @@ namespace CSharp_SQL_App {
         }
 
         private void buttonSacuvaj_Click(object sender, EventArgs e) {
+            
             try {
                 newUgovor.id = oldUgovor.id;
                 newUgovor.opstina = comboBoxOpstina.Text;
@@ -77,6 +78,7 @@ namespace CSharp_SQL_App {
                 newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
                 newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
                 newUgovor.saveToDatabase();
+                ChangeLog.addChangeLogForUgovor(oldUgovor, newUgovor);
                 this.DialogResult = DialogResult.OK;
             }
             catch(FormatException ex) {
