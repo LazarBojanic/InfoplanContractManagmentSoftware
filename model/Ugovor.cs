@@ -58,17 +58,94 @@ namespace CSharp_SQL_App.model {
             OleDbDataReader dataReader = command.ExecuteReader();
             if (dataReader.HasRows) {
                 dataReader.Read();
-                id = dataReader.GetInt32(dataReader.GetOrdinal("id"));
-                opstina = dataReader.GetString(dataReader.GetOrdinal("opstina"));
-                nazivPlana = dataReader.GetString(dataReader.GetOrdinal("nazivPlana"));
-                urbanista = dataReader.GetString(dataReader.GetOrdinal("urbanista"));
-                faza = dataReader.GetString(dataReader.GetOrdinal("faza"));
-                napomena = dataReader.GetString(dataReader.GetOrdinal("napomena"));
-                datumUgovora = dataReader.GetDateTime(dataReader.GetOrdinal("datumUgovora"));
-                rokPoUgovoru = dataReader.GetString(dataReader.GetOrdinal("rokPoUgovoru"));
-                obim = dataReader.GetInt32(dataReader.GetOrdinal("obim"));
-                krajnjiRok = dataReader.GetDateTime(dataReader.GetOrdinal("krajnjiRok"));
-                prioritet = dataReader.GetInt32(dataReader.GetOrdinal("prioritet"));
+                try {
+                    id = dataReader.GetInt32(dataReader.GetOrdinal("id"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        id = 0;
+                    }
+                }
+                try {
+                    opstina = dataReader.GetString(dataReader.GetOrdinal("opstina"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        opstina = "";
+                    }
+                }
+                try {
+                    nazivPlana = dataReader.GetString(dataReader.GetOrdinal("nazivPlana"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        nazivPlana = "";
+                    }
+                }
+                try {
+                    urbanista = dataReader.GetString(dataReader.GetOrdinal("urbanista"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        urbanista = "";
+                    }
+                }
+                try {
+                    faza = dataReader.GetString(dataReader.GetOrdinal("faza"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        faza = "";
+                    }
+                }
+                try {
+                    napomena = dataReader.GetString(dataReader.GetOrdinal("napomena"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        napomena = "";
+                    }
+                }
+                try {
+                    datumUgovora = dataReader.GetDateTime(dataReader.GetOrdinal("datumUgovora"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        datumUgovora = DateTime.Today;
+                    }
+                }
+                try {
+                    rokPoUgovoru = dataReader.GetString(dataReader.GetOrdinal("rokPoUgovoru"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        rokPoUgovoru = "";
+                    }
+                }
+                try {
+                    obim = dataReader.GetInt32(dataReader.GetOrdinal("obim"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        obim = 0;
+                    }
+                }
+                try {
+                    krajnjiRok = dataReader.GetDateTime(dataReader.GetOrdinal("krajnjiRok"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        krajnjiRok = DateTime.Today;
+                    }
+                }
+                try {
+                    prioritet = dataReader.GetInt32(dataReader.GetOrdinal("prioritet"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        prioritet = 0;
+                    }
+                }
                 myConnection.Close();
                 return true;
             }
@@ -78,38 +155,6 @@ namespace CSharp_SQL_App.model {
                 return false;
             }
         }
-
-        public bool loadChangeLog(int parId) {
-            OleDbConnection myConnection = GetConnection();
-            myConnection.Open();
-            string query = "SELECT * FROM changeLog WHERE id = @id";
-            OleDbCommand command = new OleDbCommand(query, myConnection);
-            command.Parameters.AddWithValue("@id", parId);
-            OleDbDataReader dataReader = command.ExecuteReader();
-            if (dataReader.HasRows) {
-                dataReader.Read();
-                id = dataReader.GetInt32(dataReader.GetOrdinal("id"));
-                opstina = dataReader.GetString(dataReader.GetOrdinal("opstina"));
-                nazivPlana = dataReader.GetString(dataReader.GetOrdinal("nazivPlana"));
-                urbanista = dataReader.GetString(dataReader.GetOrdinal("urbanista"));
-                faza = dataReader.GetString(dataReader.GetOrdinal("faza"));
-                napomena = dataReader.GetString(dataReader.GetOrdinal("napomena"));
-                datumUgovora = dataReader.GetDateTime(dataReader.GetOrdinal("datumUgovora"));
-                rokPoUgovoru = dataReader.GetString(dataReader.GetOrdinal("rokPoUgovoru"));
-                obim = dataReader.GetInt32(dataReader.GetOrdinal("obim"));
-                krajnjiRok = dataReader.GetDateTime(dataReader.GetOrdinal("krajnjiRok"));
-                prioritet = dataReader.GetInt32(dataReader.GetOrdinal("prioritet"));
-                myConnection.Close();
-                return true;
-            }
-            else {
-                MessageBox.Show("Ne postoji id", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                myConnection.Close();
-                return false;
-            }
-        }
-
-
 
         public void saveToDatabase() {
             OleDbConnection myConnection = GetConnection();

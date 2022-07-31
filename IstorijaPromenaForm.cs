@@ -38,6 +38,7 @@ namespace CSharp_SQL_App {
             dt.Load(command.ExecuteReader());
             bs.DataSource = dt;
             dataGridView1.DataSource = bs;
+            myConnection.Close();
         }
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
