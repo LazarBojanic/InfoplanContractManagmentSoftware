@@ -32,6 +32,7 @@
             this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ugovorTableAdapter = new CSharp_SQL_App.ugovoriDataSetTableAdapters.ugovorTableAdapter();
             this.buttonRefresh = new System.Windows.Forms.Button();
+            this.buttonIstorijaPromena = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSet)).BeginInit();
@@ -71,7 +72,7 @@
             // buttonDodaj
             // 
             this.buttonDodaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonDodaj.Location = new System.Drawing.Point(193, 559);
+            this.buttonDodaj.Location = new System.Drawing.Point(297, 559);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(261, 54);
@@ -83,7 +84,7 @@
             // buttonIzmeni
             // 
             this.buttonIzmeni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonIzmeni.Location = new System.Drawing.Point(684, 559);
+            this.buttonIzmeni.Location = new System.Drawing.Point(586, 559);
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmeni.Name = "buttonIzmeni";
             this.buttonIzmeni.Size = new System.Drawing.Size(261, 54);
@@ -113,11 +114,23 @@
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
+            // buttonIstorijaPromena
+            // 
+            this.buttonIstorijaPromena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonIstorijaPromena.Location = new System.Drawing.Point(960, 559);
+            this.buttonIstorijaPromena.Name = "buttonIstorijaPromena";
+            this.buttonIstorijaPromena.Size = new System.Drawing.Size(160, 54);
+            this.buttonIstorijaPromena.TabIndex = 4;
+            this.buttonIstorijaPromena.Text = "Istorija Promena";
+            this.buttonIstorijaPromena.UseVisualStyleBackColor = true;
+            this.buttonIstorijaPromena.Click += new System.EventHandler(this.buttonIstorijaPromena_Click);
+            // 
             // UgovoriForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1132, 651);
+            this.Controls.Add(this.buttonIstorijaPromena);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonIzmeni);
             this.Controls.Add(this.buttonDodaj);
@@ -144,5 +157,6 @@
         private System.Windows.Forms.BindingSource ugovorBindingSource;
         private ugovoriDataSetTableAdapters.ugovorTableAdapter ugovorTableAdapter;
         private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.Button buttonIstorijaPromena;
     }
 }

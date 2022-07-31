@@ -14,12 +14,18 @@ namespace CSharp_SQL_App {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e) {
+        
+
+        private void MainForm_Load(object sender, EventArgs e) {
+
+        }
+
+        private void buttonPrikazOpstina_Click(object sender, EventArgs e) {
             OpstineForm o = new OpstineForm();
             o.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e) {
+        private void buttonPrikazUgovora_Click(object sender, EventArgs e) {
             UgovoriForm u = new UgovoriForm();
             u.ShowDialog();
         }

@@ -17,8 +17,7 @@ namespace CSharp_SQL_App {
         private Ugovor newUgovor;
         //private ugovoriDataSet ugovoriDataSet;
         public UpdateForm() {
-            InitializeComponent();
-         
+            InitializeComponent();        
         }
 
         public void loadUgovor(int id) {
@@ -63,8 +62,7 @@ namespace CSharp_SQL_App {
             textBoxPrioritet.Text = oldUgovor.prioritet.ToString();
         }
 
-        private void buttonSacuvaj_Click(object sender, EventArgs e) {
-            
+        private void buttonSacuvaj_Click(object sender, EventArgs e) {         
             try {
                 newUgovor.id = oldUgovor.id;
                 newUgovor.opstina = comboBoxOpstina.Text;

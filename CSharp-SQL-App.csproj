@@ -83,9 +83,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="app\AppCore.cs" />
-    <Compile Include="controller\ActionManager.cs" />
-    <Compile Include="controller\ActionOpstine.cs" />
+    <Compile Include="IstorijaPromenaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IstorijaPromenaForm.Designer.cs">
+      <DependentUpon>IstorijaPromenaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +122,9 @@
     <Compile Include="UpdateForm.Designer.cs">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="IstorijaPromenaForm.resx">
+      <DependentUpon>IstorijaPromenaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,8 +182,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="view\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
