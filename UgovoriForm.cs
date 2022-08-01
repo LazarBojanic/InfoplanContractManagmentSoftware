@@ -59,9 +59,9 @@ namespace CSharp_SQL_App {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
         private void buttonIstorijaPromena_Click(object sender, EventArgs e) {
-            int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-            IstorijaPromenaForm i = new IstorijaPromenaForm(id);
-            i.Show();
+            String uGuid = dataGridView1.SelectedRows[0].Cells["uGuid"].Value.ToString();
+            IstorijaPromenaForm i = new IstorijaPromenaForm(uGuid);
+            i.ShowDialog();
         }
     }
 }

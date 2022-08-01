@@ -20,10 +20,11 @@ namespace CSharp_SQL_App.model {
         public int obim { get; set; }
         public DateTime krajnjiRok { get; set; }
         public int prioritet { get; set; }
+        public String uGuid { get; set; }
 
         public Ugovor(int id, string opstina, string nazivPlana, string urbanista, string faza,
             string napomena, DateTime datumUgovora, string rokPoUgovoru, int obim,
-            DateTime krajnjiRok, int prioritet) {
+            DateTime krajnjiRok, int prioritet, String uGuid) {
             this.id = id;
             this.opstina = opstina;
             this.nazivPlana = nazivPlana;
@@ -35,6 +36,7 @@ namespace CSharp_SQL_App.model {
             this.obim = obim;
             this.krajnjiRok = krajnjiRok;
             this.prioritet = prioritet;
+            this.uGuid = uGuid;
         }
         public Ugovor() {
             this.id = 0;
@@ -48,6 +50,7 @@ namespace CSharp_SQL_App.model {
             this.obim = 0;
             this.krajnjiRok = DateTime.Today;
             this.prioritet = 0;
+            this.uGuid = Guid.NewGuid().ToString();
         }
         public bool loadFromDatabase(int parId) {
             OleDbConnection myConnection = GetConnection();
@@ -146,6 +149,14 @@ namespace CSharp_SQL_App.model {
                         prioritet = 0;
                     }
                 }
+                try {
+                    uGuid = dataReader.GetString(dataReader.GetOrdinal("uGuid"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        uGuid = "";
+                    }
+                }
                 myConnection.Close();
                 return true;
             }
@@ -161,8 +172,8 @@ namespace CSharp_SQL_App.model {
             myConnection.Open();
             if (id == 0) {
                 string query = "INSERT INTO ugovor (opstina, nazivPlana, urbanista, faza, napomena, datumUgovora," +
-                    " rokPoUgovoru, obim, krajnjiRok, prioritet) VALUES (@opstina, @nazivPlana, @urbanista, @faza, @napomena," +
-                    " @datumUgovora, @rokPoUgovoru, @obim, @krajnjiRok, @prioritet)";
+                    " rokPoUgovoru, obim, krajnjiRok, prioritet, uGuid) VALUES (@opstina, @nazivPlana, @urbanista, @faza, @napomena," +
+                    " @datumUgovora, @rokPoUgovoru, @obim, @krajnjiRok, @prioritet, @uGuid)";
                 OleDbCommand command = new OleDbCommand(query, myConnection);
                 command.Parameters.AddWithValue("@opstina", opstina);
                 command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
@@ -174,6 +185,7 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@obim", obim);
                 command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);
                 command.Parameters.AddWithValue("@prioritet", prioritet);
+                command.Parameters.AddWithValue("@uGuid", uGuid);
                 int recordsAffected = command.ExecuteNonQuery();
                 //MessageBox.Show("inserted " + recordsAffected.ToString());
             }
@@ -193,6 +205,7 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);
                 command.Parameters.AddWithValue("@prioritet", prioritet);
                 command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@uGuid", uGuid);
                 int recordsAffected = command.ExecuteNonQuery();
                 //MessageBox.Show("updated " + recordsAffected.ToString());
             }

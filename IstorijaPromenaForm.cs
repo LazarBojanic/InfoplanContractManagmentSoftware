@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class IstorijaPromenaForm : Form {
-        private int id { get;set;}
+        private String uGuid { get;set;}
         
-        public IstorijaPromenaForm(int id) {
+        public IstorijaPromenaForm(String uGuid) {
             InitializeComponent();
-            this.id = id;
+            this.uGuid = uGuid;
             fillChangeLogGrid();
         }
         private void IstorijaPromenaForm_Load(object sender, EventArgs e) {
@@ -30,9 +30,9 @@ namespace CSharp_SQL_App {
             OleDbCommand command;
             myConnection = GetConnection();
             myConnection.Open();
-            String query = "SELECT * FROM changeLog WHERE primaryKey = @id";
+            String query = "SELECT * FROM changeLog WHERE primaryKey = @uGuid";
             command = new OleDbCommand(query, myConnection);
-            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.AddWithValue("@uGuid", uGuid);
             dt = new DataTable();
             bs = new BindingSource();
             dt.Load(command.ExecuteReader());

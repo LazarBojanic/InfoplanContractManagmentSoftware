@@ -23,6 +23,7 @@ namespace CSharp_SQL_App {
         public void loadUgovor(int id) {
             oldUgovor = new Ugovor();
             newUgovor = new Ugovor();
+            newUgovor.uGuid = newUgovor.uGuid;
             if (id != 0) {
                 oldUgovor.loadFromDatabase(id);
             }
@@ -75,18 +76,18 @@ namespace CSharp_SQL_App {
                 newUgovor.obim = Int32.Parse(textBoxObim.Text);
                 newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
                 newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
+                newUgovor.uGuid = oldUgovor.uGuid;
                 newUgovor.saveToDatabase();
                 ChangeLog.addChangeLogForUgovor(oldUgovor, newUgovor);
                 this.DialogResult = DialogResult.OK;
             }
             catch(FormatException ex) {
-                MessageBox.Show("Nekorektan format podataka.");
-                
+                MessageBox.Show("Nekorektan format podataka.");                
             }
         }
 
         private void buttonOtkazi_Click(object sender, EventArgs e) {
-
+            this.Close();
         }
 
        
