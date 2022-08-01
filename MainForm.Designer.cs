@@ -29,10 +29,10 @@
             // 
             // buttonPrikazOpstina
             // 
-            this.buttonPrikazOpstina.Location = new System.Drawing.Point(72, 50);
-            this.buttonPrikazOpstina.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonPrikazOpstina.Location = new System.Drawing.Point(96, 62);
+            this.buttonPrikazOpstina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrikazOpstina.Name = "buttonPrikazOpstina";
-            this.buttonPrikazOpstina.Size = new System.Drawing.Size(155, 68);
+            this.buttonPrikazOpstina.Size = new System.Drawing.Size(207, 84);
             this.buttonPrikazOpstina.TabIndex = 0;
             this.buttonPrikazOpstina.Text = "Prikaz Opstina";
             this.buttonPrikazOpstina.UseVisualStyleBackColor = true;
@@ -40,10 +40,11 @@
             // 
             // buttonPrikazUgovora
             // 
-            this.buttonPrikazUgovora.Location = new System.Drawing.Point(373, 50);
-            this.buttonPrikazUgovora.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonPrikazUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonPrikazUgovora.Location = new System.Drawing.Point(497, 62);
+            this.buttonPrikazUgovora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrikazUgovora.Name = "buttonPrikazUgovora";
-            this.buttonPrikazUgovora.Size = new System.Drawing.Size(155, 68);
+            this.buttonPrikazUgovora.Size = new System.Drawing.Size(207, 84);
             this.buttonPrikazUgovora.TabIndex = 1;
             this.buttonPrikazUgovora.Text = "Prikaz Ugovora";
             this.buttonPrikazUgovora.UseVisualStyleBackColor = true;
@@ -51,12 +52,12 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonPrikazUgovora);
             this.Controls.Add(this.buttonPrikazOpstina);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "Glavni meni";
             this.Load += new System.EventHandler(this.MainForm_Load);

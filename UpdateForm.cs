@@ -51,6 +51,7 @@ namespace CSharp_SQL_App {
         private void UpdateForm_Load(object sender, EventArgs e) {
             loadOpstinaComboBox();
             textBoxId.Text = oldUgovor.id.ToString();
+            textBoxUGuid.Text = oldUgovor.uGuid;
             comboBoxOpstina.Text = oldUgovor.opstina.ToString();
             textBoxNazivPlana.Text = oldUgovor.nazivPlana;
             textBoxUrbanista.Text = oldUgovor.urbanista;
@@ -89,7 +90,5 @@ namespace CSharp_SQL_App {
         private void buttonOtkazi_Click(object sender, EventArgs e) {
             this.Close();
         }
-
-       
     }
 }

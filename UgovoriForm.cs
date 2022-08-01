@@ -13,28 +13,27 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class UgovoriForm : Form {
-        public Ugovor ugovor { get; set; }
-        
+        public Ugovor ugovor { get; set; }       
         public UgovoriForm() {
             InitializeComponent();
         }
         private void UgovoriForm_Load(object sender, EventArgs e) {
-            // TODO: This line of code loads data into the 'ugovoriDataSet.ugovor' table. You can move, or remove it, as needed.
-            //this.ugovorTableAdapter.Fill(this.ugovoriDataSet.ugovor);
             refreshDataGrid();
         }    
         private void buttonDodaj_Click(object sender, EventArgs e) {
             UpdateForm updateForm1 = new UpdateForm();
             updateForm1.loadUgovor(0);
-            updateForm1.ShowDialog();
-            refreshDataGrid();
+            if (updateForm1.ShowDialog().Equals(DialogResult.OK)) {
+                refreshDataGrid();
+            }          
         }
         private void buttonIzmeni_Click(object sender, EventArgs e) {
             UpdateForm updateForm2 = new UpdateForm();
             int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
             updateForm2.loadUgovor(id);
-            updateForm2.ShowDialog();
-            refreshDataGrid();
+            if (updateForm2.ShowDialog().Equals(DialogResult.OK)) {
+                refreshDataGrid();
+            }
         }
         private void buttonRefresh_Click(object sender, EventArgs e) {
             refreshDataGrid();
@@ -62,6 +61,14 @@ namespace CSharp_SQL_App {
             String uGuid = dataGridView1.SelectedRows[0].Cells["uGuid"].Value.ToString();
             IstorijaPromenaForm i = new IstorijaPromenaForm(uGuid);
             i.ShowDialog();
+        }
+
+        private void UgovoriForm_ResizeBegin(object sender, EventArgs e) {
+            this.SuspendLayout();           
+        }
+
+        private void UgovoriForm_ResizeEnd(object sender, EventArgs e) {
+            this.ResumeLayout(true);
         }
     }
 }

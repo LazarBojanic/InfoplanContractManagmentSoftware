@@ -30,7 +30,7 @@ namespace CSharp_SQL_App {
             OleDbCommand command;
             myConnection = GetConnection();
             myConnection.Open();
-            String query = "SELECT * FROM changeLog WHERE primaryKey = @uGuid";
+            String query = "SELECT * FROM changeLog WHERE primarniKljuc = @uGuid";
             command = new OleDbCommand(query, myConnection);
             command.Parameters.AddWithValue("@uGuid", uGuid);
             dt = new DataTable();
@@ -42,6 +42,14 @@ namespace CSharp_SQL_App {
         }
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
+        }
+
+        private void IstorijaPromenaForm_ResizeBegin(object sender, EventArgs e) {
+            this.SuspendLayout();            
+        }
+
+        private void IstorijaPromenaForm_ResizeEnd(object sender, EventArgs e) {
+            this.ResumeLayout(true);
         }
     }
 }

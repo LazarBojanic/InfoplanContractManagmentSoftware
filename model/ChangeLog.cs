@@ -9,28 +9,28 @@ using System.Windows.Forms;
 namespace CSharp_SQL_App.model {
     public class ChangeLog {
 
-        public static void addChangeLogField(String tableName, String fieldName, String eventType,
-            String primaryKey, String oldValue, String newValue) {
+        public static void addChangeLogField(String imeTabele, String imePolja, String tipAkcije,
+            String primarniKljuc, String staraVrednost, String novaVrednost) {
 
             OleDbConnection myConnection = GetConnection();
             myConnection.Open();
-            DateTime eventTime = DateTime.Now;
+            DateTime vremeAkcije = DateTime.Now;
             string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
-            string query = "INSERT INTO changeLog (tableName, fieldName, eventType," +
-                " eventTime, userName, primaryKey, oldValue, newValue) VALUES" +
-                " (@tableName, @fieldName, @eventType, @eventTime, @userName," +
-                " @primaryKey, @oldValue, @newValue)";
+            string query = "INSERT INTO changeLog (imeTabele, imePolja, tipAkcije," +
+                " vremeAkcije, userName, primarniKljuc, staraVrednost, novaVrednost) VALUES" +
+                " (@imeTabele, @imePolja, @tipAkcije, @vremeAkcije, @userName," +
+                " @primarniKljuc, @staraVrednost, @novaVrednost)";
             OleDbCommand command = new OleDbCommand(query, myConnection);
-            command.Parameters.AddWithValue("@tableName", tableName);
-            command.Parameters.AddWithValue("@fieldName", fieldName);
-            command.Parameters.AddWithValue("@eventType", eventType);
-            command.Parameters.Add("@eventTime", OleDbType.DBTimeStamp).Value = eventTimeWithoutMilliseconds(eventTime);
+            command.Parameters.AddWithValue("@imeTabele", imeTabele);
+            command.Parameters.AddWithValue("@imePolja", imePolja);
+            command.Parameters.AddWithValue("@tipAkcije", tipAkcije);
+            command.Parameters.Add("@vremeAkcije", OleDbType.DBTimeStamp).Value = vremeAkcijeWithoutMilliseconds(vremeAkcije);
             command.Parameters.AddWithValue("@userName", userName);
-            command.Parameters.AddWithValue("@primaryKey", primaryKey);
-            command.Parameters.AddWithValue("@oldValue", oldValue);
-            command.Parameters.AddWithValue("@newValue", newValue);
-            //MessageBox.Show(tableName + " " + fieldName + " " + eventType + " " + eventTime.ToString() + " " + userName + " " + primaryKey + " " + oldValue + " " + newValue);
+            command.Parameters.AddWithValue("@primarniKljuc", primarniKljuc);
+            command.Parameters.AddWithValue("@staraVrednost", staraVrednost);
+            command.Parameters.AddWithValue("@novaVrednost", novaVrednost);
+            //MessageBox.Show(imeTabele + " " + imePolja + " " + tipAkcije + " " + vremeAkcije.ToString() + " " + userName + " " + primarniKljuc + " " + staraVrednost + " " + novaVrednost);
             command.ExecuteNonQuery();
         }
 
@@ -105,8 +105,8 @@ namespace CSharp_SQL_App.model {
         private static OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
-        public static DateTime eventTimeWithoutMilliseconds(DateTime eventTime) {
-            return new DateTime(eventTime.Year, eventTime.Month, eventTime.Day, eventTime.Hour, eventTime.Minute, eventTime.Second);
+        public static DateTime vremeAkcijeWithoutMilliseconds(DateTime vremeAkcije) {
+            return new DateTime(vremeAkcije.Year, vremeAkcije.Month, vremeAkcije.Day, vremeAkcije.Hour, vremeAkcije.Minute, vremeAkcije.Second);
         }
     }
 }

@@ -47,16 +47,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 10);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1114, 526);
+            this.dataGridView1.Size = new System.Drawing.Size(1485, 651);
             this.dataGridView1.TabIndex = 0;
             // 
             // ugovorBindingSource
@@ -71,11 +70,12 @@
             // 
             // buttonDodaj
             // 
-            this.buttonDodaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonDodaj.Location = new System.Drawing.Point(297, 559);
-            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonDodaj.AutoSize = true;
+            this.buttonDodaj.Location = new System.Drawing.Point(333, 693);
+            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDodaj.Name = "buttonDodaj";
-            this.buttonDodaj.Size = new System.Drawing.Size(261, 54);
+            this.buttonDodaj.Size = new System.Drawing.Size(347, 77);
             this.buttonDodaj.TabIndex = 1;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
@@ -83,11 +83,12 @@
             // 
             // buttonIzmeni
             // 
-            this.buttonIzmeni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonIzmeni.Location = new System.Drawing.Point(586, 559);
-            this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonIzmeni.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonIzmeni.AutoSize = true;
+            this.buttonIzmeni.Location = new System.Drawing.Point(827, 693);
+            this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonIzmeni.Name = "buttonIzmeni";
-            this.buttonIzmeni.Size = new System.Drawing.Size(261, 54);
+            this.buttonIzmeni.Size = new System.Drawing.Size(347, 77);
             this.buttonIzmeni.TabIndex = 2;
             this.buttonIzmeni.Text = "Izmeni";
             this.buttonIzmeni.UseVisualStyleBackColor = true;
@@ -105,10 +106,11 @@
             // buttonRefresh
             // 
             this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonRefresh.Location = new System.Drawing.Point(11, 559);
-            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonRefresh.AutoSize = true;
+            this.buttonRefresh.Location = new System.Drawing.Point(12, 693);
+            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(156, 54);
+            this.buttonRefresh.Size = new System.Drawing.Size(192, 77);
             this.buttonRefresh.TabIndex = 3;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
@@ -117,9 +119,11 @@
             // buttonIstorijaPromena
             // 
             this.buttonIstorijaPromena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonIstorijaPromena.Location = new System.Drawing.Point(960, 559);
+            this.buttonIstorijaPromena.AutoSize = true;
+            this.buttonIstorijaPromena.Location = new System.Drawing.Point(1304, 693);
+            this.buttonIstorijaPromena.Margin = new System.Windows.Forms.Padding(4);
             this.buttonIstorijaPromena.Name = "buttonIstorijaPromena";
-            this.buttonIstorijaPromena.Size = new System.Drawing.Size(160, 54);
+            this.buttonIstorijaPromena.Size = new System.Drawing.Size(192, 77);
             this.buttonIstorijaPromena.TabIndex = 4;
             this.buttonIstorijaPromena.Text = "Istorija Promena";
             this.buttonIstorijaPromena.UseVisualStyleBackColor = true;
@@ -127,23 +131,27 @@
             // 
             // UgovoriForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 651);
+            this.ClientSize = new System.Drawing.Size(1509, 781);
             this.Controls.Add(this.buttonIstorijaPromena);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonIzmeni);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1527, 828);
             this.Name = "UgovoriForm";
             this.Text = "UgovoriForm";
             this.Load += new System.EventHandler(this.UgovoriForm_Load);
+            this.ResizeBegin += new System.EventHandler(this.UgovoriForm_ResizeBegin);
+            this.ResizeEnd += new System.EventHandler(this.UgovoriForm_ResizeEnd);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
