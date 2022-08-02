@@ -262,7 +262,7 @@
             // 
             this.dateTimeKrajnjiRok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimeKrajnjiRok.Location = new System.Drawing.Point(602, 220);
-            this.dateTimeKrajnjiRok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimeKrajnjiRok.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimeKrajnjiRok.Name = "dateTimeKrajnjiRok";
             this.dateTimeKrajnjiRok.Size = new System.Drawing.Size(301, 22);
             this.dateTimeKrajnjiRok.TabIndex = 24;
@@ -271,16 +271,17 @@
             // 
             this.dateTimeDatumUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimeDatumUgovora.Location = new System.Drawing.Point(602, 79);
-            this.dateTimeDatumUgovora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimeDatumUgovora.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimeDatumUgovora.Name = "dateTimeDatumUgovora";
             this.dateTimeDatumUgovora.Size = new System.Drawing.Size(301, 22);
             this.dateTimeDatumUgovora.TabIndex = 25;
             // 
             // comboBoxOpstina
             // 
+            this.comboBoxOpstina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOpstina.FormattingEnabled = true;
             this.comboBoxOpstina.Location = new System.Drawing.Point(132, 79);
-            this.comboBoxOpstina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxOpstina.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxOpstina.Name = "comboBoxOpstina";
             this.comboBoxOpstina.Size = new System.Drawing.Size(301, 24);
             this.comboBoxOpstina.TabIndex = 26;
