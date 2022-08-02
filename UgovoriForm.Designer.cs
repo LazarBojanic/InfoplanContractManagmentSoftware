@@ -25,14 +25,14 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ugovoriDataSet = new CSharp_SQL_App.ugovoriDataSet();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonIzmeni = new System.Windows.Forms.Button();
-            this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ugovorTableAdapter = new CSharp_SQL_App.ugovoriDataSetTableAdapters.ugovorTableAdapter();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonIstorijaPromena = new System.Windows.Forms.Button();
+            this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ugovoriDataSet = new CSharp_SQL_App.ugovoriDataSet();
+            this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ugovorTableAdapter = new CSharp_SQL_App.ugovoriDataSetTableAdapters.ugovorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSet)).BeginInit();
@@ -60,16 +60,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1485, 651);
             this.dataGridView1.TabIndex = 0;
             // 
-            // ugovorBindingSource
-            // 
-            this.ugovorBindingSource.DataMember = "ugovor";
-            this.ugovorBindingSource.DataSource = this.ugovoriDataSet;
-            // 
-            // ugovoriDataSet
-            // 
-            this.ugovoriDataSet.DataSetName = "ugovoriDataSet";
-            this.ugovoriDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // buttonDodaj
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -96,15 +86,6 @@
             this.buttonIzmeni.UseVisualStyleBackColor = true;
             this.buttonIzmeni.Click += new System.EventHandler(this.buttonIzmeni_Click);
             // 
-            // ugovoriDataSetBindingSource
-            // 
-            this.ugovoriDataSetBindingSource.DataSource = this.ugovoriDataSet;
-            this.ugovoriDataSetBindingSource.Position = 0;
-            // 
-            // ugovorTableAdapter
-            // 
-            this.ugovorTableAdapter.ClearBeforeFill = true;
-            // 
             // buttonRefresh
             // 
             this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -130,6 +111,25 @@
             this.buttonIstorijaPromena.Text = "Istorija Promena";
             this.buttonIstorijaPromena.UseVisualStyleBackColor = true;
             this.buttonIstorijaPromena.Click += new System.EventHandler(this.buttonIstorijaPromena_Click);
+            // 
+            // ugovorBindingSource
+            // 
+            this.ugovorBindingSource.DataMember = "ugovor";
+            this.ugovorBindingSource.DataSource = this.ugovoriDataSet;
+            // 
+            // ugovoriDataSet
+            // 
+            this.ugovoriDataSet.DataSetName = "ugovoriDataSet";
+            this.ugovoriDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ugovoriDataSetBindingSource
+            // 
+            this.ugovoriDataSetBindingSource.DataSource = this.ugovoriDataSet;
+            this.ugovoriDataSetBindingSource.Position = 0;
+            // 
+            // ugovorTableAdapter
+            // 
+            this.ugovorTableAdapter.ClearBeforeFill = true;
             // 
             // UgovoriForm
             // 
