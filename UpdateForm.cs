@@ -17,7 +17,8 @@ namespace CSharp_SQL_App {
         private Ugovor newUgovor;
         //private ugovoriDataSet ugovoriDataSet;
         public UpdateForm() {
-            InitializeComponent();        
+            InitializeComponent();
+            
         }
 
         public void loadUgovor(int id) {
