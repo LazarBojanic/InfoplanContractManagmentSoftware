@@ -32,6 +32,7 @@ namespace CSharp_SQL_App.model {
             command.Parameters.AddWithValue("@novaVrednost", novaVrednost);
             //MessageBox.Show(imeTabele + " " + imePolja + " " + tipAkcije + " " + vremeAkcije.ToString() + " " + userName + " " + primarniKljuc + " " + staraVrednost + " " + novaVrednost);
             command.ExecuteNonQuery();
+            myConnection.Close();
         }
 
         public static void addChangeLogForUgovor(Ugovor oldUgovor, Ugovor newUgovor) {
