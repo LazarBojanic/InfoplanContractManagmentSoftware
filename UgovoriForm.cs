@@ -19,13 +19,15 @@ namespace CSharp_SQL_App {
         }
         private void UgovoriForm_Load(object sender, EventArgs e) {          
             refreshDataGrid();
-        }    
+        }
         private void buttonDodaj_Click(object sender, EventArgs e) {
             UpdateForm updateForm1 = new UpdateForm();
             updateForm1.loadUgovor(0);
             if (updateForm1.ShowDialog().Equals(DialogResult.OK)) {
                 refreshDataGrid();
             }
+            dataGridView1.FirstDisplayedScrollingRowIndex = dataGridView1.RowCount - 1;
+            dataGridView1.Rows[dataGridView1.RowCount - 1].Selected = true;
         }
         private void buttonIzmeni_Click(object sender, EventArgs e) {
             UpdateForm updateForm2 = new UpdateForm();
@@ -36,6 +38,7 @@ namespace CSharp_SQL_App {
                 refreshDataGrid();
             }
             dataGridView1.FirstDisplayedScrollingRowIndex = index;
+            dataGridView1.Rows[index].Selected = true;
         }
         private void buttonRefresh_Click(object sender, EventArgs e) {
             refreshDataGrid();
