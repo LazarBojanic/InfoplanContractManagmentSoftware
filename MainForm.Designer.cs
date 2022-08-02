@@ -34,7 +34,7 @@
             this.buttonPrikazOpstina.Name = "buttonPrikazOpstina";
             this.buttonPrikazOpstina.Size = new System.Drawing.Size(207, 84);
             this.buttonPrikazOpstina.TabIndex = 0;
-            this.buttonPrikazOpstina.Text = "Prikaz Opstina";
+            this.buttonPrikazOpstina.Text = "Prikaz Opština";
             this.buttonPrikazOpstina.UseVisualStyleBackColor = true;
             this.buttonPrikazOpstina.Click += new System.EventHandler(this.buttonPrikazOpstina_Click);
             // 

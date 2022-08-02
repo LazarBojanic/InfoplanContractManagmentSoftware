@@ -113,7 +113,7 @@
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(192, 77);
             this.buttonRefresh.TabIndex = 3;
-            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.Text = "Osveži";
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 

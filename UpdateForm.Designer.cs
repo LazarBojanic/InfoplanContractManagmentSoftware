@@ -126,7 +126,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Opstina";
+            this.label1.Text = "Opština";
             // 
             // label2
             // 
@@ -222,7 +222,7 @@
             this.buttonSacuvaj.Name = "buttonSacuvaj";
             this.buttonSacuvaj.Size = new System.Drawing.Size(266, 83);
             this.buttonSacuvaj.TabIndex = 20;
-            this.buttonSacuvaj.Text = "Sacuvaj";
+            this.buttonSacuvaj.Text = "Sačuvaj";
             this.buttonSacuvaj.UseVisualStyleBackColor = true;
             this.buttonSacuvaj.Click += new System.EventHandler(this.buttonSacuvaj_Click);
             // 
@@ -235,7 +235,7 @@
             this.buttonOtkazi.Name = "buttonOtkazi";
             this.buttonOtkazi.Size = new System.Drawing.Size(266, 83);
             this.buttonOtkazi.TabIndex = 21;
-            this.buttonOtkazi.Text = "Otkazi";
+            this.buttonOtkazi.Text = "Otkaži";
             this.buttonOtkazi.UseVisualStyleBackColor = true;
             this.buttonOtkazi.Click += new System.EventHandler(this.buttonOtkazi_Click);
             // 
