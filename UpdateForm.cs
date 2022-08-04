@@ -55,7 +55,7 @@ namespace CSharp_SQL_App {
             textBoxNapomena.Text = oldUgovor.napomena;
             dateTimeDatumUgovora.Value = oldUgovor.datumUgovora;
             textBoxRokPoUgovoru.Text = oldUgovor.rokPoUgovoru;
-            comboBoxRokPoUgovoru.Text = "Mesec";
+            comboBoxRokPoUgovoru.Text = "Meseci";
             textBoxObim.Text = oldUgovor.obim.ToString();
             dateTimeKrajnjiRok.Value = oldUgovor.krajnjiRok;
             textBoxPrioritet.Text = oldUgovor.prioritet.ToString();
