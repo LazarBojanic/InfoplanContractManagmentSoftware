@@ -12,14 +12,11 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class UpdateForm : Form {
-
         private Ugovor oldUgovor;
         private Ugovor newUgovor;
-        //private ugovoriDataSet ugovoriDataSet;
         public UpdateForm() {
             InitializeComponent();
         }
-
         public void loadUgovor(int id) {
             oldUgovor = new Ugovor();
             newUgovor = new Ugovor();
@@ -28,7 +25,6 @@ namespace CSharp_SQL_App {
                 oldUgovor.loadFromDatabase(id);
             }
         }
-
         public void loadOpstinaComboBox() {
             OleDbConnection connection = GetConnection();
             connection.Open();
