@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharp_SQL_App.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,8 +11,15 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class MainForm : Form {
+        private User user;
         public MainForm() {
             InitializeComponent();
+            user = new User(LoginForm.username, LoginForm.password, LoginForm.privilegija);
+            labelUsername.Text = user.username;
+            labelPrivilegija.Text = user.privilegija;
+            if(!user.privilegija.Equals("administrator")) {
+                buttonKorisnici.Enabled = false;
+            }
         }
 
         
@@ -28,6 +36,16 @@ namespace CSharp_SQL_App {
         private void buttonPrikazUgovora_Click(object sender, EventArgs e) {
             UgovoriForm u = new UgovoriForm();
             u.ShowDialog();
+        }
+
+        private void buttonKorisnici_Click_1(object sender, EventArgs e) {
+            KorisniciForm korisniciForm = new KorisniciForm();
+            korisniciForm.ShowDialog();
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e) {
+            LoginForm.getInstance().Show();
+            this.Close();
         }
     }
 }

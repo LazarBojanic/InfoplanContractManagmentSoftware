@@ -45,13 +45,13 @@ namespace CSharp_SQL_App {
         }
         public void refreshDataGrid() {
             BindingSource bs;
-            OleDbConnection myConnection;
+            OleDbConnection connection;
             OleDbCommand command;
             DataTable dt;
             String query = "SELECT * FROM ugovor ORDER BY id";
-            myConnection = GetConnection();
-            myConnection.Open();
-            command = new OleDbCommand(query, myConnection);
+            connection = GetConnection();
+            connection.Open();
+            command = new OleDbCommand(query, connection);
             dt = new DataTable();
             bs = new BindingSource();
             dt.Load(command.ExecuteReader());

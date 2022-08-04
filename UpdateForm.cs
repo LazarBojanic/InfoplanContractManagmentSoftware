@@ -31,10 +31,10 @@ namespace CSharp_SQL_App {
         }
 
         public void loadOpstinaComboBox() {
-            OleDbConnection myConnection = GetConnection();
-            myConnection.Open();
+            OleDbConnection connection = GetConnection();
+            connection.Open();
             string query = "SELECT opstina FROM opstina";
-            OleDbCommand command = new OleDbCommand(query, myConnection);
+            OleDbCommand command = new OleDbCommand(query, connection);
             DataTable table = new DataTable ("opstina");
             table.Load(command.ExecuteReader());
 

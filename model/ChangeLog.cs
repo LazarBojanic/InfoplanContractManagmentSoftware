@@ -12,27 +12,27 @@ namespace CSharp_SQL_App.model {
         public static void addChangeLogField(String imeTabele, String imePolja, String tipAkcije,
             String primarniKljuc, String staraVrednost, String novaVrednost) {
 
-            OleDbConnection myConnection = GetConnection();
-            myConnection.Open();
+            OleDbConnection connection = GetConnection();
+            connection.Open();
             DateTime vremeAkcije = DateTime.Now;
-            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            string username = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
             string query = "INSERT INTO changeLog (imeTabele, imePolja, tipAkcije," +
-                " vremeAkcije, userName, primarniKljuc, staraVrednost, novaVrednost) VALUES" +
-                " (@imeTabele, @imePolja, @tipAkcije, @vremeAkcije, @userName," +
+                " vremeAkcije, username, primarniKljuc, staraVrednost, novaVrednost) VALUES" +
+                " (@imeTabele, @imePolja, @tipAkcije, @vremeAkcije, @username," +
                 " @primarniKljuc, @staraVrednost, @novaVrednost)";
-            OleDbCommand command = new OleDbCommand(query, myConnection);
+            OleDbCommand command = new OleDbCommand(query, connection);
             command.Parameters.AddWithValue("@imeTabele", imeTabele);
             command.Parameters.AddWithValue("@imePolja", imePolja);
             command.Parameters.AddWithValue("@tipAkcije", tipAkcije);
             command.Parameters.Add("@vremeAkcije", OleDbType.DBTimeStamp).Value = vremeAkcijeWithoutMilliseconds(vremeAkcije);
-            command.Parameters.AddWithValue("@userName", userName);
+            command.Parameters.AddWithValue("@username", username);
             command.Parameters.AddWithValue("@primarniKljuc", primarniKljuc);
             command.Parameters.AddWithValue("@staraVrednost", staraVrednost);
             command.Parameters.AddWithValue("@novaVrednost", novaVrednost);
-            //MessageBox.Show(imeTabele + " " + imePolja + " " + tipAkcije + " " + vremeAkcije.ToString() + " " + userName + " " + primarniKljuc + " " + staraVrednost + " " + novaVrednost);
+            //MessageBox.Show(imeTabele + " " + imePolja + " " + tipAkcije + " " + vremeAkcije.ToString() + " " + username + " " + primarniKljuc + " " + staraVrednost + " " + novaVrednost);
             command.ExecuteNonQuery();
-            myConnection.Close();
+            connection.Close();
         }
 
         public static void addChangeLogForUgovor(Ugovor oldUgovor, Ugovor newUgovor) {

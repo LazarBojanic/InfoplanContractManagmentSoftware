@@ -21,18 +21,18 @@ namespace CSharp_SQL_App {
         public void fillOpstineDataGrid() {
             DataTable dt;
             BindingSource bs;
-            OleDbConnection myConnection;
+            OleDbConnection connection;
             OleDbCommand command;
-            myConnection = GetConnection();
-            myConnection.Open();
+            connection = GetConnection();
+            connection.Open();
             String query = "SELECT * FROM opstina ORDER BY opstina";
-            command = new OleDbCommand(query, myConnection);
+            command = new OleDbCommand(query, connection);
             dt = new DataTable();
             bs = new BindingSource();
             dt.Load(command.ExecuteReader());
             bs.DataSource = dt;
             dataGridView1.DataSource = bs;
-            myConnection.Close();
+            connection.Close();
         }
 
         private OleDbConnection GetConnection() {
@@ -47,19 +47,19 @@ namespace CSharp_SQL_App {
         public void addOpstina() {
             DataTable dt;
             BindingSource bs;
-            OleDbConnection myConnection;
+            OleDbConnection connection;
             OleDbCommand command;
-            myConnection = GetConnection();
-            myConnection.Open();
+            connection = GetConnection();
+            connection.Open();
             String query = "INSERT INTO opstina (opstina) VALUES (@data)";
-            command = new OleDbCommand(query, myConnection);
+            command = new OleDbCommand(query, connection);
             command.Parameters.AddWithValue("@data", textBoxOpstina.Text);
             dt = new DataTable();
             bs = new BindingSource();
             dt.Load(command.ExecuteReader());
             bs.DataSource = dt;
             dataGridView1.DataSource = bs;
-            myConnection.Close();
+            connection.Close();
         }
     }
 }

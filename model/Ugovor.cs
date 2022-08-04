@@ -53,10 +53,10 @@ namespace CSharp_SQL_App.model {
             this.uGuid = Guid.NewGuid().ToString();
         }
         public bool loadFromDatabase(int parId) {
-            OleDbConnection myConnection = GetConnection();
-            myConnection.Open();
+            OleDbConnection connection = GetConnection();
+            connection.Open();
             string query = "SELECT * FROM ugovor WHERE id = @id";
-            OleDbCommand command = new OleDbCommand(query, myConnection);
+            OleDbCommand command = new OleDbCommand(query, connection);
             command.Parameters.AddWithValue("@id", parId);
             OleDbDataReader dataReader = command.ExecuteReader();
             if (dataReader.HasRows) {
@@ -157,24 +157,24 @@ namespace CSharp_SQL_App.model {
                         uGuid = "";
                     }
                 }
-                myConnection.Close();
+                connection.Close();
                 return true;
             }
             else {
                 MessageBox.Show("Ne postoji id", "Greska", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                myConnection.Close();
+                connection.Close();
                 return false;
             }
         }
 
         public void saveToDatabase() {
-            OleDbConnection myConnection = GetConnection();
-            myConnection.Open();
+            OleDbConnection connection = GetConnection();
+            connection.Open();
             if (id == 0) {
                 string query = "INSERT INTO ugovor (opstina, nazivPlana, urbanista, faza, napomena, datumUgovora," +
                     " rokPoUgovoru, obim, krajnjiRok, prioritet, uGuid) VALUES (@opstina, @nazivPlana, @urbanista, @faza, @napomena," +
                     " @datumUgovora, @rokPoUgovoru, @obim, @krajnjiRok, @prioritet, @uGuid)";
-                OleDbCommand command = new OleDbCommand(query, myConnection);
+                OleDbCommand command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@opstina", opstina);
                 command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
                 command.Parameters.AddWithValue("@urbanista", urbanista);
@@ -193,7 +193,7 @@ namespace CSharp_SQL_App.model {
                 string query = "UPDATE ugovor SET opstina = @opstina, nazivPlana = @nazivPlana, urbanista = @urbanista," +
                     " faza = @faza, napomena = @napomena, datumUgovora = @datumUgovora, rokPoUgovoru = @rokPoUgovoru, obim = @obim," +
                     " krajnjiRok = @krajnjiRok, prioritet = @prioritet WHERE id = @id";
-                OleDbCommand command = new OleDbCommand(query, myConnection);
+                OleDbCommand command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@opstina", opstina);
                 command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
                 command.Parameters.AddWithValue("@urbanista", urbanista);
@@ -209,7 +209,7 @@ namespace CSharp_SQL_App.model {
                 int recordsAffected = command.ExecuteNonQuery();
                 //MessageBox.Show("updated " + recordsAffected.ToString());
             }
-            myConnection.Close();
+            connection.Close();
         }
         private static OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);

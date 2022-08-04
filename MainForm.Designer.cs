@@ -25,6 +25,10 @@
         private void InitializeComponent() {
             this.buttonPrikazOpstina = new System.Windows.Forms.Button();
             this.buttonPrikazUgovora = new System.Windows.Forms.Button();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.labelPrivilegija = new System.Windows.Forms.Label();
+            this.buttonLogout = new System.Windows.Forms.Button();
+            this.buttonKorisnici = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonPrikazOpstina
@@ -50,12 +54,55 @@
             this.buttonPrikazUgovora.UseVisualStyleBackColor = true;
             this.buttonPrikazUgovora.Click += new System.EventHandler(this.buttonPrikazUgovora_Click);
             // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Location = new System.Drawing.Point(12, 399);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(0, 16);
+            this.labelUsername.TabIndex = 3;
+            // 
+            // labelPrivilegija
+            // 
+            this.labelPrivilegija.AutoSize = true;
+            this.labelPrivilegija.Location = new System.Drawing.Point(12, 423);
+            this.labelPrivilegija.Name = "labelPrivilegija";
+            this.labelPrivilegija.Size = new System.Drawing.Size(0, 16);
+            this.labelPrivilegija.TabIndex = 4;
+            // 
+            // buttonLogout
+            // 
+            this.buttonLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLogout.Location = new System.Drawing.Point(703, 386);
+            this.buttonLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(85, 54);
+            this.buttonLogout.TabIndex = 5;
+            this.buttonLogout.Text = "Logout";
+            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
+            // 
+            // buttonKorisnici
+            // 
+            this.buttonKorisnici.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonKorisnici.Location = new System.Drawing.Point(612, 386);
+            this.buttonKorisnici.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonKorisnici.Name = "buttonKorisnici";
+            this.buttonKorisnici.Size = new System.Drawing.Size(85, 54);
+            this.buttonKorisnici.TabIndex = 6;
+            this.buttonKorisnici.Text = "Korisnici";
+            this.buttonKorisnici.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonKorisnici);
+            this.Controls.Add(this.buttonLogout);
+            this.Controls.Add(this.labelPrivilegija);
+            this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.buttonPrikazUgovora);
             this.Controls.Add(this.buttonPrikazOpstina);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -63,6 +110,7 @@
             this.Text = "Glavni meni";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -70,5 +118,9 @@
 
         private System.Windows.Forms.Button buttonPrikazOpstina;
         private System.Windows.Forms.Button buttonPrikazUgovora;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Label labelPrivilegija;
+        private System.Windows.Forms.Button buttonLogout;
+        private System.Windows.Forms.Button buttonKorisnici;
     }
 }

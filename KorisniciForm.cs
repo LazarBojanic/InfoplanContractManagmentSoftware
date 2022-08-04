@@ -1,5 +1,4 @@
-﻿using CSharp_SQL_App.model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,28 +10,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
-    public partial class IstorijaPromenaForm : Form {
-        private String uGuid { get;set;}
-        
-        public IstorijaPromenaForm(String uGuid) {
+    public partial class KorisniciForm : Form {
+        public KorisniciForm() {
             InitializeComponent();
-            this.uGuid = uGuid;
-            fillChangeLogGrid();
-        }
-        private void IstorijaPromenaForm_Load(object sender, EventArgs e) {
-            
+            fillKorisniciDataGrid();
         }
 
-        public void fillChangeLogGrid() {
+        private void KorisniciForm_Load(object sender, EventArgs e) {
+
+        }
+
+        public void fillKorisniciDataGrid() {
             DataTable dt;
             BindingSource bs;
             OleDbConnection connection;
             OleDbCommand command;
             connection = GetConnection();
             connection.Open();
-            String query = "SELECT * FROM changeLog WHERE primarniKljuc = @uGuid";
+            String query = "SELECT username, privilegija FROM korisnik ORDER BY username";
             command = new OleDbCommand(query, connection);
-            command.Parameters.AddWithValue("@uGuid", uGuid);
             dt = new DataTable();
             bs = new BindingSource();
             dt.Load(command.ExecuteReader());
@@ -40,16 +36,9 @@ namespace CSharp_SQL_App {
             dataGridView1.DataSource = bs;
             connection.Close();
         }
+
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
-        }
-
-        private void IstorijaPromenaForm_ResizeBegin(object sender, EventArgs e) {
-            this.SuspendLayout();            
-        }
-
-        private void IstorijaPromenaForm_ResizeEnd(object sender, EventArgs e) {
-            this.ResumeLayout(true);
         }
     }
 }
