@@ -58,7 +58,6 @@ namespace CSharp_SQL_App {
             bs.DataSource = dt;
             dataGridView1.DataSource = bs;
         }
-        
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
@@ -67,11 +66,9 @@ namespace CSharp_SQL_App {
             IstorijaPromenaForm i = new IstorijaPromenaForm(uGuid);
             i.ShowDialog();
         }
-
         private void UgovoriForm_ResizeBegin(object sender, EventArgs e) {
             this.SuspendLayout();           
         }
-
         private void UgovoriForm_ResizeEnd(object sender, EventArgs e) {
             this.ResumeLayout(true);
         }

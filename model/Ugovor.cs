@@ -166,7 +166,6 @@ namespace CSharp_SQL_App.model {
                 return false;
             }
         }
-
         public void saveToDatabase() {
             OleDbConnection connection = GetConnection();
             connection.Open();
@@ -187,7 +186,6 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@prioritet", prioritet);
                 command.Parameters.AddWithValue("@uGuid", uGuid);
                 int recordsAffected = command.ExecuteNonQuery();
-                //MessageBox.Show("inserted " + recordsAffected.ToString());
             }
             else {
                 string query = "UPDATE ugovor SET opstina = @opstina, nazivPlana = @nazivPlana, urbanista = @urbanista," +
@@ -207,7 +205,6 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@id", id);
                 command.Parameters.AddWithValue("@uGuid", uGuid);
                 int recordsAffected = command.ExecuteNonQuery();
-                //MessageBox.Show("updated " + recordsAffected.ToString());
             }
             connection.Close();
         }

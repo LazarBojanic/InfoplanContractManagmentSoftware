@@ -29,6 +29,7 @@
             this.labelPrivilegija = new System.Windows.Forms.Label();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonKorisnici = new System.Windows.Forms.Button();
+            this.buttonInformacije = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonPrikazOpstina
@@ -85,7 +86,7 @@
             // buttonKorisnici
             // 
             this.buttonKorisnici.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonKorisnici.Location = new System.Drawing.Point(612, 386);
+            this.buttonKorisnici.Location = new System.Drawing.Point(521, 386);
             this.buttonKorisnici.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonKorisnici.Name = "buttonKorisnici";
             this.buttonKorisnici.Size = new System.Drawing.Size(85, 54);
@@ -94,12 +95,25 @@
             this.buttonKorisnici.UseVisualStyleBackColor = true;
             this.buttonKorisnici.Click += new System.EventHandler(this.buttonKorisnici_Click);
             // 
+            // buttonInformacije
+            // 
+            this.buttonInformacije.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInformacije.Location = new System.Drawing.Point(612, 386);
+            this.buttonInformacije.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonInformacije.Name = "buttonInformacije";
+            this.buttonInformacije.Size = new System.Drawing.Size(85, 54);
+            this.buttonInformacije.TabIndex = 7;
+            this.buttonInformacije.Text = "Informacije";
+            this.buttonInformacije.UseVisualStyleBackColor = true;
+            this.buttonInformacije.Click += new System.EventHandler(this.buttonInformacije_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonInformacije);
             this.Controls.Add(this.buttonKorisnici);
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.labelPrivilegija);
@@ -123,5 +137,6 @@
         private System.Windows.Forms.Label labelPrivilegija;
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Button buttonKorisnici;
+        private System.Windows.Forms.Button buttonInformacije;
     }
 }

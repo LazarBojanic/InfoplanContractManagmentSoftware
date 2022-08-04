@@ -21,11 +21,9 @@ namespace CSharp_SQL_App {
             textBoxPassword.Text = KorisniciForm.user.password;
             comboBoxPrivilegija.Text = KorisniciForm.user.privilegija;
         }
-
         private void KorisniciUpdateForm_Load(object sender, EventArgs e) {
 
         }
-
         public void loadPrivilegijaComboBox() {
             OleDbConnection connection = GetConnection();
             connection.Open();
@@ -35,11 +33,8 @@ namespace CSharp_SQL_App {
             table.Load(command.ExecuteReader());
             foreach (DataRow row in table.Rows) {
                 comboBoxPrivilegija.Items.Add(row["privilegija"].ToString());
-                //MessageBox.Show(row["opstina"].ToString());
             }
         }
-
-
         private void buttonSacuvaj_Click(object sender, EventArgs e) {
             int id = Int32.Parse(textBoxId.Text);
             string username = textBoxUsername.Text;
@@ -64,7 +59,6 @@ namespace CSharp_SQL_App {
                 command.Parameters.AddWithValue("@password", user.password);
                 command.Parameters.AddWithValue("@privilegija", user.privilegija);
                 int recordsAffected = command.ExecuteNonQuery();
-                //MessageBox.Show("inserted " + recordsAffected.ToString());
             }
             else {
                 string query = "UPDATE korisnik SET username = @username, [password] = @password," +
@@ -74,8 +68,7 @@ namespace CSharp_SQL_App {
                 command.Parameters.AddWithValue("@password", user.password);
                 command.Parameters.AddWithValue("@privilegija", user.privilegija);
                 command.Parameters.AddWithValue("@id", user.id);
-                int recordsAffected = command.ExecuteNonQuery();
-                //MessageBox.Show("updated " + recordsAffected.ToString());
+                command.ExecuteNonQuery();
             }
             connection.Close();
         }

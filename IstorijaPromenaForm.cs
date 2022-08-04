@@ -13,7 +13,6 @@ using System.Windows.Forms;
 namespace CSharp_SQL_App {
     public partial class IstorijaPromenaForm : Form {
         private String uGuid { get;set;}
-        
         public IstorijaPromenaForm(String uGuid) {
             InitializeComponent();
             this.uGuid = uGuid;

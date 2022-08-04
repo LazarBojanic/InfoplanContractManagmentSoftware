@@ -80,6 +80,8 @@
             this.Name = "KorisniciForm";
             this.Text = "KorisniciForm";
             this.Load += new System.EventHandler(this.KorisniciForm_Load);
+            this.ResizeBegin += new System.EventHandler(this.KorisniciForm_ResizeBegin);
+            this.ResizeEnd += new System.EventHandler(this.KorisniciForm_ResizeEnd);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

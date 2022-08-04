@@ -46,11 +46,9 @@ namespace CSharp_SQL_App {
                 labelGreska.Text = "";
             }
         }
-
         private void LoginForm_Load(object sender, EventArgs e) {
             
         }
-
         public int login() {
             OleDbConnection connection;
             OleDbCommand command;
@@ -78,7 +76,6 @@ namespace CSharp_SQL_App {
             connection.Close();
             return privilegija;
         }
-
         public int getId() {
             OleDbConnection connection;
             OleDbCommand command;

@@ -17,7 +17,6 @@ namespace CSharp_SQL_App {
         }
         private void OpstineForm_Load(object sender, EventArgs e) {
         }
-
         public void fillOpstineDataGrid() {
             DataTable dt;
             BindingSource bs;
@@ -34,16 +33,13 @@ namespace CSharp_SQL_App {
             dataGridView1.DataSource = bs;
             connection.Close();
         }
-
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
-
         private void buttonDodaj_Click(object sender, EventArgs e) {
             addOpstina();
             fillOpstineDataGrid();
         }
-
         public void addOpstina() {
             DataTable dt;
             BindingSource bs;

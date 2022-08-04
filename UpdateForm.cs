@@ -40,15 +40,12 @@ namespace CSharp_SQL_App {
 
             foreach (DataRow row in table.Rows) {
                 comboBoxOpstina.Items.Add(row["opstina"].ToString());
-                //MessageBox.Show(row["opstina"].ToString());
             }
             
         }
-
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
-
         private void UpdateForm_Load(object sender, EventArgs e) {
             loadOpstinaComboBox();
             textBoxId.Text = oldUgovor.id.ToString();
@@ -65,7 +62,6 @@ namespace CSharp_SQL_App {
             dateTimeKrajnjiRok.Value = oldUgovor.krajnjiRok;
             textBoxPrioritet.Text = oldUgovor.prioritet.ToString();
         }
-
         private void buttonSacuvaj_Click(object sender, EventArgs e) {         
             try {
                 newUgovor.id = oldUgovor.id;
@@ -88,27 +84,21 @@ namespace CSharp_SQL_App {
                 MessageBox.Show("Nekorektan format podataka.");                
             }
         }
-
         private void buttonOtkazi_Click(object sender, EventArgs e) {
             this.Close();
         }
-
         private void textBoxObim_TextChanged(object sender, EventArgs e) {
 
         }
-
         private void textBoxRokPoUgovoru_KeyPress(object sender, KeyPressEventArgs e) {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
                     (e.KeyChar != '.')) {
                 e.Handled = true;
             }
-
-            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
                 e.Handled = true;
             }
         }
-
         private void textBoxRokPoUgovoru_TextChanged(object sender, EventArgs e) {
             dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value;
             if (!textBoxRokPoUgovoru.Text.Equals("")) {
@@ -129,7 +119,6 @@ namespace CSharp_SQL_App {
                 }
             }
         }
-
         private void comboBoxRokPoUgovoru_SelectedValueChanged(object sender, EventArgs e) {
             dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value;
             if (!textBoxRokPoUgovoru.Text.Equals("")) {

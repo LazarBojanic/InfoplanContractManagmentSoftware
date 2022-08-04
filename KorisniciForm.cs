@@ -17,11 +17,9 @@ namespace CSharp_SQL_App {
             InitializeComponent();
             fillKorisniciDataGrid();
         }
-
         private void KorisniciForm_Load(object sender, EventArgs e) {
 
         }
-
         public void fillKorisniciDataGrid() {
             DataTable dt;
             BindingSource bs;
@@ -38,7 +36,6 @@ namespace CSharp_SQL_App {
             dataGridView1.DataSource = bs;
             connection.Close();
         }
-
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
@@ -54,7 +51,6 @@ namespace CSharp_SQL_App {
                 fillKorisniciDataGrid();
             }
         }
-
         private void buttonIzmeni_Click(object sender, EventArgs e) {
             int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
             string username = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
@@ -65,6 +61,12 @@ namespace CSharp_SQL_App {
             if (korisniciUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
                 fillKorisniciDataGrid();
             }
+        }
+        private void KorisniciForm_ResizeBegin(object sender, EventArgs e) {
+            this.SuspendLayout();
+        }
+        private void KorisniciForm_ResizeEnd(object sender, EventArgs e) {
+            this.ResumeLayout(true);
         }
     }
 }

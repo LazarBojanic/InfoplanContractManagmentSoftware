@@ -44,5 +44,10 @@ namespace CSharp_SQL_App {
             KorisniciForm korisniciForm = new KorisniciForm();
             korisniciForm.ShowDialog();
         }
+
+        private void buttonInformacije_Click(object sender, EventArgs e) {
+            InfoForm infoForm= new InfoForm();
+            infoForm.ShowDialog();
+        }
     }
 }

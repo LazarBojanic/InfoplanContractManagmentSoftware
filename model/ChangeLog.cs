@@ -8,15 +8,12 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App.model {
     public class ChangeLog {
-
         public static void addChangeLogField(String imeTabele, String imePolja, String tipAkcije,
             String primarniKljuc, String staraVrednost, String novaVrednost) {
-
             OleDbConnection connection = GetConnection();
             connection.Open();
             DateTime vremeAkcije = DateTime.Now;
             string username = MainForm.user.username;
-
             string query = "INSERT INTO changeLog (imeTabele, imePolja, tipAkcije," +
                 " vremeAkcije, username, primarniKljuc, staraVrednost, novaVrednost) VALUES" +
                 " (@imeTabele, @imePolja, @tipAkcije, @vremeAkcije, @username," +
@@ -30,13 +27,10 @@ namespace CSharp_SQL_App.model {
             command.Parameters.AddWithValue("@primarniKljuc", primarniKljuc);
             command.Parameters.AddWithValue("@staraVrednost", staraVrednost);
             command.Parameters.AddWithValue("@novaVrednost", novaVrednost);
-            //MessageBox.Show(imeTabele + " " + imePolja + " " + tipAkcije + " " + vremeAkcije.ToString() + " " + username + " " + primarniKljuc + " " + staraVrednost + " " + novaVrednost);
             command.ExecuteNonQuery();
             connection.Close();
         }
-
         public static void addChangeLogForUgovor(Ugovor oldUgovor, Ugovor newUgovor) {
-            //MessageBox.Show("old id " + oldUgovor.id.ToString() + " new id " + newUgovor.id.ToString());
             if(oldUgovor.id == 0) {
                 if (!oldUgovor.opstina.Equals(newUgovor.opstina)) {
                     addChangeLogField("ugovor", "opstina", "kreairanje", oldUgovor.uGuid, oldUgovor.opstina, newUgovor.opstina);
@@ -102,7 +96,6 @@ namespace CSharp_SQL_App.model {
                 }
             }
         }
-
         private static OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
