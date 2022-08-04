@@ -53,7 +53,7 @@ namespace CSharp_SQL_App {
             OleDbCommand command;
             connection = GetConnection();
             connection.Open();
-            String query = "SELECT COUNT(*) FROM korisnik WHERE username = @username AND password = @password";
+            String query = "SELECT COUNT(*) FROM korisnik WHERE username = @username AND [password] = @password";
             command = new OleDbCommand(query, connection);
             command.Parameters.AddWithValue("@username", username);
             command.Parameters.AddWithValue("@password", password);
@@ -66,7 +66,7 @@ namespace CSharp_SQL_App {
             OleDbCommand command;
             connection = GetConnection();
             connection.Open();
-            String query = "SELECT privilegija FROM korisnik WHERE username = @username AND password = @password";
+            String query = "SELECT privilegija FROM korisnik WHERE username = @username AND [password] = @password";
             command = new OleDbCommand(query, connection);
             command.Parameters.AddWithValue("@username", username);
             command.Parameters.AddWithValue("@password", password);
@@ -79,7 +79,7 @@ namespace CSharp_SQL_App {
             OleDbCommand command;
             connection = GetConnection();
             connection.Open();
-            String query = "SELECT id FROM korisnik WHERE username = @username AND password = @password";
+            String query = "SELECT id FROM korisnik WHERE username = @username AND [password] = @password";
             command = new OleDbCommand(query, connection);
             command.Parameters.AddWithValue("@username", username);
             command.Parameters.AddWithValue("@password", password);

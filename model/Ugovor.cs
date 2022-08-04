@@ -21,10 +21,11 @@ namespace CSharp_SQL_App.model {
         public DateTime krajnjiRok { get; set; }
         public int prioritet { get; set; }
         public String uGuid { get; set; }
+        public DateTime vremeUgovora { get; set; }
 
         public Ugovor(int id, string opstina, string nazivPlana, string urbanista, string faza,
             string napomena, DateTime datumUgovora, string rokPoUgovoru, int obim,
-            DateTime krajnjiRok, int prioritet, String uGuid) {
+            DateTime krajnjiRok, int prioritet, String uGuid, DateTime vremeUgovora) {
             this.id = id;
             this.opstina = opstina;
             this.nazivPlana = nazivPlana;
@@ -37,6 +38,7 @@ namespace CSharp_SQL_App.model {
             this.krajnjiRok = krajnjiRok;
             this.prioritet = prioritet;
             this.uGuid = uGuid;
+            this.vremeUgovora = vremeUgovora;
         }
         public Ugovor() {
             this.id = 0;
@@ -51,6 +53,7 @@ namespace CSharp_SQL_App.model {
             this.krajnjiRok = DateTime.Today;
             this.prioritet = 0;
             this.uGuid = Guid.NewGuid().ToString();
+            this.vremeUgovora = DateTime.Today;
         }
         public bool loadFromDatabase(int parId) {
             OleDbConnection connection = GetConnection();
@@ -172,7 +175,7 @@ namespace CSharp_SQL_App.model {
             if (id == 0) {
                 string query = "INSERT INTO ugovor (opstina, nazivPlana, urbanista, faza, napomena, datumUgovora," +
                     " rokPoUgovoru, obim, krajnjiRok, prioritet, uGuid) VALUES (@opstina, @nazivPlana, @urbanista, @faza, @napomena," +
-                    " @datumUgovora, @rokPoUgovoru, @obim, @krajnjiRok, @prioritet, @uGuid)";
+                    " @datumUgovora, @rokPoUgovoru, @obim, @krajnjiRok, @prioritet, vremeUgovora = @vremeUgovora, @uGuid)";
                 OleDbCommand command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@opstina", opstina);
                 command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
@@ -184,13 +187,14 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@obim", obim);
                 command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);
                 command.Parameters.AddWithValue("@prioritet", prioritet);
+                command.Parameters.AddWithValue("@vremeUgovora", vremeUgovora);
                 command.Parameters.AddWithValue("@uGuid", uGuid);
                 int recordsAffected = command.ExecuteNonQuery();
             }
             else {
                 string query = "UPDATE ugovor SET opstina = @opstina, nazivPlana = @nazivPlana, urbanista = @urbanista," +
                     " faza = @faza, napomena = @napomena, datumUgovora = @datumUgovora, rokPoUgovoru = @rokPoUgovoru, obim = @obim," +
-                    " krajnjiRok = @krajnjiRok, prioritet = @prioritet WHERE id = @id";
+                    " krajnjiRok = @krajnjiRok, prioritet = @prioritet, vremeUgovora = @vremeUgovora WHERE id = @id";
                 OleDbCommand command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@opstina", opstina);
                 command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
@@ -202,8 +206,8 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@obim", obim);
                 command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);
                 command.Parameters.AddWithValue("@prioritet", prioritet);
+                command.Parameters.AddWithValue("@vremeUgovora", vremeUgovora);
                 command.Parameters.AddWithValue("@id", id);
-                command.Parameters.AddWithValue("@uGuid", uGuid);
                 command.ExecuteNonQuery();
             }
             connection.Close();

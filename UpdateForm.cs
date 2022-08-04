@@ -18,7 +18,6 @@ namespace CSharp_SQL_App {
         //private ugovoriDataSet ugovoriDataSet;
         public UpdateForm() {
             InitializeComponent();
-            
         }
 
         public void loadUgovor(int id) {
@@ -37,7 +36,6 @@ namespace CSharp_SQL_App {
             OleDbCommand command = new OleDbCommand(query, connection);
             DataTable table = new DataTable ("opstina");
             table.Load(command.ExecuteReader());
-
             foreach (DataRow row in table.Rows) {
                 comboBoxOpstina.Items.Add(row["opstina"].ToString());
             }
@@ -75,6 +73,7 @@ namespace CSharp_SQL_App {
                 newUgovor.obim = Int32.Parse(textBoxObim.Text);
                 newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
                 newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
+                newUgovor.vremeUgovora = DateTime.Today;
                 newUgovor.uGuid = oldUgovor.uGuid;
                 newUgovor.saveToDatabase();
                 ChangeLog.addChangeLogForUgovor(oldUgovor, newUgovor);
@@ -102,19 +101,16 @@ namespace CSharp_SQL_App {
         private void textBoxRokPoUgovoru_TextChanged(object sender, EventArgs e) {
             dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value;
             if (!textBoxRokPoUgovoru.Text.Equals("")) {
-                if (comboBoxRokPoUgovoru.Text.Equals("Sat")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddHours(Int32.Parse(textBoxRokPoUgovoru.Text));
-                }
-                if (comboBoxRokPoUgovoru.Text.Equals("Dan")) {
+                if (comboBoxRokPoUgovoru.Text.Equals("Dani")) {
                     dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text));
                 }
-                if (comboBoxRokPoUgovoru.Text.Equals("Nedelja")) {
+                if (comboBoxRokPoUgovoru.Text.Equals("Nedelje")) {
                     dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text) * 7);
                 }
-                if (comboBoxRokPoUgovoru.Text.Equals("Mesec")) {
+                if (comboBoxRokPoUgovoru.Text.Equals("Meseci")) {
                     dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddMonths(Int32.Parse(textBoxRokPoUgovoru.Text));
                 }
-                if(comboBoxRokPoUgovoru.Text.Equals("Godina")) {
+                if(comboBoxRokPoUgovoru.Text.Equals("Godine")) {
                     dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(Int32.Parse(textBoxRokPoUgovoru.Text));
                 }
             }
@@ -122,19 +118,16 @@ namespace CSharp_SQL_App {
         private void comboBoxRokPoUgovoru_SelectedValueChanged(object sender, EventArgs e) {
             dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value;
             if (!textBoxRokPoUgovoru.Text.Equals("")) {
-                if (comboBoxRokPoUgovoru.Text.Equals("Sat")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddHours(Int32.Parse(textBoxRokPoUgovoru.Text));
-                }
-                if (comboBoxRokPoUgovoru.Text.Equals("Dan")) {
+                if (comboBoxRokPoUgovoru.Text.Equals("Dani")) {
                     dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text));
                 }
-                if (comboBoxRokPoUgovoru.Text.Equals("Nedelja")) {
+                if (comboBoxRokPoUgovoru.Text.Equals("Nedelje")) {
                     dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text) * 7);
                 }
-                if (comboBoxRokPoUgovoru.Text.Equals("Mesec")) {
+                if (comboBoxRokPoUgovoru.Text.Equals("Meseci")) {
                     dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddMonths(Int32.Parse(textBoxRokPoUgovoru.Text));
                 }
-                if (comboBoxRokPoUgovoru.Text.Equals("Godina")) {
+                if (comboBoxRokPoUgovoru.Text.Equals("Godine")) {
                     dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(Int32.Parse(textBoxRokPoUgovoru.Text));
                 }
             }

@@ -318,11 +318,10 @@
             // 
             this.comboBoxRokPoUgovoru.FormattingEnabled = true;
             this.comboBoxRokPoUgovoru.Items.AddRange(new object[] {
-            "Sat",
-            "Dan",
-            "Nedelja",
-            "Mesec",
-            "Godina"});
+            "Dani",
+            "Nedelje",
+            "Meseci",
+            "Godine"});
             this.comboBoxRokPoUgovoru.Location = new System.Drawing.Point(788, 127);
             this.comboBoxRokPoUgovoru.Name = "comboBoxRokPoUgovoru";
             this.comboBoxRokPoUgovoru.Size = new System.Drawing.Size(115, 24);
