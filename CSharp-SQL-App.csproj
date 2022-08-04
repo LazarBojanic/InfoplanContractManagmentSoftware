@@ -108,6 +108,12 @@
     <Compile Include="KorisniciForm.Designer.cs">
       <DependentUpon>KorisniciForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="KorisniciUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KorisniciUpdateForm.Designer.cs">
+      <DependentUpon>KorisniciUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KorisniciForm.resx">
       <DependentUpon>KorisniciForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorisniciUpdateForm.resx">
+      <DependentUpon>KorisniciUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

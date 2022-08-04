@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class LoginForm : Form {
+        public static int id { get; set; }
         public static string username { get;set;}
         public static string password { get;set;}
         public static string privilegija { get;set;}
@@ -33,6 +34,7 @@ namespace CSharp_SQL_App {
             username = textBoxUsername.Text;
             password = textBoxPassword.Text;
             if (login() > 0) {
+                id = getId();
                 privilegija = getPrivilegija();
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
@@ -75,6 +77,20 @@ namespace CSharp_SQL_App {
             string privilegija = command.ExecuteScalar().ToString();
             connection.Close();
             return privilegija;
+        }
+
+        public int getId() {
+            OleDbConnection connection;
+            OleDbCommand command;
+            connection = GetConnection();
+            connection.Open();
+            String query = "SELECT id FROM korisnik WHERE username = @username AND password = @password";
+            command = new OleDbCommand(query, connection);
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@password", password);
+            int id = Int32.Parse(command.ExecuteScalar().ToString());
+            connection.Close();
+            return id;
         }
 
         private OleDbConnection GetConnection() {

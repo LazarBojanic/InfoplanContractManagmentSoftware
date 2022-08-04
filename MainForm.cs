@@ -14,7 +14,7 @@ namespace CSharp_SQL_App {
         public static User user { get;set;}
         public MainForm() {
             InitializeComponent();
-            user = new User(LoginForm.username, LoginForm.password, LoginForm.privilegija);
+            user = new User(LoginForm.id, LoginForm.username, LoginForm.password, LoginForm.privilegija);
             labelUsername.Text = user.username;
             labelPrivilegija.Text = user.privilegija;
             if(!user.privilegija.Equals("administrator")) {
