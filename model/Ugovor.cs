@@ -204,7 +204,7 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@prioritet", prioritet);
                 command.Parameters.AddWithValue("@id", id);
                 command.Parameters.AddWithValue("@uGuid", uGuid);
-                int recordsAffected = command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
             connection.Close();
         }

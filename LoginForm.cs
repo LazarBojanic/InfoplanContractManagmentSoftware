@@ -20,16 +20,15 @@ namespace CSharp_SQL_App {
 
         public LoginForm() {
             InitializeComponent();
+            textBoxPassword.PasswordChar = '●';
             this.AcceptButton = buttonLogin;
         }
-
         public static LoginForm getInstance() {
             if (instance == null) {
                 instance = new LoginForm();
             }
             return instance;
         }
-
         private async void buttonLogin_Click(object sender, EventArgs e) {
             username = textBoxUsername.Text;
             password = textBoxPassword.Text;
@@ -62,7 +61,6 @@ namespace CSharp_SQL_App {
             connection.Close();
             return found;
         }
-
         public string getPrivilegija() {
             OleDbConnection connection;
             OleDbCommand command;
@@ -89,7 +87,6 @@ namespace CSharp_SQL_App {
             connection.Close();
             return id;
         }
-
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }

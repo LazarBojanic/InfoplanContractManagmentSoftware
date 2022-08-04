@@ -29,7 +29,7 @@
             this.labelPrivilegija = new System.Windows.Forms.Label();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonKorisnici = new System.Windows.Forms.Button();
-            this.buttonInformacije = new System.Windows.Forms.Button();
+            this.buttonInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonPrikazOpstina
@@ -95,17 +95,17 @@
             this.buttonKorisnici.UseVisualStyleBackColor = true;
             this.buttonKorisnici.Click += new System.EventHandler(this.buttonKorisnici_Click);
             // 
-            // buttonInformacije
+            // buttonInfo
             // 
-            this.buttonInformacije.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonInformacije.Location = new System.Drawing.Point(612, 386);
-            this.buttonInformacije.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonInformacije.Name = "buttonInformacije";
-            this.buttonInformacije.Size = new System.Drawing.Size(85, 54);
-            this.buttonInformacije.TabIndex = 7;
-            this.buttonInformacije.Text = "Informacije";
-            this.buttonInformacije.UseVisualStyleBackColor = true;
-            this.buttonInformacije.Click += new System.EventHandler(this.buttonInformacije_Click);
+            this.buttonInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInfo.Location = new System.Drawing.Point(612, 386);
+            this.buttonInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.Size = new System.Drawing.Size(85, 54);
+            this.buttonInfo.TabIndex = 7;
+            this.buttonInfo.Text = "Detalji";
+            this.buttonInfo.UseVisualStyleBackColor = true;
+            this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
             // 
             // MainForm
             // 
@@ -113,7 +113,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonInformacije);
+            this.Controls.Add(this.buttonInfo);
             this.Controls.Add(this.buttonKorisnici);
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.labelPrivilegija);
@@ -137,6 +137,6 @@
         private System.Windows.Forms.Label labelPrivilegija;
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Button buttonKorisnici;
-        private System.Windows.Forms.Button buttonInformacije;
+        private System.Windows.Forms.Button buttonInfo;
     }
 }

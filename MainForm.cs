@@ -24,7 +24,6 @@ namespace CSharp_SQL_App {
         private void MainForm_Load(object sender, EventArgs e) {
 
         }
-
         private void buttonPrikazOpstina_Click(object sender, EventArgs e) {
             OpstineForm o = new OpstineForm();
             o.Show();
@@ -34,19 +33,16 @@ namespace CSharp_SQL_App {
             UgovoriForm u = new UgovoriForm();
             u.ShowDialog();
         }
-
         private void buttonLogout_Click(object sender, EventArgs e) {
             LoginForm.getInstance().Show();
             this.Close();
         }
-
         private void buttonKorisnici_Click(object sender, EventArgs e) {
             KorisniciForm korisniciForm = new KorisniciForm();
             korisniciForm.ShowDialog();
         }
-
-        private void buttonInformacije_Click(object sender, EventArgs e) {
-            InfoForm infoForm= new InfoForm();
+        private void buttonInfo_Click(object sender, EventArgs e) {
+            InfoForm infoForm = new InfoForm();
             infoForm.ShowDialog();
         }
     }
