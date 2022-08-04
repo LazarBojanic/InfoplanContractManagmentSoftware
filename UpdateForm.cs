@@ -39,7 +39,6 @@ namespace CSharp_SQL_App {
             foreach (DataRow row in table.Rows) {
                 comboBoxOpstina.Items.Add(row["opstina"].ToString());
             }
-            
         }
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
