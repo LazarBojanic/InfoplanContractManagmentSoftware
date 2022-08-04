@@ -15,7 +15,7 @@ namespace CSharp_SQL_App.model {
             OleDbConnection connection = GetConnection();
             connection.Open();
             DateTime vremeAkcije = DateTime.Now;
-            string username = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            string username = MainForm.user.username;
 
             string query = "INSERT INTO changeLog (imeTabele, imePolja, tipAkcije," +
                 " vremeAkcije, username, primarniKljuc, staraVrednost, novaVrednost) VALUES" +

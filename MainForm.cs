@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class MainForm : Form {
-        private User user;
+        public static User user { get;set;}
         public MainForm() {
             InitializeComponent();
             user = new User(LoginForm.username, LoginForm.password, LoginForm.privilegija);
@@ -21,9 +21,6 @@ namespace CSharp_SQL_App {
                 buttonKorisnici.Enabled = false;
             }
         }
-
-        
-
         private void MainForm_Load(object sender, EventArgs e) {
 
         }
@@ -38,14 +35,14 @@ namespace CSharp_SQL_App {
             u.ShowDialog();
         }
 
-        private void buttonKorisnici_Click_1(object sender, EventArgs e) {
-            KorisniciForm korisniciForm = new KorisniciForm();
-            korisniciForm.ShowDialog();
-        }
-
         private void buttonLogout_Click(object sender, EventArgs e) {
             LoginForm.getInstance().Show();
             this.Close();
+        }
+
+        private void buttonKorisnici_Click(object sender, EventArgs e) {
+            KorisniciForm korisniciForm = new KorisniciForm();
+            korisniciForm.ShowDialog();
         }
     }
 }

@@ -92,6 +92,7 @@
             this.buttonKorisnici.TabIndex = 6;
             this.buttonKorisnici.Text = "Korisnici";
             this.buttonKorisnici.UseVisualStyleBackColor = true;
+            this.buttonKorisnici.Click += new System.EventHandler(this.buttonKorisnici_Click);
             // 
             // MainForm
             // 

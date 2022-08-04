@@ -29,7 +29,6 @@ namespace CSharp_SQL_App {
             return instance;
         }
 
-
         private async void buttonLogin_Click(object sender, EventArgs e) {
             username = textBoxUsername.Text;
             password = textBoxPassword.Text;
@@ -45,7 +44,6 @@ namespace CSharp_SQL_App {
                 labelGreska.Text = "";
             }
         }
-
 
         private void LoginForm_Load(object sender, EventArgs e) {
             
