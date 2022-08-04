@@ -32,7 +32,7 @@
             this.buttonPrikazOpstina.Location = new System.Drawing.Point(96, 62);
             this.buttonPrikazOpstina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrikazOpstina.Name = "buttonPrikazOpstina";
-            this.buttonPrikazOpstina.Size = new System.Drawing.Size(207, 84);
+            this.buttonPrikazOpstina.Size = new System.Drawing.Size(207, 77);
             this.buttonPrikazOpstina.TabIndex = 0;
             this.buttonPrikazOpstina.Text = "Prikaz Opština";
             this.buttonPrikazOpstina.UseVisualStyleBackColor = true;
@@ -44,7 +44,7 @@
             this.buttonPrikazUgovora.Location = new System.Drawing.Point(497, 62);
             this.buttonPrikazUgovora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrikazUgovora.Name = "buttonPrikazUgovora";
-            this.buttonPrikazUgovora.Size = new System.Drawing.Size(207, 84);
+            this.buttonPrikazUgovora.Size = new System.Drawing.Size(207, 77);
             this.buttonPrikazUgovora.TabIndex = 1;
             this.buttonPrikazUgovora.Text = "Prikaz Ugovora";
             this.buttonPrikazUgovora.UseVisualStyleBackColor = true;

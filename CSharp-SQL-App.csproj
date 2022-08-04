@@ -118,11 +118,6 @@
     </Compile>
     <Compile Include="main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ugovoriDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ugovoriDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="UgovoriForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,7 +154,6 @@
     <EmbeddedResource Include="UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="CSharp-SQL-App_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -169,17 +163,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ugovoriDataSet.xsc">
-      <DependentUpon>ugovoriDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ugovoriDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ugovoriDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ugovoriDataSet.xss">
-      <DependentUpon>ugovoriDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

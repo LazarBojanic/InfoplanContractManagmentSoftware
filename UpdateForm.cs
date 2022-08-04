@@ -60,6 +60,7 @@ namespace CSharp_SQL_App {
             textBoxNapomena.Text = oldUgovor.napomena;
             dateTimeDatumUgovora.Value = oldUgovor.datumUgovora;
             textBoxRokPoUgovoru.Text = oldUgovor.rokPoUgovoru;
+            comboBoxRokPoUgovoru.Text = "Mesec";
             textBoxObim.Text = oldUgovor.obim.ToString();
             dateTimeKrajnjiRok.Value = oldUgovor.krajnjiRok;
             textBoxPrioritet.Text = oldUgovor.prioritet.ToString();
@@ -90,6 +91,64 @@ namespace CSharp_SQL_App {
 
         private void buttonOtkazi_Click(object sender, EventArgs e) {
             this.Close();
+        }
+
+        private void textBoxObim_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void textBoxRokPoUgovoru_KeyPress(object sender, KeyPressEventArgs e) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                    (e.KeyChar != '.')) {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxRokPoUgovoru_TextChanged(object sender, EventArgs e) {
+            dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value;
+            if (!textBoxRokPoUgovoru.Text.Equals("")) {
+                if (comboBoxRokPoUgovoru.Text.Equals("Sat")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddHours(Int32.Parse(textBoxRokPoUgovoru.Text));
+                }
+                if (comboBoxRokPoUgovoru.Text.Equals("Dan")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text));
+                }
+                if (comboBoxRokPoUgovoru.Text.Equals("Nedelja")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text) * 7);
+                }
+                if (comboBoxRokPoUgovoru.Text.Equals("Mesec")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddMonths(Int32.Parse(textBoxRokPoUgovoru.Text));
+                }
+                if(comboBoxRokPoUgovoru.Text.Equals("Godina")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(Int32.Parse(textBoxRokPoUgovoru.Text));
+                }
+            }
+        }
+
+        private void comboBoxRokPoUgovoru_SelectedValueChanged(object sender, EventArgs e) {
+            dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value;
+            if (!textBoxRokPoUgovoru.Text.Equals("")) {
+                if (comboBoxRokPoUgovoru.Text.Equals("Sat")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddHours(Int32.Parse(textBoxRokPoUgovoru.Text));
+                }
+                if (comboBoxRokPoUgovoru.Text.Equals("Dan")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text));
+                }
+                if (comboBoxRokPoUgovoru.Text.Equals("Nedelja")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text) * 7);
+                }
+                if (comboBoxRokPoUgovoru.Text.Equals("Mesec")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddMonths(Int32.Parse(textBoxRokPoUgovoru.Text));
+                }
+                if (comboBoxRokPoUgovoru.Text.Equals("Godina")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(Int32.Parse(textBoxRokPoUgovoru.Text));
+                }
+            }
         }
     }
 }

@@ -25,13 +25,11 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.opstinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opstinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ugovoriDataSet = new CSharp_SQL_App.ugovoriDataSet();
-            this.opstinaTableAdapter = new CSharp_SQL_App.ugovoriDataSetTableAdapters.opstinaTableAdapter();
+            this.buttonDodaj = new System.Windows.Forms.Button();
+            this.textBoxOpstina = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -41,49 +39,48 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.opstinaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.opstinaBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(323, 672);
+            this.dataGridView1.Size = new System.Drawing.Size(453, 493);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // opstinaDataGridViewTextBoxColumn
-            // 
-            this.opstinaDataGridViewTextBoxColumn.DataPropertyName = "opstina";
-            this.opstinaDataGridViewTextBoxColumn.HeaderText = "opstina";
-            this.opstinaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.opstinaDataGridViewTextBoxColumn.Name = "opstinaDataGridViewTextBoxColumn";
-            this.opstinaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // opstinaBindingSource
             // 
             this.opstinaBindingSource.DataMember = "opstina";
-            this.opstinaBindingSource.DataSource = this.ugovoriDataSet;
             // 
-            // ugovoriDataSet
+            // buttonDodaj
             // 
-            this.ugovoriDataSet.DataSetName = "ugovoriDataSet";
-            this.ugovoriDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonDodaj.Location = new System.Drawing.Point(123, 563);
+            this.buttonDodaj.Name = "buttonDodaj";
+            this.buttonDodaj.Size = new System.Drawing.Size(234, 77);
+            this.buttonDodaj.TabIndex = 3;
+            this.buttonDodaj.Text = "Dodaj";
+            this.buttonDodaj.UseVisualStyleBackColor = true;
+            this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
             // 
-            // opstinaTableAdapter
+            // textBoxOpstina
             // 
-            this.opstinaTableAdapter.ClearBeforeFill = true;
+            this.textBoxOpstina.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.textBoxOpstina.Location = new System.Drawing.Point(90, 524);
+            this.textBoxOpstina.Name = "textBoxOpstina";
+            this.textBoxOpstina.Size = new System.Drawing.Size(301, 22);
+            this.textBoxOpstina.TabIndex = 4;
             // 
             // OpstineForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 698);
+            this.ClientSize = new System.Drawing.Size(478, 652);
+            this.Controls.Add(this.textBoxOpstina);
+            this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OpstineForm";
@@ -91,17 +88,17 @@
             this.Load += new System.EventHandler(this.OpstineForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private ugovoriDataSet ugovoriDataSet;
         private System.Windows.Forms.BindingSource opstinaBindingSource;
-        private ugovoriDataSetTableAdapters.opstinaTableAdapter opstinaTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn opstinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button buttonDodaj;
+        private System.Windows.Forms.TextBox textBoxOpstina;
     }
 }

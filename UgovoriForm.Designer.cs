@@ -30,12 +30,9 @@
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonIstorijaPromena = new System.Windows.Forms.Button();
             this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ugovoriDataSet = new CSharp_SQL_App.ugovoriDataSet();
             this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ugovorTableAdapter = new CSharp_SQL_App.ugovoriDataSetTableAdapters.ugovorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,21 +112,6 @@
             // ugovorBindingSource
             // 
             this.ugovorBindingSource.DataMember = "ugovor";
-            this.ugovorBindingSource.DataSource = this.ugovoriDataSet;
-            // 
-            // ugovoriDataSet
-            // 
-            this.ugovoriDataSet.DataSetName = "ugovoriDataSet";
-            this.ugovoriDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ugovoriDataSetBindingSource
-            // 
-            this.ugovoriDataSetBindingSource.DataSource = this.ugovoriDataSet;
-            this.ugovoriDataSetBindingSource.Position = 0;
-            // 
-            // ugovorTableAdapter
-            // 
-            this.ugovorTableAdapter.ClearBeforeFill = true;
             // 
             // UgovoriForm
             // 
@@ -150,7 +132,6 @@
             this.ResizeEnd += new System.EventHandler(this.UgovoriForm_ResizeEnd);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,9 +144,7 @@
         private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.Button buttonIzmeni;
         private System.Windows.Forms.BindingSource ugovoriDataSetBindingSource;
-        private ugovoriDataSet ugovoriDataSet;
         private System.Windows.Forms.BindingSource ugovorBindingSource;
-        private ugovoriDataSetTableAdapters.ugovorTableAdapter ugovorTableAdapter;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonIstorijaPromena;
     }
