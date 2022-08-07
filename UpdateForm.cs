@@ -68,7 +68,7 @@ namespace CSharp_SQL_App {
                 newUgovor.obim = Int32.Parse(textBoxObim.Text);
                 newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
                 newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
-                newUgovor.vremeUgovora = DateTime.Today;
+                newUgovor.vremeUgovora = DateTime.Now;
                 newUgovor.uGuid = oldUgovor.uGuid;
                 newUgovor.saveToDatabase();
                 ChangeLog.addChangeLogForUgovor(oldUgovor, newUgovor);

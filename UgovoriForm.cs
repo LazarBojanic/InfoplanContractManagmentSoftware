@@ -73,5 +73,147 @@ namespace CSharp_SQL_App {
             this.ResumeLayout(true);
         }
 
+        private void buttonPretraga_Click(object sender, EventArgs e) {
+            IEnumerable<Control> controls = this.Controls.OfType<Control>();
+            BindingSource bs;
+            OleDbConnection connection;
+            OleDbCommand command;
+            DataTable dt;
+            connection = GetConnection();
+            String query = "SELECT * FROM ugovor WHERE id IS NOT NULL";
+            if (!string.IsNullOrEmpty(textBoxId.Text)) {
+                if (radioButtonIdLesser.Checked) {
+                    query += " AND id < @id";
+                }
+                if (radioButtonIdGreater.Checked) {
+                    query += " AND id > @id";
+                }
+                if (radioButtonIdEqual.Checked) {
+                    query += " AND id = @id";
+                }
+            }
+            if (!string.IsNullOrEmpty(textBoxOpstina.Text)) {
+                query += " AND UCASE(opstina) LIKE '%' + @opstina + '%'";
+            }
+            if (!string.IsNullOrEmpty(textBoxNazivPlana.Text)) {
+                query += " AND UCASE(nazivPlana) LIKE '%' + @nazivPlana + '%'";
+            }
+            if (!string.IsNullOrEmpty(textBoxUrbanista.Text)) {
+                query += " AND UCASE(urbanista) LIKE '%' + @urbanista + '%'";
+            }
+            if (!string.IsNullOrEmpty(textBoxTipUgovora.Text)) {
+                query += " AND UCASE(tipUgovora) LIKE '%' + @tipUgovora + '%'";
+            }
+            if (!string.IsNullOrEmpty(textBoxFaza.Text)) {
+                query += " AND UCASE(faza) LIKE '%' + @faza + '%'";
+            }
+            if (!string.IsNullOrEmpty(textBoxNapomena.Text)) {
+                query += " AND UCASE(napomena) LIKE '%' + @napomena + '%'";
+            }
+            if (!string.IsNullOrEmpty(dateTimeDatumUgovora.Text)) {
+                if (radioButtonDatumUgovoraLesser.Checked) {
+                    query += " AND datumUgovora < @datumUgovora";
+                }
+                if (radioButtonDatumUgovoraGreater.Checked) {
+                    query += " AND datumUgovora > @datumUgovora";
+                }
+                if (radioButtonDatumUgovoraEqual.Checked) {
+                    query += " AND datumUgovora = @datumUgovora";
+                }
+            }
+            if (!string.IsNullOrEmpty(textBoxRokPoUgovoru.Text)) {
+                query += " AND UCASE(rokPoUgovoru) LIKE '%' + @rokPoUgovoru + '%'";
+            }
+            if (!string.IsNullOrEmpty(textBoxObim.Text)) {
+                if (radioButtonObimLesser.Checked) {
+                    query += " AND obim < @obim";
+                }
+                if (radioButtonObimGreater.Checked) {
+                    query += " AND obim > @obim";
+                }
+                if (radioButtonObimEqual.Checked) {
+                    query += " AND obim = @obim";
+                }
+            }
+            if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text)) {
+                if (radioButtonKrajnjiRokLesser.Checked) {
+                    query += " AND krajnjiRok < @krajnjiRok";
+                }
+                if (radioButtonKrajnjiRokGreater.Checked) {
+                    query += " AND krajnjiRok > @krajnjiRok";
+                }
+                if (radioButtonKrajnjiRokEqual.Checked) {
+                    query += " AND krajnjiRok = @krajnjiRok";
+                }
+            }
+            if (!string.IsNullOrEmpty(textBoxPrioritet.Text)) {
+                if (radioButtonPrioritetLesser.Checked) {
+                    query += " AND prioritet < @prioritet";
+                }
+                if (radioButtonPrioritetGreater.Checked) {
+                    query += " AND prioritet > @prioritet";
+                }
+                if (radioButtonPrioritetEqual.Checked) {
+                    query += " AND prioritet = @prioritet";
+                }
+            }
+            if (!string.IsNullOrEmpty(textBoxUGuid.Text)) {
+                query += " AND UCASE(uGuid) LIKE '%' + @uGuid + '%'";
+            }
+
+            command = new OleDbCommand(query, connection);
+            if (!string.IsNullOrEmpty(textBoxId.Text)) {
+                command.Parameters.AddWithValue("@id", textBoxId.Text.ToUpper());
+            }
+            if (!string.IsNullOrEmpty(textBoxId.Text)) {
+                command.Parameters.AddWithValue("@opstina", textBoxOpstina.Text.ToUpper());
+            }
+            if (!string.IsNullOrEmpty(textBoxNazivPlana.Text)) {
+                command.Parameters.AddWithValue("@nazivPlana", textBoxNazivPlana.Text.ToUpper());
+            }
+            if (!string.IsNullOrEmpty(textBoxUrbanista.Text)) {
+                command.Parameters.AddWithValue("@urbanista", textBoxUrbanista.Text.ToUpper());
+            }
+            if (!string.IsNullOrEmpty(textBoxTipUgovora.Text)) {
+                command.Parameters.AddWithValue("@tipUgovora", textBoxTipUgovora.Text.ToUpper());
+            }
+            if (!string.IsNullOrEmpty(textBoxFaza.Text)) {
+                command.Parameters.AddWithValue("@faza", textBoxFaza.Text.ToUpper());
+            }
+            if (!string.IsNullOrEmpty(textBoxNapomena.Text)) {
+                command.Parameters.AddWithValue("@napomena", textBoxNapomena.Text.ToUpper());
+            }      
+            if (!string.IsNullOrEmpty(dateTimeDatumUgovora.Text)) {
+                command.Parameters.Add("@datumUgovora", OleDbType.Date).Value = dateTimeDatumUgovora.Value.Date;
+            }
+            if (!string.IsNullOrEmpty(textBoxRokPoUgovoru.Text)) {
+                command.Parameters.AddWithValue("@rokPoUgovoru", textBoxRokPoUgovoru.Text);
+            }
+            if (!string.IsNullOrEmpty(textBoxObim.Text)) {
+                command.Parameters.AddWithValue("@obim", textBoxObim.Text);
+            }
+            if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text)) {
+                command.Parameters.Add("@krajnjiRok", OleDbType.Date).Value = dateTimeKrajnjiRok.Value.Date;
+            }
+            if (!string.IsNullOrEmpty(textBoxPrioritet.Text)) {
+                command.Parameters.AddWithValue("@prioritet", textBoxPrioritet.Text);
+            }
+            if (!string.IsNullOrEmpty(textBoxUGuid.Text)) {
+                command.Parameters.AddWithValue("@uGuid", textBoxUGuid.Text.ToUpper());
+            }           
+            dt = new DataTable();
+            bs = new BindingSource();
+            connection.Open();
+            dt.Load(command.ExecuteReader());
+            bs.DataSource = dt;
+            dataGridView1.DataSource = bs;
+            this.Text = query;
+            connection.Close();
+        }
+        public DateTime dateTimeWithoutMiliseconds(DateTime dateTime) {
+            return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second);
+        }
     }
+
+
 }

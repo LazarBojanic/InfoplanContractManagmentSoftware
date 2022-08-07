@@ -53,7 +53,7 @@ namespace CSharp_SQL_App.model {
             this.krajnjiRok = DateTime.Today;
             this.prioritet = 0;
             this.uGuid = Guid.NewGuid().ToString();
-            this.vremeUgovora = DateTime.Today;
+            this.vremeUgovora = DateTime.Now;
         }
         public bool loadFromDatabase(int parId) {
             OleDbConnection connection = GetConnection();
@@ -172,6 +172,7 @@ namespace CSharp_SQL_App.model {
         public void saveToDatabase() {
             OleDbConnection connection = GetConnection();
             connection.Open();
+            vremeUgovora = DateTime.Now;
             if (id == 0) {
                 string query = "INSERT INTO ugovor (opstina, nazivPlana, urbanista, faza, napomena, datumUgovora," +
                     " rokPoUgovoru, obim, krajnjiRok, prioritet, uGuid) VALUES (@opstina, @nazivPlana, @urbanista, @faza, @napomena," +
