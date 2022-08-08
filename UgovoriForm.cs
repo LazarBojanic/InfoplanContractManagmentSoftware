@@ -110,7 +110,7 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(textBoxNapomena.Text)) {
                 query += " AND UCASE(napomena) LIKE '%' + @napomena + '%'";
             }
-            if (!string.IsNullOrEmpty(dateTimeDatumUgovora.Text)) {
+            if (!string.IsNullOrEmpty(dateTimeDatumUgovora.Text) && checkBoxDatumUgovora.Checked) {
                 if (radioButtonDatumUgovoraLesser.Checked) {
                     query += " AND datumUgovora < @datumUgovora";
                 }
@@ -135,7 +135,7 @@ namespace CSharp_SQL_App {
                     query += " AND obim = @obim";
                 }
             }
-            if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text)) {
+            if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text) && checkBoxKrajnjiRok.Checked) {
                 if (radioButtonKrajnjiRokLesser.Checked) {
                     query += " AND krajnjiRok < @krajnjiRok";
                 }
@@ -165,7 +165,7 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(textBoxId.Text)) {
                 command.Parameters.AddWithValue("@id", textBoxId.Text.ToUpper());
             }
-            if (!string.IsNullOrEmpty(textBoxId.Text)) {
+            if (!string.IsNullOrEmpty(textBoxOpstina.Text)) {
                 command.Parameters.AddWithValue("@opstina", textBoxOpstina.Text.ToUpper());
             }
             if (!string.IsNullOrEmpty(textBoxNazivPlana.Text)) {
@@ -183,7 +183,7 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(textBoxNapomena.Text)) {
                 command.Parameters.AddWithValue("@napomena", textBoxNapomena.Text.ToUpper());
             }      
-            if (!string.IsNullOrEmpty(dateTimeDatumUgovora.Text)) {
+            if (!string.IsNullOrEmpty(dateTimeDatumUgovora.Text) && checkBoxDatumUgovora.Checked) {
                 command.Parameters.Add("@datumUgovora", OleDbType.Date).Value = dateTimeDatumUgovora.Value.Date;
             }
             if (!string.IsNullOrEmpty(textBoxRokPoUgovoru.Text)) {
@@ -192,7 +192,7 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(textBoxObim.Text)) {
                 command.Parameters.AddWithValue("@obim", textBoxObim.Text);
             }
-            if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text)) {
+            if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text) && checkBoxDatumUgovora.Checked) {
                 command.Parameters.Add("@krajnjiRok", OleDbType.Date).Value = dateTimeKrajnjiRok.Value.Date;
             }
             if (!string.IsNullOrEmpty(textBoxPrioritet.Text)) {
@@ -213,6 +213,7 @@ namespace CSharp_SQL_App {
         public DateTime dateTimeWithoutMiliseconds(DateTime dateTime) {
             return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second);
         }
+
     }
 
 
