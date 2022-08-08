@@ -30,6 +30,7 @@
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonKorisnici = new System.Windows.Forms.Button();
             this.buttonInfo = new System.Windows.Forms.Button();
+            this.buttonIzmenaUsernamePassword = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonPrikazOpstina
@@ -107,12 +108,25 @@
             this.buttonInfo.UseVisualStyleBackColor = true;
             this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
             // 
+            // buttonIzmenaUsernamePassword
+            // 
+            this.buttonIzmenaUsernamePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonIzmenaUsernamePassword.Location = new System.Drawing.Point(12, 385);
+            this.buttonIzmenaUsernamePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonIzmenaUsernamePassword.Name = "buttonIzmenaUsernamePassword";
+            this.buttonIzmenaUsernamePassword.Size = new System.Drawing.Size(180, 54);
+            this.buttonIzmenaUsernamePassword.TabIndex = 8;
+            this.buttonIzmenaUsernamePassword.Text = "Izmena username/password-a";
+            this.buttonIzmenaUsernamePassword.UseVisualStyleBackColor = true;
+            this.buttonIzmenaUsernamePassword.Click += new System.EventHandler(this.buttonIzmenaUsernamePassword_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonIzmenaUsernamePassword);
             this.Controls.Add(this.buttonInfo);
             this.Controls.Add(this.buttonKorisnici);
             this.Controls.Add(this.buttonLogout);
@@ -123,6 +137,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "Glavni meni";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,5 +153,6 @@
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Button buttonKorisnici;
         private System.Windows.Forms.Button buttonInfo;
+        private System.Windows.Forms.Button buttonIzmenaUsernamePassword;
     }
 }

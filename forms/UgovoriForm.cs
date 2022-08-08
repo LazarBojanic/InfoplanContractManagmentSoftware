@@ -1,23 +1,18 @@
 ﻿using CSharp_SQL_App.model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class UgovoriForm : Form {
-        public Ugovor ugovor { get; set; }       
+        public Ugovor ugovor { get; set; }
         public UgovoriForm() {
             InitializeComponent();
         }
-        private void UgovoriForm_Load(object sender, EventArgs e) {          
+        private void UgovoriForm_Load(object sender, EventArgs e) {
             refreshDataGrid();
         }
         private void buttonDodaj_Click(object sender, EventArgs e) {
@@ -67,12 +62,11 @@ namespace CSharp_SQL_App {
             i.ShowDialog();
         }
         private void UgovoriForm_ResizeBegin(object sender, EventArgs e) {
-            this.SuspendLayout();           
+            this.SuspendLayout();
         }
         private void UgovoriForm_ResizeEnd(object sender, EventArgs e) {
             this.ResumeLayout(true);
         }
-
         private void buttonPretraga_Click(object sender, EventArgs e) {
             IEnumerable<Control> controls = this.Controls.OfType<Control>();
             BindingSource bs;
@@ -160,7 +154,6 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(textBoxUGuid.Text)) {
                 query += " AND UCASE(uGuid) LIKE '%' + @uGuid + '%'";
             }
-
             command = new OleDbCommand(query, connection);
             if (!string.IsNullOrEmpty(textBoxId.Text)) {
                 command.Parameters.AddWithValue("@id", textBoxId.Text.ToUpper());
@@ -182,7 +175,7 @@ namespace CSharp_SQL_App {
             }
             if (!string.IsNullOrEmpty(textBoxNapomena.Text)) {
                 command.Parameters.AddWithValue("@napomena", textBoxNapomena.Text.ToUpper());
-            }      
+            }
             if (!string.IsNullOrEmpty(dateTimeDatumUgovora.Text) && checkBoxDatumUgovora.Checked) {
                 command.Parameters.Add("@datumUgovora", OleDbType.Date).Value = dateTimeDatumUgovora.Value.Date;
             }
@@ -200,7 +193,7 @@ namespace CSharp_SQL_App {
             }
             if (!string.IsNullOrEmpty(textBoxUGuid.Text)) {
                 command.Parameters.AddWithValue("@uGuid", textBoxUGuid.Text.ToUpper());
-            }           
+            }
             dt = new DataTable();
             bs = new BindingSource();
             connection.Open();
@@ -213,7 +206,6 @@ namespace CSharp_SQL_App {
         public DateTime dateTimeWithoutMiliseconds(DateTime dateTime) {
             return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second);
         }
-
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
             UpdateForm updateForm2 = new UpdateForm();
             int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
@@ -226,6 +218,4 @@ namespace CSharp_SQL_App {
             dataGridView1.Rows[index].Selected = true;
         }
     }
-
-
 }

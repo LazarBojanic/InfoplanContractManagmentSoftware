@@ -53,6 +53,8 @@
             this.opstinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxRokPoUgovoru = new System.Windows.Forms.ComboBox();
+            this.comboBoxTipUgovora = new System.Windows.Forms.ComboBox();
+            this.labelTipUgovora = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +77,7 @@
             // 
             // textBoxFaza
             // 
-            this.textBoxFaza.Location = new System.Drawing.Point(132, 222);
+            this.textBoxFaza.Location = new System.Drawing.Point(132, 272);
             this.textBoxFaza.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxFaza.Name = "textBoxFaza";
             this.textBoxFaza.Size = new System.Drawing.Size(301, 22);
@@ -83,7 +85,7 @@
             // 
             // textBoxNapomena
             // 
-            this.textBoxNapomena.Location = new System.Drawing.Point(132, 269);
+            this.textBoxNapomena.Location = new System.Drawing.Point(132, 319);
             this.textBoxNapomena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNapomena.Name = "textBoxNapomena";
             this.textBoxNapomena.Size = new System.Drawing.Size(301, 22);
@@ -97,7 +99,6 @@
             this.textBoxObim.Name = "textBoxObim";
             this.textBoxObim.Size = new System.Drawing.Size(301, 22);
             this.textBoxObim.TabIndex = 7;
-            this.textBoxObim.TextChanged += new System.EventHandler(this.textBoxObim_TextChanged);
             // 
             // textBoxRokPoUgovoru
             // 
@@ -122,7 +123,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 82);
+            this.label1.Location = new System.Drawing.Point(42, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 10;
@@ -131,7 +132,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 129);
+            this.label2.Location = new System.Drawing.Point(42, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 11;
@@ -140,7 +141,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 176);
+            this.label3.Location = new System.Drawing.Point(42, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 16);
             this.label3.TabIndex = 12;
@@ -149,7 +150,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 223);
+            this.label4.Location = new System.Drawing.Point(42, 275);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 16);
             this.label4.TabIndex = 13;
@@ -158,7 +159,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 270);
+            this.label5.Location = new System.Drawing.Point(42, 322);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 16);
             this.label5.TabIndex = 14;
@@ -217,7 +218,7 @@
             // buttonSacuvaj
             // 
             this.buttonSacuvaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSacuvaj.Location = new System.Drawing.Point(125, 335);
+            this.buttonSacuvaj.Location = new System.Drawing.Point(132, 382);
             this.buttonSacuvaj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSacuvaj.Name = "buttonSacuvaj";
             this.buttonSacuvaj.Size = new System.Drawing.Size(266, 77);
@@ -230,7 +231,7 @@
             // 
             this.buttonOtkazi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonOtkazi.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonOtkazi.Location = new System.Drawing.Point(560, 335);
+            this.buttonOtkazi.Location = new System.Drawing.Point(553, 382);
             this.buttonOtkazi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonOtkazi.Name = "buttonOtkazi";
             this.buttonOtkazi.Size = new System.Drawing.Size(266, 77);
@@ -242,7 +243,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(48, 35);
+            this.label11.Location = new System.Drawing.Point(42, 35);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(18, 16);
             this.label11.TabIndex = 23;
@@ -328,11 +329,32 @@
             this.comboBoxRokPoUgovoru.TabIndex = 29;
             this.comboBoxRokPoUgovoru.SelectedValueChanged += new System.EventHandler(this.comboBoxRokPoUgovoru_SelectedValueChanged);
             // 
+            // comboBoxTipUgovora
+            // 
+            this.comboBoxTipUgovora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipUgovora.FormattingEnabled = true;
+            this.comboBoxTipUgovora.Location = new System.Drawing.Point(132, 226);
+            this.comboBoxTipUgovora.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxTipUgovora.Name = "comboBoxTipUgovora";
+            this.comboBoxTipUgovora.Size = new System.Drawing.Size(301, 24);
+            this.comboBoxTipUgovora.TabIndex = 30;
+            // 
+            // labelTipUgovora
+            // 
+            this.labelTipUgovora.AutoSize = true;
+            this.labelTipUgovora.Location = new System.Drawing.Point(42, 229);
+            this.labelTipUgovora.Name = "labelTipUgovora";
+            this.labelTipUgovora.Size = new System.Drawing.Size(83, 16);
+            this.labelTipUgovora.TabIndex = 31;
+            this.labelTipUgovora.Text = "Tip Ugovora";
+            // 
             // UpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(951, 452);
+            this.ClientSize = new System.Drawing.Size(951, 499);
+            this.Controls.Add(this.labelTipUgovora);
+            this.Controls.Add(this.comboBoxTipUgovora);
             this.Controls.Add(this.comboBoxRokPoUgovoru);
             this.Controls.Add(this.labelUGuid);
             this.Controls.Add(this.textBoxUGuid);
@@ -402,5 +424,7 @@
         private System.Windows.Forms.Label labelUGuid;
         private System.Windows.Forms.TextBox textBoxUGuid;
         private System.Windows.Forms.ComboBox comboBoxRokPoUgovoru;
+        private System.Windows.Forms.ComboBox comboBoxTipUgovora;
+        private System.Windows.Forms.Label labelTipUgovora;
     }
 }

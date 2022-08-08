@@ -96,81 +96,90 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InfoForm.cs">
+    <Compile Include="forms\InfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InfoForm.Designer.cs">
+    <Compile Include="forms\InfoForm.Designer.cs">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IstorijaPromenaForm.cs">
+    <Compile Include="forms\IstorijaPromenaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IstorijaPromenaForm.Designer.cs">
+    <Compile Include="forms\IstorijaPromenaForm.Designer.cs">
       <DependentUpon>IstorijaPromenaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="KorisniciForm.cs">
+    <Compile Include="forms\KorisniciForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KorisniciForm.Designer.cs">
+    <Compile Include="forms\KorisniciForm.Designer.cs">
       <DependentUpon>KorisniciForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="KorisniciUpdateForm.cs">
+    <Compile Include="forms\KorisniciUpdateFormForUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KorisniciUpdateForm.Designer.cs">
+    <Compile Include="forms\KorisniciUpdateFormForUser.Designer.cs">
+      <DependentUpon>KorisniciUpdateFormForUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\KorisniciUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\KorisniciUpdateForm.Designer.cs">
       <DependentUpon>KorisniciUpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="model\ChangeLog.cs" />
     <Compile Include="model\Ugovor.cs" />
     <Compile Include="model\User.cs" />
-    <Compile Include="OpstineForm.cs">
+    <Compile Include="forms\OpstineForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OpstineForm.Designer.cs">
+    <Compile Include="forms\OpstineForm.Designer.cs">
       <DependentUpon>OpstineForm.cs</DependentUpon>
     </Compile>
     <Compile Include="main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UgovoriForm.cs">
+    <Compile Include="forms\UgovoriForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UgovoriForm.Designer.cs">
+    <Compile Include="forms\UgovoriForm.Designer.cs">
       <DependentUpon>UgovoriForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateForm.cs">
+    <Compile Include="forms\UpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateForm.Designer.cs">
+    <Compile Include="forms\UpdateForm.Designer.cs">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="IstorijaPromenaForm.resx">
+    <EmbeddedResource Include="forms\IstorijaPromenaForm.resx">
       <DependentUpon>IstorijaPromenaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KorisniciForm.resx">
+    <EmbeddedResource Include="forms\KorisniciForm.resx">
       <DependentUpon>KorisniciForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KorisniciUpdateForm.resx">
+    <EmbeddedResource Include="forms\KorisniciUpdateFormForUser.resx">
+      <DependentUpon>KorisniciUpdateFormForUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\KorisniciUpdateForm.resx">
       <DependentUpon>KorisniciUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OpstineForm.resx">
+    <EmbeddedResource Include="forms\OpstineForm.resx">
       <DependentUpon>OpstineForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -182,10 +191,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UgovoriForm.resx">
+    <EmbeddedResource Include="forms\UgovoriForm.resx">
       <DependentUpon>UgovoriForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateForm.resx">
+    <EmbeddedResource Include="forms\UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

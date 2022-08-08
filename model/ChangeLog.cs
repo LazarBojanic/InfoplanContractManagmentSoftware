@@ -41,6 +41,9 @@ namespace CSharp_SQL_App.model {
                 if (!oldUgovor.urbanista.Equals(newUgovor.urbanista)) {
                     addChangeLogField("ugovor", "urbanista", "kreairanje", oldUgovor.uGuid, oldUgovor.urbanista, newUgovor.urbanista);
                 }
+                if (!oldUgovor.tipUgovora.Equals(newUgovor.tipUgovora)) {
+                    addChangeLogField("ugovor", "tipUgovora", "kreairanje", oldUgovor.uGuid, oldUgovor.tipUgovora, newUgovor.tipUgovora);
+                }
                 if (!oldUgovor.faza.Equals(newUgovor.faza)) {
                     addChangeLogField("ugovor", "faza", "kreairanje", oldUgovor.uGuid, oldUgovor.faza, newUgovor.faza);
                 }
@@ -72,6 +75,9 @@ namespace CSharp_SQL_App.model {
                 }
                 if (!oldUgovor.urbanista.Equals(newUgovor.urbanista)) {
                     addChangeLogField("ugovor", "urbanista", "promena", oldUgovor.uGuid, oldUgovor.urbanista, newUgovor.urbanista);
+                }
+                if (!oldUgovor.tipUgovora.Equals(newUgovor.tipUgovora)) {
+                    addChangeLogField("ugovor", "tipUgovora", "promena", oldUgovor.uGuid, oldUgovor.tipUgovora, newUgovor.tipUgovora);
                 }
                 if (!oldUgovor.faza.Equals(newUgovor.faza)) {
                     addChangeLogField("ugovor", "faza", "promena", oldUgovor.uGuid, oldUgovor.faza, newUgovor.faza);

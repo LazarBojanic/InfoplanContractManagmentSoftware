@@ -28,7 +28,6 @@ namespace CSharp_SQL_App {
             OpstineForm o = new OpstineForm();
             o.Show();
         }
-
         private void buttonPrikazUgovora_Click(object sender, EventArgs e) {
             UgovoriForm u = new UgovoriForm();
             u.ShowDialog();
@@ -44,6 +43,13 @@ namespace CSharp_SQL_App {
         private void buttonInfo_Click(object sender, EventArgs e) {
             InfoForm infoForm = new InfoForm();
             infoForm.ShowDialog();
+        }
+        private void buttonIzmenaUsernamePassword_Click(object sender, EventArgs e) {
+            KorisniciUpdateFormForUser korisniciUpdateFormForUser = new KorisniciUpdateFormForUser();
+            korisniciUpdateFormForUser.ShowDialog();
+        }
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
+            LoginForm.getInstance().Show();
         }
     }
 }

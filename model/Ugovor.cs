@@ -13,6 +13,7 @@ namespace CSharp_SQL_App.model {
         public String opstina { get; set; }
         public String nazivPlana { get; set; }
         public String urbanista { get; set; }
+        public String tipUgovora { get; set; }
         public String faza { get; set; }
         public String napomena { get; set; }
         public DateTime datumUgovora { get; set; }
@@ -23,13 +24,14 @@ namespace CSharp_SQL_App.model {
         public String uGuid { get; set; }
         public DateTime vremeUgovora { get; set; }
 
-        public Ugovor(int id, string opstina, string nazivPlana, string urbanista, string faza,
+        public Ugovor(int id, string opstina, string nazivPlana, string urbanista, string faza, string tipUgovora,
             string napomena, DateTime datumUgovora, string rokPoUgovoru, int obim,
-            DateTime krajnjiRok, int prioritet, String uGuid, DateTime vremeUgovora) {
+            DateTime krajnjiRok, int prioritet, string uGuid, DateTime vremeUgovora) {
             this.id = id;
             this.opstina = opstina;
             this.nazivPlana = nazivPlana;
             this.urbanista = urbanista;
+            this.tipUgovora = tipUgovora;
             this.faza = faza;
             this.napomena = napomena;
             this.datumUgovora = datumUgovora;
@@ -45,6 +47,7 @@ namespace CSharp_SQL_App.model {
             this.opstina = "";
             this.nazivPlana = "";
             this.urbanista = "";
+            this.tipUgovora = "";
             this.faza = "";
             this.napomena = "";
             this.datumUgovora = DateTime.Today;
@@ -94,6 +97,14 @@ namespace CSharp_SQL_App.model {
                 catch (Exception ex) {
                     if (ex is NullReferenceException || ex is InvalidCastException) {
                         urbanista = "";
+                    }
+                }
+                try {
+                    tipUgovora = dataReader.GetString(dataReader.GetOrdinal("tipUgovora"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        tipUgovora = "";
                     }
                 }
                 try {
@@ -182,13 +193,14 @@ namespace CSharp_SQL_App.model {
             connection.Open();
             vremeUgovora = DateTime.Now;
             if (id == 0) {
-                string query = "INSERT INTO ugovor (opstina, nazivPlana, urbanista, faza, napomena, datumUgovora," +
-                    " rokPoUgovoru, obim, krajnjiRok, prioritet, uGuid) VALUES (@opstina, @nazivPlana, @urbanista, @faza, @napomena," +
-                    " @datumUgovora, @rokPoUgovoru, @obim, @krajnjiRok, @prioritet, vremeUgovora = @vremeUgovora, @uGuid)";
+                string query = "INSERT INTO ugovor (opstina, nazivPlana, urbanista, tipUgovora, faza, napomena, datumUgovora," +
+                    " rokPoUgovoru, obim, krajnjiRok, prioritet, vremeUgovora, uGuid) VALUES (@opstina, @nazivPlana, @urbanista, @tipUgovora, @faza, @napomena," +
+                    " @datumUgovora, @rokPoUgovoru, @obim, @krajnjiRok, @prioritet, @vremeUgovora, @uGuid)";
                 OleDbCommand command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@opstina", opstina);
                 command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
                 command.Parameters.AddWithValue("@urbanista", urbanista);
+                command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
                 command.Parameters.AddWithValue("@faza", faza);
                 command.Parameters.AddWithValue("@napomena", napomena);
                 command.Parameters.AddWithValue("@datumUgovora", datumUgovora);
@@ -201,13 +213,14 @@ namespace CSharp_SQL_App.model {
                 int recordsAffected = command.ExecuteNonQuery();
             }
             else {
-                string query = "UPDATE ugovor SET opstina = @opstina, nazivPlana = @nazivPlana, urbanista = @urbanista," +
+                string query = "UPDATE ugovor SET opstina = @opstina, nazivPlana = @nazivPlana, urbanista = @urbanista, tipUgovora = @tipUgovora," +
                     " faza = @faza, napomena = @napomena, datumUgovora = @datumUgovora, rokPoUgovoru = @rokPoUgovoru, obim = @obim," +
                     " krajnjiRok = @krajnjiRok, prioritet = @prioritet, vremeUgovora = @vremeUgovora WHERE id = @id";
                 OleDbCommand command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@opstina", opstina);
                 command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
                 command.Parameters.AddWithValue("@urbanista", urbanista);
+                command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
                 command.Parameters.AddWithValue("@faza", faza);
                 command.Parameters.AddWithValue("@napomena", napomena);
                 command.Parameters.AddWithValue("@datumUgovora", datumUgovora);
