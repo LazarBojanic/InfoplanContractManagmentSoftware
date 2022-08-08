@@ -117,7 +117,7 @@
             this.buttonIzmenaUsernamePassword.Name = "buttonIzmenaUsernamePassword";
             this.buttonIzmenaUsernamePassword.Size = new System.Drawing.Size(180, 54);
             this.buttonIzmenaUsernamePassword.TabIndex = 8;
-            this.buttonIzmenaUsernamePassword.Text = "Izmena username/password-a";
+            this.buttonIzmenaUsernamePassword.Text = "Izmena Username/Password-a";
             this.buttonIzmenaUsernamePassword.UseVisualStyleBackColor = true;
             this.buttonIzmenaUsernamePassword.Click += new System.EventHandler(this.buttonIzmenaUsernamePassword_Click);
             // 

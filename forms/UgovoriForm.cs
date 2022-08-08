@@ -1,4 +1,5 @@
-﻿using CSharp_SQL_App.model;
+﻿using CSharp_SQL_App.forms;
+using CSharp_SQL_App.model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,6 +12,8 @@ namespace CSharp_SQL_App {
         public Ugovor ugovor { get; set; }
         public UgovoriForm() {
             InitializeComponent();
+            dateTimeDatumUgovora.Value = DateTime.Today.AddDays(1);
+            dateTimeKrajnjiRok.Value = DateTime.Today.AddDays(1);
             if (!MainForm.user.privilegija.Equals("administrator")) {
                 buttonObrisi.Enabled = false;
             }
@@ -55,6 +58,7 @@ namespace CSharp_SQL_App {
             dt.Load(command.ExecuteReader());
             bs.DataSource = dt;
             dataGridViewUgovori.DataSource = bs;
+            connection.Close();
         }
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
@@ -71,7 +75,6 @@ namespace CSharp_SQL_App {
             this.ResumeLayout(true);
         }
         private void buttonPretraga_Click(object sender, EventArgs e) {
-            IEnumerable<Control> controls = this.Controls.OfType<Control>();
             BindingSource bs;
             OleDbConnection connection;
             OleDbCommand command;
@@ -222,7 +225,10 @@ namespace CSharp_SQL_App {
         }
 
         private void buttonObrisi_Click(object sender, EventArgs e) {
+            Ugovor oldUgovor = new Ugovor();
+            Ugovor newUgovor = new Ugovor();
             int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells[0].Value.ToString());
+            oldUgovor.loadFromDatabase(id);
             OleDbConnection connection;
             OleDbCommand command;
             String query = "DELETE FROM ugovor WHERE id = @id";
@@ -231,8 +237,14 @@ namespace CSharp_SQL_App {
             command = new OleDbCommand(query, connection);
             command.Parameters.AddWithValue("@id", id);
             command.ExecuteNonQuery();
-            refreshDataGrid();
             connection.Close();
+            refreshDataGrid();
+            ChangeLog.addChangeLogForUgovor(oldUgovor, newUgovor);
+        }
+
+        private void buttonIstorijaPromenaObrisanihUgovora_Click(object sender, EventArgs e) {
+            IstorijaPromenaObrisanihUgovoraForm i = new IstorijaPromenaObrisanihUgovoraForm();
+            i.ShowDialog();
         }
     }
 }

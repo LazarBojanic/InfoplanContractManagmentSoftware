@@ -66,7 +66,7 @@ namespace CSharp_SQL_App {
             dateTimeDatumUgovora.Value = oldUgovor.datumUgovora;
             if (!oldUgovor.rokPoUgovoru.Equals("")) {
                 textBoxRokPoUgovoru.Text = oldUgovor.rokPoUgovoru.Substring(0, oldUgovor.rokPoUgovoru.IndexOf(" "));
-                comboBoxRokPoUgovoru.Text = oldUgovor.rokPoUgovoru.Substring(oldUgovor.rokPoUgovoru.IndexOf(" "));
+                comboBoxRokPoUgovoru.Text = oldUgovor.rokPoUgovoru.Substring(oldUgovor.rokPoUgovoru.IndexOf(" ") + 1);
             }
             else {
                 textBoxRokPoUgovoru.Text = "0";

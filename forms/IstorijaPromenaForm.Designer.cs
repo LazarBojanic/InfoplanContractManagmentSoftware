@@ -36,12 +36,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewChangeLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewChangeLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewChangeLog.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewChangeLog.Location = new System.Drawing.Point(13, 13);
             this.dataGridViewChangeLog.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewChangeLog.Name = "dataGridViewChangeLog";
             this.dataGridViewChangeLog.ReadOnly = true;
             this.dataGridViewChangeLog.RowHeadersWidth = 51;
-            this.dataGridViewChangeLog.Size = new System.Drawing.Size(1363, 554);
+            this.dataGridViewChangeLog.Size = new System.Drawing.Size(1337, 528);
             this.dataGridViewChangeLog.TabIndex = 0;
             // 
             // IstorijaPromenaForm

@@ -29,8 +29,6 @@
             this.buttonIzmeni = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonIstorijaPromena = new System.Windows.Forms.Button();
-            this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelId = new System.Windows.Forms.Label();
             this.labelOpstina = new System.Windows.Forms.Label();
             this.labelUrbanista = new System.Windows.Forms.Label();
@@ -82,15 +80,18 @@
             this.radioButtonIdLesser = new System.Windows.Forms.RadioButton();
             this.radioButtonIdGreater = new System.Windows.Forms.RadioButton();
             this.buttonObrisi = new System.Windows.Forms.Button();
+            this.buttonIstorijaPromenaObrisanihUgovora = new System.Windows.Forms.Button();
+            this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).BeginInit();
             this.panelPretraga.SuspendLayout();
             this.panelPrioritet.SuspendLayout();
             this.panelKrajnjiRok.SuspendLayout();
             this.panelObim.SuspendLayout();
             this.panelDatumUgovora.SuspendLayout();
             this.panelId.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewUgovori
@@ -117,9 +118,9 @@
             // 
             // buttonDodaj
             // 
-            this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonDodaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonDodaj.AutoSize = true;
-            this.buttonDodaj.Location = new System.Drawing.Point(307, 693);
+            this.buttonDodaj.Location = new System.Drawing.Point(468, 693);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(347, 77);
@@ -132,7 +133,7 @@
             // 
             this.buttonIzmeni.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonIzmeni.AutoSize = true;
-            this.buttonIzmeni.Location = new System.Drawing.Point(717, 693);
+            this.buttonIzmeni.Location = new System.Drawing.Point(838, 693);
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonIzmeni.Name = "buttonIzmeni";
             this.buttonIzmeni.Size = new System.Drawing.Size(347, 77);
@@ -148,7 +149,7 @@
             this.buttonRefresh.Location = new System.Drawing.Point(12, 693);
             this.buttonRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(114, 77);
+            this.buttonRefresh.Size = new System.Drawing.Size(74, 77);
             this.buttonRefresh.TabIndex = 3;
             this.buttonRefresh.Text = "Osveži";
             this.buttonRefresh.UseVisualStyleBackColor = true;
@@ -158,7 +159,7 @@
             // 
             this.buttonIstorijaPromena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonIstorijaPromena.AutoSize = true;
-            this.buttonIstorijaPromena.Location = new System.Drawing.Point(133, 693);
+            this.buttonIstorijaPromena.Location = new System.Drawing.Point(93, 693);
             this.buttonIstorijaPromena.Margin = new System.Windows.Forms.Padding(4);
             this.buttonIstorijaPromena.Name = "buttonIstorijaPromena";
             this.buttonIstorijaPromena.Size = new System.Drawing.Size(114, 77);
@@ -166,10 +167,6 @@
             this.buttonIstorijaPromena.Text = "Istorija Promena";
             this.buttonIstorijaPromena.UseVisualStyleBackColor = true;
             this.buttonIstorijaPromena.Click += new System.EventHandler(this.buttonIstorijaPromena_Click);
-            // 
-            // ugovorBindingSource
-            // 
-            this.ugovorBindingSource.DataMember = "ugovor";
             // 
             // labelId
             // 
@@ -730,9 +727,9 @@
             // 
             // buttonObrisi
             // 
-            this.buttonObrisi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonObrisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonObrisi.AutoSize = true;
-            this.buttonObrisi.Location = new System.Drawing.Point(1127, 693);
+            this.buttonObrisi.Location = new System.Drawing.Point(1208, 693);
             this.buttonObrisi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonObrisi.Name = "buttonObrisi";
             this.buttonObrisi.Size = new System.Drawing.Size(347, 77);
@@ -741,11 +738,29 @@
             this.buttonObrisi.UseVisualStyleBackColor = true;
             this.buttonObrisi.Click += new System.EventHandler(this.buttonObrisi_Click);
             // 
+            // buttonIstorijaPromenaObrisanihUgovora
+            // 
+            this.buttonIstorijaPromenaObrisanihUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonIstorijaPromenaObrisanihUgovora.AutoSize = true;
+            this.buttonIstorijaPromenaObrisanihUgovora.Location = new System.Drawing.Point(215, 693);
+            this.buttonIstorijaPromenaObrisanihUgovora.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonIstorijaPromenaObrisanihUgovora.Name = "buttonIstorijaPromenaObrisanihUgovora";
+            this.buttonIstorijaPromenaObrisanihUgovora.Size = new System.Drawing.Size(230, 77);
+            this.buttonIstorijaPromenaObrisanihUgovora.TabIndex = 55;
+            this.buttonIstorijaPromenaObrisanihUgovora.Text = "Istorija Promena Obrisanih Ugovora";
+            this.buttonIstorijaPromenaObrisanihUgovora.UseVisualStyleBackColor = true;
+            this.buttonIstorijaPromenaObrisanihUgovora.Click += new System.EventHandler(this.buttonIstorijaPromenaObrisanihUgovora_Click);
+            // 
+            // ugovorBindingSource
+            // 
+            this.ugovorBindingSource.DataMember = "ugovor";
+            // 
             // UgovoriForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1782, 781);
+            this.Controls.Add(this.buttonIstorijaPromenaObrisanihUgovora);
             this.Controls.Add(this.buttonObrisi);
             this.Controls.Add(this.buttonPretraga);
             this.Controls.Add(this.buttonIstorijaPromena);
@@ -763,8 +778,6 @@
             this.ResizeBegin += new System.EventHandler(this.UgovoriForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.UgovoriForm_ResizeEnd);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).EndInit();
             this.panelPretraga.ResumeLayout(false);
             this.panelPretraga.PerformLayout();
             this.panelPrioritet.ResumeLayout(false);
@@ -772,6 +785,8 @@
             this.panelObim.ResumeLayout(false);
             this.panelDatumUgovora.ResumeLayout(false);
             this.panelId.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -837,5 +852,6 @@
         private System.Windows.Forms.RadioButton radioButtonDatumUgovoraLesser;
         private System.Windows.Forms.RadioButton radioButtonDatumUgovoraGreater;
         private System.Windows.Forms.Button buttonObrisi;
+        private System.Windows.Forms.Button buttonIstorijaPromenaObrisanihUgovora;
     }
 }

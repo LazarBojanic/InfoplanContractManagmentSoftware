@@ -66,6 +66,41 @@ namespace CSharp_SQL_App.model {
                     addChangeLogField("ugovor", "prioritet", "kreairanje", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
                 }
             }
+            else if(newUgovor.id == 0) {
+                if (!oldUgovor.opstina.Equals(newUgovor.opstina)) {
+                    addChangeLogField("ugovor", "opstina", "brisanje", oldUgovor.uGuid, oldUgovor.opstina, newUgovor.opstina);
+                }
+                if (!oldUgovor.nazivPlana.Equals(newUgovor.nazivPlana)) {
+                    addChangeLogField("ugovor", "nazivPlana", "brisanje", oldUgovor.uGuid, oldUgovor.nazivPlana, newUgovor.nazivPlana);
+                }
+                if (!oldUgovor.urbanista.Equals(newUgovor.urbanista)) {
+                    addChangeLogField("ugovor", "urbanista", "brisanje", oldUgovor.uGuid, oldUgovor.urbanista, newUgovor.urbanista);
+                }
+                if (!oldUgovor.tipUgovora.Equals(newUgovor.tipUgovora)) {
+                    addChangeLogField("ugovor", "tipUgovora", "brisanje", oldUgovor.uGuid, oldUgovor.tipUgovora, newUgovor.tipUgovora);
+                }
+                if (!oldUgovor.faza.Equals(newUgovor.faza)) {
+                    addChangeLogField("ugovor", "faza", "brisanje", oldUgovor.uGuid, oldUgovor.faza, newUgovor.faza);
+                }
+                if (!oldUgovor.napomena.Equals(newUgovor.napomena)) {
+                    addChangeLogField("ugovor", "napomena", "brisanje", oldUgovor.uGuid, oldUgovor.napomena, newUgovor.napomena);
+                }
+                if (!oldUgovor.datumUgovora.Equals(newUgovor.datumUgovora)) {
+                    addChangeLogField("ugovor", "datumUgovora", "brisanje", oldUgovor.uGuid, oldUgovor.datumUgovora.ToString(), newUgovor.datumUgovora.ToString());
+                }
+                if (!oldUgovor.rokPoUgovoru.Equals(newUgovor.rokPoUgovoru)) {
+                    addChangeLogField("ugovor", "rokPoUgovoru", "brisanje", oldUgovor.uGuid, oldUgovor.rokPoUgovoru, newUgovor.rokPoUgovoru);
+                }
+                if (!oldUgovor.obim.Equals(newUgovor.obim)) {
+                    addChangeLogField("ugovor", "obim", "brisanje", oldUgovor.uGuid, oldUgovor.obim.ToString(), newUgovor.obim.ToString());
+                }
+                if (!oldUgovor.krajnjiRok.Equals(newUgovor.krajnjiRok)) {
+                    addChangeLogField("ugovor", "krajnjiRok", "brisanje", oldUgovor.uGuid, oldUgovor.krajnjiRok.ToString(), newUgovor.krajnjiRok.ToString());
+                }
+                if (!oldUgovor.prioritet.Equals(newUgovor.prioritet)) {
+                    addChangeLogField("ugovor", "prioritet", "brisanje", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
+                }
+            }
             else {
                 if (!oldUgovor.opstina.Equals(newUgovor.opstina)) {
                     addChangeLogField("ugovor", "opstina", "promena", oldUgovor.uGuid, oldUgovor.opstina, newUgovor.opstina);
@@ -101,6 +136,7 @@ namespace CSharp_SQL_App.model {
                     addChangeLogField("ugovor", "prioritet", "promena", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
                 }
             }
+
         }
         private static OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
