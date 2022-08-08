@@ -24,13 +24,17 @@ namespace CSharp_SQL_App {
         private void MainForm_Load(object sender, EventArgs e) {
 
         }
-        private void buttonPrikazOpstina_Click(object sender, EventArgs e) {
-            OpstineForm o = new OpstineForm();
-            o.Show();
-        }
         private void buttonPrikazUgovora_Click(object sender, EventArgs e) {
             UgovoriForm u = new UgovoriForm();
             u.ShowDialog();
+        }
+        private void buttonOpstine_Click(object sender, EventArgs e) {
+            OpstineForm o = new OpstineForm();
+            o.ShowDialog();
+        }
+        private void buttonTipoviUgovora_Click(object sender, EventArgs e) {
+            TipUgovoraForm t = new TipUgovoraForm();
+            t.ShowDialog();
         }
         private void buttonLogout_Click(object sender, EventArgs e) {
             LoginForm.getInstance().Show();
@@ -50,6 +54,6 @@ namespace CSharp_SQL_App {
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
             LoginForm.getInstance().Show();
-        }
+        }    
     }
 }

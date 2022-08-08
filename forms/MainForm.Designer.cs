@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.buttonPrikazOpstina = new System.Windows.Forms.Button();
+            this.buttonOpstine = new System.Windows.Forms.Button();
             this.buttonPrikazUgovora = new System.Windows.Forms.Button();
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelPrivilegija = new System.Windows.Forms.Label();
@@ -31,18 +31,19 @@
             this.buttonKorisnici = new System.Windows.Forms.Button();
             this.buttonInfo = new System.Windows.Forms.Button();
             this.buttonIzmenaUsernamePassword = new System.Windows.Forms.Button();
+            this.buttonTipoviUgovora = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // buttonPrikazOpstina
+            // buttonOpstine
             // 
-            this.buttonPrikazOpstina.Location = new System.Drawing.Point(96, 62);
-            this.buttonPrikazOpstina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonPrikazOpstina.Name = "buttonPrikazOpstina";
-            this.buttonPrikazOpstina.Size = new System.Drawing.Size(207, 77);
-            this.buttonPrikazOpstina.TabIndex = 0;
-            this.buttonPrikazOpstina.Text = "Prikaz Opština";
-            this.buttonPrikazOpstina.UseVisualStyleBackColor = true;
-            this.buttonPrikazOpstina.Click += new System.EventHandler(this.buttonPrikazOpstina_Click);
+            this.buttonOpstine.Location = new System.Drawing.Point(96, 62);
+            this.buttonOpstine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonOpstine.Name = "buttonOpstine";
+            this.buttonOpstine.Size = new System.Drawing.Size(207, 77);
+            this.buttonOpstine.TabIndex = 0;
+            this.buttonOpstine.Text = "Opštine";
+            this.buttonOpstine.UseVisualStyleBackColor = true;
+            this.buttonOpstine.Click += new System.EventHandler(this.buttonOpstine_Click);
             // 
             // buttonPrikazUgovora
             // 
@@ -52,7 +53,7 @@
             this.buttonPrikazUgovora.Name = "buttonPrikazUgovora";
             this.buttonPrikazUgovora.Size = new System.Drawing.Size(207, 77);
             this.buttonPrikazUgovora.TabIndex = 1;
-            this.buttonPrikazUgovora.Text = "Prikaz Ugovora";
+            this.buttonPrikazUgovora.Text = "Ugovori";
             this.buttonPrikazUgovora.UseVisualStyleBackColor = true;
             this.buttonPrikazUgovora.Click += new System.EventHandler(this.buttonPrikazUgovora_Click);
             // 
@@ -120,12 +121,24 @@
             this.buttonIzmenaUsernamePassword.UseVisualStyleBackColor = true;
             this.buttonIzmenaUsernamePassword.Click += new System.EventHandler(this.buttonIzmenaUsernamePassword_Click);
             // 
+            // buttonTipoviUgovora
+            // 
+            this.buttonTipoviUgovora.Location = new System.Drawing.Point(96, 163);
+            this.buttonTipoviUgovora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonTipoviUgovora.Name = "buttonTipoviUgovora";
+            this.buttonTipoviUgovora.Size = new System.Drawing.Size(207, 77);
+            this.buttonTipoviUgovora.TabIndex = 9;
+            this.buttonTipoviUgovora.Text = "Tipovi Ugovora";
+            this.buttonTipoviUgovora.UseVisualStyleBackColor = true;
+            this.buttonTipoviUgovora.Click += new System.EventHandler(this.buttonTipoviUgovora_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonTipoviUgovora);
             this.Controls.Add(this.buttonIzmenaUsernamePassword);
             this.Controls.Add(this.buttonInfo);
             this.Controls.Add(this.buttonKorisnici);
@@ -133,7 +146,7 @@
             this.Controls.Add(this.labelPrivilegija);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.buttonPrikazUgovora);
-            this.Controls.Add(this.buttonPrikazOpstina);
+            this.Controls.Add(this.buttonOpstine);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "Glavni meni";
@@ -146,7 +159,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonPrikazOpstina;
+        private System.Windows.Forms.Button buttonOpstine;
         private System.Windows.Forms.Button buttonPrikazUgovora;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelPrivilegija;
@@ -154,5 +167,6 @@
         private System.Windows.Forms.Button buttonKorisnici;
         private System.Windows.Forms.Button buttonInfo;
         private System.Windows.Forms.Button buttonIzmenaUsernamePassword;
+        private System.Windows.Forms.Button buttonTipoviUgovora;
     }
 }

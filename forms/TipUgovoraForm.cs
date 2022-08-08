@@ -10,55 +10,58 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
-    public partial class OpstineForm : Form {
-        public OpstineForm() {
+    public partial class TipUgovoraForm : Form {
+        public TipUgovoraForm() {
             InitializeComponent();
-            fillOpstineDataGrid();
+            fillTipUgovoraDataGrid();
             if (!MainForm.user.privilegija.Equals("administrator")) {
                 buttonDodaj.Enabled = false;
             }
         }
-        private void OpstineForm_Load(object sender, EventArgs e) {
-        }
-        public void fillOpstineDataGrid() {
+        public void fillTipUgovoraDataGrid() {
             DataTable dt;
             BindingSource bs;
             OleDbConnection connection;
             OleDbCommand command;
             connection = GetConnection();
             connection.Open();
-            String query = "SELECT * FROM opstina ORDER BY opstina";
+            String query = "SELECT * FROM tipUgovora ORDER BY tipUgovora";
             command = new OleDbCommand(query, connection);
             dt = new DataTable();
             bs = new BindingSource();
             dt.Load(command.ExecuteReader());
             bs.DataSource = dt;
-            dataGridViewOpstine.DataSource = bs;
+            dataGridViewTipUgovora.DataSource = bs;
             connection.Close();
         }
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
-        private void buttonDodaj_Click(object sender, EventArgs e) {
-            addOpstina();
-            fillOpstineDataGrid();
-        }
-        public void addOpstina() {
+        public void addTipUgovora() {
             DataTable dt;
             BindingSource bs;
             OleDbConnection connection;
             OleDbCommand command;
             connection = GetConnection();
             connection.Open();
-            String query = "INSERT INTO opstina (opstina) VALUES (@opstina)";
+            String query = "INSERT INTO tipUgovora (tipUgovora) VALUES (@tipUgovora)";
             command = new OleDbCommand(query, connection);
-            command.Parameters.AddWithValue("@opstina", textBoxOpstina.Text);
+            command.Parameters.AddWithValue("@tipUgovora", textBoxTipUgovora.Text);
             dt = new DataTable();
             bs = new BindingSource();
             dt.Load(command.ExecuteReader());
             bs.DataSource = dt;
-            dataGridViewOpstine.DataSource = bs;
+            dataGridViewTipUgovora.DataSource = bs;
             connection.Close();
+        }
+
+        private void TipUgovoraForm_Load(object sender, EventArgs e) {
+
+        }
+
+        private void buttonDodaj_Click(object sender, EventArgs e) {
+            addTipUgovora();
+            fillTipUgovoraDataGrid();
         }
     }
 }

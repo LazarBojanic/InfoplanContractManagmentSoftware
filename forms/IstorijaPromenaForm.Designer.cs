@@ -23,46 +23,46 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewChangeLog = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLog)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewChangeLog
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewChangeLog.AllowUserToAddRows = false;
+            this.dataGridViewChangeLog.AllowUserToDeleteRows = false;
+            this.dataGridViewChangeLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1363, 554);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewChangeLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewChangeLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewChangeLog.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewChangeLog.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewChangeLog.Name = "dataGridViewChangeLog";
+            this.dataGridViewChangeLog.ReadOnly = true;
+            this.dataGridViewChangeLog.RowHeadersWidth = 51;
+            this.dataGridViewChangeLog.Size = new System.Drawing.Size(1363, 554);
+            this.dataGridViewChangeLog.TabIndex = 0;
             // 
             // IstorijaPromenaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1363, 554);
-            this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.dataGridViewChangeLog);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IstorijaPromenaForm";
             this.Text = "IstorijaPromenaForm";
             this.Load += new System.EventHandler(this.IstorijaPromenaForm_Load);
             this.ResizeBegin += new System.EventHandler(this.IstorijaPromenaForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.IstorijaPromenaForm_ResizeEnd);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLog)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewChangeLog;
     }
 }

@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewUgovori = new System.Windows.Forms.DataGridView();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonIzmeni = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
@@ -81,7 +81,8 @@
             this.radioButtonIdEqual = new System.Windows.Forms.RadioButton();
             this.radioButtonIdLesser = new System.Windows.Forms.RadioButton();
             this.radioButtonIdGreater = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.buttonObrisi = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).BeginInit();
             this.panelPretraga.SuspendLayout();
@@ -92,34 +93,33 @@
             this.panelId.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewUgovori
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewUgovori.AllowUserToAddRows = false;
+            this.dataGridViewUgovori.AllowUserToDeleteRows = false;
+            this.dataGridViewUgovori.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1180, 651);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridViewUgovori.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewUgovori.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewUgovori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUgovori.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewUgovori.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewUgovori.MultiSelect = false;
+            this.dataGridViewUgovori.Name = "dataGridViewUgovori";
+            this.dataGridViewUgovori.ReadOnly = true;
+            this.dataGridViewUgovori.RowHeadersWidth = 51;
+            this.dataGridViewUgovori.RowTemplate.Height = 24;
+            this.dataGridViewUgovori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewUgovori.Size = new System.Drawing.Size(1196, 651);
+            this.dataGridViewUgovori.TabIndex = 0;
+            this.dataGridViewUgovori.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // buttonDodaj
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonDodaj.AutoSize = true;
-            this.buttonDodaj.Location = new System.Drawing.Point(521, 693);
+            this.buttonDodaj.Location = new System.Drawing.Point(307, 693);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(347, 77);
@@ -132,7 +132,7 @@
             // 
             this.buttonIzmeni.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonIzmeni.AutoSize = true;
-            this.buttonIzmeni.Location = new System.Drawing.Point(908, 693);
+            this.buttonIzmeni.Location = new System.Drawing.Point(717, 693);
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonIzmeni.Name = "buttonIzmeni";
             this.buttonIzmeni.Size = new System.Drawing.Size(347, 77);
@@ -392,7 +392,7 @@
             // 
             this.buttonPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPretraga.AutoSize = true;
-            this.buttonPretraga.Location = new System.Drawing.Point(1577, 691);
+            this.buttonPretraga.Location = new System.Drawing.Point(1578, 693);
             this.buttonPretraga.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPretraga.Name = "buttonPretraga";
             this.buttonPretraga.Size = new System.Drawing.Size(192, 77);
@@ -728,17 +728,31 @@
             this.radioButtonIdGreater.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButtonIdGreater.UseVisualStyleBackColor = true;
             // 
+            // buttonObrisi
+            // 
+            this.buttonObrisi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonObrisi.AutoSize = true;
+            this.buttonObrisi.Location = new System.Drawing.Point(1127, 693);
+            this.buttonObrisi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonObrisi.Name = "buttonObrisi";
+            this.buttonObrisi.Size = new System.Drawing.Size(347, 77);
+            this.buttonObrisi.TabIndex = 54;
+            this.buttonObrisi.Text = "Obriši";
+            this.buttonObrisi.UseVisualStyleBackColor = true;
+            this.buttonObrisi.Click += new System.EventHandler(this.buttonObrisi_Click);
+            // 
             // UgovoriForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1782, 781);
+            this.Controls.Add(this.buttonObrisi);
             this.Controls.Add(this.buttonPretraga);
             this.Controls.Add(this.buttonIstorijaPromena);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonIzmeni);
             this.Controls.Add(this.buttonDodaj);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewUgovori);
             this.Controls.Add(this.panelPretraga);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(1800, 828);
@@ -748,7 +762,7 @@
             this.Load += new System.EventHandler(this.UgovoriForm_Load);
             this.ResizeBegin += new System.EventHandler(this.UgovoriForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.UgovoriForm_ResizeEnd);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).EndInit();
             this.panelPretraga.ResumeLayout(false);
@@ -765,7 +779,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewUgovori;
         private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.Button buttonIzmeni;
         private System.Windows.Forms.BindingSource ugovoriDataSetBindingSource;
@@ -822,5 +836,6 @@
         private System.Windows.Forms.RadioButton radioButtonDatumUgovoraEqual;
         private System.Windows.Forms.RadioButton radioButtonDatumUgovoraLesser;
         private System.Windows.Forms.RadioButton radioButtonDatumUgovoraGreater;
+        private System.Windows.Forms.Button buttonObrisi;
     }
 }

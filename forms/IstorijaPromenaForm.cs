@@ -36,7 +36,7 @@ namespace CSharp_SQL_App {
             bs = new BindingSource();
             dt.Load(command.ExecuteReader());
             bs.DataSource = dt;
-            dataGridView1.DataSource = bs;
+            dataGridViewChangeLog.DataSource = bs;
             connection.Close();
         }
         private OleDbConnection GetConnection() {

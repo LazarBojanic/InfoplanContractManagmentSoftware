@@ -24,32 +24,32 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewOpstine = new System.Windows.Forms.DataGridView();
             this.opstinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.textBoxOpstina = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOpstine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewOpstine
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewOpstine.AllowUserToAddRows = false;
+            this.dataGridViewOpstine.AllowUserToDeleteRows = false;
+            this.dataGridViewOpstine.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(453, 493);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewOpstine.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewOpstine.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewOpstine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOpstine.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewOpstine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewOpstine.Name = "dataGridViewOpstine";
+            this.dataGridViewOpstine.ReadOnly = true;
+            this.dataGridViewOpstine.RowHeadersWidth = 51;
+            this.dataGridViewOpstine.RowTemplate.Height = 24;
+            this.dataGridViewOpstine.Size = new System.Drawing.Size(453, 493);
+            this.dataGridViewOpstine.TabIndex = 0;
             // 
             // opstinaBindingSource
             // 
@@ -81,12 +81,12 @@
             this.ClientSize = new System.Drawing.Size(478, 652);
             this.Controls.Add(this.textBoxOpstina);
             this.Controls.Add(this.buttonDodaj);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewOpstine);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OpstineForm";
             this.Text = "OpstineForm";
             this.Load += new System.EventHandler(this.OpstineForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOpstine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -95,7 +95,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewOpstine;
         private System.Windows.Forms.BindingSource opstinaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn opstinaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button buttonDodaj;

@@ -11,6 +11,9 @@ namespace CSharp_SQL_App {
         public Ugovor ugovor { get; set; }
         public UgovoriForm() {
             InitializeComponent();
+            if (!MainForm.user.privilegija.Equals("administrator")) {
+                buttonObrisi.Enabled = false;
+            }
         }
         private void UgovoriForm_Load(object sender, EventArgs e) {
             refreshDataGrid();
@@ -21,19 +24,19 @@ namespace CSharp_SQL_App {
             if (updateForm1.ShowDialog().Equals(DialogResult.OK)) {
                 refreshDataGrid();
             }
-            dataGridView1.FirstDisplayedScrollingRowIndex = dataGridView1.RowCount - 1;
-            dataGridView1.Rows[dataGridView1.RowCount - 1].Selected = true;
+            dataGridViewUgovori.FirstDisplayedScrollingRowIndex = dataGridViewUgovori.RowCount - 1;
+            dataGridViewUgovori.Rows[dataGridViewUgovori.RowCount - 1].Selected = true;
         }
         private void buttonIzmeni_Click(object sender, EventArgs e) {
             UpdateForm updateForm2 = new UpdateForm();
-            int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-            int index = dataGridView1.CurrentRow.Index;
+            int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells[0].Value.ToString());
+            int index = dataGridViewUgovori.CurrentRow.Index;
             updateForm2.loadUgovor(id);
             if (updateForm2.ShowDialog().Equals(DialogResult.OK)) {
                 refreshDataGrid();
             }
-            dataGridView1.FirstDisplayedScrollingRowIndex = index;
-            dataGridView1.Rows[index].Selected = true;
+            dataGridViewUgovori.FirstDisplayedScrollingRowIndex = index;
+            dataGridViewUgovori.Rows[index].Selected = true;
         }
         private void buttonRefresh_Click(object sender, EventArgs e) {
             refreshDataGrid();
@@ -51,13 +54,13 @@ namespace CSharp_SQL_App {
             bs = new BindingSource();
             dt.Load(command.ExecuteReader());
             bs.DataSource = dt;
-            dataGridView1.DataSource = bs;
+            dataGridViewUgovori.DataSource = bs;
         }
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
         private void buttonIstorijaPromena_Click(object sender, EventArgs e) {
-            String uGuid = dataGridView1.SelectedRows[0].Cells["uGuid"].Value.ToString();
+            String uGuid = dataGridViewUgovori.SelectedRows[0].Cells["uGuid"].Value.ToString();
             IstorijaPromenaForm i = new IstorijaPromenaForm(uGuid);
             i.ShowDialog();
         }
@@ -199,7 +202,7 @@ namespace CSharp_SQL_App {
             connection.Open();
             dt.Load(command.ExecuteReader());
             bs.DataSource = dt;
-            dataGridView1.DataSource = bs;
+            dataGridViewUgovori.DataSource = bs;
             this.Text = query;
             connection.Close();
         }
@@ -208,14 +211,28 @@ namespace CSharp_SQL_App {
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
             UpdateForm updateForm2 = new UpdateForm();
-            int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-            int index = dataGridView1.CurrentRow.Index;
+            int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells[0].Value.ToString());
+            int index = dataGridViewUgovori.CurrentRow.Index;
             updateForm2.loadUgovor(id);
             if (updateForm2.ShowDialog().Equals(DialogResult.OK)) {
                 refreshDataGrid();
             }
-            dataGridView1.FirstDisplayedScrollingRowIndex = index;
-            dataGridView1.Rows[index].Selected = true;
+            dataGridViewUgovori.FirstDisplayedScrollingRowIndex = index;
+            dataGridViewUgovori.Rows[index].Selected = true;
+        }
+
+        private void buttonObrisi_Click(object sender, EventArgs e) {
+            int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells[0].Value.ToString());
+            OleDbConnection connection;
+            OleDbCommand command;
+            String query = "DELETE FROM ugovor WHERE id = @id";
+            connection = GetConnection();
+            connection.Open();
+            command = new OleDbCommand(query, connection);
+            command.Parameters.AddWithValue("@id", id);
+            command.ExecuteNonQuery();
+            refreshDataGrid();
+            connection.Close();
         }
     }
 }
