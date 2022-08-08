@@ -153,6 +153,14 @@ namespace CSharp_SQL_App.model {
                     }
                 }
                 try {
+                    vremeUgovora = dataReader.GetDateTime(dataReader.GetOrdinal("vremeUgovora"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        vremeUgovora = DateTime.Now;
+                    }
+                }
+                try {
                     uGuid = dataReader.GetString(dataReader.GetOrdinal("uGuid"));
                 }
                 catch (Exception ex) {
@@ -188,7 +196,7 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@obim", obim);
                 command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);
                 command.Parameters.AddWithValue("@prioritet", prioritet);
-                command.Parameters.AddWithValue("@vremeUgovora", vremeUgovora);
+                command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = ChangeLog.vremeAkcijeWithoutMilliseconds(vremeUgovora);
                 command.Parameters.AddWithValue("@uGuid", uGuid);
                 int recordsAffected = command.ExecuteNonQuery();
             }
@@ -207,7 +215,7 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@obim", obim);
                 command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);
                 command.Parameters.AddWithValue("@prioritet", prioritet);
-                command.Parameters.AddWithValue("@vremeUgovora", vremeUgovora);
+                command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = ChangeLog.vremeAkcijeWithoutMilliseconds(vremeUgovora);
                 command.Parameters.AddWithValue("@id", id);
                 command.ExecuteNonQuery();
             }

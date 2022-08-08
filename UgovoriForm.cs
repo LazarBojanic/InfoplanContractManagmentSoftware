@@ -214,6 +214,17 @@ namespace CSharp_SQL_App {
             return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second);
         }
 
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            UpdateForm updateForm2 = new UpdateForm();
+            int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            int index = dataGridView1.CurrentRow.Index;
+            updateForm2.loadUgovor(id);
+            if (updateForm2.ShowDialog().Equals(DialogResult.OK)) {
+                refreshDataGrid();
+            }
+            dataGridView1.FirstDisplayedScrollingRowIndex = index;
+            dataGridView1.Rows[index].Selected = true;
+        }
     }
 
 
