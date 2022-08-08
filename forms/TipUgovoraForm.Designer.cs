@@ -36,7 +36,7 @@
             this.textBoxTipUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTipUgovora.Name = "textBoxTipUgovora";
             this.textBoxTipUgovora.Size = new System.Drawing.Size(227, 20);
-            this.textBoxTipUgovora.TabIndex = 1;
+            this.textBoxTipUgovora.TabIndex = 0;
             // 
             // buttonDodaj
             // 
@@ -45,7 +45,7 @@
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(176, 63);
-            this.buttonDodaj.TabIndex = 2;
+            this.buttonDodaj.TabIndex = 1;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
@@ -67,7 +67,8 @@
             this.dataGridViewTipUgovora.RowHeadersWidth = 51;
             this.dataGridViewTipUgovora.RowTemplate.Height = 24;
             this.dataGridViewTipUgovora.Size = new System.Drawing.Size(340, 401);
-            this.dataGridViewTipUgovora.TabIndex = 0;
+            this.dataGridViewTipUgovora.TabIndex = 2;
+            this.dataGridViewTipUgovora.TabStop = false;
             // 
             // TipUgovoraForm
             // 

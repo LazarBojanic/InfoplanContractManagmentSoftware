@@ -25,9 +25,9 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.dataGridViewOpstine = new System.Windows.Forms.DataGridView();
-            this.opstinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.textBoxOpstina = new System.Windows.Forms.TextBox();
+            this.opstinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOpstine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -49,11 +49,8 @@
             this.dataGridViewOpstine.RowHeadersWidth = 51;
             this.dataGridViewOpstine.RowTemplate.Height = 24;
             this.dataGridViewOpstine.Size = new System.Drawing.Size(340, 401);
-            this.dataGridViewOpstine.TabIndex = 0;
-            // 
-            // opstinaBindingSource
-            // 
-            this.opstinaBindingSource.DataMember = "opstina";
+            this.dataGridViewOpstine.TabIndex = 2;
+            this.dataGridViewOpstine.TabStop = false;
             // 
             // buttonDodaj
             // 
@@ -62,7 +59,7 @@
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(176, 63);
-            this.buttonDodaj.TabIndex = 2;
+            this.buttonDodaj.TabIndex = 1;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
@@ -74,7 +71,11 @@
             this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxOpstina.Name = "textBoxOpstina";
             this.textBoxOpstina.Size = new System.Drawing.Size(227, 20);
-            this.textBoxOpstina.TabIndex = 1;
+            this.textBoxOpstina.TabIndex = 0;
+            // 
+            // opstinaBindingSource
+            // 
+            this.opstinaBindingSource.DataMember = "opstina";
             // 
             // OpstineForm
             // 

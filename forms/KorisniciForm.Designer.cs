@@ -48,7 +48,8 @@
             this.dataGridViewKorisnici.RowTemplate.Height = 24;
             this.dataGridViewKorisnici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewKorisnici.Size = new System.Drawing.Size(395, 238);
-            this.dataGridViewKorisnici.TabIndex = 0;
+            this.dataGridViewKorisnici.TabIndex = 2;
+            this.dataGridViewKorisnici.TabStop = false;
             this.dataGridViewKorisnici.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // buttonDodaj
@@ -57,7 +58,7 @@
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(129, 63);
-            this.buttonDodaj.TabIndex = 1;
+            this.buttonDodaj.TabIndex = 0;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
@@ -68,7 +69,7 @@
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonIzmeni.Name = "buttonIzmeni";
             this.buttonIzmeni.Size = new System.Drawing.Size(129, 63);
-            this.buttonIzmeni.TabIndex = 2;
+            this.buttonIzmeni.TabIndex = 1;
             this.buttonIzmeni.Text = "Izmeni";
             this.buttonIzmeni.UseVisualStyleBackColor = true;
             this.buttonIzmeni.Click += new System.EventHandler(this.buttonIzmeni_Click);
