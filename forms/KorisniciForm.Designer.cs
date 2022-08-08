@@ -39,45 +39,49 @@
             this.dataGridViewKorisnici.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewKorisnici.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewKorisnici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKorisnici.Location = new System.Drawing.Point(12, 13);
+            this.dataGridViewKorisnici.Location = new System.Drawing.Point(9, 11);
+            this.dataGridViewKorisnici.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewKorisnici.MultiSelect = false;
             this.dataGridViewKorisnici.Name = "dataGridViewKorisnici";
             this.dataGridViewKorisnici.ReadOnly = true;
             this.dataGridViewKorisnici.RowHeadersWidth = 51;
             this.dataGridViewKorisnici.RowTemplate.Height = 24;
             this.dataGridViewKorisnici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewKorisnici.Size = new System.Drawing.Size(527, 293);
+            this.dataGridViewKorisnici.Size = new System.Drawing.Size(395, 238);
             this.dataGridViewKorisnici.TabIndex = 0;
             this.dataGridViewKorisnici.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // buttonDodaj
             // 
-            this.buttonDodaj.Location = new System.Drawing.Point(83, 326);
+            this.buttonDodaj.Location = new System.Drawing.Point(62, 265);
+            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDodaj.Name = "buttonDodaj";
-            this.buttonDodaj.Size = new System.Drawing.Size(172, 77);
-            this.buttonDodaj.TabIndex = 2;
+            this.buttonDodaj.Size = new System.Drawing.Size(129, 63);
+            this.buttonDodaj.TabIndex = 1;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
             // 
             // buttonIzmeni
             // 
-            this.buttonIzmeni.Location = new System.Drawing.Point(296, 326);
+            this.buttonIzmeni.Location = new System.Drawing.Point(222, 265);
+            this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonIzmeni.Name = "buttonIzmeni";
-            this.buttonIzmeni.Size = new System.Drawing.Size(172, 77);
-            this.buttonIzmeni.TabIndex = 5;
+            this.buttonIzmeni.Size = new System.Drawing.Size(129, 63);
+            this.buttonIzmeni.TabIndex = 2;
             this.buttonIzmeni.Text = "Izmeni";
             this.buttonIzmeni.UseVisualStyleBackColor = true;
             this.buttonIzmeni.Click += new System.EventHandler(this.buttonIzmeni_Click);
             // 
             // KorisniciForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 428);
+            this.ClientSize = new System.Drawing.Size(413, 348);
             this.Controls.Add(this.buttonIzmeni);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridViewKorisnici);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "KorisniciForm";
             this.Text = "KorisniciForm";
             this.Load += new System.EventHandler(this.KorisniciForm_Load);

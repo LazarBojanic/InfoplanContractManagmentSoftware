@@ -32,18 +32,20 @@
             // textBoxTipUgovora
             // 
             this.textBoxTipUgovora.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textBoxTipUgovora.Location = new System.Drawing.Point(91, 524);
+            this.textBoxTipUgovora.Location = new System.Drawing.Point(68, 426);
+            this.textBoxTipUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTipUgovora.Name = "textBoxTipUgovora";
-            this.textBoxTipUgovora.Size = new System.Drawing.Size(301, 22);
-            this.textBoxTipUgovora.TabIndex = 7;
+            this.textBoxTipUgovora.Size = new System.Drawing.Size(227, 20);
+            this.textBoxTipUgovora.TabIndex = 1;
             // 
             // buttonDodaj
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonDodaj.Location = new System.Drawing.Point(124, 563);
+            this.buttonDodaj.Location = new System.Drawing.Point(93, 457);
+            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
-            this.buttonDodaj.Size = new System.Drawing.Size(234, 77);
-            this.buttonDodaj.TabIndex = 6;
+            this.buttonDodaj.Size = new System.Drawing.Size(176, 63);
+            this.buttonDodaj.TabIndex = 2;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
@@ -58,23 +60,24 @@
             this.dataGridViewTipUgovora.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTipUgovora.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewTipUgovora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTipUgovora.Location = new System.Drawing.Point(13, 12);
-            this.dataGridViewTipUgovora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewTipUgovora.Location = new System.Drawing.Point(10, 10);
+            this.dataGridViewTipUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewTipUgovora.Name = "dataGridViewTipUgovora";
             this.dataGridViewTipUgovora.ReadOnly = true;
             this.dataGridViewTipUgovora.RowHeadersWidth = 51;
             this.dataGridViewTipUgovora.RowTemplate.Height = 24;
-            this.dataGridViewTipUgovora.Size = new System.Drawing.Size(453, 493);
-            this.dataGridViewTipUgovora.TabIndex = 5;
+            this.dataGridViewTipUgovora.Size = new System.Drawing.Size(340, 401);
+            this.dataGridViewTipUgovora.TabIndex = 0;
             // 
             // TipUgovoraForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 652);
+            this.ClientSize = new System.Drawing.Size(358, 530);
             this.Controls.Add(this.textBoxTipUgovora);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridViewTipUgovora);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TipUgovoraForm";
             this.Text = "TipUgovoraForm";
             this.Load += new System.EventHandler(this.TipUgovoraForm_Load);

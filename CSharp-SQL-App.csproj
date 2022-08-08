@@ -173,6 +173,9 @@
     <Compile Include="forms\UpdateForm.Designer.cs">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="forms\InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\IstorijaPromenaForm.resx">
       <DependentUpon>IstorijaPromenaForm.cs</DependentUpon>
     </EmbeddedResource>

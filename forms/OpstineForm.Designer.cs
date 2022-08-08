@@ -42,13 +42,13 @@
             this.dataGridViewOpstine.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewOpstine.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewOpstine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOpstine.Location = new System.Drawing.Point(12, 12);
-            this.dataGridViewOpstine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewOpstine.Location = new System.Drawing.Point(9, 10);
+            this.dataGridViewOpstine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewOpstine.Name = "dataGridViewOpstine";
             this.dataGridViewOpstine.ReadOnly = true;
             this.dataGridViewOpstine.RowHeadersWidth = 51;
             this.dataGridViewOpstine.RowTemplate.Height = 24;
-            this.dataGridViewOpstine.Size = new System.Drawing.Size(453, 493);
+            this.dataGridViewOpstine.Size = new System.Drawing.Size(340, 401);
             this.dataGridViewOpstine.TabIndex = 0;
             // 
             // opstinaBindingSource
@@ -58,10 +58,11 @@
             // buttonDodaj
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonDodaj.Location = new System.Drawing.Point(123, 563);
+            this.buttonDodaj.Location = new System.Drawing.Point(92, 457);
+            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDodaj.Name = "buttonDodaj";
-            this.buttonDodaj.Size = new System.Drawing.Size(234, 77);
-            this.buttonDodaj.TabIndex = 3;
+            this.buttonDodaj.Size = new System.Drawing.Size(176, 63);
+            this.buttonDodaj.TabIndex = 2;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
@@ -69,20 +70,21 @@
             // textBoxOpstina
             // 
             this.textBoxOpstina.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textBoxOpstina.Location = new System.Drawing.Point(90, 524);
+            this.textBoxOpstina.Location = new System.Drawing.Point(68, 426);
+            this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxOpstina.Name = "textBoxOpstina";
-            this.textBoxOpstina.Size = new System.Drawing.Size(301, 22);
-            this.textBoxOpstina.TabIndex = 4;
+            this.textBoxOpstina.Size = new System.Drawing.Size(227, 20);
+            this.textBoxOpstina.TabIndex = 1;
             // 
             // OpstineForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 652);
+            this.ClientSize = new System.Drawing.Size(358, 530);
             this.Controls.Add(this.textBoxOpstina);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridViewOpstine);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "OpstineForm";
             this.Text = "OpstineForm";
             this.Load += new System.EventHandler(this.OpstineForm_Load);
