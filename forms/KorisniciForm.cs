@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,9 @@ namespace CSharp_SQL_App {
         public static User user;
         public KorisniciForm() {
             InitializeComponent();
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dataGridViewKorisnici, new object[] { true });
             fillKorisniciDataGrid();
             if (!MainForm.user.privilegija.Equals("administrator")) {
                 buttonDodaj.Enabled = false;

@@ -40,25 +40,25 @@
             this.dataGridViewKorisnici.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewKorisnici.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewKorisnici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKorisnici.Location = new System.Drawing.Point(9, 11);
-            this.dataGridViewKorisnici.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewKorisnici.Location = new System.Drawing.Point(12, 14);
+            this.dataGridViewKorisnici.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewKorisnici.MultiSelect = false;
             this.dataGridViewKorisnici.Name = "dataGridViewKorisnici";
             this.dataGridViewKorisnici.ReadOnly = true;
             this.dataGridViewKorisnici.RowHeadersWidth = 51;
             this.dataGridViewKorisnici.RowTemplate.Height = 24;
             this.dataGridViewKorisnici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewKorisnici.Size = new System.Drawing.Size(395, 238);
+            this.dataGridViewKorisnici.Size = new System.Drawing.Size(527, 293);
             this.dataGridViewKorisnici.TabIndex = 2;
             this.dataGridViewKorisnici.TabStop = false;
             this.dataGridViewKorisnici.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // buttonDodaj
             // 
-            this.buttonDodaj.Location = new System.Drawing.Point(62, 265);
-            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDodaj.Location = new System.Drawing.Point(83, 326);
+            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDodaj.Name = "buttonDodaj";
-            this.buttonDodaj.Size = new System.Drawing.Size(129, 63);
+            this.buttonDodaj.Size = new System.Drawing.Size(172, 78);
             this.buttonDodaj.TabIndex = 0;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
@@ -66,10 +66,10 @@
             // 
             // buttonIzmeni
             // 
-            this.buttonIzmeni.Location = new System.Drawing.Point(222, 265);
-            this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonIzmeni.Location = new System.Drawing.Point(296, 326);
+            this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonIzmeni.Name = "buttonIzmeni";
-            this.buttonIzmeni.Size = new System.Drawing.Size(129, 63);
+            this.buttonIzmeni.Size = new System.Drawing.Size(172, 78);
             this.buttonIzmeni.TabIndex = 1;
             this.buttonIzmeni.Text = "Izmeni";
             this.buttonIzmeni.UseVisualStyleBackColor = true;
@@ -77,15 +77,15 @@
             // 
             // KorisniciForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 348);
+            this.ClientSize = new System.Drawing.Size(551, 428);
             this.Controls.Add(this.buttonIzmeni);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridViewKorisnici);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(429, 387);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(567, 467);
             this.Name = "KorisniciForm";
             this.Text = "Korisnici";
             this.Load += new System.EventHandler(this.KorisniciForm_Load);

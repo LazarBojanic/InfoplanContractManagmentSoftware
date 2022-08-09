@@ -40,10 +40,10 @@
             // 
             this.buttonSacuvaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonSacuvaj.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonSacuvaj.Location = new System.Drawing.Point(9, 182);
-            this.buttonSacuvaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSacuvaj.Location = new System.Drawing.Point(12, 224);
+            this.buttonSacuvaj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSacuvaj.Name = "buttonSacuvaj";
-            this.buttonSacuvaj.Size = new System.Drawing.Size(154, 63);
+            this.buttonSacuvaj.Size = new System.Drawing.Size(205, 78);
             this.buttonSacuvaj.TabIndex = 2;
             this.buttonSacuvaj.Text = "Sačuvaj";
             this.buttonSacuvaj.UseVisualStyleBackColor = true;
@@ -53,10 +53,10 @@
             // 
             this.buttonOtkazi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonOtkazi.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonOtkazi.Location = new System.Drawing.Point(194, 182);
-            this.buttonOtkazi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonOtkazi.Location = new System.Drawing.Point(259, 224);
+            this.buttonOtkazi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonOtkazi.Name = "buttonOtkazi";
-            this.buttonOtkazi.Size = new System.Drawing.Size(154, 63);
+            this.buttonOtkazi.Size = new System.Drawing.Size(205, 78);
             this.buttonOtkazi.TabIndex = 3;
             this.buttonOtkazi.Text = "Otkaži";
             this.buttonOtkazi.UseVisualStyleBackColor = true;
@@ -67,10 +67,10 @@
             this.textBoxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUsername.Location = new System.Drawing.Point(87, 61);
-            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxUsername.Location = new System.Drawing.Point(116, 75);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(242, 20);
+            this.textBoxUsername.Size = new System.Drawing.Size(321, 22);
             this.textBoxUsername.TabIndex = 0;
             // 
             // textBoxPassword
@@ -78,10 +78,10 @@
             this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPassword.Location = new System.Drawing.Point(87, 98);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPassword.Location = new System.Drawing.Point(116, 121);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(242, 20);
+            this.textBoxPassword.Size = new System.Drawing.Size(321, 22);
             this.textBoxPassword.TabIndex = 1;
             // 
             // labelUsername
@@ -90,10 +90,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(30, 63);
-            this.labelUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelUsername.Location = new System.Drawing.Point(40, 78);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(55, 13);
+            this.labelUsername.Size = new System.Drawing.Size(70, 16);
             this.labelUsername.TabIndex = 5;
             this.labelUsername.Text = "Username";
             // 
@@ -103,10 +102,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(30, 101);
-            this.labelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPassword.Location = new System.Drawing.Point(40, 124);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(53, 13);
+            this.labelPassword.Size = new System.Drawing.Size(67, 16);
             this.labelPassword.TabIndex = 6;
             this.labelPassword.Text = "Password";
             // 
@@ -116,10 +114,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrivilegija.AutoSize = true;
-            this.labelPrivilegija.Location = new System.Drawing.Point(30, 139);
-            this.labelPrivilegija.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPrivilegija.Location = new System.Drawing.Point(40, 171);
             this.labelPrivilegija.Name = "labelPrivilegija";
-            this.labelPrivilegija.Size = new System.Drawing.Size(51, 13);
+            this.labelPrivilegija.Size = new System.Drawing.Size(66, 16);
             this.labelPrivilegija.TabIndex = 7;
             this.labelPrivilegija.Text = "Privilegija";
             // 
@@ -128,11 +125,11 @@
             this.textBoxId.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxId.Location = new System.Drawing.Point(87, 24);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxId.Location = new System.Drawing.Point(116, 30);
+            this.textBoxId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.ReadOnly = true;
-            this.textBoxId.Size = new System.Drawing.Size(242, 20);
+            this.textBoxId.Size = new System.Drawing.Size(321, 22);
             this.textBoxId.TabIndex = 4;
             this.textBoxId.TabStop = false;
             // 
@@ -142,10 +139,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelId.AutoSize = true;
-            this.labelId.Location = new System.Drawing.Point(30, 26);
-            this.labelId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelId.Location = new System.Drawing.Point(40, 32);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(16, 13);
+            this.labelId.Size = new System.Drawing.Size(18, 16);
             this.labelId.TabIndex = 9;
             this.labelId.Text = "Id";
             // 
@@ -154,19 +150,19 @@
             this.textBoxPrivilegija.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPrivilegija.Location = new System.Drawing.Point(87, 136);
-            this.textBoxPrivilegija.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPrivilegija.Location = new System.Drawing.Point(116, 167);
+            this.textBoxPrivilegija.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPrivilegija.Name = "textBoxPrivilegija";
             this.textBoxPrivilegija.ReadOnly = true;
-            this.textBoxPrivilegija.Size = new System.Drawing.Size(242, 20);
+            this.textBoxPrivilegija.Size = new System.Drawing.Size(321, 22);
             this.textBoxPrivilegija.TabIndex = 5;
             this.textBoxPrivilegija.TabStop = false;
             // 
             // KorisniciUpdateFormForUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 254);
+            this.ClientSize = new System.Drawing.Size(475, 313);
             this.Controls.Add(this.textBoxPrivilegija);
             this.Controls.Add(this.labelId);
             this.Controls.Add(this.textBoxId);
@@ -178,8 +174,8 @@
             this.Controls.Add(this.buttonOtkazi);
             this.Controls.Add(this.buttonSacuvaj);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(372, 293);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(491, 352);
             this.Name = "KorisniciUpdateFormForUser";
             this.Text = "Izmena ličnih podataka";
             this.Load += new System.EventHandler(this.KorisniciUpdateFormForUser_Load);

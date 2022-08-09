@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,8 +14,11 @@ using System.Windows.Forms;
 namespace CSharp_SQL_App {
     public partial class IstorijaPromenaForm : Form {
         private String uGuid { get;set;}
-        public IstorijaPromenaForm(String uGuid) {
+        public IstorijaPromenaForm(String uGuid) {         
             InitializeComponent();
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dataGridViewChangeLog, new object[] { true });
             this.uGuid = uGuid;
             fillChangeLogGrid();
         }

@@ -73,7 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 335);
+            this.ClientSize = new System.Drawing.Size(561, 343);
             this.Controls.Add(this.labelGreska);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPassword);

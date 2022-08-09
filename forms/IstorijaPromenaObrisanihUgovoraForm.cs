@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,9 @@ namespace CSharp_SQL_App.forms {
     public partial class IstorijaPromenaObrisanihUgovoraForm : Form {
         public IstorijaPromenaObrisanihUgovoraForm() {
             InitializeComponent();
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dataGridViewChangeLogObrisanihUgovora, new object[] { true });
             fillChangeLogObrisanihUgovoraGrid();
         }
 

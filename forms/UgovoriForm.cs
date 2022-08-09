@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
@@ -12,11 +13,15 @@ namespace CSharp_SQL_App {
         public Ugovor ugovor { get; set; }
         public UgovoriForm() {
             InitializeComponent();
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dataGridViewUgovori, new object[] { true });
             dateTimeDatumUgovora.Value = DateTime.Today.AddDays(1);
             dateTimeKrajnjiRok.Value = DateTime.Today.AddDays(1);
             if (!MainForm.user.privilegija.Equals("administrator")) {
                 buttonObrisi.Enabled = false;
             }
+            
         }
         private void UgovoriForm_Load(object sender, EventArgs e) {
             refreshDataGrid();

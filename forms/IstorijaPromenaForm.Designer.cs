@@ -37,21 +37,23 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewChangeLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewChangeLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewChangeLog.Location = new System.Drawing.Point(10, 11);
+            this.dataGridViewChangeLog.Location = new System.Drawing.Point(13, 14);
+            this.dataGridViewChangeLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewChangeLog.Name = "dataGridViewChangeLog";
             this.dataGridViewChangeLog.ReadOnly = true;
             this.dataGridViewChangeLog.RowHeadersWidth = 51;
-            this.dataGridViewChangeLog.Size = new System.Drawing.Size(1003, 429);
+            this.dataGridViewChangeLog.Size = new System.Drawing.Size(1337, 528);
             this.dataGridViewChangeLog.TabIndex = 0;
             // 
             // IstorijaPromenaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 450);
+            this.ClientSize = new System.Drawing.Size(1363, 554);
             this.Controls.Add(this.dataGridViewChangeLog);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1038, 489);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1379, 593);
             this.Name = "IstorijaPromenaForm";
             this.Text = "Istorija Promena";
             this.Load += new System.EventHandler(this.IstorijaPromenaForm_Load);
