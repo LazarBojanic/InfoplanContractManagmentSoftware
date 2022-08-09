@@ -442,7 +442,7 @@
             this.checkBoxDatumUgovora.AutoSize = true;
             this.checkBoxDatumUgovora.Checked = true;
             this.checkBoxDatumUgovora.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxDatumUgovora.Location = new System.Drawing.Point(11, 354);
+            this.checkBoxDatumUgovora.Location = new System.Drawing.Point(11, 340);
             this.checkBoxDatumUgovora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxDatumUgovora.Name = "checkBoxDatumUgovora";
             this.checkBoxDatumUgovora.Size = new System.Drawing.Size(18, 17);
@@ -455,7 +455,7 @@
             this.checkBoxKrajnjiRok.AutoSize = true;
             this.checkBoxKrajnjiRok.Checked = true;
             this.checkBoxKrajnjiRok.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxKrajnjiRok.Location = new System.Drawing.Point(11, 498);
+            this.checkBoxKrajnjiRok.Location = new System.Drawing.Point(11, 478);
             this.checkBoxKrajnjiRok.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxKrajnjiRok.Name = "checkBoxKrajnjiRok";
             this.checkBoxKrajnjiRok.Size = new System.Drawing.Size(18, 17);
