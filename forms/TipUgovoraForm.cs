@@ -63,5 +63,13 @@ namespace CSharp_SQL_App {
             addTipUgovora();
             fillTipUgovoraDataGrid();
         }
+
+        private void TipUgovoraForm_ResizeBegin(object sender, EventArgs e) {
+            this.SuspendLayout();
+        }
+
+        private void TipUgovoraForm_ResizeEnd(object sender, EventArgs e) {
+            this.ResumeLayout(true);
+        }
     }
 }

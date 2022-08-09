@@ -60,5 +60,13 @@ namespace CSharp_SQL_App {
             dataGridViewOpstine.DataSource = bs;
             connection.Close();
         }
+
+        private void OpstineForm_ResizeBegin(object sender, EventArgs e) {
+            this.SuspendLayout();
+        }
+
+        private void OpstineForm_ResizeEnd(object sender, EventArgs e) {
+            this.ResumeLayout(true);
+        }
     }
 }

@@ -28,11 +28,11 @@
             // 
             // InfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 385);
+            this.ClientSize = new System.Drawing.Size(442, 313);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(458, 352);
             this.Name = "InfoForm";
             this.Text = "Detalji o firmi i softveru";
             this.Load += new System.EventHandler(this.InfoForm_Load);
