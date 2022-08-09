@@ -49,7 +49,8 @@ namespace CSharp_SQL_App {
             OleDbConnection connection;
             OleDbCommand command;
             DataTable dt;
-            String query = "SELECT * FROM ugovor ORDER BY id";
+            String query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
+                " datumUgovora, rokPoUgovoru, obim, krajnjiRok, prioritet, cena, uGuid FROM ugovor ORDER BY id";
             connection = GetConnection();
             connection.Open();
             command = new OleDbCommand(query, connection);
@@ -245,6 +246,36 @@ namespace CSharp_SQL_App {
         private void buttonIstorijaPromenaObrisanihUgovora_Click(object sender, EventArgs e) {
             IstorijaPromenaObrisanihUgovoraForm i = new IstorijaPromenaObrisanihUgovoraForm();
             i.ShowDialog();
+        }
+
+        private void textBoxCena_KeyPress(object sender, KeyPressEventArgs e) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                    (e.KeyChar != '.')) {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxObim_KeyPress(object sender, KeyPressEventArgs e) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                    (e.KeyChar != '.')) {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxRokPoUgovoru_KeyPress(object sender, KeyPressEventArgs e) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                    (e.KeyChar != '.')) {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
+                e.Handled = true;
+            }
         }
     }
 }

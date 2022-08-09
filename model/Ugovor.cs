@@ -21,12 +21,13 @@ namespace CSharp_SQL_App.model {
         public int obim { get; set; }
         public DateTime krajnjiRok { get; set; }
         public int prioritet { get; set; }
+        public int cena { get; set; }
         public String uGuid { get; set; }
         public DateTime vremeUgovora { get; set; }
 
         public Ugovor(int id, string opstina, string nazivPlana, string urbanista, string faza, string tipUgovora,
             string napomena, DateTime datumUgovora, string rokPoUgovoru, int obim,
-            DateTime krajnjiRok, int prioritet, string uGuid, DateTime vremeUgovora) {
+            DateTime krajnjiRok, int prioritet, int cena, DateTime vremeUgovora, string uGuid) {
             this.id = id;
             this.opstina = opstina;
             this.nazivPlana = nazivPlana;
@@ -39,8 +40,9 @@ namespace CSharp_SQL_App.model {
             this.obim = obim;
             this.krajnjiRok = krajnjiRok;
             this.prioritet = prioritet;
-            this.uGuid = uGuid;
+            this.cena = cena;
             this.vremeUgovora = vremeUgovora;
+            this.uGuid = uGuid;     
         }
         public Ugovor() {
             this.id = 0;
@@ -55,8 +57,9 @@ namespace CSharp_SQL_App.model {
             this.obim = 0;
             this.krajnjiRok = DateTime.Today;
             this.prioritet = 0;
-            this.uGuid = Guid.NewGuid().ToString();
+            this.cena = 0;
             this.vremeUgovora = DateTime.Now;
+            this.uGuid = Guid.NewGuid().ToString();          
         }
         public bool loadFromDatabase(int parId) {
             OleDbConnection connection = GetConnection();
@@ -164,6 +167,14 @@ namespace CSharp_SQL_App.model {
                     }
                 }
                 try {
+                    cena = dataReader.GetInt32(dataReader.GetOrdinal("cena"));
+                }
+                catch (Exception ex) {
+                    if (ex is NullReferenceException || ex is InvalidCastException) {
+                        cena = 0;
+                    }
+                }
+                try {
                     vremeUgovora = dataReader.GetDateTime(dataReader.GetOrdinal("vremeUgovora"));
                 }
                 catch (Exception ex) {
@@ -194,8 +205,8 @@ namespace CSharp_SQL_App.model {
             vremeUgovora = DateTime.Now;
             if (id == 0) {
                 string query = "INSERT INTO ugovor (opstina, nazivPlana, urbanista, tipUgovora, faza, napomena, datumUgovora," +
-                    " rokPoUgovoru, obim, krajnjiRok, prioritet, vremeUgovora, uGuid) VALUES (@opstina, @nazivPlana, @urbanista, @tipUgovora, @faza, @napomena," +
-                    " @datumUgovora, @rokPoUgovoru, @obim, @krajnjiRok, @prioritet, @vremeUgovora, @uGuid)";
+                    " rokPoUgovoru, obim, krajnjiRok, prioritet, cena, vremeUgovora, uGuid) VALUES (@opstina, @nazivPlana, @urbanista, @tipUgovora, @faza, @napomena," +
+                    " @datumUgovora, @rokPoUgovoru, @obim, @krajnjiRok, @prioritet, @cena, @vremeUgovora, @uGuid)";
                 OleDbCommand command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@opstina", opstina);
                 command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
@@ -208,6 +219,7 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@obim", obim);
                 command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);
                 command.Parameters.AddWithValue("@prioritet", prioritet);
+                command.Parameters.AddWithValue("@cena", cena);
                 command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = ChangeLog.vremeAkcijeWithoutMilliseconds(vremeUgovora);
                 command.Parameters.AddWithValue("@uGuid", uGuid);
                 int recordsAffected = command.ExecuteNonQuery();
@@ -215,7 +227,7 @@ namespace CSharp_SQL_App.model {
             else {
                 string query = "UPDATE ugovor SET opstina = @opstina, nazivPlana = @nazivPlana, urbanista = @urbanista, tipUgovora = @tipUgovora," +
                     " faza = @faza, napomena = @napomena, datumUgovora = @datumUgovora, rokPoUgovoru = @rokPoUgovoru, obim = @obim," +
-                    " krajnjiRok = @krajnjiRok, prioritet = @prioritet, vremeUgovora = @vremeUgovora WHERE id = @id";
+                    " krajnjiRok = @krajnjiRok, prioritet = @prioritet, cena = @cena, vremeUgovora = @vremeUgovora WHERE id = @id";
                 OleDbCommand command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@opstina", opstina);
                 command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
@@ -228,6 +240,7 @@ namespace CSharp_SQL_App.model {
                 command.Parameters.AddWithValue("@obim", obim);
                 command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);
                 command.Parameters.AddWithValue("@prioritet", prioritet);
+                command.Parameters.AddWithValue("@cena", cena);
                 command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = ChangeLog.vremeAkcijeWithoutMilliseconds(vremeUgovora);
                 command.Parameters.AddWithValue("@id", id);
                 command.ExecuteNonQuery();
@@ -237,8 +250,5 @@ namespace CSharp_SQL_App.model {
         private static OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
-
-
-
     }
 }

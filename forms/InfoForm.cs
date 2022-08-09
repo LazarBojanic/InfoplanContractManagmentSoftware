@@ -13,5 +13,8 @@ namespace CSharp_SQL_App {
         public InfoForm() {
             InitializeComponent();
         }
+        private void InfoForm_Load(object sender, EventArgs e) {
+
+        }
     }
 }

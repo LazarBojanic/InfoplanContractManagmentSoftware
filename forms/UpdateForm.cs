@@ -75,6 +75,7 @@ namespace CSharp_SQL_App {
             textBoxObim.Text = oldUgovor.obim.ToString();
             dateTimeKrajnjiRok.Value = oldUgovor.krajnjiRok;
             textBoxPrioritet.Text = oldUgovor.prioritet.ToString();
+            textBoxCena.Text = oldUgovor.cena.ToString();
         }
         private void buttonSacuvaj_Click(object sender, EventArgs e) {         
             try {
@@ -98,6 +99,7 @@ namespace CSharp_SQL_App {
                 newUgovor.obim = Int32.Parse(textBoxObim.Text);
                 newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
                 newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
+                newUgovor.cena = Int32.Parse(textBoxCena.Text);
                 newUgovor.vremeUgovora = DateTime.Now;
                 newUgovor.uGuid = oldUgovor.uGuid;
                 newUgovor.saveToDatabase();
@@ -152,6 +154,26 @@ namespace CSharp_SQL_App {
                 if (comboBoxRokPoUgovoru.Text.Equals("Godine")) {
                     dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(Int32.Parse(textBoxRokPoUgovoru.Text));
                 }
+            }
+        }
+
+        private void textBoxCena_KeyPress(object sender, KeyPressEventArgs e) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                    (e.KeyChar != '.')) {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxObim_KeyPress(object sender, KeyPressEventArgs e) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                    (e.KeyChar != '.')) {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
+                e.Handled = true;
             }
         }
     }

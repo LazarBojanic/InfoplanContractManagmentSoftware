@@ -65,6 +65,9 @@ namespace CSharp_SQL_App.model {
                 if (!oldUgovor.prioritet.Equals(newUgovor.prioritet)) {
                     addChangeLogField("ugovor", "prioritet", "kreairanje", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
                 }
+                if (!oldUgovor.cena.Equals(newUgovor.cena)) {
+                    addChangeLogField("ugovor", "cena", "kreairanje", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
+                }
             }
             else if(newUgovor.id == 0) {
                 if (!oldUgovor.opstina.Equals(newUgovor.opstina)) {
@@ -100,6 +103,9 @@ namespace CSharp_SQL_App.model {
                 if (!oldUgovor.prioritet.Equals(newUgovor.prioritet)) {
                     addChangeLogField("ugovor", "prioritet", "brisanje", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
                 }
+                if (!oldUgovor.cena.Equals(newUgovor.cena)) {
+                    addChangeLogField("ugovor", "cena", "brisanje", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
+                }
             }
             else {
                 if (!oldUgovor.opstina.Equals(newUgovor.opstina)) {
@@ -134,6 +140,9 @@ namespace CSharp_SQL_App.model {
                 }
                 if (!oldUgovor.prioritet.Equals(newUgovor.prioritet)) {
                     addChangeLogField("ugovor", "prioritet", "promena", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
+                }
+                if (!oldUgovor.cena.Equals(newUgovor.cena)) {
+                    addChangeLogField("ugovor", "cena", "promena", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
                 }
             }
 
