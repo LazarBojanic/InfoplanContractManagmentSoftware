@@ -35,9 +35,10 @@
             this.textBoxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUsername.Location = new System.Drawing.Point(91, 49);
+            this.textBoxUsername.Location = new System.Drawing.Point(68, 40);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(377, 22);
+            this.textBoxUsername.Size = new System.Drawing.Size(284, 20);
             this.textBoxUsername.TabIndex = 0;
             // 
             // textBoxPassword
@@ -45,17 +46,19 @@
             this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPassword.Location = new System.Drawing.Point(91, 116);
+            this.textBoxPassword.Location = new System.Drawing.Point(68, 94);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(377, 22);
+            this.textBoxPassword.Size = new System.Drawing.Size(284, 20);
             this.textBoxPassword.TabIndex = 1;
             // 
             // buttonLogin
             // 
             this.buttonLogin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonLogin.Location = new System.Drawing.Point(155, 208);
+            this.buttonLogin.Location = new System.Drawing.Point(116, 169);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(248, 77);
+            this.buttonLogin.Size = new System.Drawing.Size(186, 63);
             this.buttonLogin.TabIndex = 2;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -63,23 +66,26 @@
             // 
             // labelGreska
             // 
-            this.labelGreska.Location = new System.Drawing.Point(155, 288);
+            this.labelGreska.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.labelGreska.Location = new System.Drawing.Point(116, 234);
+            this.labelGreska.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelGreska.Name = "labelGreska";
-            this.labelGreska.Size = new System.Drawing.Size(248, 25);
+            this.labelGreska.Size = new System.Drawing.Size(186, 20);
             this.labelGreska.TabIndex = 3;
             this.labelGreska.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 343);
+            this.ClientSize = new System.Drawing.Size(421, 279);
             this.Controls.Add(this.labelGreska);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(577, 382);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(437, 318);
             this.Name = "LoginForm";
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
