@@ -44,7 +44,7 @@
             this.dataGridViewOpstine.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewOpstine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOpstine.Location = new System.Drawing.Point(9, 10);
-            this.dataGridViewOpstine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewOpstine.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewOpstine.Name = "dataGridViewOpstine";
             this.dataGridViewOpstine.ReadOnly = true;
             this.dataGridViewOpstine.RowHeadersWidth = 51;
@@ -57,7 +57,7 @@
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonDodaj.Location = new System.Drawing.Point(92, 457);
-            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(176, 63);
             this.buttonDodaj.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             this.textBoxOpstina.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBoxOpstina.Location = new System.Drawing.Point(68, 426);
-            this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOpstina.Name = "textBoxOpstina";
             this.textBoxOpstina.Size = new System.Drawing.Size(227, 20);
             this.textBoxOpstina.TabIndex = 0;
@@ -87,7 +87,7 @@
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridViewOpstine);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(374, 569);
             this.Name = "OpstineForm";
             this.Text = "Opštine";
@@ -98,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

@@ -899,8 +899,8 @@
             this.Text = "Ugovori";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UgovoriForm_Load);
-            this.ResizeBegin += new System.EventHandler(this.UgovoriForm_ResizeBegin);
-            this.ResizeEnd += new System.EventHandler(this.UgovoriForm_ResizeEnd);
+            this.ResizeBegin += new System.EventHandler(this.UgovoriForm_ResizeBegin_1);
+            this.ResizeEnd += new System.EventHandler(this.UgovoriForm_ResizeEnd_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).EndInit();
             this.panelPretraga.ResumeLayout(false);
             this.panelPretraga.PerformLayout();

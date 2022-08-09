@@ -62,7 +62,7 @@ namespace CSharp_SQL_App {
         }
 
         private void OpstineForm_ResizeBegin(object sender, EventArgs e) {
-            this.SuspendLayout();
+            this.SuspendLayout();           
         }
 
         private void OpstineForm_ResizeEnd(object sender, EventArgs e) {

@@ -65,12 +65,6 @@ namespace CSharp_SQL_App {
                 fillKorisniciDataGrid();
             }
         }
-        private void KorisniciForm_ResizeBegin(object sender, EventArgs e) {
-            this.SuspendLayout();
-        }
-        private void KorisniciForm_ResizeEnd(object sender, EventArgs e) {
-            this.ResumeLayout(true);
-        }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
             int id = int.Parse(dataGridViewKorisnici.SelectedRows[0].Cells[0].Value.ToString());
@@ -81,6 +75,14 @@ namespace CSharp_SQL_App {
             if (korisniciUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
                 fillKorisniciDataGrid();
             }
+        }
+
+        private void KorisniciForm_ResizeBegin(object sender, EventArgs e) {
+            this.SuspendLayout();            
+        }
+
+        private void KorisniciForm_ResizeEnd(object sender, EventArgs e) {
+            this.ResumeLayout(true);
         }
     }
 }

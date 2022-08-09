@@ -44,7 +44,7 @@ namespace CSharp_SQL_App {
         }
 
         private void IstorijaPromenaForm_ResizeBegin(object sender, EventArgs e) {
-            this.SuspendLayout();            
+            this.SuspendLayout();
         }
 
         private void IstorijaPromenaForm_ResizeEnd(object sender, EventArgs e) {

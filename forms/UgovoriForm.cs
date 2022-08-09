@@ -291,5 +291,13 @@ namespace CSharp_SQL_App {
                 e.Handled = true;
             }
         }
+
+        private void UgovoriForm_ResizeBegin_1(object sender, EventArgs e) {
+            this.SuspendLayout();            
+        }
+
+        private void UgovoriForm_ResizeEnd_1(object sender, EventArgs e) {
+            this.ResumeLayout(true);
+        }
     }
 }
