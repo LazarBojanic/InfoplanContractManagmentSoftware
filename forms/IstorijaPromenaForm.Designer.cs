@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IstorijaPromenaForm));
             this.dataGridViewChangeLog = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLog)).BeginInit();
             this.SuspendLayout();
@@ -50,9 +51,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1363, 554);
             this.Controls.Add(this.dataGridViewChangeLog);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IstorijaPromenaForm";
-            this.Text = "IstorijaPromenaForm";
+            this.Text = "Istorija Promena";
             this.Load += new System.EventHandler(this.IstorijaPromenaForm_Load);
             this.ResizeBegin += new System.EventHandler(this.IstorijaPromenaForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.IstorijaPromenaForm_ResizeEnd);

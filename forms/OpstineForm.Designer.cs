@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpstineForm));
             this.dataGridViewOpstine = new System.Windows.Forms.DataGridView();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.textBoxOpstina = new System.Windows.Forms.TextBox();
@@ -42,23 +43,23 @@
             this.dataGridViewOpstine.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewOpstine.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewOpstine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOpstine.Location = new System.Drawing.Point(9, 10);
-            this.dataGridViewOpstine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewOpstine.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewOpstine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewOpstine.Name = "dataGridViewOpstine";
             this.dataGridViewOpstine.ReadOnly = true;
             this.dataGridViewOpstine.RowHeadersWidth = 51;
             this.dataGridViewOpstine.RowTemplate.Height = 24;
-            this.dataGridViewOpstine.Size = new System.Drawing.Size(340, 401);
+            this.dataGridViewOpstine.Size = new System.Drawing.Size(453, 494);
             this.dataGridViewOpstine.TabIndex = 2;
             this.dataGridViewOpstine.TabStop = false;
             // 
             // buttonDodaj
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonDodaj.Location = new System.Drawing.Point(92, 457);
-            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDodaj.Location = new System.Drawing.Point(123, 562);
+            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDodaj.Name = "buttonDodaj";
-            this.buttonDodaj.Size = new System.Drawing.Size(176, 63);
+            this.buttonDodaj.Size = new System.Drawing.Size(235, 78);
             this.buttonDodaj.TabIndex = 1;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
@@ -67,10 +68,10 @@
             // textBoxOpstina
             // 
             this.textBoxOpstina.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textBoxOpstina.Location = new System.Drawing.Point(68, 426);
-            this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxOpstina.Location = new System.Drawing.Point(91, 524);
+            this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxOpstina.Name = "textBoxOpstina";
-            this.textBoxOpstina.Size = new System.Drawing.Size(227, 20);
+            this.textBoxOpstina.Size = new System.Drawing.Size(301, 22);
             this.textBoxOpstina.TabIndex = 0;
             // 
             // opstinaBindingSource
@@ -79,15 +80,16 @@
             // 
             // OpstineForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 530);
+            this.ClientSize = new System.Drawing.Size(477, 652);
             this.Controls.Add(this.textBoxOpstina);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridViewOpstine);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OpstineForm";
-            this.Text = "OpstineForm";
+            this.Text = "Opštine";
             this.Load += new System.EventHandler(this.OpstineForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOpstine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).EndInit();

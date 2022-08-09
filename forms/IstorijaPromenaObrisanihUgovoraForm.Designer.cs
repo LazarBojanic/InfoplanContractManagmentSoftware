@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IstorijaPromenaObrisanihUgovoraForm));
             this.dataGridViewChangeLogObrisanihUgovora = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLogObrisanihUgovora)).BeginInit();
             this.SuspendLayout();
@@ -50,8 +51,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1363, 554);
             this.Controls.Add(this.dataGridViewChangeLogObrisanihUgovora);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IstorijaPromenaObrisanihUgovoraForm";
-            this.Text = "IstorijaPromenaObrisanihUgovoraForm";
+            this.Text = "Istorija Promena Obrisanih Ugovora";
             this.Load += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_Load);
             this.ResizeBegin += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_ResizeEnd);

@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateForm));
             this.textBoxNazivPlana = new System.Windows.Forms.TextBox();
             this.textBoxUrbanista = new System.Windows.Forms.TextBox();
             this.textBoxFaza = new System.Windows.Forms.TextBox();
@@ -411,10 +412,11 @@
             this.Controls.Add(this.textBoxFaza);
             this.Controls.Add(this.textBoxUrbanista);
             this.Controls.Add(this.textBoxNazivPlana);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(969, 497);
             this.Name = "UpdateForm";
-            this.Text = "UpdateForm";
+            this.Text = "Dodavanje/izmena ugovora";
             this.Load += new System.EventHandler(this.UpdateForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).EndInit();

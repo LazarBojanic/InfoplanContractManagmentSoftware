@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UgovoriForm));
             this.dataGridViewUgovori = new System.Windows.Forms.DataGridView();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonIzmeni = new System.Windows.Forms.Button();
@@ -440,8 +441,6 @@
             // checkBoxDatumUgovora
             // 
             this.checkBoxDatumUgovora.AutoSize = true;
-            this.checkBoxDatumUgovora.Checked = true;
-            this.checkBoxDatumUgovora.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxDatumUgovora.Location = new System.Drawing.Point(11, 340);
             this.checkBoxDatumUgovora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxDatumUgovora.Name = "checkBoxDatumUgovora";
@@ -453,8 +452,6 @@
             // checkBoxKrajnjiRok
             // 
             this.checkBoxKrajnjiRok.AutoSize = true;
-            this.checkBoxKrajnjiRok.Checked = true;
-            this.checkBoxKrajnjiRok.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxKrajnjiRok.Location = new System.Drawing.Point(11, 478);
             this.checkBoxKrajnjiRok.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxKrajnjiRok.Name = "checkBoxKrajnjiRok";
@@ -646,12 +643,14 @@
             // radioButtonKrajnjiRokEqual
             // 
             this.radioButtonKrajnjiRokEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonKrajnjiRokEqual.Checked = true;
             this.radioButtonKrajnjiRokEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKrajnjiRokEqual.Location = new System.Drawing.Point(80, 0);
             this.radioButtonKrajnjiRokEqual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonKrajnjiRokEqual.Name = "radioButtonKrajnjiRokEqual";
             this.radioButtonKrajnjiRokEqual.Size = new System.Drawing.Size(35, 30);
             this.radioButtonKrajnjiRokEqual.TabIndex = 2;
+            this.radioButtonKrajnjiRokEqual.TabStop = true;
             this.radioButtonKrajnjiRokEqual.Text = "=";
             this.radioButtonKrajnjiRokEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButtonKrajnjiRokEqual.UseVisualStyleBackColor = true;
@@ -659,14 +658,12 @@
             // radioButtonKrajnjiRokLesser
             // 
             this.radioButtonKrajnjiRokLesser.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonKrajnjiRokLesser.Checked = true;
             this.radioButtonKrajnjiRokLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKrajnjiRokLesser.Location = new System.Drawing.Point(0, 0);
             this.radioButtonKrajnjiRokLesser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonKrajnjiRokLesser.Name = "radioButtonKrajnjiRokLesser";
             this.radioButtonKrajnjiRokLesser.Size = new System.Drawing.Size(35, 30);
             this.radioButtonKrajnjiRokLesser.TabIndex = 0;
-            this.radioButtonKrajnjiRokLesser.TabStop = true;
             this.radioButtonKrajnjiRokLesser.Text = "<";
             this.radioButtonKrajnjiRokLesser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButtonKrajnjiRokLesser.UseVisualStyleBackColor = true;
@@ -750,12 +747,14 @@
             // radioButtonDatumUgovoraEqual
             // 
             this.radioButtonDatumUgovoraEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonDatumUgovoraEqual.Checked = true;
             this.radioButtonDatumUgovoraEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonDatumUgovoraEqual.Location = new System.Drawing.Point(80, 0);
             this.radioButtonDatumUgovoraEqual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonDatumUgovoraEqual.Name = "radioButtonDatumUgovoraEqual";
             this.radioButtonDatumUgovoraEqual.Size = new System.Drawing.Size(35, 30);
             this.radioButtonDatumUgovoraEqual.TabIndex = 2;
+            this.radioButtonDatumUgovoraEqual.TabStop = true;
             this.radioButtonDatumUgovoraEqual.Text = "=";
             this.radioButtonDatumUgovoraEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButtonDatumUgovoraEqual.UseVisualStyleBackColor = true;
@@ -763,14 +762,12 @@
             // radioButtonDatumUgovoraLesser
             // 
             this.radioButtonDatumUgovoraLesser.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonDatumUgovoraLesser.Checked = true;
             this.radioButtonDatumUgovoraLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonDatumUgovoraLesser.Location = new System.Drawing.Point(0, 0);
             this.radioButtonDatumUgovoraLesser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonDatumUgovoraLesser.Name = "radioButtonDatumUgovoraLesser";
             this.radioButtonDatumUgovoraLesser.Size = new System.Drawing.Size(35, 30);
             this.radioButtonDatumUgovoraLesser.TabIndex = 0;
-            this.radioButtonDatumUgovoraLesser.TabStop = true;
             this.radioButtonDatumUgovoraLesser.Text = "<";
             this.radioButtonDatumUgovoraLesser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButtonDatumUgovoraLesser.UseVisualStyleBackColor = true;
@@ -884,6 +881,7 @@
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridViewUgovori);
             this.Controls.Add(this.panelPretraga);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(1799, 826);
             this.Name = "UgovoriForm";
