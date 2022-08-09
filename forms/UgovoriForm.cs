@@ -158,6 +158,17 @@ namespace CSharp_SQL_App {
                     query += " AND prioritet = @prioritet";
                 }
             }
+            if (!string.IsNullOrEmpty(textBoxCena.Text)) {
+                if (radioButtonCenaLesser.Checked) {
+                    query += " AND cena < @cena";
+                }
+                if (radioButtonCenaGreater.Checked) {
+                    query += " AND cena > @cena";
+                }
+                if (radioButtonCenaEqual.Checked) {
+                    query += " AND cena = @cena";
+                }
+            }
             if (!string.IsNullOrEmpty(textBoxUGuid.Text)) {
                 query += " AND UCASE(uGuid) LIKE '%' + @uGuid + '%'";
             }
@@ -197,6 +208,9 @@ namespace CSharp_SQL_App {
             }
             if (!string.IsNullOrEmpty(textBoxPrioritet.Text)) {
                 command.Parameters.AddWithValue("@prioritet", textBoxPrioritet.Text);
+            }
+            if (!string.IsNullOrEmpty(textBoxCena.Text)) {
+                command.Parameters.AddWithValue("@cena", textBoxCena.Text);
             }
             if (!string.IsNullOrEmpty(textBoxUGuid.Text)) {
                 command.Parameters.AddWithValue("@uGuid", textBoxUGuid.Text.ToUpper());

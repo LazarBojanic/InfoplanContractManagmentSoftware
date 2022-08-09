@@ -59,6 +59,12 @@
             this.checkBoxDatumUgovora = new System.Windows.Forms.CheckBox();
             this.checkBoxKrajnjiRok = new System.Windows.Forms.CheckBox();
             this.panelPretraga = new System.Windows.Forms.Panel();
+            this.panelCena = new System.Windows.Forms.Panel();
+            this.radioButtonCenaEqual = new System.Windows.Forms.RadioButton();
+            this.radioButtonCenaLesser = new System.Windows.Forms.RadioButton();
+            this.radioButtonCenaGreater = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxCena = new System.Windows.Forms.TextBox();
             this.panelPrioritet = new System.Windows.Forms.Panel();
             this.radioButtonPrioritetEqual = new System.Windows.Forms.RadioButton();
             this.radioButtonPrioritetLesser = new System.Windows.Forms.RadioButton();
@@ -83,14 +89,9 @@
             this.buttonIstorijaPromenaObrisanihUgovora = new System.Windows.Forms.Button();
             this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textBoxCena = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelCena = new System.Windows.Forms.Panel();
-            this.radioButtonEqual = new System.Windows.Forms.RadioButton();
-            this.radioButtonCenaLesser = new System.Windows.Forms.RadioButton();
-            this.radioButtonGreater = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).BeginInit();
             this.panelPretraga.SuspendLayout();
+            this.panelCena.SuspendLayout();
             this.panelPrioritet.SuspendLayout();
             this.panelKrajnjiRok.SuspendLayout();
             this.panelObim.SuspendLayout();
@@ -98,7 +99,6 @@
             this.panelId.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).BeginInit();
-            this.panelCena.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewUgovori
@@ -168,7 +168,7 @@
             this.buttonIstorijaPromena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonIstorijaPromena.AutoSize = true;
             this.buttonIstorijaPromena.Location = new System.Drawing.Point(93, 693);
-            this.buttonIstorijaPromena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonIstorijaPromena.Margin = new System.Windows.Forms.Padding(4);
             this.buttonIstorijaPromena.Name = "buttonIstorijaPromena";
             this.buttonIstorijaPromena.Size = new System.Drawing.Size(123, 78);
             this.buttonIstorijaPromena.TabIndex = 14;
@@ -411,7 +411,7 @@
             this.buttonPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPretraga.AutoSize = true;
             this.buttonPretraga.Location = new System.Drawing.Point(1577, 693);
-            this.buttonPretraga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPretraga.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPretraga.Name = "buttonPretraga";
             this.buttonPretraga.Size = new System.Drawing.Size(192, 78);
             this.buttonPretraga.TabIndex = 19;
@@ -507,6 +507,78 @@
             this.panelPretraga.Name = "panelPretraga";
             this.panelPretraga.Size = new System.Drawing.Size(556, 651);
             this.panelPretraga.TabIndex = 20;
+            // 
+            // panelCena
+            // 
+            this.panelCena.Controls.Add(this.radioButtonCenaEqual);
+            this.panelCena.Controls.Add(this.radioButtonCenaLesser);
+            this.panelCena.Controls.Add(this.radioButtonCenaGreater);
+            this.panelCena.Location = new System.Drawing.Point(423, 563);
+            this.panelCena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelCena.Name = "panelCena";
+            this.panelCena.Size = new System.Drawing.Size(115, 30);
+            this.panelCena.TabIndex = 28;
+            // 
+            // radioButtonCenaEqual
+            // 
+            this.radioButtonCenaEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonCenaEqual.Checked = true;
+            this.radioButtonCenaEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCenaEqual.Location = new System.Drawing.Point(80, 0);
+            this.radioButtonCenaEqual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButtonCenaEqual.Name = "radioButtonCenaEqual";
+            this.radioButtonCenaEqual.Size = new System.Drawing.Size(35, 30);
+            this.radioButtonCenaEqual.TabIndex = 2;
+            this.radioButtonCenaEqual.TabStop = true;
+            this.radioButtonCenaEqual.Text = "=";
+            this.radioButtonCenaEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonCenaEqual.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonCenaLesser
+            // 
+            this.radioButtonCenaLesser.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonCenaLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCenaLesser.Location = new System.Drawing.Point(0, 0);
+            this.radioButtonCenaLesser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButtonCenaLesser.Name = "radioButtonCenaLesser";
+            this.radioButtonCenaLesser.Size = new System.Drawing.Size(35, 30);
+            this.radioButtonCenaLesser.TabIndex = 0;
+            this.radioButtonCenaLesser.Text = "<";
+            this.radioButtonCenaLesser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonCenaLesser.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonCenaGreater
+            // 
+            this.radioButtonCenaGreater.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonCenaGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCenaGreater.Location = new System.Drawing.Point(40, 0);
+            this.radioButtonCenaGreater.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButtonCenaGreater.Name = "radioButtonCenaGreater";
+            this.radioButtonCenaGreater.Size = new System.Drawing.Size(35, 30);
+            this.radioButtonCenaGreater.TabIndex = 1;
+            this.radioButtonCenaGreater.Text = ">";
+            this.radioButtonCenaGreater.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonCenaGreater.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 570);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 16);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Cena";
+            // 
+            // textBoxCena
+            // 
+            this.textBoxCena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCena.Location = new System.Drawing.Point(147, 567);
+            this.textBoxCena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCena.Name = "textBoxCena";
+            this.textBoxCena.Size = new System.Drawing.Size(264, 22);
+            this.textBoxCena.TabIndex = 28;
+            this.textBoxCena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCena_KeyPress);
             // 
             // panelPrioritet
             // 
@@ -786,7 +858,7 @@
             this.buttonIstorijaPromenaObrisanihUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonIstorijaPromenaObrisanihUgovora.AutoSize = true;
             this.buttonIstorijaPromenaObrisanihUgovora.Location = new System.Drawing.Point(224, 693);
-            this.buttonIstorijaPromenaObrisanihUgovora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonIstorijaPromenaObrisanihUgovora.Margin = new System.Windows.Forms.Padding(4);
             this.buttonIstorijaPromenaObrisanihUgovora.Name = "buttonIstorijaPromenaObrisanihUgovora";
             this.buttonIstorijaPromenaObrisanihUgovora.Size = new System.Drawing.Size(244, 78);
             this.buttonIstorijaPromenaObrisanihUgovora.TabIndex = 15;
@@ -797,78 +869,6 @@
             // ugovorBindingSource
             // 
             this.ugovorBindingSource.DataMember = "ugovor";
-            // 
-            // textBoxCena
-            // 
-            this.textBoxCena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCena.Location = new System.Drawing.Point(147, 567);
-            this.textBoxCena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxCena.Name = "textBoxCena";
-            this.textBoxCena.Size = new System.Drawing.Size(264, 22);
-            this.textBoxCena.TabIndex = 28;
-            this.textBoxCena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCena_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 570);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 16);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Cena";
-            // 
-            // panelCena
-            // 
-            this.panelCena.Controls.Add(this.radioButtonEqual);
-            this.panelCena.Controls.Add(this.radioButtonCenaLesser);
-            this.panelCena.Controls.Add(this.radioButtonGreater);
-            this.panelCena.Location = new System.Drawing.Point(423, 563);
-            this.panelCena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelCena.Name = "panelCena";
-            this.panelCena.Size = new System.Drawing.Size(115, 30);
-            this.panelCena.TabIndex = 28;
-            // 
-            // radioButtonEqual
-            // 
-            this.radioButtonEqual.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonEqual.Checked = true;
-            this.radioButtonEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonEqual.Location = new System.Drawing.Point(80, 0);
-            this.radioButtonEqual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButtonEqual.Name = "radioButtonEqual";
-            this.radioButtonEqual.Size = new System.Drawing.Size(35, 30);
-            this.radioButtonEqual.TabIndex = 2;
-            this.radioButtonEqual.TabStop = true;
-            this.radioButtonEqual.Text = "=";
-            this.radioButtonEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButtonEqual.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonCenaLesser
-            // 
-            this.radioButtonCenaLesser.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonCenaLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonCenaLesser.Location = new System.Drawing.Point(0, 0);
-            this.radioButtonCenaLesser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButtonCenaLesser.Name = "radioButtonCenaLesser";
-            this.radioButtonCenaLesser.Size = new System.Drawing.Size(35, 30);
-            this.radioButtonCenaLesser.TabIndex = 0;
-            this.radioButtonCenaLesser.Text = "<";
-            this.radioButtonCenaLesser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButtonCenaLesser.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonGreater
-            // 
-            this.radioButtonGreater.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonGreater.Location = new System.Drawing.Point(40, 0);
-            this.radioButtonGreater.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButtonGreater.Name = "radioButtonGreater";
-            this.radioButtonGreater.Size = new System.Drawing.Size(35, 30);
-            this.radioButtonGreater.TabIndex = 1;
-            this.radioButtonGreater.Text = ">";
-            this.radioButtonGreater.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButtonGreater.UseVisualStyleBackColor = true;
             // 
             // UgovoriForm
             // 
@@ -895,6 +895,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).EndInit();
             this.panelPretraga.ResumeLayout(false);
             this.panelPretraga.PerformLayout();
+            this.panelCena.ResumeLayout(false);
             this.panelPrioritet.ResumeLayout(false);
             this.panelKrajnjiRok.ResumeLayout(false);
             this.panelObim.ResumeLayout(false);
@@ -902,7 +903,6 @@
             this.panelId.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).EndInit();
-            this.panelCena.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -972,8 +972,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxCena;
         private System.Windows.Forms.Panel panelCena;
-        private System.Windows.Forms.RadioButton radioButtonEqual;
+        private System.Windows.Forms.RadioButton radioButtonCenaEqual;
         private System.Windows.Forms.RadioButton radioButtonCenaLesser;
-        private System.Windows.Forms.RadioButton radioButtonGreater;
+        private System.Windows.Forms.RadioButton radioButtonCenaGreater;
     }
 }
