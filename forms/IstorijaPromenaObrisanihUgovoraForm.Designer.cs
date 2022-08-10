@@ -25,6 +25,7 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IstorijaPromenaObrisanihUgovoraForm));
             this.dataGridViewChangeLogObrisanihUgovora = new System.Windows.Forms.DataGridView();
+            this.buttonNazad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLogObrisanihUgovora)).BeginInit();
             this.SuspendLayout();
             // 
@@ -37,23 +38,34 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewChangeLogObrisanihUgovora.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewChangeLogObrisanihUgovora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewChangeLogObrisanihUgovora.Location = new System.Drawing.Point(13, 14);
-            this.dataGridViewChangeLogObrisanihUgovora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewChangeLogObrisanihUgovora.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewChangeLogObrisanihUgovora.Name = "dataGridViewChangeLogObrisanihUgovora";
             this.dataGridViewChangeLogObrisanihUgovora.ReadOnly = true;
             this.dataGridViewChangeLogObrisanihUgovora.RowHeadersWidth = 51;
-            this.dataGridViewChangeLogObrisanihUgovora.Size = new System.Drawing.Size(1337, 528);
+            this.dataGridViewChangeLogObrisanihUgovora.Size = new System.Drawing.Size(998, 345);
             this.dataGridViewChangeLogObrisanihUgovora.TabIndex = 1;
+            // 
+            // buttonNazad
+            // 
+            this.buttonNazad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonNazad.Location = new System.Drawing.Point(428, 375);
+            this.buttonNazad.Name = "buttonNazad";
+            this.buttonNazad.Size = new System.Drawing.Size(165, 63);
+            this.buttonNazad.TabIndex = 2;
+            this.buttonNazad.Text = "Nazad";
+            this.buttonNazad.UseVisualStyleBackColor = true;
+            this.buttonNazad.Click += new System.EventHandler(this.buttonNazad_Click);
             // 
             // IstorijaPromenaObrisanihUgovoraForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1363, 554);
+            this.ClientSize = new System.Drawing.Size(1022, 450);
+            this.Controls.Add(this.buttonNazad);
             this.Controls.Add(this.dataGridViewChangeLogObrisanihUgovora);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1379, 593);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(1038, 489);
             this.Name = "IstorijaPromenaObrisanihUgovoraForm";
             this.Text = "Istorija Promena Obrisanih Ugovora";
             this.Load += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_Load);
@@ -67,5 +79,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewChangeLogObrisanihUgovora;
+        private System.Windows.Forms.Button buttonNazad;
     }
 }

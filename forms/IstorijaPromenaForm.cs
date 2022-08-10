@@ -54,5 +54,9 @@ namespace CSharp_SQL_App {
         private void IstorijaPromenaForm_ResizeEnd(object sender, EventArgs e) {
             this.ResumeLayout(true);
         }
+
+        private void buttonNazad_Click(object sender, EventArgs e) {
+            this.Close();
+        }
     }
 }

@@ -66,7 +66,10 @@ namespace CSharp_SQL_App.model {
                     addChangeLogField("ugovor", "prioritet", "kreairanje", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
                 }
                 if (!oldUgovor.cena.Equals(newUgovor.cena)) {
-                    addChangeLogField("ugovor", "cena", "kreairanje", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
+                    addChangeLogField("ugovor", "cena", "kreairanje", oldUgovor.uGuid, oldUgovor.cena.ToString(), newUgovor.cena.ToString());
+                }
+                if (!oldUgovor.cena.Equals(newUgovor.status)) {
+                    addChangeLogField("ugovor", "status", "kreairanje", oldUgovor.uGuid, oldUgovor.status.ToString(), newUgovor.status.ToString());
                 }
             }
             else if(newUgovor.id == 0) {
@@ -104,7 +107,10 @@ namespace CSharp_SQL_App.model {
                     addChangeLogField("ugovor", "prioritet", "brisanje", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
                 }
                 if (!oldUgovor.cena.Equals(newUgovor.cena)) {
-                    addChangeLogField("ugovor", "cena", "brisanje", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
+                    addChangeLogField("ugovor", "cena", "brisanje", oldUgovor.uGuid, oldUgovor.cena.ToString(), newUgovor.cena.ToString());
+                }
+                if (!oldUgovor.cena.Equals(newUgovor.status)) {
+                    addChangeLogField("ugovor", "status", "brisanje", oldUgovor.uGuid, oldUgovor.status.ToString(), newUgovor.status.ToString());
                 }
             }
             else {
@@ -142,7 +148,10 @@ namespace CSharp_SQL_App.model {
                     addChangeLogField("ugovor", "prioritet", "promena", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
                 }
                 if (!oldUgovor.cena.Equals(newUgovor.cena)) {
-                    addChangeLogField("ugovor", "cena", "promena", oldUgovor.uGuid, oldUgovor.prioritet.ToString(), newUgovor.prioritet.ToString());
+                    addChangeLogField("ugovor", "cena", "promena", oldUgovor.uGuid, oldUgovor.cena.ToString(), newUgovor.cena.ToString());
+                }
+                if (!oldUgovor.cena.Equals(newUgovor.status)) {
+                    addChangeLogField("ugovor", "status", "promena", oldUgovor.uGuid, oldUgovor.status.ToString(), newUgovor.status.ToString());
                 }
             }
 

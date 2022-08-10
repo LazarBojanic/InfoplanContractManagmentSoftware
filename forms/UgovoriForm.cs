@@ -24,7 +24,6 @@ namespace CSharp_SQL_App {
             if (MainForm.user.privilegija.Equals("turista")) {
                 buttonDodaj.Enabled = false;
                 buttonIzmeni.Enabled = false;
-                buttonObrisi.Enabled = false;
             }
         }
         private void UgovoriForm_Load(object sender, EventArgs e) {
@@ -59,7 +58,7 @@ namespace CSharp_SQL_App {
             OleDbCommand command;
             DataTable dt;
             String query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
-                " datumUgovora, rokPoUgovoru, obim, krajnjiRok, prioritet, cena, uGuid FROM ugovor ORDER BY id";
+                " datumUgovora, rokPoUgovoru, obim, krajnjiRok, prioritet, cena, status, uGuid FROM ugovor ORDER BY id";
             connection = GetConnection();
             connection.Open();
             command = new OleDbCommand(query, connection);
@@ -178,6 +177,9 @@ namespace CSharp_SQL_App {
                     query += " AND cena = @cena";
                 }
             }
+            if (!string.IsNullOrEmpty(textBoxStatus.Text)) {
+                query += " AND UCASE(status) LIKE '%' + @status + '%'";
+            }
             if (!string.IsNullOrEmpty(textBoxUGuid.Text)) {
                 query += " AND UCASE(uGuid) LIKE '%' + @uGuid + '%'";
             }
@@ -218,6 +220,9 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(textBoxPrioritet.Text)) {
                 command.Parameters.AddWithValue("@prioritet", textBoxPrioritet.Text);
             }
+            if (!string.IsNullOrEmpty(textBoxStatus.Text)) {
+                command.Parameters.AddWithValue("@status", textBoxStatus.Text);
+            }
             if (!string.IsNullOrEmpty(textBoxCena.Text)) {
                 command.Parameters.AddWithValue("@cena", textBoxCena.Text);
             }
@@ -247,7 +252,6 @@ namespace CSharp_SQL_App {
             dataGridViewUgovori.FirstDisplayedScrollingRowIndex = index;
             dataGridViewUgovori.Rows[index].Selected = true;
         }
-
         private void buttonObrisi_Click(object sender, EventArgs e) {
             Ugovor oldUgovor = new Ugovor();
             Ugovor newUgovor = new Ugovor();
@@ -265,12 +269,10 @@ namespace CSharp_SQL_App {
             refreshDataGrid();
             ChangeLog.addChangeLogForUgovor(oldUgovor, newUgovor);
         }
-
         private void buttonIstorijaPromenaObrisanihUgovora_Click(object sender, EventArgs e) {
             IstorijaPromenaObrisanihUgovoraForm i = new IstorijaPromenaObrisanihUgovoraForm();
             i.ShowDialog();
         }
-
         private void textBoxCena_KeyPress(object sender, KeyPressEventArgs e) {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
                     (e.KeyChar != '.')) {
@@ -280,25 +282,25 @@ namespace CSharp_SQL_App {
                 e.Handled = true;
             }
         }
-
         private void textBoxObim_KeyPress(object sender, KeyPressEventArgs e) {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)){
                 e.Handled = true;
             }
         }
-
         private void textBoxRokPoUgovoru_KeyPress(object sender, KeyPressEventArgs e) {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)){
                 e.Handled = true;
             }
         }
-
         private void UgovoriForm_ResizeBegin_1(object sender, EventArgs e) {
             this.SuspendLayout();            
         }
-
         private void UgovoriForm_ResizeEnd_1(object sender, EventArgs e) {
             this.ResumeLayout(true);
+        }
+
+        private void buttonNazad_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }

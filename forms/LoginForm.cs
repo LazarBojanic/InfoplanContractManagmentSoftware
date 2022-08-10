@@ -94,5 +94,9 @@ namespace CSharp_SQL_App {
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e) {
             Application.Exit();
         }
+
+        private void buttonIzlaz_Click(object sender, EventArgs e) {
+            this.Close();
+        }
     }
 }

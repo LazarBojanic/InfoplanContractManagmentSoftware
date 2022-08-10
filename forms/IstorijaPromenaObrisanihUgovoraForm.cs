@@ -51,5 +51,9 @@ namespace CSharp_SQL_App.forms {
         private void IstorijaPromenaObrisanihUgovoraForm_ResizeEnd(object sender, EventArgs e) {
             this.ResumeLayout(true);
         }
+
+        private void buttonNazad_Click(object sender, EventArgs e) {
+            this.Close();
+        }
     }
 }

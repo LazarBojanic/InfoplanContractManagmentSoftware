@@ -16,5 +16,9 @@ namespace CSharp_SQL_App {
         private void InfoForm_Load(object sender, EventArgs e) {
 
         }
+
+        private void buttonNazad_Click(object sender, EventArgs e) {
+            this.Close();
+        }
     }
 }

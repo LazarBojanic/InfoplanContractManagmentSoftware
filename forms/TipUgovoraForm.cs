@@ -61,22 +61,21 @@ namespace CSharp_SQL_App {
             dataGridViewTipUgovora.DataSource = bs;
             connection.Close();
         }
-
         private void TipUgovoraForm_Load(object sender, EventArgs e) {
 
         }
-
+        private void TipUgovoraForm_ResizeBegin(object sender, EventArgs e) {
+            this.SuspendLayout();
+        }
+        private void TipUgovoraForm_ResizeEnd(object sender, EventArgs e) {
+            this.ResumeLayout(true);
+        }
         private void buttonDodaj_Click(object sender, EventArgs e) {
             addTipUgovora();
             fillTipUgovoraDataGrid();
         }
-
-        private void TipUgovoraForm_ResizeBegin(object sender, EventArgs e) {
-            this.SuspendLayout();        
-        }
-
-        private void TipUgovoraForm_ResizeEnd(object sender, EventArgs e) {
-            this.ResumeLayout(true);
+        private void buttonNazad_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }

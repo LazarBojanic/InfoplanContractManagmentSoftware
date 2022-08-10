@@ -17,7 +17,8 @@ namespace CSharp_SQL_App {
         public UpdateForm() {
             InitializeComponent();
             loadOpstinaComboBox();
-            loadTipUgovoraComboBox();     
+            loadTipUgovoraComboBox();
+            loadStatusComboBox();
         }
         public void loadUgovor(int id) {
             oldUgovor = new Ugovor();
@@ -30,7 +31,7 @@ namespace CSharp_SQL_App {
         public void loadOpstinaComboBox() {
             OleDbConnection connection = GetConnection();
             connection.Open();
-            string query = "SELECT opstina FROM opstina";
+            string query = "SELECT * FROM opstina ORDER BY opstina";
             OleDbCommand command = new OleDbCommand(query, connection);
             DataTable table = new DataTable ("opstina");
             table.Load(command.ExecuteReader());
@@ -42,12 +43,24 @@ namespace CSharp_SQL_App {
         public void loadTipUgovoraComboBox() {
             OleDbConnection connection = GetConnection();
             connection.Open();
-            string query = "SELECT tipUgovora FROM tipUgovora";
+            string query = "SELECT * FROM tipUgovora ORDER BY tipUgovora";
             OleDbCommand command = new OleDbCommand(query, connection);
             DataTable table = new DataTable("tipUgovora");
             table.Load(command.ExecuteReader());
             foreach (DataRow row in table.Rows) {
                 comboBoxTipUgovora.Items.Add(row["tipUgovora"].ToString());
+            }
+            connection.Close();
+        }
+        public void loadStatusComboBox() {
+            OleDbConnection connection = GetConnection();
+            connection.Open();
+            string query = "SELECT * FROM status ORDER BY status";
+            OleDbCommand command = new OleDbCommand(query, connection);
+            DataTable table = new DataTable("status");
+            table.Load(command.ExecuteReader());
+            foreach (DataRow row in table.Rows) {
+                comboBoxStatus.Items.Add(row["status"].ToString());
             }
             connection.Close();
         }
@@ -70,12 +83,15 @@ namespace CSharp_SQL_App {
             }
             else {
                 textBoxRokPoUgovoru.Text = "0";
-                comboBoxRokPoUgovoru.Text = "Meseci";
+                comboBoxRokPoUgovoru.SelectedIndex = 2;
             }
             textBoxObim.Text = oldUgovor.obim.ToString();
             dateTimeKrajnjiRok.Value = oldUgovor.krajnjiRok;
             textBoxPrioritet.Text = oldUgovor.prioritet.ToString();
             textBoxCena.Text = oldUgovor.cena.ToString();
+            comboBoxOpstina.SelectedIndex = 0;
+            comboBoxTipUgovora.SelectedIndex = 0;
+            comboBoxStatus.SelectedIndex = 2;
         }
         private void buttonSacuvaj_Click(object sender, EventArgs e) {         
             try {
@@ -100,7 +116,7 @@ namespace CSharp_SQL_App {
                 newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
                 newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
                 newUgovor.cena = Decimal.Parse(textBoxCena.Text);
-                //MessageBox.Show(newUgovor.cena.ToString());
+                newUgovor.status = comboBoxStatus.Text;
                 newUgovor.vremeUgovora = DateTime.Now;
                 newUgovor.uGuid = oldUgovor.uGuid;
                 newUgovor.saveToDatabase();
@@ -153,18 +169,22 @@ namespace CSharp_SQL_App {
                 e.Handled = true;
             }
         }
+        private void textBoxObim_KeyPress(object sender, KeyPressEventArgs e) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) {
+                e.Handled = true;
+            }
+        }
+        private void textBoxPrioritet_KeyPress(object sender, KeyPressEventArgs e) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) {
+                e.Handled = true;
+            }
+        }
         private void textBoxCena_KeyPress(object sender, KeyPressEventArgs e) {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
                     (e.KeyChar != '.')) {
                 e.Handled = true;
             }
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
-                e.Handled = true;
-            }
-        }
-
-        private void textBoxObim_KeyPress(object sender, KeyPressEventArgs e) {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)){
                 e.Handled = true;
             }
         }

@@ -27,6 +27,7 @@
             this.dataGridViewKorisnici = new System.Windows.Forms.DataGridView();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonIzmeni = new System.Windows.Forms.Button();
+            this.buttonNazad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKorisnici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,25 +41,25 @@
             this.dataGridViewKorisnici.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewKorisnici.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewKorisnici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKorisnici.Location = new System.Drawing.Point(12, 14);
-            this.dataGridViewKorisnici.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewKorisnici.Location = new System.Drawing.Point(9, 11);
+            this.dataGridViewKorisnici.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewKorisnici.MultiSelect = false;
             this.dataGridViewKorisnici.Name = "dataGridViewKorisnici";
             this.dataGridViewKorisnici.ReadOnly = true;
             this.dataGridViewKorisnici.RowHeadersWidth = 51;
             this.dataGridViewKorisnici.RowTemplate.Height = 24;
             this.dataGridViewKorisnici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewKorisnici.Size = new System.Drawing.Size(527, 293);
+            this.dataGridViewKorisnici.Size = new System.Drawing.Size(395, 248);
             this.dataGridViewKorisnici.TabIndex = 2;
             this.dataGridViewKorisnici.TabStop = false;
             this.dataGridViewKorisnici.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // buttonDodaj
             // 
-            this.buttonDodaj.Location = new System.Drawing.Point(83, 326);
-            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDodaj.Location = new System.Drawing.Point(11, 274);
+            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
-            this.buttonDodaj.Size = new System.Drawing.Size(172, 78);
+            this.buttonDodaj.Size = new System.Drawing.Size(112, 63);
             this.buttonDodaj.TabIndex = 0;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
@@ -66,26 +67,38 @@
             // 
             // buttonIzmeni
             // 
-            this.buttonIzmeni.Location = new System.Drawing.Point(296, 326);
-            this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonIzmeni.Location = new System.Drawing.Point(150, 274);
+            this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmeni.Name = "buttonIzmeni";
-            this.buttonIzmeni.Size = new System.Drawing.Size(172, 78);
+            this.buttonIzmeni.Size = new System.Drawing.Size(112, 63);
             this.buttonIzmeni.TabIndex = 1;
             this.buttonIzmeni.Text = "Izmeni";
             this.buttonIzmeni.UseVisualStyleBackColor = true;
             this.buttonIzmeni.Click += new System.EventHandler(this.buttonIzmeni_Click);
             // 
+            // buttonNazad
+            // 
+            this.buttonNazad.Location = new System.Drawing.Point(289, 274);
+            this.buttonNazad.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonNazad.Name = "buttonNazad";
+            this.buttonNazad.Size = new System.Drawing.Size(112, 63);
+            this.buttonNazad.TabIndex = 3;
+            this.buttonNazad.Text = "Nazad";
+            this.buttonNazad.UseVisualStyleBackColor = true;
+            this.buttonNazad.Click += new System.EventHandler(this.buttonNazad_Click);
+            // 
             // KorisniciForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 428);
+            this.ClientSize = new System.Drawing.Size(413, 348);
+            this.Controls.Add(this.buttonNazad);
             this.Controls.Add(this.buttonIzmeni);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridViewKorisnici);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(567, 467);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(429, 387);
             this.Name = "KorisniciForm";
             this.Text = "Korisnici";
             this.Load += new System.EventHandler(this.KorisniciForm_Load);
@@ -101,5 +114,6 @@
         private System.Windows.Forms.DataGridView dataGridViewKorisnici;
         private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.Button buttonIzmeni;
+        private System.Windows.Forms.Button buttonNazad;
     }
 }
