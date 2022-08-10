@@ -21,13 +21,13 @@ namespace CSharp_SQL_App.model {
         public int obim { get; set; }
         public DateTime krajnjiRok { get; set; }
         public int prioritet { get; set; }
-        public int cena { get; set; }
+        public decimal cena { get; set; }
         public String uGuid { get; set; }
         public DateTime vremeUgovora { get; set; }
 
         public Ugovor(int id, string opstina, string nazivPlana, string urbanista, string faza, string tipUgovora,
             string napomena, DateTime datumUgovora, string rokPoUgovoru, int obim,
-            DateTime krajnjiRok, int prioritet, int cena, DateTime vremeUgovora, string uGuid) {
+            DateTime krajnjiRok, int prioritet, decimal cena, DateTime vremeUgovora, string uGuid) {
             this.id = id;
             this.opstina = opstina;
             this.nazivPlana = nazivPlana;
@@ -167,7 +167,7 @@ namespace CSharp_SQL_App.model {
                     }
                 }
                 try {
-                    cena = dataReader.GetInt32(dataReader.GetOrdinal("cena"));
+                    cena = dataReader.GetDecimal(dataReader.GetOrdinal("cena"));
                 }
                 catch (Exception ex) {
                     if (ex is NullReferenceException || ex is InvalidCastException) {

@@ -21,6 +21,9 @@ namespace CSharp_SQL_App {
             if (!MainForm.user.privilegija.Equals("administrator")) {
                 buttonDodaj.Enabled = false;
             }
+            if (MainForm.user.privilegija.Equals("turista")) {
+                buttonDodaj.Enabled = false;
+            }
         }
         private void OpstineForm_Load(object sender, EventArgs e) {
         }

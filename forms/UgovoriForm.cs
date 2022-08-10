@@ -21,7 +21,11 @@ namespace CSharp_SQL_App {
             if (!MainForm.user.privilegija.Equals("administrator")) {
                 buttonObrisi.Enabled = false;
             }
-            
+            if (MainForm.user.privilegija.Equals("turista")) {
+                buttonDodaj.Enabled = false;
+                buttonIzmeni.Enabled = false;
+                buttonObrisi.Enabled = false;
+            }
         }
         private void UgovoriForm_Load(object sender, EventArgs e) {
             refreshDataGrid();
@@ -278,21 +282,13 @@ namespace CSharp_SQL_App {
         }
 
         private void textBoxObim_KeyPress(object sender, KeyPressEventArgs e) {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                    (e.KeyChar != '.')) {
-                e.Handled = true;
-            }
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)){
                 e.Handled = true;
             }
         }
 
         private void textBoxRokPoUgovoru_KeyPress(object sender, KeyPressEventArgs e) {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                    (e.KeyChar != '.')) {
-                e.Handled = true;
-            }
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)){
                 e.Handled = true;
             }
         }

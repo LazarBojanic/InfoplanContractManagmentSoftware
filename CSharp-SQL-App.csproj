@@ -7,7 +7,7 @@
     <ProjectGuid>{EBBBC89F-EC4C-498E-B688-FD2A177541F0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CSharp_SQL_App</RootNamespace>
-    <AssemblyName>CSharp-SQL-App</AssemblyName>
+    <AssemblyName>Infoplan Ugovori</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -245,6 +245,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="forms\infoplanLogo.ico" />
+    <Content Include="forms\infoplanLogo.png" />
+    <Content Include="forms\infoplanUgovoriPrePressPrintCompany.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

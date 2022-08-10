@@ -83,7 +83,7 @@ namespace CSharp_SQL_App {
                     Ugovor dbUgovor = new Ugovor();
                     dbUgovor.loadFromDatabase(oldUgovor.id);
                     if (dbUgovor.vremeUgovora > oldUgovor.vremeUgovora) {
-                        MessageBox.Show("Podatke o ovom ugovoru u bazi podataka je neko drugi već izmenio. Morate ponovo da pokrenete formu i da unesete vaše izmene.");
+                        MessageBox.Show("Podatke o ovom ugovoru u bazi podataka je neko drugi već izmenio. Morate ponovo da pokrenete formu, osvežiti tabelu i uneti vaše izmene.");
                         return;
                     }
                 }               
@@ -99,7 +99,8 @@ namespace CSharp_SQL_App {
                 newUgovor.obim = Int32.Parse(textBoxObim.Text);
                 newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
                 newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
-                newUgovor.cena = Int32.Parse(textBoxCena.Text);
+                newUgovor.cena = Decimal.Parse(textBoxCena.Text);
+                //MessageBox.Show(newUgovor.cena.ToString());
                 newUgovor.vremeUgovora = DateTime.Now;
                 newUgovor.uGuid = oldUgovor.uGuid;
                 newUgovor.saveToDatabase();
@@ -112,15 +113,6 @@ namespace CSharp_SQL_App {
         }
         private void buttonOtkazi_Click(object sender, EventArgs e) {
             this.Close();
-        }
-        private void textBoxRokPoUgovoru_KeyPress(object sender, KeyPressEventArgs e) {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                    (e.KeyChar != '.')) {
-                e.Handled = true;
-            }
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
-                e.Handled = true;
-            }
         }
         private void textBoxRokPoUgovoru_TextChanged(object sender, EventArgs e) {
             dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value;
@@ -156,7 +148,11 @@ namespace CSharp_SQL_App {
                 }
             }
         }
-
+        private void textBoxRokPoUgovoru_KeyPress(object sender, KeyPressEventArgs e) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)){
+                e.Handled = true;
+            }
+        }
         private void textBoxCena_KeyPress(object sender, KeyPressEventArgs e) {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
                     (e.KeyChar != '.')) {
@@ -168,11 +164,7 @@ namespace CSharp_SQL_App {
         }
 
         private void textBoxObim_KeyPress(object sender, KeyPressEventArgs e) {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                    (e.KeyChar != '.')) {
-                e.Handled = true;
-            }
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)){
                 e.Handled = true;
             }
         }
