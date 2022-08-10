@@ -88,11 +88,11 @@
             this.radioButtonIdGreater = new System.Windows.Forms.RadioButton();
             this.buttonObrisi = new System.Windows.Forms.Button();
             this.buttonIstorijaPromenaObrisanihUgovora = new System.Windows.Forms.Button();
-            this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelStatus = new System.Windows.Forms.Label();
             this.textBoxStatus = new System.Windows.Forms.TextBox();
             this.buttonNazad = new System.Windows.Forms.Button();
+            this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).BeginInit();
             this.panelPretraga.SuspendLayout();
             this.panelCena.SuspendLayout();
@@ -879,10 +879,6 @@
             this.buttonIstorijaPromenaObrisanihUgovora.UseVisualStyleBackColor = true;
             this.buttonIstorijaPromenaObrisanihUgovora.Click += new System.EventHandler(this.buttonIstorijaPromenaObrisanihUgovora_Click);
             // 
-            // ugovorBindingSource
-            // 
-            this.ugovorBindingSource.DataMember = "ugovor";
-            // 
             // labelStatus
             // 
             this.labelStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -905,7 +901,7 @@
             // 
             // buttonNazad
             // 
-            this.buttonNazad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonNazad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonNazad.AutoSize = true;
             this.buttonNazad.Location = new System.Drawing.Point(1316, 567);
             this.buttonNazad.Margin = new System.Windows.Forms.Padding(2);
@@ -915,6 +911,10 @@
             this.buttonNazad.Text = "Nazad";
             this.buttonNazad.UseVisualStyleBackColor = true;
             this.buttonNazad.Click += new System.EventHandler(this.buttonNazad_Click);
+            // 
+            // ugovorBindingSource
+            // 
+            this.ugovorBindingSource.DataMember = "ugovor";
             // 
             // UgovoriForm
             // 
