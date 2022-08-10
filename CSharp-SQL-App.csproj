@@ -80,6 +80,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>infoplanLogo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
@@ -247,6 +250,7 @@
     <Content Include="forms\infoplanLogo.ico" />
     <Content Include="forms\infoplanLogo.png" />
     <Content Include="forms\infoplanUgovoriPrePressPrintCompany.png" />
+    <Content Include="infoplanLogo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
