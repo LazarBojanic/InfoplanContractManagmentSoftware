@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
+using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
@@ -68,6 +69,17 @@ namespace CSharp_SQL_App {
             bs.DataSource = dt;
             dataGridViewUgovori.DataSource = bs;
             connection.Close();
+            foreach(DataGridViewRow row in dataGridViewUgovori.Rows) {
+                if (row.Cells[13].Value.ToString().Equals("Usvojen")) {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 0);
+                }
+                if (row.Cells[13].Value.ToString().Equals("Odbačen")) {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 0, 0);
+                }
+                if (row.Cells[13].Value.ToString().Equals("Predat")) {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(0, 255, 0);
+                }
+            }
         }
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);

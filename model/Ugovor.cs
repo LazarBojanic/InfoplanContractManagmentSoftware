@@ -214,51 +214,57 @@ namespace CSharp_SQL_App.model {
             OleDbConnection connection = GetConnection();
             connection.Open();
             vremeUgovora = DateTime.Now;
-            if (id == 0) {
-                string query = "INSERT INTO ugovor (opstina, nazivPlana, urbanista, tipUgovora, faza, napomena, datumUgovora," +
-                    " rokPoUgovoru, obim, krajnjiRok, prioritet, cena, status, vremeUgovora, uGuid) VALUES (@opstina, @nazivPlana, @urbanista, @tipUgovora, @faza, @napomena," +
-                    " @datumUgovora, @rokPoUgovoru, @obim, @krajnjiRok, @prioritet, @cena, @status, @vremeUgovora, @uGuid)";
-                OleDbCommand command = new OleDbCommand(query, connection);
-                command.Parameters.AddWithValue("@opstina", opstina);
-                command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
-                command.Parameters.AddWithValue("@urbanista", urbanista);
-                command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
-                command.Parameters.AddWithValue("@faza", faza);
-                command.Parameters.AddWithValue("@napomena", napomena);
-                command.Parameters.AddWithValue("@datumUgovora", datumUgovora);
-                command.Parameters.AddWithValue("@rokPoUgovoru", rokPoUgovoru);
-                command.Parameters.AddWithValue("@obim", obim);
-                command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);
-                command.Parameters.AddWithValue("@prioritet", prioritet);
-                command.Parameters.AddWithValue("@status", status);
-                command.Parameters.AddWithValue("@cena", cena);
-                command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = ChangeLog.vremeAkcijeWithoutMilliseconds(vremeUgovora);
-                command.Parameters.AddWithValue("@uGuid", uGuid);
-                int recordsAffected = command.ExecuteNonQuery();
+            try {
+                if (id == 0) {
+                    string query = "INSERT INTO ugovor (opstina, nazivPlana, urbanista, tipUgovora, faza, napomena, datumUgovora," +
+                        " rokPoUgovoru, obim, krajnjiRok, prioritet, cena, status, vremeUgovora, uGuid) VALUES (@opstina, @nazivPlana, @urbanista, @tipUgovora, @faza, @napomena," +
+                        " @datumUgovora, @rokPoUgovoru, @obim, @krajnjiRok, @prioritet, @cena, @status, @vremeUgovora, @uGuid)";
+                    OleDbCommand command = new OleDbCommand(query, connection);
+                    command.Parameters.AddWithValue("@opstina", opstina);
+                    command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
+                    command.Parameters.AddWithValue("@urbanista", urbanista);
+                    command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
+                    command.Parameters.AddWithValue("@faza", faza);
+                    command.Parameters.AddWithValue("@napomena", napomena);
+                    command.Parameters.AddWithValue("@datumUgovora", datumUgovora);
+                    command.Parameters.AddWithValue("@rokPoUgovoru", rokPoUgovoru);
+                    command.Parameters.AddWithValue("@obim", obim);
+                    command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);
+                    command.Parameters.AddWithValue("@prioritet", prioritet);                  
+                    command.Parameters.AddWithValue("@cena", cena);
+                    command.Parameters.AddWithValue("@status", status);
+                    command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = ChangeLog.vremeAkcijeWithoutMilliseconds(vremeUgovora);
+                    command.Parameters.AddWithValue("@uGuid", uGuid);
+                    int recordsAffected = command.ExecuteNonQuery();
+                }
+                else {
+                    string query = "UPDATE ugovor SET opstina = @opstina, nazivPlana = @nazivPlana, urbanista = @urbanista, tipUgovora = @tipUgovora," +
+                        " faza = @faza, napomena = @napomena, datumUgovora = @datumUgovora, rokPoUgovoru = @rokPoUgovoru, obim = @obim," +
+                        " krajnjiRok = @krajnjiRok, prioritet = @prioritet, cena = @cena, status = @status, vremeUgovora = @vremeUgovora WHERE id = @id";
+                    OleDbCommand command = new OleDbCommand(query, connection);
+                    command.Parameters.AddWithValue("@opstina", opstina);
+                    command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
+                    command.Parameters.AddWithValue("@urbanista", urbanista);
+                    command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
+                    command.Parameters.AddWithValue("@faza", faza);
+                    command.Parameters.AddWithValue("@napomena", napomena);
+                    command.Parameters.AddWithValue("@datumUgovora", datumUgovora);
+                    command.Parameters.AddWithValue("@rokPoUgovoru", rokPoUgovoru);
+                    command.Parameters.AddWithValue("@obim", obim);
+                    command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);
+                    command.Parameters.AddWithValue("@prioritet", prioritet);              
+                    command.Parameters.AddWithValue("@cena", cena);
+                    command.Parameters.AddWithValue("@status", status);
+                    command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = ChangeLog.vremeAkcijeWithoutMilliseconds(vremeUgovora);
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
             }
-            else {
-                string query = "UPDATE ugovor SET opstina = @opstina, nazivPlana = @nazivPlana, urbanista = @urbanista, tipUgovora = @tipUgovora," +
-                    " faza = @faza, napomena = @napomena, datumUgovora = @datumUgovora, rokPoUgovoru = @rokPoUgovoru, obim = @obim," +
-                    " krajnjiRok = @krajnjiRok, prioritet = @prioritet, cena = @cena, status = @status, vremeUgovora = @vremeUgovora WHERE id = @id";
-                OleDbCommand command = new OleDbCommand(query, connection);
-                command.Parameters.AddWithValue("@opstina", opstina);
-                command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
-                command.Parameters.AddWithValue("@urbanista", urbanista);
-                command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
-                command.Parameters.AddWithValue("@faza", faza);
-                command.Parameters.AddWithValue("@napomena", napomena);
-                command.Parameters.AddWithValue("@datumUgovora", datumUgovora);
-                command.Parameters.AddWithValue("@rokPoUgovoru", rokPoUgovoru);
-                command.Parameters.AddWithValue("@obim", obim);
-                command.Parameters.AddWithValue("@krajnjiRok", krajnjiRok);    
-                command.Parameters.AddWithValue("@prioritet", prioritet);
-                command.Parameters.AddWithValue("@status", status);
-                command.Parameters.AddWithValue("@cena", cena);
-                command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = ChangeLog.vremeAkcijeWithoutMilliseconds(vremeUgovora);
-                command.Parameters.AddWithValue("@id", id);
-                command.ExecuteNonQuery();
+            catch (OleDbException e){
+                Application.Exit();
             }
-            connection.Close();
+            
         }
         private static OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
