@@ -45,21 +45,23 @@ namespace CSharp_SQL_App {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
         public void addTipUgovora() {
-            DataTable dt;
-            BindingSource bs;
-            OleDbConnection connection;
-            OleDbCommand command;
-            connection = GetConnection();
-            connection.Open();
-            String query = "INSERT INTO tipUgovora (tipUgovora) VALUES (@tipUgovora)";
-            command = new OleDbCommand(query, connection);
-            command.Parameters.AddWithValue("@tipUgovora", textBoxTipUgovora.Text);
-            dt = new DataTable();
-            bs = new BindingSource();
-            dt.Load(command.ExecuteReader());
-            bs.DataSource = dt;
-            dataGridViewTipUgovora.DataSource = bs;
-            connection.Close();
+            if (!string.IsNullOrEmpty(textBoxTipUgovora.Text)) {
+                DataTable dt;
+                BindingSource bs;
+                OleDbConnection connection;
+                OleDbCommand command;
+                connection = GetConnection();
+                connection.Open();
+                String query = "INSERT INTO tipUgovora (tipUgovora) VALUES (@tipUgovora)";
+                command = new OleDbCommand(query, connection);
+                command.Parameters.AddWithValue("@tipUgovora", textBoxTipUgovora.Text);
+                dt = new DataTable();
+                bs = new BindingSource();
+                dt.Load(command.ExecuteReader());
+                bs.DataSource = dt;
+                dataGridViewTipUgovora.DataSource = bs;
+                connection.Close();
+            }         
         }
         private void TipUgovoraForm_Load(object sender, EventArgs e) {
 

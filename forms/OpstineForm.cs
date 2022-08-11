@@ -51,21 +51,23 @@ namespace CSharp_SQL_App {
             fillOpstineDataGrid();
         }
         public void addOpstina() {
-            DataTable dt;
-            BindingSource bs;
-            OleDbConnection connection;
-            OleDbCommand command;
-            connection = GetConnection();
-            connection.Open();
-            String query = "INSERT INTO opstina (opstina) VALUES (@opstina)";
-            command = new OleDbCommand(query, connection);
-            command.Parameters.AddWithValue("@opstina", textBoxOpstina.Text);
-            dt = new DataTable();
-            bs = new BindingSource();
-            dt.Load(command.ExecuteReader());
-            bs.DataSource = dt;
-            dataGridViewOpstine.DataSource = bs;
-            connection.Close();
+            if (!string.IsNullOrEmpty(textBoxOpstina.Text)) {
+                DataTable dt;
+                BindingSource bs;
+                OleDbConnection connection;
+                OleDbCommand command;
+                connection = GetConnection();
+                connection.Open();
+                String query = "INSERT INTO opstina (opstina) VALUES (@opstina)";
+                command = new OleDbCommand(query, connection);
+                command.Parameters.AddWithValue("@opstina", textBoxOpstina.Text);
+                dt = new DataTable();
+                bs = new BindingSource();
+                dt.Load(command.ExecuteReader());
+                bs.DataSource = dt;
+                dataGridViewOpstine.DataSource = bs;
+                connection.Close();
+            }      
         }
 
         private void OpstineForm_ResizeBegin(object sender, EventArgs e) {
