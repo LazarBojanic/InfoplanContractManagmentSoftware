@@ -70,13 +70,13 @@ namespace CSharp_SQL_App {
             dataGridViewUgovori.DataSource = bs;
             connection.Close();
             foreach(DataGridViewRow row in dataGridViewUgovori.Rows) {
-                if (row.Cells[13].Value.ToString().Equals("Usvojen")) {
+                if (row.Cells[13].Value.ToString().Equals("Usvojen") || row.Cells[13].Value.ToString().Equals("Započet")) {
                     row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 0);
                 }
-                if (row.Cells[13].Value.ToString().Equals("Odbačen")) {
+                if (row.Cells[13].Value.ToString().Equals("Odbačen") || row.Cells[13].Value.ToString().Equals("Prekinut")) {
                     row.DefaultCellStyle.BackColor = Color.FromArgb(255, 0, 0);
                 }
-                if (row.Cells[13].Value.ToString().Equals("Predat")) {
+                if (row.Cells[13].Value.ToString().Equals("Predat") || row.Cells[13].Value.ToString().Equals("Završen")) {
                     row.DefaultCellStyle.BackColor = Color.FromArgb(0, 255, 0);
                 }
             }
