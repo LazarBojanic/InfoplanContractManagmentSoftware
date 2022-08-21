@@ -81,5 +81,9 @@ namespace CSharp_SQL_App {
         private void buttontZatvori_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void OpstineForm_Click(object sender, EventArgs e) {
+            dataGridViewOpstine.ClearSelection();
+        }
     }
 }

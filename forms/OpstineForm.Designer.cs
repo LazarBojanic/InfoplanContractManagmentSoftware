@@ -50,8 +50,9 @@
             this.dataGridViewOpstine.ReadOnly = true;
             this.dataGridViewOpstine.RowHeadersWidth = 51;
             this.dataGridViewOpstine.RowTemplate.Height = 24;
+            this.dataGridViewOpstine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewOpstine.Size = new System.Drawing.Size(336, 401);
-            this.dataGridViewOpstine.TabIndex = 2;
+            this.dataGridViewOpstine.TabIndex = 0;
             this.dataGridViewOpstine.TabStop = false;
             // 
             // buttonDodaj
@@ -61,7 +62,7 @@
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(131, 63);
-            this.buttonDodaj.TabIndex = 1;
+            this.buttonDodaj.TabIndex = 2;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
@@ -73,7 +74,7 @@
             this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOpstina.Name = "textBoxOpstina";
             this.textBoxOpstina.Size = new System.Drawing.Size(227, 20);
-            this.textBoxOpstina.TabIndex = 0;
+            this.textBoxOpstina.TabIndex = 1;
             // 
             // opstinaBindingSource
             // 
@@ -108,6 +109,7 @@
             this.Load += new System.EventHandler(this.OpstineForm_Load);
             this.ResizeBegin += new System.EventHandler(this.OpstineForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.OpstineForm_ResizeEnd);
+            this.Click += new System.EventHandler(this.OpstineForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOpstine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).EndInit();
             this.ResumeLayout(false);

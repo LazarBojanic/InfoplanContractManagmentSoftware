@@ -79,5 +79,9 @@ namespace CSharp_SQL_App.forms {
         private void buttonZatvori_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void UgovorFilesForm_Click(object sender, EventArgs e) {
+            dataGridViewUgovorFiles.ClearSelection();
+        }
     }
 }

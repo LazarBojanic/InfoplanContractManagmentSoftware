@@ -90,11 +90,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(30, 63);
+            this.labelUsername.Location = new System.Drawing.Point(28, 65);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(55, 13);
-            this.labelUsername.TabIndex = 5;
+            this.labelUsername.TabIndex = 7;
             this.labelUsername.Text = "Username";
             // 
             // labelPassword
@@ -103,11 +103,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(30, 101);
+            this.labelPassword.Location = new System.Drawing.Point(28, 102);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(53, 13);
-            this.labelPassword.TabIndex = 6;
+            this.labelPassword.TabIndex = 8;
             this.labelPassword.Text = "Password";
             // 
             // labelPrivilegija
@@ -116,11 +116,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrivilegija.AutoSize = true;
-            this.labelPrivilegija.Location = new System.Drawing.Point(30, 139);
+            this.labelPrivilegija.Location = new System.Drawing.Point(28, 140);
             this.labelPrivilegija.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrivilegija.Name = "labelPrivilegija";
             this.labelPrivilegija.Size = new System.Drawing.Size(51, 13);
-            this.labelPrivilegija.TabIndex = 7;
+            this.labelPrivilegija.TabIndex = 9;
             this.labelPrivilegija.Text = "Privilegija";
             // 
             // textBoxId
@@ -142,11 +142,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelId.AutoSize = true;
-            this.labelId.Location = new System.Drawing.Point(30, 26);
+            this.labelId.Location = new System.Drawing.Point(28, 28);
             this.labelId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(16, 13);
-            this.labelId.TabIndex = 9;
+            this.labelId.TabIndex = 6;
             this.labelId.Text = "Id";
             // 
             // comboBoxPrivilegija

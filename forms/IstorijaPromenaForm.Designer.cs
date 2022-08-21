@@ -35,7 +35,7 @@
             this.buttonZatvori.Location = new System.Drawing.Point(428, 375);
             this.buttonZatvori.Name = "buttonZatvori";
             this.buttonZatvori.Size = new System.Drawing.Size(165, 63);
-            this.buttonZatvori.TabIndex = 4;
+            this.buttonZatvori.TabIndex = 1;
             this.buttonZatvori.Text = "Zatvori";
             this.buttonZatvori.UseVisualStyleBackColor = true;
             this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
@@ -53,8 +53,10 @@
             this.dataGridViewChangeLog.Name = "dataGridViewChangeLog";
             this.dataGridViewChangeLog.ReadOnly = true;
             this.dataGridViewChangeLog.RowHeadersWidth = 51;
+            this.dataGridViewChangeLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewChangeLog.Size = new System.Drawing.Size(998, 345);
-            this.dataGridViewChangeLog.TabIndex = 3;
+            this.dataGridViewChangeLog.TabIndex = 0;
+            this.dataGridViewChangeLog.TabStop = false;
             // 
             // IstorijaPromenaForm
             // 
@@ -70,6 +72,7 @@
             this.Load += new System.EventHandler(this.IstorijaPromenaForm_Load);
             this.ResizeBegin += new System.EventHandler(this.IstorijaPromenaForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.IstorijaPromenaForm_ResizeEnd);
+            this.Click += new System.EventHandler(this.IstorijaPromenaForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLog)).EndInit();
             this.ResumeLayout(false);
 

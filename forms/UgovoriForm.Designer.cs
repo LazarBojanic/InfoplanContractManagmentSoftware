@@ -137,7 +137,7 @@
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(192, 63);
-            this.buttonDodaj.TabIndex = 16;
+            this.buttonDodaj.TabIndex = 19;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
@@ -150,7 +150,7 @@
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmeni.Name = "buttonIzmeni";
             this.buttonIzmeni.Size = new System.Drawing.Size(192, 63);
-            this.buttonIzmeni.TabIndex = 17;
+            this.buttonIzmeni.TabIndex = 20;
             this.buttonIzmeni.Text = "Izmeni";
             this.buttonIzmeni.UseVisualStyleBackColor = true;
             this.buttonIzmeni.Click += new System.EventHandler(this.buttonIzmeni_Click);
@@ -163,7 +163,7 @@
             this.buttonRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(56, 63);
-            this.buttonRefresh.TabIndex = 13;
+            this.buttonRefresh.TabIndex = 16;
             this.buttonRefresh.Text = "Osveži";
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
@@ -175,7 +175,7 @@
             this.buttonIstorijaPromena.Location = new System.Drawing.Point(84, 567);
             this.buttonIstorijaPromena.Name = "buttonIstorijaPromena";
             this.buttonIstorijaPromena.Size = new System.Drawing.Size(92, 63);
-            this.buttonIstorijaPromena.TabIndex = 14;
+            this.buttonIstorijaPromena.TabIndex = 17;
             this.buttonIstorijaPromena.Text = "Istorija Promena";
             this.buttonIstorijaPromena.UseVisualStyleBackColor = true;
             this.buttonIstorijaPromena.Click += new System.EventHandler(this.buttonIstorijaPromena_Click);
@@ -329,7 +329,7 @@
             this.textBoxId.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(199, 20);
-            this.textBoxId.TabIndex = 0;
+            this.textBoxId.TabIndex = 1;
             // 
             // textBoxOpstina
             // 
@@ -338,7 +338,7 @@
             this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOpstina.Name = "textBoxOpstina";
             this.textBoxOpstina.Size = new System.Drawing.Size(199, 20);
-            this.textBoxOpstina.TabIndex = 1;
+            this.textBoxOpstina.TabIndex = 2;
             // 
             // textBoxNazivPlana
             // 
@@ -347,7 +347,7 @@
             this.textBoxNazivPlana.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNazivPlana.Name = "textBoxNazivPlana";
             this.textBoxNazivPlana.Size = new System.Drawing.Size(199, 20);
-            this.textBoxNazivPlana.TabIndex = 2;
+            this.textBoxNazivPlana.TabIndex = 3;
             // 
             // textBoxUrbanista
             // 
@@ -356,7 +356,7 @@
             this.textBoxUrbanista.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUrbanista.Name = "textBoxUrbanista";
             this.textBoxUrbanista.Size = new System.Drawing.Size(199, 20);
-            this.textBoxUrbanista.TabIndex = 3;
+            this.textBoxUrbanista.TabIndex = 4;
             // 
             // textBoxTipUgovora
             // 
@@ -365,7 +365,7 @@
             this.textBoxTipUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTipUgovora.Name = "textBoxTipUgovora";
             this.textBoxTipUgovora.Size = new System.Drawing.Size(199, 20);
-            this.textBoxTipUgovora.TabIndex = 4;
+            this.textBoxTipUgovora.TabIndex = 5;
             // 
             // textBoxObim
             // 
@@ -374,7 +374,7 @@
             this.textBoxObim.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxObim.Name = "textBoxObim";
             this.textBoxObim.Size = new System.Drawing.Size(199, 20);
-            this.textBoxObim.TabIndex = 9;
+            this.textBoxObim.TabIndex = 10;
             this.textBoxObim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxObim_KeyPress);
             // 
             // textBoxRokPoUgovoru
@@ -384,7 +384,7 @@
             this.textBoxRokPoUgovoru.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRokPoUgovoru.Name = "textBoxRokPoUgovoru";
             this.textBoxRokPoUgovoru.Size = new System.Drawing.Size(199, 20);
-            this.textBoxRokPoUgovoru.TabIndex = 8;
+            this.textBoxRokPoUgovoru.TabIndex = 9;
             this.textBoxRokPoUgovoru.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxRokPoUgovoru_KeyPress);
             // 
             // textBoxNapomena
@@ -394,7 +394,7 @@
             this.textBoxNapomena.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNapomena.Name = "textBoxNapomena";
             this.textBoxNapomena.Size = new System.Drawing.Size(199, 20);
-            this.textBoxNapomena.TabIndex = 6;
+            this.textBoxNapomena.TabIndex = 7;
             // 
             // textBoxFaza
             // 
@@ -403,7 +403,7 @@
             this.textBoxFaza.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFaza.Name = "textBoxFaza";
             this.textBoxFaza.Size = new System.Drawing.Size(199, 20);
-            this.textBoxFaza.TabIndex = 5;
+            this.textBoxFaza.TabIndex = 6;
             // 
             // textBoxPrioritet
             // 
@@ -412,7 +412,7 @@
             this.textBoxPrioritet.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrioritet.Name = "textBoxPrioritet";
             this.textBoxPrioritet.Size = new System.Drawing.Size(199, 20);
-            this.textBoxPrioritet.TabIndex = 11;
+            this.textBoxPrioritet.TabIndex = 12;
             // 
             // textBoxUGuid
             // 
@@ -421,7 +421,7 @@
             this.textBoxUGuid.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUGuid.Name = "textBoxUGuid";
             this.textBoxUGuid.Size = new System.Drawing.Size(199, 20);
-            this.textBoxUGuid.TabIndex = 12;
+            this.textBoxUGuid.TabIndex = 15;
             // 
             // buttonPretraga
             // 
@@ -430,7 +430,7 @@
             this.buttonPretraga.Location = new System.Drawing.Point(1132, 567);
             this.buttonPretraga.Name = "buttonPretraga";
             this.buttonPretraga.Size = new System.Drawing.Size(161, 63);
-            this.buttonPretraga.TabIndex = 19;
+            this.buttonPretraga.TabIndex = 23;
             this.buttonPretraga.Text = "Pretraga";
             this.buttonPretraga.UseVisualStyleBackColor = true;
             this.buttonPretraga.Click += new System.EventHandler(this.buttonPretraga_Click);
@@ -442,7 +442,7 @@
             this.dateTimeDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeDatumUgovora.Name = "dateTimeDatumUgovora";
             this.dateTimeDatumUgovora.Size = new System.Drawing.Size(199, 20);
-            this.dateTimeDatumUgovora.TabIndex = 7;
+            this.dateTimeDatumUgovora.TabIndex = 8;
             // 
             // dateTimeKrajnjiRok
             // 
@@ -451,7 +451,7 @@
             this.dateTimeKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeKrajnjiRok.Name = "dateTimeKrajnjiRok";
             this.dateTimeKrajnjiRok.Size = new System.Drawing.Size(199, 20);
-            this.dateTimeKrajnjiRok.TabIndex = 10;
+            this.dateTimeKrajnjiRok.TabIndex = 11;
             // 
             // checkBoxDatumUgovora
             // 
@@ -460,8 +460,7 @@
             this.checkBoxDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDatumUgovora.Name = "checkBoxDatumUgovora";
             this.checkBoxDatumUgovora.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxDatumUgovora.TabIndex = 21;
-            this.checkBoxDatumUgovora.TabStop = false;
+            this.checkBoxDatumUgovora.TabIndex = 26;
             this.checkBoxDatumUgovora.UseVisualStyleBackColor = true;
             // 
             // checkBoxKrajnjiRok
@@ -471,8 +470,7 @@
             this.checkBoxKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxKrajnjiRok.Name = "checkBoxKrajnjiRok";
             this.checkBoxKrajnjiRok.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxKrajnjiRok.TabIndex = 22;
-            this.checkBoxKrajnjiRok.TabStop = false;
+            this.checkBoxKrajnjiRok.TabIndex = 29;
             this.checkBoxKrajnjiRok.UseVisualStyleBackColor = true;
             // 
             // panelPretraga
@@ -520,7 +518,7 @@
             this.panelPretraga.Margin = new System.Windows.Forms.Padding(2);
             this.panelPretraga.Name = "panelPretraga";
             this.panelPretraga.Size = new System.Drawing.Size(417, 529);
-            this.panelPretraga.TabIndex = 20;
+            this.panelPretraga.TabIndex = 33;
             // 
             // labelStatus
             // 
@@ -542,7 +540,7 @@
             this.panelCena.Margin = new System.Windows.Forms.Padding(2);
             this.panelCena.Name = "panelCena";
             this.panelCena.Size = new System.Drawing.Size(86, 24);
-            this.panelCena.TabIndex = 28;
+            this.panelCena.TabIndex = 32;
             // 
             // radioButtonCenaEqual
             // 
@@ -603,7 +601,7 @@
             this.textBoxStatus.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxStatus.Name = "textBoxStatus";
             this.textBoxStatus.Size = new System.Drawing.Size(199, 20);
-            this.textBoxStatus.TabIndex = 30;
+            this.textBoxStatus.TabIndex = 14;
             // 
             // textBoxCena
             // 
@@ -612,7 +610,7 @@
             this.textBoxCena.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCena.Name = "textBoxCena";
             this.textBoxCena.Size = new System.Drawing.Size(199, 20);
-            this.textBoxCena.TabIndex = 28;
+            this.textBoxCena.TabIndex = 13;
             this.textBoxCena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCena_KeyPress);
             // 
             // panelPrioritet
@@ -624,7 +622,7 @@
             this.panelPrioritet.Margin = new System.Windows.Forms.Padding(2);
             this.panelPrioritet.Name = "panelPrioritet";
             this.panelPrioritet.Size = new System.Drawing.Size(86, 24);
-            this.panelPrioritet.TabIndex = 27;
+            this.panelPrioritet.TabIndex = 31;
             // 
             // radioButtonPrioritetEqual
             // 
@@ -676,7 +674,7 @@
             this.panelKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
             this.panelKrajnjiRok.Name = "panelKrajnjiRok";
             this.panelKrajnjiRok.Size = new System.Drawing.Size(86, 24);
-            this.panelKrajnjiRok.TabIndex = 26;
+            this.panelKrajnjiRok.TabIndex = 30;
             // 
             // radioButtonKrajnjiRokEqual
             // 
@@ -728,7 +726,7 @@
             this.panelObim.Margin = new System.Windows.Forms.Padding(2);
             this.panelObim.Name = "panelObim";
             this.panelObim.Size = new System.Drawing.Size(86, 24);
-            this.panelObim.TabIndex = 25;
+            this.panelObim.TabIndex = 28;
             // 
             // radioButtonObimEqual
             // 
@@ -780,7 +778,7 @@
             this.panelDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.panelDatumUgovora.Name = "panelDatumUgovora";
             this.panelDatumUgovora.Size = new System.Drawing.Size(86, 24);
-            this.panelDatumUgovora.TabIndex = 24;
+            this.panelDatumUgovora.TabIndex = 27;
             // 
             // radioButtonDatumUgovoraEqual
             // 
@@ -832,7 +830,7 @@
             this.panelId.Margin = new System.Windows.Forms.Padding(2);
             this.panelId.Name = "panelId";
             this.panelId.Size = new System.Drawing.Size(86, 24);
-            this.panelId.TabIndex = 23;
+            this.panelId.TabIndex = 25;
             // 
             // radioButtonIdEqual
             // 
@@ -883,7 +881,7 @@
             this.buttonObrisi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonObrisi.Name = "buttonObrisi";
             this.buttonObrisi.Size = new System.Drawing.Size(192, 63);
-            this.buttonObrisi.TabIndex = 18;
+            this.buttonObrisi.TabIndex = 21;
             this.buttonObrisi.Text = "Obriši";
             this.buttonObrisi.UseVisualStyleBackColor = true;
             this.buttonObrisi.Click += new System.EventHandler(this.buttonObrisi_Click);
@@ -895,7 +893,7 @@
             this.buttonIstorijaPromenaObrisanihUgovora.Location = new System.Drawing.Point(195, 567);
             this.buttonIstorijaPromenaObrisanihUgovora.Name = "buttonIstorijaPromenaObrisanihUgovora";
             this.buttonIstorijaPromenaObrisanihUgovora.Size = new System.Drawing.Size(105, 63);
-            this.buttonIstorijaPromenaObrisanihUgovora.TabIndex = 15;
+            this.buttonIstorijaPromenaObrisanihUgovora.TabIndex = 18;
             this.buttonIstorijaPromenaObrisanihUgovora.Text = "Istorija Promena\r\nObrisanih Ugovora";
             this.buttonIstorijaPromenaObrisanihUgovora.UseVisualStyleBackColor = true;
             this.buttonIstorijaPromenaObrisanihUgovora.Click += new System.EventHandler(this.buttonIstorijaPromenaObrisanihUgovora_Click);
@@ -908,7 +906,7 @@
             this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
             this.buttonZatvori.Name = "buttonZatvori";
             this.buttonZatvori.Size = new System.Drawing.Size(63, 63);
-            this.buttonZatvori.TabIndex = 21;
+            this.buttonZatvori.TabIndex = 24;
             this.buttonZatvori.Text = "Zatvori";
             this.buttonZatvori.UseVisualStyleBackColor = true;
             this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
@@ -954,6 +952,7 @@
             this.Load += new System.EventHandler(this.UgovoriForm_Load);
             this.ResizeBegin += new System.EventHandler(this.UgovoriForm_ResizeBegin_1);
             this.ResizeEnd += new System.EventHandler(this.UgovoriForm_ResizeEnd_1);
+            this.Click += new System.EventHandler(this.UgovoriForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).EndInit();
             this.panelPretraga.ResumeLayout(false);
             this.panelPretraga.PerformLayout();

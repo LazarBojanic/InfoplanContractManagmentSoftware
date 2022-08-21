@@ -70,7 +70,7 @@
             this.textBoxNazivPlana.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNazivPlana.Name = "textBoxNazivPlana";
             this.textBoxNazivPlana.Size = new System.Drawing.Size(227, 20);
-            this.textBoxNazivPlana.TabIndex = 1;
+            this.textBoxNazivPlana.TabIndex = 2;
             // 
             // textBoxUrbanista
             // 
@@ -78,7 +78,7 @@
             this.textBoxUrbanista.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUrbanista.Name = "textBoxUrbanista";
             this.textBoxUrbanista.Size = new System.Drawing.Size(227, 20);
-            this.textBoxUrbanista.TabIndex = 2;
+            this.textBoxUrbanista.TabIndex = 3;
             // 
             // textBoxObim
             // 
@@ -87,7 +87,7 @@
             this.textBoxObim.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxObim.Name = "textBoxObim";
             this.textBoxObim.Size = new System.Drawing.Size(227, 20);
-            this.textBoxObim.TabIndex = 9;
+            this.textBoxObim.TabIndex = 10;
             this.textBoxObim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxObim_KeyPress);
             // 
             // textBoxRokPoUgovoru
@@ -97,7 +97,7 @@
             this.textBoxRokPoUgovoru.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRokPoUgovoru.Name = "textBoxRokPoUgovoru";
             this.textBoxRokPoUgovoru.Size = new System.Drawing.Size(136, 20);
-            this.textBoxRokPoUgovoru.TabIndex = 7;
+            this.textBoxRokPoUgovoru.TabIndex = 8;
             this.textBoxRokPoUgovoru.TextChanged += new System.EventHandler(this.textBoxRokPoUgovoru_TextChanged);
             this.textBoxRokPoUgovoru.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxRokPoUgovoru_KeyPress);
             // 
@@ -108,7 +108,7 @@
             this.textBoxPrioritet.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrioritet.Name = "textBoxPrioritet";
             this.textBoxPrioritet.Size = new System.Drawing.Size(227, 20);
-            this.textBoxPrioritet.TabIndex = 11;
+            this.textBoxPrioritet.TabIndex = 12;
             this.textBoxPrioritet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrioritet_KeyPress);
             // 
             // label1
@@ -223,7 +223,7 @@
             this.buttonSacuvaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSacuvaj.Name = "buttonSacuvaj";
             this.buttonSacuvaj.Size = new System.Drawing.Size(200, 63);
-            this.buttonSacuvaj.TabIndex = 12;
+            this.buttonSacuvaj.TabIndex = 16;
             this.buttonSacuvaj.Text = "Sačuvaj";
             this.buttonSacuvaj.UseVisualStyleBackColor = true;
             this.buttonSacuvaj.Click += new System.EventHandler(this.buttonSacuvaj_Click);
@@ -236,7 +236,7 @@
             this.buttonOtkazi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOtkazi.Name = "buttonOtkazi";
             this.buttonOtkazi.Size = new System.Drawing.Size(200, 63);
-            this.buttonOtkazi.TabIndex = 13;
+            this.buttonOtkazi.TabIndex = 17;
             this.buttonOtkazi.Text = "Otkaži";
             this.buttonOtkazi.UseVisualStyleBackColor = true;
             this.buttonOtkazi.Click += new System.EventHandler(this.buttonOtkazi_Click);
@@ -259,7 +259,7 @@
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.ReadOnly = true;
             this.textBoxId.Size = new System.Drawing.Size(227, 20);
-            this.textBoxId.TabIndex = 14;
+            this.textBoxId.TabIndex = 0;
             this.textBoxId.TabStop = false;
             // 
             // dateTimeKrajnjiRok
@@ -269,7 +269,7 @@
             this.dateTimeKrajnjiRok.Location = new System.Drawing.Point(452, 139);
             this.dateTimeKrajnjiRok.Name = "dateTimeKrajnjiRok";
             this.dateTimeKrajnjiRok.Size = new System.Drawing.Size(227, 20);
-            this.dateTimeKrajnjiRok.TabIndex = 10;
+            this.dateTimeKrajnjiRok.TabIndex = 11;
             // 
             // dateTimeDatumUgovora
             // 
@@ -277,7 +277,7 @@
             this.dateTimeDatumUgovora.Location = new System.Drawing.Point(452, 24);
             this.dateTimeDatumUgovora.Name = "dateTimeDatumUgovora";
             this.dateTimeDatumUgovora.Size = new System.Drawing.Size(227, 20);
-            this.dateTimeDatumUgovora.TabIndex = 6;
+            this.dateTimeDatumUgovora.TabIndex = 7;
             // 
             // comboBoxOpstina
             // 
@@ -286,7 +286,7 @@
             this.comboBoxOpstina.Location = new System.Drawing.Point(99, 62);
             this.comboBoxOpstina.Name = "comboBoxOpstina";
             this.comboBoxOpstina.Size = new System.Drawing.Size(227, 21);
-            this.comboBoxOpstina.TabIndex = 0;
+            this.comboBoxOpstina.TabIndex = 1;
             // 
             // labelUGuid
             // 
@@ -330,7 +330,7 @@
             this.comboBoxRokPoUgovoru.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxRokPoUgovoru.Name = "comboBoxRokPoUgovoru";
             this.comboBoxRokPoUgovoru.Size = new System.Drawing.Size(87, 21);
-            this.comboBoxRokPoUgovoru.TabIndex = 8;
+            this.comboBoxRokPoUgovoru.TabIndex = 9;
             this.comboBoxRokPoUgovoru.SelectedValueChanged += new System.EventHandler(this.comboBoxRokPoUgovoru_SelectedValueChanged);
             // 
             // comboBoxTipUgovora
@@ -340,7 +340,7 @@
             this.comboBoxTipUgovora.Location = new System.Drawing.Point(99, 177);
             this.comboBoxTipUgovora.Name = "comboBoxTipUgovora";
             this.comboBoxTipUgovora.Size = new System.Drawing.Size(227, 21);
-            this.comboBoxTipUgovora.TabIndex = 3;
+            this.comboBoxTipUgovora.TabIndex = 4;
             // 
             // labelTipUgovora
             // 
@@ -370,7 +370,7 @@
             this.textBoxCena.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCena.Name = "textBoxCena";
             this.textBoxCena.Size = new System.Drawing.Size(227, 20);
-            this.textBoxCena.TabIndex = 34;
+            this.textBoxCena.TabIndex = 13;
             this.textBoxCena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCena_KeyPress);
             // 
             // labelStatus
@@ -390,7 +390,7 @@
             this.comboBoxStatus.Location = new System.Drawing.Point(452, 254);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(227, 21);
-            this.comboBoxStatus.TabIndex = 39;
+            this.comboBoxStatus.TabIndex = 14;
             // 
             // textBoxFaza
             // 
@@ -398,7 +398,7 @@
             this.textBoxFaza.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFaza.Name = "textBoxFaza";
             this.textBoxFaza.Size = new System.Drawing.Size(227, 20);
-            this.textBoxFaza.TabIndex = 4;
+            this.textBoxFaza.TabIndex = 5;
             // 
             // textBoxNapomena
             // 
@@ -406,7 +406,7 @@
             this.textBoxNapomena.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNapomena.Name = "textBoxNapomena";
             this.textBoxNapomena.Size = new System.Drawing.Size(227, 20);
-            this.textBoxNapomena.TabIndex = 5;
+            this.textBoxNapomena.TabIndex = 6;
             // 
             // UpdateForm
             // 

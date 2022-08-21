@@ -46,6 +46,7 @@
             this.dataGridViewUgovorFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewUgovorFiles.Size = new System.Drawing.Size(776, 386);
             this.dataGridViewUgovorFiles.TabIndex = 0;
+            this.dataGridViewUgovorFiles.TabStop = false;
             // 
             // buttonPrikazi
             // 
@@ -64,7 +65,7 @@
             this.buttonUkloni.Location = new System.Drawing.Point(428, 414);
             this.buttonUkloni.Name = "buttonUkloni";
             this.buttonUkloni.Size = new System.Drawing.Size(152, 63);
-            this.buttonUkloni.TabIndex = 2;
+            this.buttonUkloni.TabIndex = 3;
             this.buttonUkloni.Text = "Ukloni";
             this.buttonUkloni.UseVisualStyleBackColor = true;
             this.buttonUkloni.Click += new System.EventHandler(this.buttonObrisi_Click);
@@ -75,7 +76,7 @@
             this.buttonDodaj.Location = new System.Drawing.Point(220, 414);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(152, 63);
-            this.buttonDodaj.TabIndex = 3;
+            this.buttonDodaj.TabIndex = 2;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
@@ -104,6 +105,7 @@
             this.Name = "UgovorFilesForm";
             this.Text = "UgovorFilesForm";
             this.Load += new System.EventHandler(this.UgovorFilesForm_Load);
+            this.Click += new System.EventHandler(this.UgovorFilesForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovorFiles)).EndInit();
             this.ResumeLayout(false);
 

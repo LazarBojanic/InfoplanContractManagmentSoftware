@@ -82,7 +82,7 @@
             this.buttonIzlaz.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzlaz.Name = "buttonIzlaz";
             this.buttonIzlaz.Size = new System.Drawing.Size(122, 63);
-            this.buttonIzlaz.TabIndex = 4;
+            this.buttonIzlaz.TabIndex = 3;
             this.buttonIzlaz.Text = "Izlaz";
             this.buttonIzlaz.UseVisualStyleBackColor = true;
             this.buttonIzlaz.Click += new System.EventHandler(this.buttonIzlaz_Click);

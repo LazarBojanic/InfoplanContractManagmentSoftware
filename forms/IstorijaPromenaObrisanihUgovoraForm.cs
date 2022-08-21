@@ -55,5 +55,9 @@ namespace CSharp_SQL_App.forms {
         private void buttonZatvori_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void IstorijaPromenaObrisanihUgovoraForm_Click(object sender, EventArgs e) {
+            dataGridViewChangeLogObrisanihUgovora.ClearSelection();
+        }
     }
 }

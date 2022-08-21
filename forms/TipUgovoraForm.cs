@@ -80,5 +80,9 @@ namespace CSharp_SQL_App {
         private void buttonZatvori_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void TipUgovoraForm_Click(object sender, EventArgs e) {
+            dataGridViewTipUgovora.ClearSelection();
+        }
     }
 }

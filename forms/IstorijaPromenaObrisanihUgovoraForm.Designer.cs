@@ -42,8 +42,10 @@
             this.dataGridViewChangeLogObrisanihUgovora.Name = "dataGridViewChangeLogObrisanihUgovora";
             this.dataGridViewChangeLogObrisanihUgovora.ReadOnly = true;
             this.dataGridViewChangeLogObrisanihUgovora.RowHeadersWidth = 51;
+            this.dataGridViewChangeLogObrisanihUgovora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewChangeLogObrisanihUgovora.Size = new System.Drawing.Size(998, 345);
-            this.dataGridViewChangeLogObrisanihUgovora.TabIndex = 1;
+            this.dataGridViewChangeLogObrisanihUgovora.TabIndex = 0;
+            this.dataGridViewChangeLogObrisanihUgovora.TabStop = false;
             // 
             // buttonZatvori
             // 
@@ -51,7 +53,7 @@
             this.buttonZatvori.Location = new System.Drawing.Point(428, 375);
             this.buttonZatvori.Name = "buttonZatvori";
             this.buttonZatvori.Size = new System.Drawing.Size(165, 63);
-            this.buttonZatvori.TabIndex = 2;
+            this.buttonZatvori.TabIndex = 1;
             this.buttonZatvori.Text = "Zatvori";
             this.buttonZatvori.UseVisualStyleBackColor = true;
             this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
@@ -71,6 +73,7 @@
             this.Load += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_Load);
             this.ResizeBegin += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_ResizeEnd);
+            this.Click += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLogObrisanihUgovora)).EndInit();
             this.ResumeLayout(false);
 

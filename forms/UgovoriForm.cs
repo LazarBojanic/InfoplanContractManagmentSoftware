@@ -320,5 +320,9 @@ namespace CSharp_SQL_App {
         private void buttonZatvori_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void UgovoriForm_Click(object sender, EventArgs e) {
+            dataGridViewUgovori.ClearSelection();
+        }
     }
 }

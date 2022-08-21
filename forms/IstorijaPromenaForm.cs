@@ -58,5 +58,9 @@ namespace CSharp_SQL_App {
         private void buttonZatvori_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void IstorijaPromenaForm_Click(object sender, EventArgs e) {
+            dataGridViewChangeLog.ClearSelection();
+        }
     }
 }

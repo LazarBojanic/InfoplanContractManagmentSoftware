@@ -38,7 +38,7 @@
             this.textBoxTipUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTipUgovora.Name = "textBoxTipUgovora";
             this.textBoxTipUgovora.Size = new System.Drawing.Size(227, 20);
-            this.textBoxTipUgovora.TabIndex = 0;
+            this.textBoxTipUgovora.TabIndex = 1;
             // 
             // dataGridViewTipUgovora
             // 
@@ -56,8 +56,9 @@
             this.dataGridViewTipUgovora.ReadOnly = true;
             this.dataGridViewTipUgovora.RowHeadersWidth = 51;
             this.dataGridViewTipUgovora.RowTemplate.Height = 24;
+            this.dataGridViewTipUgovora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTipUgovora.Size = new System.Drawing.Size(336, 401);
-            this.dataGridViewTipUgovora.TabIndex = 2;
+            this.dataGridViewTipUgovora.TabIndex = 0;
             this.dataGridViewTipUgovora.TabStop = false;
             // 
             // buttonZatvori
@@ -67,7 +68,7 @@
             this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
             this.buttonZatvori.Name = "buttonZatvori";
             this.buttonZatvori.Size = new System.Drawing.Size(131, 63);
-            this.buttonZatvori.TabIndex = 7;
+            this.buttonZatvori.TabIndex = 3;
             this.buttonZatvori.Text = "Zatvori";
             this.buttonZatvori.UseVisualStyleBackColor = true;
             this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
@@ -79,7 +80,7 @@
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(131, 63);
-            this.buttonDodaj.TabIndex = 6;
+            this.buttonDodaj.TabIndex = 2;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
@@ -101,6 +102,7 @@
             this.Load += new System.EventHandler(this.TipUgovoraForm_Load);
             this.ResizeBegin += new System.EventHandler(this.TipUgovoraForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.TipUgovoraForm_ResizeEnd);
+            this.Click += new System.EventHandler(this.TipUgovoraForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTipUgovora)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -100,7 +100,7 @@
             this.buttonZatvori.Location = new System.Drawing.Point(365, 491);
             this.buttonZatvori.Name = "buttonZatvori";
             this.buttonZatvori.Size = new System.Drawing.Size(211, 63);
-            this.buttonZatvori.TabIndex = 8;
+            this.buttonZatvori.TabIndex = 0;
             this.buttonZatvori.Text = "Zatvori";
             this.buttonZatvori.UseVisualStyleBackColor = true;
             this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click_1);
