@@ -90,7 +90,7 @@
             this.radioButtonIdGreater = new System.Windows.Forms.RadioButton();
             this.buttonObrisi = new System.Windows.Forms.Button();
             this.buttonIstorijaPromenaObrisanihUgovora = new System.Windows.Forms.Button();
-            this.buttonNazad = new System.Windows.Forms.Button();
+            this.buttonZatvori = new System.Windows.Forms.Button();
             this.buttonUgovorFiles = new System.Windows.Forms.Button();
             this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -900,18 +900,18 @@
             this.buttonIstorijaPromenaObrisanihUgovora.UseVisualStyleBackColor = true;
             this.buttonIstorijaPromenaObrisanihUgovora.Click += new System.EventHandler(this.buttonIstorijaPromenaObrisanihUgovora_Click);
             // 
-            // buttonNazad
+            // buttonZatvori
             // 
-            this.buttonNazad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonNazad.AutoSize = true;
-            this.buttonNazad.Location = new System.Drawing.Point(1312, 567);
-            this.buttonNazad.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonNazad.Name = "buttonNazad";
-            this.buttonNazad.Size = new System.Drawing.Size(63, 63);
-            this.buttonNazad.TabIndex = 21;
-            this.buttonNazad.Text = "Nazad";
-            this.buttonNazad.UseVisualStyleBackColor = true;
-            this.buttonNazad.Click += new System.EventHandler(this.buttonNazad_Click);
+            this.buttonZatvori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonZatvori.AutoSize = true;
+            this.buttonZatvori.Location = new System.Drawing.Point(1312, 567);
+            this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonZatvori.Name = "buttonZatvori";
+            this.buttonZatvori.Size = new System.Drawing.Size(63, 63);
+            this.buttonZatvori.TabIndex = 21;
+            this.buttonZatvori.Text = "Zatvori";
+            this.buttonZatvori.UseVisualStyleBackColor = true;
+            this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
             // 
             // buttonUgovorFiles
             // 
@@ -935,7 +935,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1390, 641);
             this.Controls.Add(this.buttonUgovorFiles);
-            this.Controls.Add(this.buttonNazad);
+            this.Controls.Add(this.buttonZatvori);
             this.Controls.Add(this.buttonIstorijaPromenaObrisanihUgovora);
             this.Controls.Add(this.buttonObrisi);
             this.Controls.Add(this.buttonPretraga);
@@ -1039,7 +1039,7 @@
         private System.Windows.Forms.RadioButton radioButtonCenaGreater;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.TextBox textBoxStatus;
-        private System.Windows.Forms.Button buttonNazad;
+        private System.Windows.Forms.Button buttonZatvori;
         private System.Windows.Forms.Button buttonUgovorFiles;
     }
 }

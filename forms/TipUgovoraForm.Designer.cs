@@ -26,7 +26,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TipUgovoraForm));
             this.textBoxTipUgovora = new System.Windows.Forms.TextBox();
             this.dataGridViewTipUgovora = new System.Windows.Forms.DataGridView();
-            this.buttonNazad = new System.Windows.Forms.Button();
+            this.buttonZatvori = new System.Windows.Forms.Button();
             this.buttonDodaj = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTipUgovora)).BeginInit();
             this.SuspendLayout();
@@ -35,7 +35,7 @@
             // 
             this.textBoxTipUgovora.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBoxTipUgovora.Location = new System.Drawing.Point(68, 426);
-            this.textBoxTipUgovora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTipUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTipUgovora.Name = "textBoxTipUgovora";
             this.textBoxTipUgovora.Size = new System.Drawing.Size(227, 20);
             this.textBoxTipUgovora.TabIndex = 0;
@@ -51,7 +51,7 @@
             this.dataGridViewTipUgovora.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewTipUgovora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTipUgovora.Location = new System.Drawing.Point(11, 11);
-            this.dataGridViewTipUgovora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewTipUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewTipUgovora.Name = "dataGridViewTipUgovora";
             this.dataGridViewTipUgovora.ReadOnly = true;
             this.dataGridViewTipUgovora.RowHeadersWidth = 51;
@@ -60,17 +60,17 @@
             this.dataGridViewTipUgovora.TabIndex = 2;
             this.dataGridViewTipUgovora.TabStop = false;
             // 
-            // buttonNazad
+            // buttonZatvori
             // 
-            this.buttonNazad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonNazad.Location = new System.Drawing.Point(198, 456);
-            this.buttonNazad.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonNazad.Name = "buttonNazad";
-            this.buttonNazad.Size = new System.Drawing.Size(131, 63);
-            this.buttonNazad.TabIndex = 7;
-            this.buttonNazad.Text = "Nazad";
-            this.buttonNazad.UseVisualStyleBackColor = true;
-            this.buttonNazad.Click += new System.EventHandler(this.buttonNazad_Click);
+            this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonZatvori.Location = new System.Drawing.Point(198, 456);
+            this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonZatvori.Name = "buttonZatvori";
+            this.buttonZatvori.Size = new System.Drawing.Size(131, 63);
+            this.buttonZatvori.TabIndex = 7;
+            this.buttonZatvori.Text = "Zatvori";
+            this.buttonZatvori.UseVisualStyleBackColor = true;
+            this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
             // 
             // buttonDodaj
             // 
@@ -89,12 +89,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(358, 530);
-            this.Controls.Add(this.buttonNazad);
+            this.Controls.Add(this.buttonZatvori);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.textBoxTipUgovora);
             this.Controls.Add(this.dataGridViewTipUgovora);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(374, 569);
             this.Name = "TipUgovoraForm";
             this.Text = "Tipovi Ugovora";
@@ -111,7 +111,7 @@
 
         private System.Windows.Forms.TextBox textBoxTipUgovora;
         private System.Windows.Forms.DataGridView dataGridViewTipUgovora;
-        private System.Windows.Forms.Button buttonNazad;
+        private System.Windows.Forms.Button buttonZatvori;
         private System.Windows.Forms.Button buttonDodaj;
     }
 }

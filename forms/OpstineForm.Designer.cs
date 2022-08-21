@@ -29,7 +29,7 @@
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.textBoxOpstina = new System.Windows.Forms.TextBox();
             this.opstinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonNazad = new System.Windows.Forms.Button();
+            this.buttontZatvori = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOpstine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -79,24 +79,24 @@
             // 
             this.opstinaBindingSource.DataMember = "opstina";
             // 
-            // buttonNazad
+            // buttontZatvori
             // 
-            this.buttonNazad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonNazad.Location = new System.Drawing.Point(198, 456);
-            this.buttonNazad.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonNazad.Name = "buttonNazad";
-            this.buttonNazad.Size = new System.Drawing.Size(131, 63);
-            this.buttonNazad.TabIndex = 3;
-            this.buttonNazad.Text = "Nazad";
-            this.buttonNazad.UseVisualStyleBackColor = true;
-            this.buttonNazad.Click += new System.EventHandler(this.buttonNazad_Click);
+            this.buttontZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttontZatvori.Location = new System.Drawing.Point(198, 456);
+            this.buttontZatvori.Margin = new System.Windows.Forms.Padding(2);
+            this.buttontZatvori.Name = "buttontZatvori";
+            this.buttontZatvori.Size = new System.Drawing.Size(131, 63);
+            this.buttontZatvori.TabIndex = 3;
+            this.buttontZatvori.Text = "Zatvori";
+            this.buttontZatvori.UseVisualStyleBackColor = true;
+            this.buttontZatvori.Click += new System.EventHandler(this.buttontZatvori_Click);
             // 
             // OpstineForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(358, 530);
-            this.Controls.Add(this.buttonNazad);
+            this.Controls.Add(this.buttontZatvori);
             this.Controls.Add(this.textBoxOpstina);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridViewOpstine);
@@ -121,6 +121,6 @@
         private System.Windows.Forms.BindingSource opstinaBindingSource;
         private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.TextBox textBoxOpstina;
-        private System.Windows.Forms.Button buttonNazad;
+        private System.Windows.Forms.Button buttontZatvori;
     }
 }

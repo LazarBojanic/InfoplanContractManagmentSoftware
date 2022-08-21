@@ -27,7 +27,7 @@
             this.buttonPrikazi = new System.Windows.Forms.Button();
             this.buttonUkloni = new System.Windows.Forms.Button();
             this.buttonDodaj = new System.Windows.Forms.Button();
-            this.buttonNazad = new System.Windows.Forms.Button();
+            this.buttonZatvori = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovorFiles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,23 +80,23 @@
             this.buttonDodaj.UseVisualStyleBackColor = true;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
             // 
-            // buttonNazad
+            // buttonZatvori
             // 
-            this.buttonNazad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonNazad.Location = new System.Drawing.Point(636, 414);
-            this.buttonNazad.Name = "buttonNazad";
-            this.buttonNazad.Size = new System.Drawing.Size(152, 63);
-            this.buttonNazad.TabIndex = 4;
-            this.buttonNazad.Text = "Nazad";
-            this.buttonNazad.UseVisualStyleBackColor = true;
-            this.buttonNazad.Click += new System.EventHandler(this.buttonNazad_Click);
+            this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonZatvori.Location = new System.Drawing.Point(636, 414);
+            this.buttonZatvori.Name = "buttonZatvori";
+            this.buttonZatvori.Size = new System.Drawing.Size(152, 63);
+            this.buttonZatvori.TabIndex = 4;
+            this.buttonZatvori.Text = "Zatvori";
+            this.buttonZatvori.UseVisualStyleBackColor = true;
+            this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
             // 
             // UgovorFilesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 489);
-            this.Controls.Add(this.buttonNazad);
+            this.Controls.Add(this.buttonZatvori);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.buttonUkloni);
             this.Controls.Add(this.buttonPrikazi);
@@ -115,6 +115,6 @@
         private System.Windows.Forms.Button buttonPrikazi;
         private System.Windows.Forms.Button buttonUkloni;
         private System.Windows.Forms.Button buttonDodaj;
-        private System.Windows.Forms.Button buttonNazad;
+        private System.Windows.Forms.Button buttonZatvori;
     }
 }

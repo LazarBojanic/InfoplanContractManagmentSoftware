@@ -76,7 +76,8 @@ namespace CSharp_SQL_App {
             addTipUgovora();
             fillTipUgovoraDataGrid();
         }
-        private void buttonNazad_Click(object sender, EventArgs e) {
+
+        private void buttonZatvori_Click(object sender, EventArgs e) {
             this.Close();
         }
     }

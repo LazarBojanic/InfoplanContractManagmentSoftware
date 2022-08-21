@@ -311,14 +311,14 @@ namespace CSharp_SQL_App {
             this.ResumeLayout(true);
         }
 
-        private void buttonNazad_Click(object sender, EventArgs e) {
-            this.Close();
-        }
-
         private void buttonUgovorFiles_Click(object sender, EventArgs e) {
             String uGuid = dataGridViewUgovori.SelectedRows[0].Cells["uGuid"].Value.ToString();
             UgovorFilesForm uFF = new UgovorFilesForm(uGuid);
             uFF.ShowDialog();
+        }
+
+        private void buttonZatvori_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }

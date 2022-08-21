@@ -52,7 +52,7 @@ namespace CSharp_SQL_App.forms {
             this.ResumeLayout(true);
         }
 
-        private void buttonNazad_Click(object sender, EventArgs e) {
+        private void buttonZatvori_Click(object sender, EventArgs e) {
             this.Close();
         }
     }

@@ -27,7 +27,7 @@
             this.dataGridViewKorisnici = new System.Windows.Forms.DataGridView();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonIzmeni = new System.Windows.Forms.Button();
-            this.buttonNazad = new System.Windows.Forms.Button();
+            this.buttonZatvori = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKorisnici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,24 +78,24 @@
             this.buttonIzmeni.UseVisualStyleBackColor = true;
             this.buttonIzmeni.Click += new System.EventHandler(this.buttonIzmeni_Click);
             // 
-            // buttonNazad
+            // buttonZatvori
             // 
-            this.buttonNazad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonNazad.Location = new System.Drawing.Point(289, 274);
-            this.buttonNazad.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonNazad.Name = "buttonNazad";
-            this.buttonNazad.Size = new System.Drawing.Size(112, 63);
-            this.buttonNazad.TabIndex = 3;
-            this.buttonNazad.Text = "Nazad";
-            this.buttonNazad.UseVisualStyleBackColor = true;
-            this.buttonNazad.Click += new System.EventHandler(this.buttonNazad_Click);
+            this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonZatvori.Location = new System.Drawing.Point(289, 274);
+            this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonZatvori.Name = "buttonZatvori";
+            this.buttonZatvori.Size = new System.Drawing.Size(112, 63);
+            this.buttonZatvori.TabIndex = 3;
+            this.buttonZatvori.Text = "Zatvori";
+            this.buttonZatvori.UseVisualStyleBackColor = true;
+            this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
             // 
             // KorisniciForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 348);
-            this.Controls.Add(this.buttonNazad);
+            this.Controls.Add(this.buttonZatvori);
             this.Controls.Add(this.buttonIzmeni);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridViewKorisnici);
@@ -117,6 +117,6 @@
         private System.Windows.Forms.DataGridView dataGridViewKorisnici;
         private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.Button buttonIzmeni;
-        private System.Windows.Forms.Button buttonNazad;
+        private System.Windows.Forms.Button buttonZatvori;
     }
 }

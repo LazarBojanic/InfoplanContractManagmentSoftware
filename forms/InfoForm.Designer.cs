@@ -29,7 +29,7 @@
             this.labelEmail = new System.Windows.Forms.Label();
             this.pictureBoxInfoplan = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonNazad = new System.Windows.Forms.Button();
+            this.buttonZatvori = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfoplan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -94,23 +94,23 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonNazad
+            // buttonZatvori
             // 
-            this.buttonNazad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonNazad.Location = new System.Drawing.Point(365, 491);
-            this.buttonNazad.Name = "buttonNazad";
-            this.buttonNazad.Size = new System.Drawing.Size(211, 63);
-            this.buttonNazad.TabIndex = 8;
-            this.buttonNazad.Text = "Nazad";
-            this.buttonNazad.UseVisualStyleBackColor = true;
-            this.buttonNazad.Click += new System.EventHandler(this.buttonNazad_Click);
+            this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonZatvori.Location = new System.Drawing.Point(365, 491);
+            this.buttonZatvori.Name = "buttonZatvori";
+            this.buttonZatvori.Size = new System.Drawing.Size(211, 63);
+            this.buttonZatvori.TabIndex = 8;
+            this.buttonZatvori.Text = "Zatvori";
+            this.buttonZatvori.UseVisualStyleBackColor = true;
+            this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click_1);
             // 
             // InfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(941, 566);
-            this.Controls.Add(this.buttonNazad);
+            this.Controls.Add(this.buttonZatvori);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBoxInfoplan);
             this.Controls.Add(this.labelEmail);
@@ -136,6 +136,6 @@
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.PictureBox pictureBoxInfoplan;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonNazad;
+        private System.Windows.Forms.Button buttonZatvori;
     }
 }

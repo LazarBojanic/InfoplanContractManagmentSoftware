@@ -25,7 +25,7 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IstorijaPromenaObrisanihUgovoraForm));
             this.dataGridViewChangeLogObrisanihUgovora = new System.Windows.Forms.DataGridView();
-            this.buttonNazad = new System.Windows.Forms.Button();
+            this.buttonZatvori = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLogObrisanihUgovora)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,26 +45,26 @@
             this.dataGridViewChangeLogObrisanihUgovora.Size = new System.Drawing.Size(998, 345);
             this.dataGridViewChangeLogObrisanihUgovora.TabIndex = 1;
             // 
-            // buttonNazad
+            // buttonZatvori
             // 
-            this.buttonNazad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonNazad.Location = new System.Drawing.Point(428, 375);
-            this.buttonNazad.Name = "buttonNazad";
-            this.buttonNazad.Size = new System.Drawing.Size(165, 63);
-            this.buttonNazad.TabIndex = 2;
-            this.buttonNazad.Text = "Nazad";
-            this.buttonNazad.UseVisualStyleBackColor = true;
-            this.buttonNazad.Click += new System.EventHandler(this.buttonNazad_Click);
+            this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonZatvori.Location = new System.Drawing.Point(428, 375);
+            this.buttonZatvori.Name = "buttonZatvori";
+            this.buttonZatvori.Size = new System.Drawing.Size(165, 63);
+            this.buttonZatvori.TabIndex = 2;
+            this.buttonZatvori.Text = "Zatvori";
+            this.buttonZatvori.UseVisualStyleBackColor = true;
+            this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
             // 
             // IstorijaPromenaObrisanihUgovoraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1022, 450);
-            this.Controls.Add(this.buttonNazad);
+            this.Controls.Add(this.buttonZatvori);
             this.Controls.Add(this.dataGridViewChangeLogObrisanihUgovora);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1038, 489);
             this.Name = "IstorijaPromenaObrisanihUgovoraForm";
             this.Text = "Istorija Promena Obrisanih Ugovora";
@@ -79,6 +79,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewChangeLogObrisanihUgovora;
-        private System.Windows.Forms.Button buttonNazad;
+        private System.Windows.Forms.Button buttonZatvori;
     }
 }
