@@ -56,6 +56,7 @@
             // 
             // buttonDodaj
             // 
+            this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonDodaj.Location = new System.Drawing.Point(11, 274);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
@@ -67,6 +68,7 @@
             // 
             // buttonIzmeni
             // 
+            this.buttonIzmeni.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonIzmeni.Location = new System.Drawing.Point(150, 274);
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmeni.Name = "buttonIzmeni";
@@ -78,6 +80,7 @@
             // 
             // buttonNazad
             // 
+            this.buttonNazad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonNazad.Location = new System.Drawing.Point(289, 274);
             this.buttonNazad.Margin = new System.Windows.Forms.Padding(2);
             this.buttonNazad.Name = "buttonNazad";

@@ -60,11 +60,13 @@
             this.checkBoxDatumUgovora = new System.Windows.Forms.CheckBox();
             this.checkBoxKrajnjiRok = new System.Windows.Forms.CheckBox();
             this.panelPretraga = new System.Windows.Forms.Panel();
+            this.labelStatus = new System.Windows.Forms.Label();
             this.panelCena = new System.Windows.Forms.Panel();
             this.radioButtonCenaEqual = new System.Windows.Forms.RadioButton();
             this.radioButtonCenaLesser = new System.Windows.Forms.RadioButton();
             this.radioButtonCenaGreater = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxStatus = new System.Windows.Forms.TextBox();
             this.textBoxCena = new System.Windows.Forms.TextBox();
             this.panelPrioritet = new System.Windows.Forms.Panel();
             this.radioButtonPrioritetEqual = new System.Windows.Forms.RadioButton();
@@ -88,9 +90,8 @@
             this.radioButtonIdGreater = new System.Windows.Forms.RadioButton();
             this.buttonObrisi = new System.Windows.Forms.Button();
             this.buttonIstorijaPromenaObrisanihUgovora = new System.Windows.Forms.Button();
-            this.labelStatus = new System.Windows.Forms.Label();
-            this.textBoxStatus = new System.Windows.Forms.TextBox();
             this.buttonNazad = new System.Windows.Forms.Button();
+            this.buttonUgovorFiles = new System.Windows.Forms.Button();
             this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).BeginInit();
@@ -116,7 +117,7 @@
             this.dataGridViewUgovori.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewUgovori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUgovori.Location = new System.Drawing.Point(9, 10);
-            this.dataGridViewUgovori.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewUgovori.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewUgovori.MultiSelect = false;
             this.dataGridViewUgovori.Name = "dataGridViewUgovori";
             this.dataGridViewUgovori.ReadOnly = true;
@@ -132,10 +133,10 @@
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonDodaj.AutoSize = true;
-            this.buttonDodaj.Location = new System.Drawing.Point(293, 567);
-            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDodaj.Location = new System.Drawing.Point(319, 567);
+            this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
-            this.buttonDodaj.Size = new System.Drawing.Size(260, 63);
+            this.buttonDodaj.Size = new System.Drawing.Size(192, 63);
             this.buttonDodaj.TabIndex = 16;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
@@ -145,10 +146,10 @@
             // 
             this.buttonIzmeni.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonIzmeni.AutoSize = true;
-            this.buttonIzmeni.Location = new System.Drawing.Point(573, 567);
-            this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonIzmeni.Location = new System.Drawing.Point(530, 567);
+            this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmeni.Name = "buttonIzmeni";
-            this.buttonIzmeni.Size = new System.Drawing.Size(260, 63);
+            this.buttonIzmeni.Size = new System.Drawing.Size(192, 63);
             this.buttonIzmeni.TabIndex = 17;
             this.buttonIzmeni.Text = "Izmeni";
             this.buttonIzmeni.UseVisualStyleBackColor = true;
@@ -159,7 +160,7 @@
             this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonRefresh.AutoSize = true;
             this.buttonRefresh.Location = new System.Drawing.Point(9, 567);
-            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(56, 63);
             this.buttonRefresh.TabIndex = 13;
@@ -171,7 +172,7 @@
             // 
             this.buttonIstorijaPromena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonIstorijaPromena.AutoSize = true;
-            this.buttonIstorijaPromena.Location = new System.Drawing.Point(70, 567);
+            this.buttonIstorijaPromena.Location = new System.Drawing.Point(84, 567);
             this.buttonIstorijaPromena.Name = "buttonIstorijaPromena";
             this.buttonIstorijaPromena.Size = new System.Drawing.Size(92, 63);
             this.buttonIstorijaPromena.TabIndex = 14;
@@ -325,7 +326,7 @@
             // textBoxId
             // 
             this.textBoxId.Location = new System.Drawing.Point(110, 12);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxId.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(199, 20);
             this.textBoxId.TabIndex = 0;
@@ -334,7 +335,7 @@
             // 
             this.textBoxOpstina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxOpstina.Location = new System.Drawing.Point(110, 45);
-            this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOpstina.Name = "textBoxOpstina";
             this.textBoxOpstina.Size = new System.Drawing.Size(199, 20);
             this.textBoxOpstina.TabIndex = 1;
@@ -343,7 +344,7 @@
             // 
             this.textBoxNazivPlana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxNazivPlana.Location = new System.Drawing.Point(110, 78);
-            this.textBoxNazivPlana.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNazivPlana.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNazivPlana.Name = "textBoxNazivPlana";
             this.textBoxNazivPlana.Size = new System.Drawing.Size(199, 20);
             this.textBoxNazivPlana.TabIndex = 2;
@@ -352,7 +353,7 @@
             // 
             this.textBoxUrbanista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxUrbanista.Location = new System.Drawing.Point(110, 111);
-            this.textBoxUrbanista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxUrbanista.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUrbanista.Name = "textBoxUrbanista";
             this.textBoxUrbanista.Size = new System.Drawing.Size(199, 20);
             this.textBoxUrbanista.TabIndex = 3;
@@ -361,7 +362,7 @@
             // 
             this.textBoxTipUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxTipUgovora.Location = new System.Drawing.Point(110, 144);
-            this.textBoxTipUgovora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTipUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTipUgovora.Name = "textBoxTipUgovora";
             this.textBoxTipUgovora.Size = new System.Drawing.Size(199, 20);
             this.textBoxTipUgovora.TabIndex = 4;
@@ -370,7 +371,7 @@
             // 
             this.textBoxObim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxObim.Location = new System.Drawing.Point(110, 309);
-            this.textBoxObim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxObim.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxObim.Name = "textBoxObim";
             this.textBoxObim.Size = new System.Drawing.Size(199, 20);
             this.textBoxObim.TabIndex = 9;
@@ -380,7 +381,7 @@
             // 
             this.textBoxRokPoUgovoru.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRokPoUgovoru.Location = new System.Drawing.Point(110, 276);
-            this.textBoxRokPoUgovoru.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxRokPoUgovoru.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRokPoUgovoru.Name = "textBoxRokPoUgovoru";
             this.textBoxRokPoUgovoru.Size = new System.Drawing.Size(199, 20);
             this.textBoxRokPoUgovoru.TabIndex = 8;
@@ -390,7 +391,7 @@
             // 
             this.textBoxNapomena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxNapomena.Location = new System.Drawing.Point(110, 210);
-            this.textBoxNapomena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNapomena.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNapomena.Name = "textBoxNapomena";
             this.textBoxNapomena.Size = new System.Drawing.Size(199, 20);
             this.textBoxNapomena.TabIndex = 6;
@@ -399,7 +400,7 @@
             // 
             this.textBoxFaza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxFaza.Location = new System.Drawing.Point(110, 177);
-            this.textBoxFaza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFaza.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFaza.Name = "textBoxFaza";
             this.textBoxFaza.Size = new System.Drawing.Size(199, 20);
             this.textBoxFaza.TabIndex = 5;
@@ -408,7 +409,7 @@
             // 
             this.textBoxPrioritet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPrioritet.Location = new System.Drawing.Point(110, 375);
-            this.textBoxPrioritet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPrioritet.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrioritet.Name = "textBoxPrioritet";
             this.textBoxPrioritet.Size = new System.Drawing.Size(199, 20);
             this.textBoxPrioritet.TabIndex = 11;
@@ -417,7 +418,7 @@
             // 
             this.textBoxUGuid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxUGuid.Location = new System.Drawing.Point(110, 474);
-            this.textBoxUGuid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxUGuid.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUGuid.Name = "textBoxUGuid";
             this.textBoxUGuid.Size = new System.Drawing.Size(199, 20);
             this.textBoxUGuid.TabIndex = 12;
@@ -426,7 +427,7 @@
             // 
             this.buttonPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPretraga.AutoSize = true;
-            this.buttonPretraga.Location = new System.Drawing.Point(1133, 567);
+            this.buttonPretraga.Location = new System.Drawing.Point(1132, 567);
             this.buttonPretraga.Name = "buttonPretraga";
             this.buttonPretraga.Size = new System.Drawing.Size(161, 63);
             this.buttonPretraga.TabIndex = 19;
@@ -438,7 +439,7 @@
             // 
             this.dateTimeDatumUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimeDatumUgovora.Location = new System.Drawing.Point(110, 243);
-            this.dateTimeDatumUgovora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeDatumUgovora.Name = "dateTimeDatumUgovora";
             this.dateTimeDatumUgovora.Size = new System.Drawing.Size(199, 20);
             this.dateTimeDatumUgovora.TabIndex = 7;
@@ -447,7 +448,7 @@
             // 
             this.dateTimeKrajnjiRok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimeKrajnjiRok.Location = new System.Drawing.Point(110, 342);
-            this.dateTimeKrajnjiRok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimeKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeKrajnjiRok.Name = "dateTimeKrajnjiRok";
             this.dateTimeKrajnjiRok.Size = new System.Drawing.Size(199, 20);
             this.dateTimeKrajnjiRok.TabIndex = 10;
@@ -456,7 +457,7 @@
             // 
             this.checkBoxDatumUgovora.AutoSize = true;
             this.checkBoxDatumUgovora.Location = new System.Drawing.Point(7, 246);
-            this.checkBoxDatumUgovora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDatumUgovora.Name = "checkBoxDatumUgovora";
             this.checkBoxDatumUgovora.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDatumUgovora.TabIndex = 21;
@@ -466,8 +467,8 @@
             // checkBoxKrajnjiRok
             // 
             this.checkBoxKrajnjiRok.AutoSize = true;
-            this.checkBoxKrajnjiRok.Location = new System.Drawing.Point(7, 355);
-            this.checkBoxKrajnjiRok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxKrajnjiRok.Location = new System.Drawing.Point(7, 345);
+            this.checkBoxKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxKrajnjiRok.Name = "checkBoxKrajnjiRok";
             this.checkBoxKrajnjiRok.Size = new System.Drawing.Size(15, 14);
             this.checkBoxKrajnjiRok.TabIndex = 22;
@@ -516,10 +517,21 @@
             this.panelPretraga.Controls.Add(this.textBoxUrbanista);
             this.panelPretraga.Controls.Add(this.textBoxTipUgovora);
             this.panelPretraga.Location = new System.Drawing.Point(964, 10);
-            this.panelPretraga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelPretraga.Margin = new System.Windows.Forms.Padding(2);
             this.panelPretraga.Name = "panelPretraga";
             this.panelPretraga.Size = new System.Drawing.Size(417, 529);
             this.panelPretraga.TabIndex = 20;
+            // 
+            // labelStatus
+            // 
+            this.labelStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.Location = new System.Drawing.Point(26, 445);
+            this.labelStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(37, 13);
+            this.labelStatus.TabIndex = 31;
+            this.labelStatus.Text = "Status";
             // 
             // panelCena
             // 
@@ -527,7 +539,7 @@
             this.panelCena.Controls.Add(this.radioButtonCenaLesser);
             this.panelCena.Controls.Add(this.radioButtonCenaGreater);
             this.panelCena.Location = new System.Drawing.Point(317, 406);
-            this.panelCena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCena.Margin = new System.Windows.Forms.Padding(2);
             this.panelCena.Name = "panelCena";
             this.panelCena.Size = new System.Drawing.Size(86, 24);
             this.panelCena.TabIndex = 28;
@@ -538,7 +550,7 @@
             this.radioButtonCenaEqual.Checked = true;
             this.radioButtonCenaEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonCenaEqual.Location = new System.Drawing.Point(60, 0);
-            this.radioButtonCenaEqual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonCenaEqual.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonCenaEqual.Name = "radioButtonCenaEqual";
             this.radioButtonCenaEqual.Size = new System.Drawing.Size(26, 24);
             this.radioButtonCenaEqual.TabIndex = 2;
@@ -552,7 +564,7 @@
             this.radioButtonCenaLesser.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonCenaLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonCenaLesser.Location = new System.Drawing.Point(0, 0);
-            this.radioButtonCenaLesser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonCenaLesser.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonCenaLesser.Name = "radioButtonCenaLesser";
             this.radioButtonCenaLesser.Size = new System.Drawing.Size(26, 24);
             this.radioButtonCenaLesser.TabIndex = 0;
@@ -565,7 +577,7 @@
             this.radioButtonCenaGreater.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonCenaGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonCenaGreater.Location = new System.Drawing.Point(30, 0);
-            this.radioButtonCenaGreater.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonCenaGreater.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonCenaGreater.Name = "radioButtonCenaGreater";
             this.radioButtonCenaGreater.Size = new System.Drawing.Size(26, 24);
             this.radioButtonCenaGreater.TabIndex = 1;
@@ -584,11 +596,20 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Cena";
             // 
+            // textBoxStatus
+            // 
+            this.textBoxStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxStatus.Location = new System.Drawing.Point(110, 441);
+            this.textBoxStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxStatus.Name = "textBoxStatus";
+            this.textBoxStatus.Size = new System.Drawing.Size(199, 20);
+            this.textBoxStatus.TabIndex = 30;
+            // 
             // textBoxCena
             // 
             this.textBoxCena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCena.Location = new System.Drawing.Point(110, 408);
-            this.textBoxCena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCena.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCena.Name = "textBoxCena";
             this.textBoxCena.Size = new System.Drawing.Size(199, 20);
             this.textBoxCena.TabIndex = 28;
@@ -600,7 +621,7 @@
             this.panelPrioritet.Controls.Add(this.radioButtonPrioritetLesser);
             this.panelPrioritet.Controls.Add(this.radioButtonPrioritetGreater);
             this.panelPrioritet.Location = new System.Drawing.Point(317, 373);
-            this.panelPrioritet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelPrioritet.Margin = new System.Windows.Forms.Padding(2);
             this.panelPrioritet.Name = "panelPrioritet";
             this.panelPrioritet.Size = new System.Drawing.Size(86, 24);
             this.panelPrioritet.TabIndex = 27;
@@ -611,7 +632,7 @@
             this.radioButtonPrioritetEqual.Checked = true;
             this.radioButtonPrioritetEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonPrioritetEqual.Location = new System.Drawing.Point(60, 0);
-            this.radioButtonPrioritetEqual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonPrioritetEqual.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonPrioritetEqual.Name = "radioButtonPrioritetEqual";
             this.radioButtonPrioritetEqual.Size = new System.Drawing.Size(26, 24);
             this.radioButtonPrioritetEqual.TabIndex = 2;
@@ -625,7 +646,7 @@
             this.radioButtonPrioritetLesser.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonPrioritetLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonPrioritetLesser.Location = new System.Drawing.Point(0, 0);
-            this.radioButtonPrioritetLesser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonPrioritetLesser.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonPrioritetLesser.Name = "radioButtonPrioritetLesser";
             this.radioButtonPrioritetLesser.Size = new System.Drawing.Size(26, 24);
             this.radioButtonPrioritetLesser.TabIndex = 0;
@@ -638,7 +659,7 @@
             this.radioButtonPrioritetGreater.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonPrioritetGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonPrioritetGreater.Location = new System.Drawing.Point(30, 0);
-            this.radioButtonPrioritetGreater.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonPrioritetGreater.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonPrioritetGreater.Name = "radioButtonPrioritetGreater";
             this.radioButtonPrioritetGreater.Size = new System.Drawing.Size(26, 24);
             this.radioButtonPrioritetGreater.TabIndex = 1;
@@ -652,7 +673,7 @@
             this.panelKrajnjiRok.Controls.Add(this.radioButtonKrajnjiRokLesser);
             this.panelKrajnjiRok.Controls.Add(this.radioButtonKrajnjiRokGreater);
             this.panelKrajnjiRok.Location = new System.Drawing.Point(317, 340);
-            this.panelKrajnjiRok.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
             this.panelKrajnjiRok.Name = "panelKrajnjiRok";
             this.panelKrajnjiRok.Size = new System.Drawing.Size(86, 24);
             this.panelKrajnjiRok.TabIndex = 26;
@@ -663,7 +684,7 @@
             this.radioButtonKrajnjiRokEqual.Checked = true;
             this.radioButtonKrajnjiRokEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKrajnjiRokEqual.Location = new System.Drawing.Point(60, 0);
-            this.radioButtonKrajnjiRokEqual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonKrajnjiRokEqual.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonKrajnjiRokEqual.Name = "radioButtonKrajnjiRokEqual";
             this.radioButtonKrajnjiRokEqual.Size = new System.Drawing.Size(26, 24);
             this.radioButtonKrajnjiRokEqual.TabIndex = 2;
@@ -677,7 +698,7 @@
             this.radioButtonKrajnjiRokLesser.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonKrajnjiRokLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKrajnjiRokLesser.Location = new System.Drawing.Point(0, 0);
-            this.radioButtonKrajnjiRokLesser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonKrajnjiRokLesser.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonKrajnjiRokLesser.Name = "radioButtonKrajnjiRokLesser";
             this.radioButtonKrajnjiRokLesser.Size = new System.Drawing.Size(26, 24);
             this.radioButtonKrajnjiRokLesser.TabIndex = 0;
@@ -690,7 +711,7 @@
             this.radioButtonKrajnjiRokGreater.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonKrajnjiRokGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKrajnjiRokGreater.Location = new System.Drawing.Point(30, 0);
-            this.radioButtonKrajnjiRokGreater.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonKrajnjiRokGreater.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonKrajnjiRokGreater.Name = "radioButtonKrajnjiRokGreater";
             this.radioButtonKrajnjiRokGreater.Size = new System.Drawing.Size(26, 24);
             this.radioButtonKrajnjiRokGreater.TabIndex = 1;
@@ -704,7 +725,7 @@
             this.panelObim.Controls.Add(this.radioButtonObimLesser);
             this.panelObim.Controls.Add(this.radioButtonObimGreater);
             this.panelObim.Location = new System.Drawing.Point(317, 307);
-            this.panelObim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelObim.Margin = new System.Windows.Forms.Padding(2);
             this.panelObim.Name = "panelObim";
             this.panelObim.Size = new System.Drawing.Size(86, 24);
             this.panelObim.TabIndex = 25;
@@ -715,7 +736,7 @@
             this.radioButtonObimEqual.Checked = true;
             this.radioButtonObimEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonObimEqual.Location = new System.Drawing.Point(60, 0);
-            this.radioButtonObimEqual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonObimEqual.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonObimEqual.Name = "radioButtonObimEqual";
             this.radioButtonObimEqual.Size = new System.Drawing.Size(26, 24);
             this.radioButtonObimEqual.TabIndex = 2;
@@ -729,7 +750,7 @@
             this.radioButtonObimLesser.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonObimLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonObimLesser.Location = new System.Drawing.Point(0, 0);
-            this.radioButtonObimLesser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonObimLesser.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonObimLesser.Name = "radioButtonObimLesser";
             this.radioButtonObimLesser.Size = new System.Drawing.Size(26, 24);
             this.radioButtonObimLesser.TabIndex = 0;
@@ -742,7 +763,7 @@
             this.radioButtonObimGreater.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonObimGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonObimGreater.Location = new System.Drawing.Point(30, 0);
-            this.radioButtonObimGreater.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonObimGreater.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonObimGreater.Name = "radioButtonObimGreater";
             this.radioButtonObimGreater.Size = new System.Drawing.Size(26, 24);
             this.radioButtonObimGreater.TabIndex = 1;
@@ -756,7 +777,7 @@
             this.panelDatumUgovora.Controls.Add(this.radioButtonDatumUgovoraLesser);
             this.panelDatumUgovora.Controls.Add(this.radioButtonDatumUgovoraGreater);
             this.panelDatumUgovora.Location = new System.Drawing.Point(317, 241);
-            this.panelDatumUgovora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.panelDatumUgovora.Name = "panelDatumUgovora";
             this.panelDatumUgovora.Size = new System.Drawing.Size(86, 24);
             this.panelDatumUgovora.TabIndex = 24;
@@ -767,7 +788,7 @@
             this.radioButtonDatumUgovoraEqual.Checked = true;
             this.radioButtonDatumUgovoraEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonDatumUgovoraEqual.Location = new System.Drawing.Point(60, 0);
-            this.radioButtonDatumUgovoraEqual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonDatumUgovoraEqual.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonDatumUgovoraEqual.Name = "radioButtonDatumUgovoraEqual";
             this.radioButtonDatumUgovoraEqual.Size = new System.Drawing.Size(26, 24);
             this.radioButtonDatumUgovoraEqual.TabIndex = 2;
@@ -781,7 +802,7 @@
             this.radioButtonDatumUgovoraLesser.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonDatumUgovoraLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonDatumUgovoraLesser.Location = new System.Drawing.Point(0, 0);
-            this.radioButtonDatumUgovoraLesser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonDatumUgovoraLesser.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonDatumUgovoraLesser.Name = "radioButtonDatumUgovoraLesser";
             this.radioButtonDatumUgovoraLesser.Size = new System.Drawing.Size(26, 24);
             this.radioButtonDatumUgovoraLesser.TabIndex = 0;
@@ -794,7 +815,7 @@
             this.radioButtonDatumUgovoraGreater.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonDatumUgovoraGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonDatumUgovoraGreater.Location = new System.Drawing.Point(30, 0);
-            this.radioButtonDatumUgovoraGreater.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonDatumUgovoraGreater.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonDatumUgovoraGreater.Name = "radioButtonDatumUgovoraGreater";
             this.radioButtonDatumUgovoraGreater.Size = new System.Drawing.Size(26, 24);
             this.radioButtonDatumUgovoraGreater.TabIndex = 1;
@@ -808,7 +829,7 @@
             this.panelId.Controls.Add(this.radioButtonIdLesser);
             this.panelId.Controls.Add(this.radioButtonIdGreater);
             this.panelId.Location = new System.Drawing.Point(317, 10);
-            this.panelId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelId.Margin = new System.Windows.Forms.Padding(2);
             this.panelId.Name = "panelId";
             this.panelId.Size = new System.Drawing.Size(86, 24);
             this.panelId.TabIndex = 23;
@@ -819,7 +840,7 @@
             this.radioButtonIdEqual.Checked = true;
             this.radioButtonIdEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonIdEqual.Location = new System.Drawing.Point(60, 0);
-            this.radioButtonIdEqual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonIdEqual.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonIdEqual.Name = "radioButtonIdEqual";
             this.radioButtonIdEqual.Size = new System.Drawing.Size(26, 24);
             this.radioButtonIdEqual.TabIndex = 2;
@@ -833,7 +854,7 @@
             this.radioButtonIdLesser.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonIdLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonIdLesser.Location = new System.Drawing.Point(0, 0);
-            this.radioButtonIdLesser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonIdLesser.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonIdLesser.Name = "radioButtonIdLesser";
             this.radioButtonIdLesser.Size = new System.Drawing.Size(26, 24);
             this.radioButtonIdLesser.TabIndex = 0;
@@ -846,7 +867,7 @@
             this.radioButtonIdGreater.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonIdGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonIdGreater.Location = new System.Drawing.Point(30, 0);
-            this.radioButtonIdGreater.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButtonIdGreater.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonIdGreater.Name = "radioButtonIdGreater";
             this.radioButtonIdGreater.Size = new System.Drawing.Size(26, 24);
             this.radioButtonIdGreater.TabIndex = 1;
@@ -858,10 +879,10 @@
             // 
             this.buttonObrisi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonObrisi.AutoSize = true;
-            this.buttonObrisi.Location = new System.Drawing.Point(853, 567);
-            this.buttonObrisi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonObrisi.Location = new System.Drawing.Point(741, 567);
+            this.buttonObrisi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonObrisi.Name = "buttonObrisi";
-            this.buttonObrisi.Size = new System.Drawing.Size(260, 63);
+            this.buttonObrisi.Size = new System.Drawing.Size(192, 63);
             this.buttonObrisi.TabIndex = 18;
             this.buttonObrisi.Text = "Obriši";
             this.buttonObrisi.UseVisualStyleBackColor = true;
@@ -871,7 +892,7 @@
             // 
             this.buttonIstorijaPromenaObrisanihUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonIstorijaPromenaObrisanihUgovora.AutoSize = true;
-            this.buttonIstorijaPromenaObrisanihUgovora.Location = new System.Drawing.Point(168, 567);
+            this.buttonIstorijaPromenaObrisanihUgovora.Location = new System.Drawing.Point(195, 567);
             this.buttonIstorijaPromenaObrisanihUgovora.Name = "buttonIstorijaPromenaObrisanihUgovora";
             this.buttonIstorijaPromenaObrisanihUgovora.Size = new System.Drawing.Size(105, 63);
             this.buttonIstorijaPromenaObrisanihUgovora.TabIndex = 15;
@@ -879,31 +900,11 @@
             this.buttonIstorijaPromenaObrisanihUgovora.UseVisualStyleBackColor = true;
             this.buttonIstorijaPromenaObrisanihUgovora.Click += new System.EventHandler(this.buttonIstorijaPromenaObrisanihUgovora_Click);
             // 
-            // labelStatus
-            // 
-            this.labelStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelStatus.AutoSize = true;
-            this.labelStatus.Location = new System.Drawing.Point(26, 445);
-            this.labelStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(37, 13);
-            this.labelStatus.TabIndex = 31;
-            this.labelStatus.Text = "Status";
-            // 
-            // textBoxStatus
-            // 
-            this.textBoxStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxStatus.Location = new System.Drawing.Point(110, 441);
-            this.textBoxStatus.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxStatus.Name = "textBoxStatus";
-            this.textBoxStatus.Size = new System.Drawing.Size(199, 20);
-            this.textBoxStatus.TabIndex = 30;
-            // 
             // buttonNazad
             // 
             this.buttonNazad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonNazad.AutoSize = true;
-            this.buttonNazad.Location = new System.Drawing.Point(1316, 567);
+            this.buttonNazad.Location = new System.Drawing.Point(1312, 567);
             this.buttonNazad.Margin = new System.Windows.Forms.Padding(2);
             this.buttonNazad.Name = "buttonNazad";
             this.buttonNazad.Size = new System.Drawing.Size(63, 63);
@@ -911,6 +912,18 @@
             this.buttonNazad.Text = "Nazad";
             this.buttonNazad.UseVisualStyleBackColor = true;
             this.buttonNazad.Click += new System.EventHandler(this.buttonNazad_Click);
+            // 
+            // buttonUgovorFiles
+            // 
+            this.buttonUgovorFiles.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonUgovorFiles.AutoSize = true;
+            this.buttonUgovorFiles.Location = new System.Drawing.Point(952, 567);
+            this.buttonUgovorFiles.Name = "buttonUgovorFiles";
+            this.buttonUgovorFiles.Size = new System.Drawing.Size(161, 63);
+            this.buttonUgovorFiles.TabIndex = 22;
+            this.buttonUgovorFiles.Text = "Fajlovi Ugovora";
+            this.buttonUgovorFiles.UseVisualStyleBackColor = true;
+            this.buttonUgovorFiles.Click += new System.EventHandler(this.buttonUgovorFiles_Click);
             // 
             // ugovorBindingSource
             // 
@@ -921,6 +934,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1390, 641);
+            this.Controls.Add(this.buttonUgovorFiles);
             this.Controls.Add(this.buttonNazad);
             this.Controls.Add(this.buttonIstorijaPromenaObrisanihUgovora);
             this.Controls.Add(this.buttonObrisi);
@@ -932,7 +946,7 @@
             this.Controls.Add(this.dataGridViewUgovori);
             this.Controls.Add(this.panelPretraga);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1406, 680);
             this.Name = "UgovoriForm";
             this.Text = "Ugovori";
@@ -1026,5 +1040,6 @@
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.TextBox textBoxStatus;
         private System.Windows.Forms.Button buttonNazad;
+        private System.Windows.Forms.Button buttonUgovorFiles;
     }
 }

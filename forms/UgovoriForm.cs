@@ -70,13 +70,13 @@ namespace CSharp_SQL_App {
             dataGridViewUgovori.DataSource = bs;
             connection.Close();
             foreach(DataGridViewRow row in dataGridViewUgovori.Rows) {
-                if (row.Cells[13].Value.ToString().Equals("Usvojen") || row.Cells[13].Value.ToString().Equals("Započet")) {
+                if (row.Cells["status"].Value.ToString().Equals("Usvojen") || row.Cells["status"].Value.ToString().Equals("Započet")) {
                     row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 0);
                 }
-                if (row.Cells[13].Value.ToString().Equals("Odbačen") || row.Cells[13].Value.ToString().Equals("Prekinut")) {
+                if (row.Cells["status"].Value.ToString().Equals("Odbačen") || row.Cells["status"].Value.ToString().Equals("Prekinut")) {
                     row.DefaultCellStyle.BackColor = Color.FromArgb(255, 0, 0);
                 }
-                if (row.Cells[13].Value.ToString().Equals("Predat") || row.Cells[13].Value.ToString().Equals("Završen")) {
+                if (row.Cells["status"].Value.ToString().Equals("Predat") || row.Cells["status"].Value.ToString().Equals("Završen")) {
                     row.DefaultCellStyle.BackColor = Color.FromArgb(0, 255, 0);
                 }
             }
@@ -313,6 +313,12 @@ namespace CSharp_SQL_App {
 
         private void buttonNazad_Click(object sender, EventArgs e) {
             this.Close();
+        }
+
+        private void buttonUgovorFiles_Click(object sender, EventArgs e) {
+            String uGuid = dataGridViewUgovori.SelectedRows[0].Cells["uGuid"].Value.ToString();
+            UgovorFilesForm uFF = new UgovorFilesForm(uGuid);
+            uFF.ShowDialog();
         }
     }
 }

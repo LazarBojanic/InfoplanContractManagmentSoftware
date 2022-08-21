@@ -96,6 +96,7 @@
             // 
             // buttonNazad
             // 
+            this.buttonNazad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonNazad.Location = new System.Drawing.Point(365, 491);
             this.buttonNazad.Name = "buttonNazad";
             this.buttonNazad.Size = new System.Drawing.Size(211, 63);

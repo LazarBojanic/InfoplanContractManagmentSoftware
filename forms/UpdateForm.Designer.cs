@@ -67,7 +67,7 @@
             // textBoxNazivPlana
             // 
             this.textBoxNazivPlana.Location = new System.Drawing.Point(99, 101);
-            this.textBoxNazivPlana.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNazivPlana.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNazivPlana.Name = "textBoxNazivPlana";
             this.textBoxNazivPlana.Size = new System.Drawing.Size(227, 20);
             this.textBoxNazivPlana.TabIndex = 1;
@@ -75,7 +75,7 @@
             // textBoxUrbanista
             // 
             this.textBoxUrbanista.Location = new System.Drawing.Point(99, 139);
-            this.textBoxUrbanista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxUrbanista.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUrbanista.Name = "textBoxUrbanista";
             this.textBoxUrbanista.Size = new System.Drawing.Size(227, 20);
             this.textBoxUrbanista.TabIndex = 2;
@@ -84,7 +84,7 @@
             // 
             this.textBoxObim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxObim.Location = new System.Drawing.Point(452, 101);
-            this.textBoxObim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxObim.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxObim.Name = "textBoxObim";
             this.textBoxObim.Size = new System.Drawing.Size(227, 20);
             this.textBoxObim.TabIndex = 9;
@@ -94,7 +94,7 @@
             // 
             this.textBoxRokPoUgovoru.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRokPoUgovoru.Location = new System.Drawing.Point(452, 62);
-            this.textBoxRokPoUgovoru.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxRokPoUgovoru.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRokPoUgovoru.Name = "textBoxRokPoUgovoru";
             this.textBoxRokPoUgovoru.Size = new System.Drawing.Size(136, 20);
             this.textBoxRokPoUgovoru.TabIndex = 7;
@@ -105,7 +105,7 @@
             // 
             this.textBoxPrioritet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPrioritet.Location = new System.Drawing.Point(452, 177);
-            this.textBoxPrioritet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPrioritet.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrioritet.Name = "textBoxPrioritet";
             this.textBoxPrioritet.Size = new System.Drawing.Size(227, 20);
             this.textBoxPrioritet.TabIndex = 11;
@@ -218,9 +218,9 @@
             // 
             // buttonSacuvaj
             // 
-            this.buttonSacuvaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSacuvaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonSacuvaj.Location = new System.Drawing.Point(99, 334);
-            this.buttonSacuvaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSacuvaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSacuvaj.Name = "buttonSacuvaj";
             this.buttonSacuvaj.Size = new System.Drawing.Size(200, 63);
             this.buttonSacuvaj.TabIndex = 12;
@@ -230,10 +230,10 @@
             // 
             // buttonOtkazi
             // 
-            this.buttonOtkazi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOtkazi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonOtkazi.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonOtkazi.Location = new System.Drawing.Point(415, 334);
-            this.buttonOtkazi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonOtkazi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOtkazi.Name = "buttonOtkazi";
             this.buttonOtkazi.Size = new System.Drawing.Size(200, 63);
             this.buttonOtkazi.TabIndex = 13;
@@ -255,7 +255,7 @@
             // 
             this.textBoxId.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxId.Location = new System.Drawing.Point(99, 24);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxId.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.ReadOnly = true;
             this.textBoxId.Size = new System.Drawing.Size(227, 20);
@@ -303,7 +303,7 @@
             // 
             this.textBoxUGuid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxUGuid.Location = new System.Drawing.Point(244, 292);
-            this.textBoxUGuid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxUGuid.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUGuid.Name = "textBoxUGuid";
             this.textBoxUGuid.ReadOnly = true;
             this.textBoxUGuid.Size = new System.Drawing.Size(227, 20);
@@ -327,7 +327,7 @@
             "Meseci",
             "Godine"});
             this.comboBoxRokPoUgovoru.Location = new System.Drawing.Point(591, 62);
-            this.comboBoxRokPoUgovoru.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxRokPoUgovoru.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxRokPoUgovoru.Name = "comboBoxRokPoUgovoru";
             this.comboBoxRokPoUgovoru.Size = new System.Drawing.Size(87, 21);
             this.comboBoxRokPoUgovoru.TabIndex = 8;
@@ -367,7 +367,7 @@
             // 
             this.textBoxCena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCena.Location = new System.Drawing.Point(452, 216);
-            this.textBoxCena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCena.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCena.Name = "textBoxCena";
             this.textBoxCena.Size = new System.Drawing.Size(227, 20);
             this.textBoxCena.TabIndex = 34;
@@ -447,7 +447,7 @@
             this.Controls.Add(this.textBoxUrbanista);
             this.Controls.Add(this.textBoxNazivPlana);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(731, 444);
             this.Name = "UpdateForm";
             this.Text = "Dodavanje/izmena ugovora";
