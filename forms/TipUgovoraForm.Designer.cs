@@ -98,7 +98,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(374, 569);
             this.Name = "TipUgovoraForm";
-            this.Text = "Tipovi Ugovora";
+            this.Text = "Tipovi ugovora";
             this.Load += new System.EventHandler(this.TipUgovoraForm_Load);
             this.ResizeBegin += new System.EventHandler(this.TipUgovoraForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.TipUgovoraForm_ResizeEnd);

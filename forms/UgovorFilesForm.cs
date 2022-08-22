@@ -15,6 +15,9 @@ namespace CSharp_SQL_App.forms {
         private String uGuid;
         public UgovorFilesForm(String parUGuid) {
             InitializeComponent();
+            if (!MainForm.user.privilegija.Equals("administrator")) {
+                buttonUkloni.Enabled = false;
+            }
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dataGridViewUgovorFiles, new object[] { true });

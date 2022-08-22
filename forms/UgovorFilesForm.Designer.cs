@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UgovorFilesForm));
             this.dataGridViewUgovorFiles = new System.Windows.Forms.DataGridView();
             this.buttonPrikazi = new System.Windows.Forms.Button();
             this.buttonUkloni = new System.Windows.Forms.Button();
@@ -103,9 +104,10 @@
             this.Controls.Add(this.buttonUkloni);
             this.Controls.Add(this.buttonPrikazi);
             this.Controls.Add(this.dataGridViewUgovorFiles);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(816, 528);
             this.Name = "UgovorFilesForm";
-            this.Text = "UgovorFilesForm";
+            this.Text = "Fajlovi ugovora";
             this.Load += new System.EventHandler(this.UgovorFilesForm_Load);
             this.ResizeBegin += new System.EventHandler(this.UgovorFilesForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.UgovorFilesForm_ResizeEnd);
