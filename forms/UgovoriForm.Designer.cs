@@ -127,7 +127,7 @@
             this.dataGridViewUgovori.Size = new System.Drawing.Size(949, 529);
             this.dataGridViewUgovori.TabIndex = 0;
             this.dataGridViewUgovori.TabStop = false;
-            this.dataGridViewUgovori.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridViewUgovori.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUgovori_CellDoubleClick);
             // 
             // buttonDodaj
             // 

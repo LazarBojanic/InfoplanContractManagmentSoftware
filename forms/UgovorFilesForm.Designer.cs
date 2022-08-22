@@ -41,6 +41,7 @@
             this.dataGridViewUgovorFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUgovorFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUgovorFiles.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewUgovorFiles.MultiSelect = false;
             this.dataGridViewUgovorFiles.Name = "dataGridViewUgovorFiles";
             this.dataGridViewUgovorFiles.ReadOnly = true;
             this.dataGridViewUgovorFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -106,6 +107,8 @@
             this.Name = "UgovorFilesForm";
             this.Text = "UgovorFilesForm";
             this.Load += new System.EventHandler(this.UgovorFilesForm_Load);
+            this.ResizeBegin += new System.EventHandler(this.UgovorFilesForm_ResizeBegin);
+            this.ResizeEnd += new System.EventHandler(this.UgovorFilesForm_ResizeEnd);
             this.Click += new System.EventHandler(this.UgovorFilesForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovorFiles)).EndInit();
             this.ResumeLayout(false);
