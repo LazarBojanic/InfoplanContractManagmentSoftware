@@ -348,9 +348,9 @@
             this.labelTipUgovora.Location = new System.Drawing.Point(32, 181);
             this.labelTipUgovora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTipUgovora.Name = "labelTipUgovora";
-            this.labelTipUgovora.Size = new System.Drawing.Size(66, 13);
+            this.labelTipUgovora.Size = new System.Drawing.Size(64, 13);
             this.labelTipUgovora.TabIndex = 31;
-            this.labelTipUgovora.Text = "Tip Ugovora";
+            this.labelTipUgovora.Text = "Tip ugovora";
             // 
             // labelCena
             // 
