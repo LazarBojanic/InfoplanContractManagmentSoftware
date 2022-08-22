@@ -102,6 +102,7 @@
             this.Controls.Add(this.buttonUkloni);
             this.Controls.Add(this.buttonPrikazi);
             this.Controls.Add(this.dataGridViewUgovorFiles);
+            this.MinimumSize = new System.Drawing.Size(816, 528);
             this.Name = "UgovorFilesForm";
             this.Text = "UgovorFilesForm";
             this.Load += new System.EventHandler(this.UgovorFilesForm_Load);

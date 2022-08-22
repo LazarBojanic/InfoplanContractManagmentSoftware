@@ -7,7 +7,7 @@
     <ProjectGuid>{EBBBC89F-EC4C-498E-B688-FD2A177541F0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CSharp_SQL_App</RootNamespace>
-    <AssemblyName>Infoplan Ugovori</AssemblyName>
+    <AssemblyName>InfoplanUgovori</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
