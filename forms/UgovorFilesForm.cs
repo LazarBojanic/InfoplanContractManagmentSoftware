@@ -56,16 +56,18 @@ namespace CSharp_SQL_App.forms {
             openFileDialog.Multiselect = false;
             openFileDialog.ShowDialog();
             String filePath = openFileDialog.FileName;
-            OleDbConnection connection;
-            OleDbCommand command;
-            connection = GetConnection();
-            connection.Open();
-            String query = "INSERT INTO ugovorFiles (uGuid, fajlPutanja) VALUES (@uGuid, @filePath)";
-            command = new OleDbCommand(query, connection);
-            command.Parameters.AddWithValue("@uGuid", uGuid);
-            command.Parameters.AddWithValue("@fajlPutanja", filePath);
-            command.ExecuteNonQuery();
-            connection.Close();
+            if (!filePath.Equals("")) {
+                OleDbConnection connection;
+                OleDbCommand command;
+                connection = GetConnection();
+                connection.Open();
+                String query = "INSERT INTO ugovorFiles (uGuid, fajlPutanja) VALUES (@uGuid, @filePath)";
+                command = new OleDbCommand(query, connection);
+                command.Parameters.AddWithValue("@uGuid", uGuid);
+                command.Parameters.AddWithValue("@fajlPutanja", filePath);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
             fillUgovorFilesDataGrid();
         }
 
