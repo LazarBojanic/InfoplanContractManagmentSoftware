@@ -73,14 +73,14 @@ namespace CSharp_SQL_App.forms {
 
         private void buttonObrisi_Click(object sender, EventArgs e) {
             if (dataGridViewUgovorFiles.SelectedRows.Count > 0) {
-                String selectedUGuid = dataGridViewUgovorFiles.SelectedRows[0].Cells["uGuid"].Value.ToString();
+                String selectedFilePath = dataGridViewUgovorFiles.SelectedRows[0].Cells["fajlPutanja"].Value.ToString();
                 OleDbConnection connection;
                 OleDbCommand command;
                 connection = GetConnection();
                 connection.Open();
-                String query = "DELETE FROM ugovorFiles WHERE uGuid = @uGuid";
+                String query = "DELETE FROM ugovorFiles WHERE fajlPutanja = @fajlPutanja";
                 command = new OleDbCommand(query, connection);
-                command.Parameters.AddWithValue("@uGuid", selectedUGuid);
+                command.Parameters.AddWithValue("@fajlPutanja", selectedFilePath);
                 command.ExecuteNonQuery();
                 connection.Close();
                 fillUgovorFilesDataGrid();
