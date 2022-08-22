@@ -60,27 +60,17 @@ namespace CSharp_SQL_App {
             }
         }
         private void buttonIzmeni_Click(object sender, EventArgs e) {
-            int id = int.Parse(dataGridViewKorisnici.SelectedRows[0].Cells[0].Value.ToString());
-            string username = dataGridViewKorisnici.SelectedRows[0].Cells[1].Value.ToString();
-            string privilegija = dataGridViewKorisnici.SelectedRows[0].Cells[2].Value.ToString();
-            user = new User(id, username, "", privilegija);
-            KorisniciUpdateForm korisniciUpdateForm = new KorisniciUpdateForm();
-            if (korisniciUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
-                fillKorisniciDataGrid();
-            }
+            if (dataGridViewKorisnici.SelectedRows.Count > 0) {
+                int id = int.Parse(dataGridViewKorisnici.SelectedRows[0].Cells[0].Value.ToString());
+                string username = dataGridViewKorisnici.SelectedRows[0].Cells[1].Value.ToString();
+                string privilegija = dataGridViewKorisnici.SelectedRows[0].Cells[2].Value.ToString();
+                user = new User(id, username, "", privilegija);
+                KorisniciUpdateForm korisniciUpdateForm = new KorisniciUpdateForm();
+                if (korisniciUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
+                    fillKorisniciDataGrid();
+                }
+            }           
         }
-
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
-            int id = int.Parse(dataGridViewKorisnici.SelectedRows[0].Cells[0].Value.ToString());
-            string username = dataGridViewKorisnici.SelectedRows[0].Cells[1].Value.ToString();
-            string privilegija = dataGridViewKorisnici.SelectedRows[0].Cells[2].Value.ToString();
-            user = new User(id, username, "", privilegija);
-            KorisniciUpdateForm korisniciUpdateForm = new KorisniciUpdateForm();
-            if (korisniciUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
-                fillKorisniciDataGrid();
-            }
-        }
-
         private void KorisniciForm_ResizeBegin(object sender, EventArgs e) {
             this.SuspendLayout();            
         }
@@ -95,6 +85,19 @@ namespace CSharp_SQL_App {
 
         private void KorisniciForm_Click(object sender, EventArgs e) {
             dataGridViewKorisnici.ClearSelection();
+        }
+
+        private void dataGridViewKorisnici_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            if (dataGridViewKorisnici.SelectedRows.Count > 0) {
+                int id = int.Parse(dataGridViewKorisnici.SelectedRows[0].Cells[0].Value.ToString());
+                string username = dataGridViewKorisnici.SelectedRows[0].Cells[1].Value.ToString();
+                string privilegija = dataGridViewKorisnici.SelectedRows[0].Cells[2].Value.ToString();
+                user = new User(id, username, "", privilegija);
+                KorisniciUpdateForm korisniciUpdateForm = new KorisniciUpdateForm();
+                if (korisniciUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
+                    fillKorisniciDataGrid();
+                }
+            }           
         }
     }
 }

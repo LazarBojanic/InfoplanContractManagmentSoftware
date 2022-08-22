@@ -322,15 +322,17 @@ namespace CSharp_SQL_App {
         }
 
         private void dataGridViewUgovori_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
-            UpdateForm updateForm2 = new UpdateForm();
-            int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells[0].Value.ToString());
-            int index = dataGridViewUgovori.CurrentRow.Index;
-            updateForm2.loadUgovor(id);
-            if (updateForm2.ShowDialog().Equals(DialogResult.OK)) {
-                refreshDataGrid();
-            }
-            dataGridViewUgovori.FirstDisplayedScrollingRowIndex = index;
-            dataGridViewUgovori.Rows[index].Selected = true;
+            if (dataGridViewUgovori.SelectedRows.Count > 0) {
+                UpdateForm updateForm2 = new UpdateForm();
+                int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells[0].Value.ToString());
+                int index = dataGridViewUgovori.CurrentRow.Index;
+                updateForm2.loadUgovor(id);
+                if (updateForm2.ShowDialog().Equals(DialogResult.OK)) {
+                    refreshDataGrid();
+                }
+                dataGridViewUgovori.FirstDisplayedScrollingRowIndex = index;
+                dataGridViewUgovori.Rows[index].Selected = true;
+            }           
         }
     }
 }

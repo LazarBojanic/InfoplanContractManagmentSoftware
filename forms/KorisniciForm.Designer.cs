@@ -52,7 +52,7 @@
             this.dataGridViewKorisnici.Size = new System.Drawing.Size(395, 248);
             this.dataGridViewKorisnici.TabIndex = 0;
             this.dataGridViewKorisnici.TabStop = false;
-            this.dataGridViewKorisnici.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridViewKorisnici.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKorisnici_CellDoubleClick);
             // 
             // buttonDodaj
             // 
