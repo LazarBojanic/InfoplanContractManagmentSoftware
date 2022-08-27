@@ -133,6 +133,7 @@
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonDodaj.AutoSize = true;
+            this.buttonDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDodaj.Location = new System.Drawing.Point(319, 567);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
@@ -146,6 +147,7 @@
             // 
             this.buttonIzmeni.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonIzmeni.AutoSize = true;
+            this.buttonIzmeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonIzmeni.Location = new System.Drawing.Point(530, 567);
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmeni.Name = "buttonIzmeni";
@@ -427,6 +429,7 @@
             // 
             this.buttonPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPretraga.AutoSize = true;
+            this.buttonPretraga.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPretraga.Location = new System.Drawing.Point(1132, 567);
             this.buttonPretraga.Name = "buttonPretraga";
             this.buttonPretraga.Size = new System.Drawing.Size(161, 63);
@@ -877,6 +880,7 @@
             // 
             this.buttonObrisi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonObrisi.AutoSize = true;
+            this.buttonObrisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonObrisi.Location = new System.Drawing.Point(741, 567);
             this.buttonObrisi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonObrisi.Name = "buttonObrisi";
@@ -915,6 +919,7 @@
             // 
             this.buttonUgovorFiles.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonUgovorFiles.AutoSize = true;
+            this.buttonUgovorFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUgovorFiles.Location = new System.Drawing.Point(952, 567);
             this.buttonUgovorFiles.Name = "buttonUgovorFiles";
             this.buttonUgovorFiles.Size = new System.Drawing.Size(161, 63);

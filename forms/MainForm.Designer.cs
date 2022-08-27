@@ -37,7 +37,8 @@
             // 
             // buttonOpstine
             // 
-            this.buttonOpstine.Location = new System.Drawing.Point(72, 50);
+            this.buttonOpstine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOpstine.Location = new System.Drawing.Point(72, 72);
             this.buttonOpstine.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOpstine.Name = "buttonOpstine";
             this.buttonOpstine.Size = new System.Drawing.Size(155, 63);
@@ -49,7 +50,8 @@
             // buttonPrikazUgovora
             // 
             this.buttonPrikazUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPrikazUgovora.Location = new System.Drawing.Point(373, 50);
+            this.buttonPrikazUgovora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrikazUgovora.Location = new System.Drawing.Point(373, 72);
             this.buttonPrikazUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPrikazUgovora.Name = "buttonPrikazUgovora";
             this.buttonPrikazUgovora.Size = new System.Drawing.Size(155, 63);
@@ -61,20 +63,22 @@
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
+            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsername.Location = new System.Drawing.Point(11, 9);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(0, 13);
+            this.labelUsername.Size = new System.Drawing.Size(0, 17);
             this.labelUsername.TabIndex = 3;
             // 
             // labelPrivilegija
             // 
             this.labelPrivilegija.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrivilegija.AutoSize = true;
-            this.labelPrivilegija.Location = new System.Drawing.Point(11, 31);
+            this.labelPrivilegija.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrivilegija.Location = new System.Drawing.Point(11, 26);
             this.labelPrivilegija.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrivilegija.Name = "labelPrivilegija";
-            this.labelPrivilegija.Size = new System.Drawing.Size(0, 13);
+            this.labelPrivilegija.Size = new System.Drawing.Size(0, 17);
             this.labelPrivilegija.TabIndex = 4;
             // 
             // buttonLogout
@@ -116,6 +120,7 @@
             // buttonIzmenaUsernamePassword
             // 
             this.buttonIzmenaUsernamePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonIzmenaUsernamePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonIzmenaUsernamePassword.Location = new System.Drawing.Point(11, 314);
             this.buttonIzmenaUsernamePassword.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmenaUsernamePassword.Name = "buttonIzmenaUsernamePassword";
@@ -127,7 +132,8 @@
             // 
             // buttonTipoviUgovora
             // 
-            this.buttonTipoviUgovora.Location = new System.Drawing.Point(72, 132);
+            this.buttonTipoviUgovora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTipoviUgovora.Location = new System.Drawing.Point(72, 176);
             this.buttonTipoviUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTipoviUgovora.Name = "buttonTipoviUgovora";
             this.buttonTipoviUgovora.Size = new System.Drawing.Size(155, 63);

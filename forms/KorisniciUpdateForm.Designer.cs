@@ -40,8 +40,9 @@
             // 
             this.buttonSacuvaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonSacuvaj.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonSacuvaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSacuvaj.Location = new System.Drawing.Point(9, 182);
-            this.buttonSacuvaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSacuvaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSacuvaj.Name = "buttonSacuvaj";
             this.buttonSacuvaj.Size = new System.Drawing.Size(154, 63);
             this.buttonSacuvaj.TabIndex = 3;
@@ -54,7 +55,7 @@
             this.buttonOtkazi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonOtkazi.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonOtkazi.Location = new System.Drawing.Point(194, 182);
-            this.buttonOtkazi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonOtkazi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOtkazi.Name = "buttonOtkazi";
             this.buttonOtkazi.Size = new System.Drawing.Size(154, 63);
             this.buttonOtkazi.TabIndex = 4;
@@ -68,7 +69,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxUsername.Location = new System.Drawing.Point(87, 61);
-            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(242, 20);
             this.textBoxUsername.TabIndex = 0;
@@ -79,7 +80,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPassword.Location = new System.Drawing.Point(87, 98);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(242, 20);
             this.textBoxPassword.TabIndex = 1;
@@ -129,7 +130,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxId.Location = new System.Drawing.Point(87, 24);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxId.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.ReadOnly = true;
             this.textBoxId.Size = new System.Drawing.Size(242, 20);
@@ -156,7 +157,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxPrivilegija.FormattingEnabled = true;
             this.comboBoxPrivilegija.Location = new System.Drawing.Point(87, 136);
-            this.comboBoxPrivilegija.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxPrivilegija.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPrivilegija.Name = "comboBoxPrivilegija";
             this.comboBoxPrivilegija.Size = new System.Drawing.Size(242, 21);
             this.comboBoxPrivilegija.TabIndex = 2;
@@ -177,7 +178,7 @@
             this.Controls.Add(this.buttonOtkazi);
             this.Controls.Add(this.buttonSacuvaj);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(372, 293);
             this.Name = "KorisniciUpdateForm";
             this.Text = "Izmena podataka za korisnika";

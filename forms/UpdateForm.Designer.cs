@@ -219,6 +219,7 @@
             // buttonSacuvaj
             // 
             this.buttonSacuvaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonSacuvaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSacuvaj.Location = new System.Drawing.Point(99, 334);
             this.buttonSacuvaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSacuvaj.Name = "buttonSacuvaj";
