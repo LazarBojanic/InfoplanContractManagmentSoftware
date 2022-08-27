@@ -81,7 +81,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>infoplanLogo.ico</ApplicationIcon>
+    <ApplicationIcon>forms\infoplanLogo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -260,7 +260,6 @@
     <Content Include="forms\infoplanLogo.ico" />
     <Content Include="forms\infoplanLogo.png" />
     <Content Include="forms\infoplanUgovoriPrePressPrintCompany.png" />
-    <Content Include="infoplanLogo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
