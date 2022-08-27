@@ -5,6 +5,7 @@
 Nakon otvaranja programa, korisnik mora uneti svoj username i password koji su podesili kod administratora.
 
 ![](Manual-SRB-2.png)
+
 Nakon uspešnog prijavljivanja otvara se glavni meni:
 
 „Detalji" otvara prozor o detaljima softvera a „Logout" odjavljuje korisnika i vraća se na „Login" formu.
@@ -27,6 +28,7 @@ Korisnik može da radi sve osnovne funkcionalnosti, ali ne može da briše podat
 Sa glavnog menija klikom na dugme „Ugovori" otvara se forma sa prikazom svih ugovora:
 
 ![](Manual-SRB-8.png) ![](Manual-SRB-9.png)
+
 Ugovori su obojeni u skladu sa poljem „status". Podaci u tabelama na svakoj formi mogu da se sortiraju klikom na ime željene kolone. Korisnici mogu da vrše pretragu ugovora po svim poljima. Brojni i datumski podaci mogu se pretraživati sa „manje, veće i jednako". Klikom na kvadratiće ispred polja za datume se oni uključuju/isključuju sa pretrage. Pretraga se vrši na dugme „Pretraga". Dugme „Osveži" ponovo učitava celu tabelu. „Istorija Promena" prikazuje istoriju promena svakog polja za izabrani ugovor koji se bira klikom na red u tabeli. „Istorija Promena Obrisanih Ugovora" radi isto, samo za obrisane ugovore koji se na tabeli ne vide. „Dodaj" otvara novu formu gde korisnici mogu da dodaju novi ugovor sa različitim parametrima:
 
 Polja „Opština", „Tip Ugovora", „Rok po ugovoru (tekst)" i „Status" su padajući meniji, gde mogu da se izaberu odgovarajuće vrednosti. Polje „Krajnji rok" se automatski menja u odnosu na datum ugovora kad korisnik menja vrednost i interval roka po ugovoru. Kod svih formi menjanja ili dodavanja, „Sačuvaj" vrši zadate promene a „Otkaži" ih odbacuje i ne menja tabele.
