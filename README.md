@@ -15,12 +15,15 @@ Klikom na dugmad „Opštine" i „Tipovi Ugovora" mogu se videti opštine i tip
 ![](Manual-SRB-3.png) ![](Manual-SRB-4.png)
 
 ![](Manual-SRB-5.png)
+
 Sa glavnog menija korisnici mogu da ismene svoj username i password, dok mogućnost menjanja privilegije imaju samo administratori:
 
 ![](Manual-SRB-6.png)
+
 Sa glavnog menija administrator mogu da vide sve korisnike i njihove privilegije ali ne I njihove password-e, klikom na dugme izmeni takođe ostavlja prazno polje na mesto passworda, ovo je namenjeno u slučaju da korisnik zaboravi svoj password ili ne može da se uloguje, tada administrator može da stavi novi. Administratori takođe ovde mogu da prave nove korisnike:
 
 ![](Manual-SRB-7.png)
+
 Klikom na „Dodaj" otvara se forma gde administrator može da doda novog korisnika i njihovu privilegiju:
 
 Korisnik može da radi sve osnovne funkcionalnosti, ali ne može da briše podatke iz tabela i da dodaje nove korisnike za razliku od administratora koji može sve da radi. Turista može samo da gleda tabele i vrši pretragu nad ugovorima.
@@ -42,6 +45,7 @@ Dugme „Obriši", na formi „Ugovori", briše odabrani ugovor i ovo mogu samo 
 ![](Manual-SRB-10.png)
 
 ![](Manual-SRB-11.png)
+
 Klikom na „Prikaži" ili duplim klikom na željeni ugovor, otvara se izabrani ugovor u odgovarajućem programu u skladu sa tipom fajla. Klikom na „Dodaj" otvara se prozor gde može da se izabere jedan željeni fajl za dodavanje:
 
 Na formi „Fajlovi ugovora" „Ukloni" briše fajl iz tabele ali ne fajl na disku. Ovo takođe samo administratori mogu da urade.
