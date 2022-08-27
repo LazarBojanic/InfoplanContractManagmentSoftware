@@ -72,7 +72,6 @@
             // 
             // labelPrivilegija
             // 
-            this.labelPrivilegija.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrivilegija.AutoSize = true;
             this.labelPrivilegija.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrivilegija.Location = new System.Drawing.Point(11, 26);
