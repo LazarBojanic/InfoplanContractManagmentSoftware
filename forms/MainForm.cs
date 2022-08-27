@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class MainForm : Form {
-        public static User user { get;set;}
+        public static User user { get;set; }
         public MainForm() {
             InitializeComponent();
             user = new User(LoginForm.id, LoginForm.username, LoginForm.password, LoginForm.privilegija);

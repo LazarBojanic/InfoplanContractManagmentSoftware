@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class KorisniciUpdateForm : Form {
-        private User user;
+        public User user { get; set; }
         public KorisniciUpdateForm() {
             InitializeComponent();
             loadPrivilegijaComboBox();
@@ -57,7 +57,7 @@ namespace CSharp_SQL_App {
                 command.Parameters.AddWithValue("@username", user.username);
                 command.Parameters.AddWithValue("@password", user.password);
                 command.Parameters.AddWithValue("@privilegija", user.privilegija);
-                int recordsAffected = command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
             else {
                 string query = "UPDATE korisnik SET username = @username, [password] = @password," +
@@ -73,10 +73,6 @@ namespace CSharp_SQL_App {
         }
         private static OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
-        }
-
-        private void KorisniciUpdateForm_Load_1(object sender, EventArgs e) {
-
         }
     }
 }

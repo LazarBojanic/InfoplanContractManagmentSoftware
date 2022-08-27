@@ -38,7 +38,7 @@
             // buttonOpstine
             // 
             this.buttonOpstine.Location = new System.Drawing.Point(72, 50);
-            this.buttonOpstine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonOpstine.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOpstine.Name = "buttonOpstine";
             this.buttonOpstine.Size = new System.Drawing.Size(155, 63);
             this.buttonOpstine.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             this.buttonPrikazUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPrikazUgovora.Location = new System.Drawing.Point(373, 50);
-            this.buttonPrikazUgovora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPrikazUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPrikazUgovora.Name = "buttonPrikazUgovora";
             this.buttonPrikazUgovora.Size = new System.Drawing.Size(155, 63);
             this.buttonPrikazUgovora.TabIndex = 1;
@@ -61,7 +61,7 @@
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(9, 324);
+            this.labelUsername.Location = new System.Drawing.Point(11, 9);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(0, 13);
@@ -69,8 +69,9 @@
             // 
             // labelPrivilegija
             // 
+            this.labelPrivilegija.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrivilegija.AutoSize = true;
-            this.labelPrivilegija.Location = new System.Drawing.Point(9, 344);
+            this.labelPrivilegija.Location = new System.Drawing.Point(11, 31);
             this.labelPrivilegija.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrivilegija.Name = "labelPrivilegija";
             this.labelPrivilegija.Size = new System.Drawing.Size(0, 13);
@@ -80,7 +81,7 @@
             // 
             this.buttonLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLogout.Location = new System.Drawing.Point(527, 314);
-            this.buttonLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLogout.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(64, 44);
             this.buttonLogout.TabIndex = 6;
@@ -92,7 +93,7 @@
             // 
             this.buttonKorisnici.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonKorisnici.Location = new System.Drawing.Point(391, 314);
-            this.buttonKorisnici.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonKorisnici.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKorisnici.Name = "buttonKorisnici";
             this.buttonKorisnici.Size = new System.Drawing.Size(64, 44);
             this.buttonKorisnici.TabIndex = 4;
@@ -104,7 +105,7 @@
             // 
             this.buttonInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInfo.Location = new System.Drawing.Point(459, 314);
-            this.buttonInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInfo.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInfo.Name = "buttonInfo";
             this.buttonInfo.Size = new System.Drawing.Size(64, 44);
             this.buttonInfo.TabIndex = 5;
@@ -115,8 +116,8 @@
             // buttonIzmenaUsernamePassword
             // 
             this.buttonIzmenaUsernamePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonIzmenaUsernamePassword.Location = new System.Drawing.Point(9, 313);
-            this.buttonIzmenaUsernamePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonIzmenaUsernamePassword.Location = new System.Drawing.Point(11, 314);
+            this.buttonIzmenaUsernamePassword.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmenaUsernamePassword.Name = "buttonIzmenaUsernamePassword";
             this.buttonIzmenaUsernamePassword.Size = new System.Drawing.Size(135, 44);
             this.buttonIzmenaUsernamePassword.TabIndex = 3;
@@ -127,7 +128,7 @@
             // buttonTipoviUgovora
             // 
             this.buttonTipoviUgovora.Location = new System.Drawing.Point(72, 132);
-            this.buttonTipoviUgovora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonTipoviUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTipoviUgovora.Name = "buttonTipoviUgovora";
             this.buttonTipoviUgovora.Size = new System.Drawing.Size(155, 63);
             this.buttonTipoviUgovora.TabIndex = 2;
@@ -151,7 +152,7 @@
             this.Controls.Add(this.buttonPrikazUgovora);
             this.Controls.Add(this.buttonOpstine);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(616, 405);
             this.Name = "MainForm";
             this.Text = "Glavni meni";

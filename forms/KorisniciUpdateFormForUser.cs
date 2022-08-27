@@ -43,7 +43,7 @@ namespace CSharp_SQL_App {
                 command.Parameters.AddWithValue("@username", user.username);
                 command.Parameters.AddWithValue("@password", user.password);
                 command.Parameters.AddWithValue("@privilegija", user.privilegija);
-                int recordsAffected = command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
             else {
                 string query = "UPDATE korisnik SET username = @username, [password] = @password," +
