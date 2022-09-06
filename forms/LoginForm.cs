@@ -13,10 +13,10 @@ using System.Windows.Forms;
 namespace CSharp_SQL_App {
     public partial class LoginForm : Form {
         public static int id { get; set; }
-        public static string username { get;set;}
-        public static string password { get;set;}
-        public static string privilegija { get;set;}
-        private static LoginForm instance { get;set;}
+        public static string username { get; set; }
+        public static string password { get; set; }
+        public static string privilegija { get; set; }
+        private static LoginForm instance { get; set; }
 
         public LoginForm() {
             InitializeComponent();
@@ -46,20 +46,26 @@ namespace CSharp_SQL_App {
             }
         }
         private void LoginForm_Load(object sender, EventArgs e) {
-            
+
         }
         public int login() {
-            OleDbConnection connection;
-            OleDbCommand command;
-            connection = GetConnection();
-            connection.Open();
-            String query = "SELECT COUNT(*) FROM korisnik WHERE username = @username AND [password] = @password";
-            command = new OleDbCommand(query, connection);
-            command.Parameters.AddWithValue("@username", username);
-            command.Parameters.AddWithValue("@password", password);
-            int found = Int32.Parse(command.ExecuteScalar().ToString());
-            connection.Close();
-            return found;
+            try {
+                OleDbConnection connection;
+                OleDbCommand command;
+                connection = GetConnection();
+                connection.Open();
+                String query = "SELECT COUNT(*) FROM korisnik WHERE username = @username AND [password] = @password";
+                command = new OleDbCommand(query, connection);
+                command.Parameters.AddWithValue("@username", username);
+                command.Parameters.AddWithValue("@password", password);
+                int found = Int32.Parse(command.ExecuteScalar().ToString());
+                connection.Close();
+                return found;
+            }
+            catch (Exception) {
+                MessageBox.Show("Nemate instaliran Microsoft Access Database Driver.");
+                return -1;
+            }
         }
         public string getPrivilegija() {
             OleDbConnection connection;
