@@ -63,7 +63,7 @@
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsername.Location = new System.Drawing.Point(11, 9);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUsername.Name = "labelUsername";
@@ -73,8 +73,8 @@
             // labelPrivilegija
             // 
             this.labelPrivilegija.AutoSize = true;
-            this.labelPrivilegija.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrivilegija.Location = new System.Drawing.Point(11, 26);
+            this.labelPrivilegija.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrivilegija.Location = new System.Drawing.Point(11, 30);
             this.labelPrivilegija.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrivilegija.Name = "labelPrivilegija";
             this.labelPrivilegija.Size = new System.Drawing.Size(0, 17);
