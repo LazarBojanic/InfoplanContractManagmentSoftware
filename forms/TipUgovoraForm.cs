@@ -139,6 +139,15 @@ namespace CSharp_SQL_App {
             dataGridViewTipUgovora.ClearSelection();
         }
 
-
+        private void dataGridViewTipUgovora_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            if (dataGridViewTipUgovora.SelectedRows.Count > 0) {
+                TipUgovoraUpdateForm tipUgovoraUpdateForm = new TipUgovoraUpdateForm("izmena",
+                    dataGridViewTipUgovora.SelectedRows[0].Cells["tipUgovora"].Value.ToString());
+                if (tipUgovoraUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
+                    updateTipUgovora();
+                    fillTipUgovoraDataGrid();
+                }
+            }
+        }
     }
 }

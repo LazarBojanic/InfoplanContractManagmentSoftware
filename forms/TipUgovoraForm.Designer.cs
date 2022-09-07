@@ -53,6 +53,7 @@
             this.dataGridViewTipUgovora.Size = new System.Drawing.Size(507, 429);
             this.dataGridViewTipUgovora.TabIndex = 0;
             this.dataGridViewTipUgovora.TabStop = false;
+            this.dataGridViewTipUgovora.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTipUgovora_CellDoubleClick);
             // 
             // buttonZatvori
             // 

@@ -142,6 +142,15 @@ namespace CSharp_SQL_App {
             dataGridViewOpstine.ClearSelection();
         }
 
-
+        private void dataGridViewOpstine_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            if (dataGridViewOpstine.SelectedRows.Count > 0) {
+                OpstineUpdateForm opstineUpdateForm = new OpstineUpdateForm("izmena",
+                    dataGridViewOpstine.SelectedRows[0].Cells["opstina"].Value.ToString());
+                if (opstineUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
+                    updateOpstina();
+                    fillOpstineDataGrid();
+                }
+            }
+        }
     }
 }

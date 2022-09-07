@@ -56,6 +56,7 @@
             this.dataGridViewOpstine.Size = new System.Drawing.Size(507, 429);
             this.dataGridViewOpstine.TabIndex = 0;
             this.dataGridViewOpstine.TabStop = false;
+            this.dataGridViewOpstine.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOpstine_CellDoubleClick);
             // 
             // buttonDodaj
             // 
