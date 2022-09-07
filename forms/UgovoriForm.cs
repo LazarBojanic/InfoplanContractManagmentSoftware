@@ -258,8 +258,8 @@ namespace CSharp_SQL_App {
 
         private void buttonObrisi_Click(object sender, EventArgs e) {
             ConfirmationForm confirmationForm = new ConfirmationForm();
-            if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
-                if (dataGridViewUgovori.SelectedRows.Count > 0) {
+            if (dataGridViewUgovori.SelectedRows.Count > 0) {
+                if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
                     Ugovor oldUgovor = new Ugovor();
                     Ugovor newUgovor = new Ugovor();
                     int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells["id"].Value.ToString());

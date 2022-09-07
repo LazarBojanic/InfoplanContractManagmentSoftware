@@ -46,8 +46,8 @@ namespace CSharp_SQL_App {
         }
         private void buttonObrisi_Click(object sender, EventArgs e) {
             ConfirmationForm confirmationForm = new ConfirmationForm();
-            if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
-                if (dataGridViewTipUgovora.SelectedRows.Count > 0) {
+            if (dataGridViewTipUgovora.SelectedRows.Count > 0) {
+                if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
                     String tipUgovora = dataGridViewTipUgovora.SelectedRows[0].Cells["tipUgovora"].Value.ToString();
                     OleDbConnection connection;
                     OleDbCommand command;

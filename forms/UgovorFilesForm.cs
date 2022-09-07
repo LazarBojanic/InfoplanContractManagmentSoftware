@@ -75,8 +75,8 @@ namespace CSharp_SQL_App.forms {
         }
         private void buttonUkloni_Click(object sender, EventArgs e) {
             ConfirmationForm confirmationForm = new ConfirmationForm();
-            if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
-                if (dataGridViewUgovorFiles.SelectedRows.Count > 0) {
+            if (dataGridViewUgovorFiles.SelectedRows.Count > 0) {
+                if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
                     String selectedFilePath = dataGridViewUgovorFiles.SelectedRows[0].Cells["fajlPutanja"].Value.ToString();
                     OleDbConnection connection;
                     OleDbCommand command;

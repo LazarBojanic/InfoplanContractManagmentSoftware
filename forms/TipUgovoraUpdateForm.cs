@@ -32,6 +32,5 @@ namespace CSharp_SQL_App.forms {
             this.Close();
         }
 
-        
     }
 }

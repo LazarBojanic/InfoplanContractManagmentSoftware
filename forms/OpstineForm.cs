@@ -50,8 +50,8 @@ namespace CSharp_SQL_App {
         }
         private void buttonObrisi_Click(object sender, EventArgs e) {
             ConfirmationForm confirmationForm = new ConfirmationForm();
-            if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
-                if (dataGridViewOpstine.SelectedRows.Count > 0) {
+            if (dataGridViewOpstine.SelectedRows.Count > 0) {
+                if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
                     String opstina = dataGridViewOpstine.SelectedRows[0].Cells["opstina"].Value.ToString();
                     OleDbConnection connection;
                     OleDbCommand command;

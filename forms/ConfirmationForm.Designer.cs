@@ -59,7 +59,6 @@
             this.labelSigurni.AutoSize = true;
             this.labelSigurni.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSigurni.Location = new System.Drawing.Point(74, 41);
-            this.labelSigurni.MinimumSize = new System.Drawing.Size(203, 30);
             this.labelSigurni.Name = "labelSigurni";
             this.labelSigurni.Size = new System.Drawing.Size(203, 30);
             this.labelSigurni.TabIndex = 2;
@@ -74,6 +73,7 @@
             this.Controls.Add(this.buttonNe);
             this.Controls.Add(this.buttonDa);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(367, 224);
             this.Name = "ConfirmationForm";
             this.Text = "Brisanje";
             this.ResumeLayout(false);

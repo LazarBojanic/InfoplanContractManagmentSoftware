@@ -104,8 +104,8 @@ namespace CSharp_SQL_App {
 
         private void buttonObrisi_Click(object sender, EventArgs e) {
             ConfirmationForm confirmationForm = new ConfirmationForm();
-            if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
-                if (dataGridViewKorisnici.SelectedRows.Count > 0) {
+            if (dataGridViewKorisnici.SelectedRows.Count > 0) {
+                if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
                     int id = int.Parse(dataGridViewKorisnici.SelectedRows[0].Cells["id"].Value.ToString());
                     OleDbConnection connection;
                     OleDbCommand command;
