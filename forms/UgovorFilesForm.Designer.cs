@@ -49,6 +49,7 @@
             this.dataGridViewUgovorFiles.Size = new System.Drawing.Size(776, 386);
             this.dataGridViewUgovorFiles.TabIndex = 0;
             this.dataGridViewUgovorFiles.TabStop = false;
+            this.dataGridViewUgovorFiles.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUgovorFiles_CellDoubleClick);
             // 
             // buttonPrikazi
             // 

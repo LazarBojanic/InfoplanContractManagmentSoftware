@@ -130,6 +130,23 @@ namespace CSharp_SQL_App {
         private void buttonOtkazi_Click(object sender, EventArgs e) {
             this.Close();
         }
+        private void dateTimeDatumUgovora_ValueChanged(object sender, EventArgs e) {
+            dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value;
+            if (!textBoxRokPoUgovoru.Text.Equals("")) {
+                if (comboBoxRokPoUgovoru.Text.Equals("Dani")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text));
+                }
+                if (comboBoxRokPoUgovoru.Text.Equals("Nedelje")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text) * 7);
+                }
+                if (comboBoxRokPoUgovoru.Text.Equals("Meseci")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddMonths(Int32.Parse(textBoxRokPoUgovoru.Text));
+                }
+                if (comboBoxRokPoUgovoru.Text.Equals("Godine")) {
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(Int32.Parse(textBoxRokPoUgovoru.Text));
+                }
+            }
+        }
         private void textBoxRokPoUgovoru_TextChanged(object sender, EventArgs e) {
             dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value;
             if (!textBoxRokPoUgovoru.Text.Equals("")) {
@@ -188,5 +205,7 @@ namespace CSharp_SQL_App {
                 e.Handled = true;
             }
         }
+
+        
     }
 }

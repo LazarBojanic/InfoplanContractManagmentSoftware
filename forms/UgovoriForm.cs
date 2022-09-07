@@ -71,7 +71,10 @@ namespace CSharp_SQL_App {
             bs.DataSource = dt;
             dataGridViewUgovori.DataSource = bs;
             connection.Close();
-            foreach(DataGridViewRow row in dataGridViewUgovori.Rows) {
+            colorUgovori();
+        }
+        private void colorUgovori() {
+            foreach (DataGridViewRow row in dataGridViewUgovori.Rows) {
                 if (row.Cells["status"].Value.ToString().Equals("Usvojen") || row.Cells["status"].Value.ToString().Equals("Započet")) {
                     row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 0);
                 }
@@ -87,9 +90,11 @@ namespace CSharp_SQL_App {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
         private void buttonIstorijaPromena_Click(object sender, EventArgs e) {
-            String uGuid = dataGridViewUgovori.SelectedRows[0].Cells["uGuid"].Value.ToString();
-            IstorijaPromenaForm i = new IstorijaPromenaForm(uGuid);
-            i.ShowDialog();
+            if(dataGridViewUgovori.SelectedRows.Count > 0) {
+                String uGuid = dataGridViewUgovori.SelectedRows[0].Cells["uGuid"].Value.ToString();
+                IstorijaPromenaForm i = new IstorijaPromenaForm(uGuid);
+                i.ShowDialog();
+            }
         }
         private void UgovoriForm_ResizeBegin(object sender, EventArgs e) {
             this.SuspendLayout();
@@ -103,7 +108,8 @@ namespace CSharp_SQL_App {
             OleDbCommand command;
             DataTable dt;
             connection = GetConnection();
-            String query = "SELECT * FROM ugovor WHERE id IS NOT NULL";
+            String query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
+                " datumUgovora, rokPoUgovoru, obim, krajnjiRok, prioritet, cena, status, uGuid FROM ugovor ORDER BY id";
             if (!string.IsNullOrEmpty(textBoxId.Text)) {
                 if (radioButtonIdLesser.Checked) {
                     query += " AND id < @id";
@@ -249,8 +255,8 @@ namespace CSharp_SQL_App {
             dt.Load(command.ExecuteReader());
             bs.DataSource = dt;
             dataGridViewUgovori.DataSource = bs;
-            this.Text = query;
             connection.Close();
+            colorUgovori();
         }
         public DateTime dateTimeWithoutMiliseconds(DateTime dateTime) {
             return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second);

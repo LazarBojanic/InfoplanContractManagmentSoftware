@@ -107,5 +107,13 @@ namespace CSharp_SQL_App.forms {
         private void UgovorFilesForm_ResizeEnd(object sender, EventArgs e) {
             this.ResumeLayout();
         }
+
+        private void dataGridViewUgovorFiles_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            String filePath;
+            if (dataGridViewUgovorFiles.SelectedRows.Count > 0) {
+                filePath = dataGridViewUgovorFiles.SelectedRows[0].Cells["fajlPutanja"].Value.ToString();
+                System.Diagnostics.Process.Start(filePath);
+            }
+        }
     }
 }

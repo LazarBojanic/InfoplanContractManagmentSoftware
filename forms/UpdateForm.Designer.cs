@@ -299,6 +299,7 @@
             this.dateTimeDatumUgovora.Name = "dateTimeDatumUgovora";
             this.dateTimeDatumUgovora.Size = new System.Drawing.Size(227, 21);
             this.dateTimeDatumUgovora.TabIndex = 7;
+            this.dateTimeDatumUgovora.ValueChanged += new System.EventHandler(this.dateTimeDatumUgovora_ValueChanged);
             // 
             // comboBoxOpstina
             // 
