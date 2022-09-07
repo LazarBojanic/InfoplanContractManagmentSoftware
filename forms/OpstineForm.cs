@@ -33,7 +33,7 @@ namespace CSharp_SQL_App {
         }
         private void buttonDodaj_Click(object sender, EventArgs e) {
             OpstineUpdateForm opstineUpdateForm = new OpstineUpdateForm("dodavanje", "");
-            if (opstineUpdateForm.ShowDialog().Equals(DialogResult.OK)){
+            if (opstineUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
                 addOpstina();
                 fillOpstineDataGrid();
             }
@@ -49,18 +49,21 @@ namespace CSharp_SQL_App {
             }
         }
         private void buttonObrisi_Click(object sender, EventArgs e) {
-            if (dataGridViewOpstine.SelectedRows.Count > 0) {
-                String opstina = dataGridViewOpstine.SelectedRows[0].Cells["opstina"].Value.ToString();
-                OleDbConnection connection;
-                OleDbCommand command;
-                String query = "DELETE FROM opstina WHERE opstina = @opstina";
-                connection = GetConnection();
-                connection.Open();
-                command = new OleDbCommand(query, connection);
-                command.Parameters.AddWithValue("@opstina", opstina);
-                command.ExecuteNonQuery();
-                connection.Close();
-                fillOpstineDataGrid();
+            ConfirmationForm confirmationForm = new ConfirmationForm();
+            if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
+                if (dataGridViewOpstine.SelectedRows.Count > 0) {
+                    String opstina = dataGridViewOpstine.SelectedRows[0].Cells["opstina"].Value.ToString();
+                    OleDbConnection connection;
+                    OleDbCommand command;
+                    String query = "DELETE FROM opstina WHERE opstina = @opstina";
+                    connection = GetConnection();
+                    connection.Open();
+                    command = new OleDbCommand(query, connection);
+                    command.Parameters.AddWithValue("@opstina", opstina);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    fillOpstineDataGrid();
+                }
             }
         }
         public void addOpstina() {
@@ -102,7 +105,7 @@ namespace CSharp_SQL_App {
                 connection.Close();
             }
         }
-        
+
         public void fillOpstineDataGrid() {
             DataTable dt;
             BindingSource bs;
@@ -122,9 +125,9 @@ namespace CSharp_SQL_App {
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
-        
+
         private void OpstineForm_ResizeBegin(object sender, EventArgs e) {
-            this.SuspendLayout();           
+            this.SuspendLayout();
         }
 
         private void OpstineForm_ResizeEnd(object sender, EventArgs e) {
@@ -139,6 +142,6 @@ namespace CSharp_SQL_App {
             dataGridViewOpstine.ClearSelection();
         }
 
-        
+
     }
 }

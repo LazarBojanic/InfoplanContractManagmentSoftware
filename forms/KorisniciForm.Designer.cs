@@ -28,6 +28,7 @@
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonIzmeni = new System.Windows.Forms.Button();
             this.buttonZatvori = new System.Windows.Forms.Button();
+            this.buttonObrisi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKorisnici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.dataGridViewKorisnici.RowHeadersWidth = 51;
             this.dataGridViewKorisnici.RowTemplate.Height = 24;
             this.dataGridViewKorisnici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewKorisnici.Size = new System.Drawing.Size(395, 248);
+            this.dataGridViewKorisnici.Size = new System.Drawing.Size(546, 248);
             this.dataGridViewKorisnici.TabIndex = 0;
             this.dataGridViewKorisnici.TabStop = false;
             this.dataGridViewKorisnici.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKorisnici_CellDoubleClick);
@@ -58,7 +59,7 @@
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonDodaj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.buttonDodaj.Location = new System.Drawing.Point(11, 274);
+            this.buttonDodaj.Location = new System.Drawing.Point(9, 274);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(112, 63);
@@ -71,7 +72,7 @@
             // 
             this.buttonIzmeni.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonIzmeni.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.buttonIzmeni.Location = new System.Drawing.Point(150, 274);
+            this.buttonIzmeni.Location = new System.Drawing.Point(153, 274);
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmeni.Name = "buttonIzmeni";
             this.buttonIzmeni.Size = new System.Drawing.Size(112, 63);
@@ -84,7 +85,7 @@
             // 
             this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.buttonZatvori.Location = new System.Drawing.Point(289, 274);
+            this.buttonZatvori.Location = new System.Drawing.Point(441, 274);
             this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
             this.buttonZatvori.Name = "buttonZatvori";
             this.buttonZatvori.Size = new System.Drawing.Size(112, 63);
@@ -93,11 +94,25 @@
             this.buttonZatvori.UseVisualStyleBackColor = true;
             this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
             // 
+            // buttonObrisi
+            // 
+            this.buttonObrisi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonObrisi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonObrisi.Location = new System.Drawing.Point(297, 274);
+            this.buttonObrisi.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonObrisi.Name = "buttonObrisi";
+            this.buttonObrisi.Size = new System.Drawing.Size(112, 63);
+            this.buttonObrisi.TabIndex = 4;
+            this.buttonObrisi.Text = "Obriši";
+            this.buttonObrisi.UseVisualStyleBackColor = true;
+            this.buttonObrisi.Click += new System.EventHandler(this.buttonObrisi_Click);
+            // 
             // KorisniciForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 348);
+            this.ClientSize = new System.Drawing.Size(564, 348);
+            this.Controls.Add(this.buttonObrisi);
             this.Controls.Add(this.buttonZatvori);
             this.Controls.Add(this.buttonIzmeni);
             this.Controls.Add(this.buttonDodaj);
@@ -122,5 +137,6 @@
         private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.Button buttonIzmeni;
         private System.Windows.Forms.Button buttonZatvori;
+        private System.Windows.Forms.Button buttonObrisi;
     }
 }

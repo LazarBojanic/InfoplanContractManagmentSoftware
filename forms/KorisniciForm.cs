@@ -1,4 +1,5 @@
-﻿using CSharp_SQL_App.model;
+﻿using CSharp_SQL_App.forms;
+using CSharp_SQL_App.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,7 @@ namespace CSharp_SQL_App {
             if (!MainForm.user.privilegija.Equals("administrator")) {
                 buttonDodaj.Enabled = false;
                 buttonIzmeni.Enabled = false;
+                buttonObrisi.Enabled = false;
             }
         }
         private void KorisniciForm_Load(object sender, EventArgs e) {
@@ -100,6 +102,23 @@ namespace CSharp_SQL_App {
             }           
         }
 
-        
+        private void buttonObrisi_Click(object sender, EventArgs e) {
+            ConfirmationForm confirmationForm = new ConfirmationForm();
+            if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
+                if (dataGridViewKorisnici.SelectedRows.Count > 0) {
+                    int id = int.Parse(dataGridViewKorisnici.SelectedRows[0].Cells["id"].Value.ToString());
+                    OleDbConnection connection;
+                    OleDbCommand command;
+                    String query = "DELETE FROM korisnik WHERE id = @id";
+                    connection = GetConnection();
+                    connection.Open();
+                    command = new OleDbCommand(query, connection);
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    fillKorisniciDataGrid();
+                }
+            }      
+        }
     }
 }

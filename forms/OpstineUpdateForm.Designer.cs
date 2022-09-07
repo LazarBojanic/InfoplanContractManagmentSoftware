@@ -57,8 +57,7 @@
             // 
             // textBoxOpstina
             // 
-            this.textBoxOpstina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOpstina.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxOpstina.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxOpstina.Location = new System.Drawing.Point(115, 50);
             this.textBoxOpstina.Name = "textBoxOpstina";
@@ -67,8 +66,7 @@
             // 
             // labelOpstina
             // 
-            this.labelOpstina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelOpstina.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelOpstina.AutoSize = true;
             this.labelOpstina.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOpstina.Location = new System.Drawing.Point(51, 53);

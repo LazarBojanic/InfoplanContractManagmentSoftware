@@ -44,6 +44,7 @@
             this.dataGridViewTipUgovora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTipUgovora.Location = new System.Drawing.Point(11, 11);
             this.dataGridViewTipUgovora.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewTipUgovora.MultiSelect = false;
             this.dataGridViewTipUgovora.Name = "dataGridViewTipUgovora";
             this.dataGridViewTipUgovora.ReadOnly = true;
             this.dataGridViewTipUgovora.RowHeadersWidth = 51;

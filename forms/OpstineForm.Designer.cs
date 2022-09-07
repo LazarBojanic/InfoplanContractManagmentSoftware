@@ -47,6 +47,7 @@
             this.dataGridViewOpstine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOpstine.Location = new System.Drawing.Point(11, 11);
             this.dataGridViewOpstine.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewOpstine.MultiSelect = false;
             this.dataGridViewOpstine.Name = "dataGridViewOpstine";
             this.dataGridViewOpstine.ReadOnly = true;
             this.dataGridViewOpstine.RowHeadersWidth = 51;

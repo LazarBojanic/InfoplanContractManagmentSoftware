@@ -32,6 +32,7 @@
             // 
             // labelTipUgovora
             // 
+            this.labelTipUgovora.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelTipUgovora.AutoSize = true;
             this.labelTipUgovora.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTipUgovora.Location = new System.Drawing.Point(24, 53);
@@ -42,6 +43,7 @@
             // 
             // textBoxTipUgovora
             // 
+            this.textBoxTipUgovora.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxTipUgovora.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTipUgovora.Location = new System.Drawing.Point(115, 50);
             this.textBoxTipUgovora.Name = "textBoxTipUgovora";

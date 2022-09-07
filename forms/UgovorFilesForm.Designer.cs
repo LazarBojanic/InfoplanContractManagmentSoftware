@@ -72,7 +72,7 @@
             this.buttonUkloni.TabIndex = 3;
             this.buttonUkloni.Text = "Ukloni";
             this.buttonUkloni.UseVisualStyleBackColor = true;
-            this.buttonUkloni.Click += new System.EventHandler(this.buttonObrisi_Click);
+            this.buttonUkloni.Click += new System.EventHandler(this.buttonUkloni_Click);
             // 
             // buttonDodaj
             // 

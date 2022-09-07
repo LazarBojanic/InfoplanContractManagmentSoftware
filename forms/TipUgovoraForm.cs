@@ -29,34 +29,37 @@ namespace CSharp_SQL_App {
         }
         private void buttonDodaj_Click(object sender, EventArgs e) {
             TipUgovoraUpdateForm tipUgovoraUpdateForm = new TipUgovoraUpdateForm("dodavanje", "");
-            if (tipUgovoraUpdateForm.ShowDialog().Equals(DialogResult.OK)){
+            if (tipUgovoraUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
                 addTipUgovora();
                 fillTipUgovoraDataGrid();
             }
         }
         private void buttonIzmeni_Click(object sender, EventArgs e) {
-            if(dataGridViewTipUgovora.SelectedRows.Count > 0) {
+            if (dataGridViewTipUgovora.SelectedRows.Count > 0) {
                 TipUgovoraUpdateForm tipUgovoraUpdateForm = new TipUgovoraUpdateForm("izmena",
                     dataGridViewTipUgovora.SelectedRows[0].Cells["tipUgovora"].Value.ToString());
-                if (tipUgovoraUpdateForm.ShowDialog().Equals(DialogResult.OK)){
+                if (tipUgovoraUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
                     updateTipUgovora();
                     fillTipUgovoraDataGrid();
                 }
             }
         }
         private void buttonObrisi_Click(object sender, EventArgs e) {
-            if (dataGridViewTipUgovora.SelectedRows.Count > 0) {
-                String tipUgovora = dataGridViewTipUgovora.SelectedRows[0].Cells["tipUgovora"].Value.ToString();
-                OleDbConnection connection;
-                OleDbCommand command;
-                String query = "DELETE FROM tipUgovora WHERE tipUgovora = @tipUgovora";
-                connection = GetConnection();
-                connection.Open();
-                command = new OleDbCommand(query, connection);
-                command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
-                command.ExecuteNonQuery();
-                connection.Close();
-                fillTipUgovoraDataGrid();
+            ConfirmationForm confirmationForm = new ConfirmationForm();
+            if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
+                if (dataGridViewTipUgovora.SelectedRows.Count > 0) {
+                    String tipUgovora = dataGridViewTipUgovora.SelectedRows[0].Cells["tipUgovora"].Value.ToString();
+                    OleDbConnection connection;
+                    OleDbCommand command;
+                    String query = "DELETE FROM tipUgovora WHERE tipUgovora = @tipUgovora";
+                    connection = GetConnection();
+                    connection.Open();
+                    command = new OleDbCommand(query, connection);
+                    command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    fillTipUgovoraDataGrid();
+                }
             }
         }
         public void addTipUgovora() {
@@ -136,6 +139,6 @@ namespace CSharp_SQL_App {
             dataGridViewTipUgovora.ClearSelection();
         }
 
-        
+
     }
 }
