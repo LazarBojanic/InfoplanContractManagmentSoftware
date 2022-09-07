@@ -12,9 +12,7 @@ Nakon uspešnog prijavljivanja otvara se glavni meni:
 
 Klikom na dugmad „Opštine“  i  „Tipovi Ugovora“ mogu se videti opštine i tipovi ugovora. Funkcionalnosti dodavanja, izmene i brisanja imaju samo administratori: 
 
-![](Manual-SRB-3.png)
-
-![](Manual-SRB-4.png)
+![](Manual-SRB-3.png) ![](Manual-SRB-4.png)
 
 Klikom na dugme „Dodaj“ korisnici mogu da dodaju nove opštine, na „Izmeni“ da izmene izabranu opštinu a na „Obriši“ da je obrišu. Izmena takođe može da se izvrši dvoklikom na željeni red. Svako dugme za brisanje u aplikaciji prikazuje prozor za potvrdu. Slični prozori se otvaraju za tipove ugovora.
 
