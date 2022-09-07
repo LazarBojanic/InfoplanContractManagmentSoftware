@@ -32,6 +32,7 @@
             // 
             // buttonSacuvaj
             // 
+            this.buttonSacuvaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonSacuvaj.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonSacuvaj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSacuvaj.Location = new System.Drawing.Point(58, 123);
@@ -44,6 +45,7 @@
             // 
             // buttonOtkazi
             // 
+            this.buttonOtkazi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonOtkazi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOtkazi.Location = new System.Drawing.Point(241, 123);
             this.buttonOtkazi.Name = "buttonOtkazi";
@@ -55,6 +57,8 @@
             // 
             // textBoxOpstina
             // 
+            this.textBoxOpstina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxOpstina.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxOpstina.Location = new System.Drawing.Point(115, 50);
             this.textBoxOpstina.Name = "textBoxOpstina";
@@ -63,6 +67,8 @@
             // 
             // labelOpstina
             // 
+            this.labelOpstina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelOpstina.AutoSize = true;
             this.labelOpstina.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOpstina.Location = new System.Drawing.Point(51, 53);
