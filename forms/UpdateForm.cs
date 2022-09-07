@@ -123,7 +123,7 @@ namespace CSharp_SQL_App {
                 ChangeLog.addChangeLogForUgovor(oldUgovor, newUgovor);
                 this.DialogResult = DialogResult.OK;
             }
-            catch(FormatException ex) {
+            catch(FormatException) {
                 MessageBox.Show("Nekorektan format podataka.");                
             }
         }
