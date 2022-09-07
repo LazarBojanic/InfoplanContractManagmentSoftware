@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -167,11 +167,23 @@
     <Compile Include="forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\OpstineUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\OpstineUpdateForm.Designer.cs">
+      <DependentUpon>OpstineUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\TipUgovoraForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\TipUgovoraForm.Designer.cs">
       <DependentUpon>TipUgovoraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\TipUgovoraUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TipUgovoraUpdateForm.Designer.cs">
+      <DependentUpon>TipUgovoraUpdateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\UgovorFilesForm.cs">
       <SubType>Form</SubType>
@@ -229,8 +241,14 @@
     <EmbeddedResource Include="forms\OpstineForm.resx">
       <DependentUpon>OpstineForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\OpstineUpdateForm.resx">
+      <DependentUpon>OpstineUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\TipUgovoraForm.resx">
       <DependentUpon>TipUgovoraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\TipUgovoraUpdateForm.resx">
+      <DependentUpon>TipUgovoraUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\UgovorFilesForm.resx">
       <DependentUpon>UgovorFilesForm.cs</DependentUpon>

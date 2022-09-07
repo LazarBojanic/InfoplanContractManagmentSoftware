@@ -61,9 +61,9 @@ namespace CSharp_SQL_App {
         }
         private void buttonIzmeni_Click(object sender, EventArgs e) {
             if (dataGridViewKorisnici.SelectedRows.Count > 0) {
-                int id = int.Parse(dataGridViewKorisnici.SelectedRows[0].Cells[0].Value.ToString());
-                string username = dataGridViewKorisnici.SelectedRows[0].Cells[1].Value.ToString();
-                string privilegija = dataGridViewKorisnici.SelectedRows[0].Cells[2].Value.ToString();
+                int id = int.Parse(dataGridViewKorisnici.SelectedRows[0].Cells["id"].Value.ToString());
+                string username = dataGridViewKorisnici.SelectedRows[0].Cells["username"].Value.ToString();
+                string privilegija = dataGridViewKorisnici.SelectedRows[0].Cells["password"].Value.ToString();
                 user = new User(id, username, "", privilegija);
                 KorisniciUpdateForm korisniciUpdateForm = new KorisniciUpdateForm();
                 if (korisniciUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
@@ -89,9 +89,9 @@ namespace CSharp_SQL_App {
 
         private void dataGridViewKorisnici_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
             if (dataGridViewKorisnici.SelectedRows.Count > 0) {
-                int id = int.Parse(dataGridViewKorisnici.SelectedRows[0].Cells[0].Value.ToString());
-                string username = dataGridViewKorisnici.SelectedRows[0].Cells[1].Value.ToString();
-                string privilegija = dataGridViewKorisnici.SelectedRows[0].Cells[2].Value.ToString();
+                int id = int.Parse(dataGridViewKorisnici.SelectedRows[0].Cells["id"].Value.ToString());
+                string username = dataGridViewKorisnici.SelectedRows[0].Cells["username"].Value.ToString();
+                string privilegija = dataGridViewKorisnici.SelectedRows[0].Cells["password"].Value.ToString();
                 user = new User(id, username, "", privilegija);
                 KorisniciUpdateForm korisniciUpdateForm = new KorisniciUpdateForm();
                 if (korisniciUpdateForm.ShowDialog().Equals(DialogResult.OK)) {

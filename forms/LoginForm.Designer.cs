@@ -58,6 +58,7 @@
             // buttonLogin
             // 
             this.buttonLogin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonLogin.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.buttonLogin.Location = new System.Drawing.Point(68, 169);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(2);
@@ -82,6 +83,7 @@
             // buttonIzlaz
             // 
             this.buttonIzlaz.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonIzlaz.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonIzlaz.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttonIzlaz.Location = new System.Drawing.Point(230, 169);
             this.buttonIzlaz.Margin = new System.Windows.Forms.Padding(2);

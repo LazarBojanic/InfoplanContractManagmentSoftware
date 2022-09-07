@@ -42,7 +42,7 @@ namespace CSharp_SQL_App {
         private void buttonIzmeni_Click(object sender, EventArgs e) {
             if (dataGridViewUgovori.SelectedRows.Count > 0) {
                 UpdateForm updateForm2 = new UpdateForm();
-                int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells[0].Value.ToString());
+                int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells["id"].Value.ToString());
                 int index = dataGridViewUgovori.CurrentRow.Index;
                 updateForm2.loadUgovor(id);
                 if (updateForm2.ShowDialog().Equals(DialogResult.OK)) {
@@ -260,7 +260,7 @@ namespace CSharp_SQL_App {
             if (dataGridViewUgovori.SelectedRows.Count > 0) {
                 Ugovor oldUgovor = new Ugovor();
                 Ugovor newUgovor = new Ugovor();
-                int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells[0].Value.ToString());
+                int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells["id"].Value.ToString());
                 oldUgovor.loadFromDatabase(id);
                 OleDbConnection connection;
                 OleDbCommand command;
