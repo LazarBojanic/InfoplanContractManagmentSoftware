@@ -40,7 +40,7 @@
             // 
             this.buttonSacuvaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonSacuvaj.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonSacuvaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSacuvaj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.buttonSacuvaj.Location = new System.Drawing.Point(9, 182);
             this.buttonSacuvaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSacuvaj.Name = "buttonSacuvaj";
@@ -54,6 +54,7 @@
             // 
             this.buttonOtkazi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonOtkazi.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonOtkazi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttonOtkazi.Location = new System.Drawing.Point(194, 182);
             this.buttonOtkazi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOtkazi.Name = "buttonOtkazi";
@@ -68,10 +69,11 @@
             this.textBoxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxUsername.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.Location = new System.Drawing.Point(87, 61);
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(242, 20);
+            this.textBoxUsername.Size = new System.Drawing.Size(242, 21);
             this.textBoxUsername.TabIndex = 0;
             // 
             // textBoxPassword
@@ -79,10 +81,11 @@
             this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPassword.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.Location = new System.Drawing.Point(87, 98);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(242, 20);
+            this.textBoxPassword.Size = new System.Drawing.Size(242, 21);
             this.textBoxPassword.TabIndex = 1;
             // 
             // labelUsername
@@ -91,10 +94,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(28, 65);
+            this.labelUsername.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Location = new System.Drawing.Point(22, 63);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(55, 13);
+            this.labelUsername.Size = new System.Drawing.Size(61, 16);
             this.labelUsername.TabIndex = 7;
             this.labelUsername.Text = "Username";
             // 
@@ -104,10 +108,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(28, 102);
+            this.labelPassword.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Location = new System.Drawing.Point(22, 100);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(53, 13);
+            this.labelPassword.Size = new System.Drawing.Size(58, 16);
             this.labelPassword.TabIndex = 8;
             this.labelPassword.Text = "Password";
             // 
@@ -117,10 +122,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrivilegija.AutoSize = true;
-            this.labelPrivilegija.Location = new System.Drawing.Point(28, 140);
+            this.labelPrivilegija.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrivilegija.Location = new System.Drawing.Point(22, 138);
             this.labelPrivilegija.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrivilegija.Name = "labelPrivilegija";
-            this.labelPrivilegija.Size = new System.Drawing.Size(51, 13);
+            this.labelPrivilegija.Size = new System.Drawing.Size(57, 16);
             this.labelPrivilegija.TabIndex = 9;
             this.labelPrivilegija.Text = "Privilegija";
             // 
@@ -129,11 +135,12 @@
             this.textBoxId.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxId.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxId.Location = new System.Drawing.Point(87, 24);
             this.textBoxId.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.ReadOnly = true;
-            this.textBoxId.Size = new System.Drawing.Size(242, 20);
+            this.textBoxId.Size = new System.Drawing.Size(242, 21);
             this.textBoxId.TabIndex = 5;
             this.textBoxId.TabStop = false;
             // 
@@ -143,10 +150,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelId.AutoSize = true;
-            this.labelId.Location = new System.Drawing.Point(28, 28);
+            this.labelId.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelId.Location = new System.Drawing.Point(22, 26);
             this.labelId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(16, 13);
+            this.labelId.Size = new System.Drawing.Size(18, 16);
             this.labelId.TabIndex = 6;
             this.labelId.Text = "Id";
             // 
@@ -155,11 +163,12 @@
             this.comboBoxPrivilegija.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxPrivilegija.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxPrivilegija.FormattingEnabled = true;
-            this.comboBoxPrivilegija.Location = new System.Drawing.Point(87, 136);
+            this.comboBoxPrivilegija.Location = new System.Drawing.Point(87, 134);
             this.comboBoxPrivilegija.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxPrivilegija.Name = "comboBoxPrivilegija";
-            this.comboBoxPrivilegija.Size = new System.Drawing.Size(242, 21);
+            this.comboBoxPrivilegija.Size = new System.Drawing.Size(242, 24);
             this.comboBoxPrivilegija.TabIndex = 2;
             // 
             // KorisniciUpdateForm

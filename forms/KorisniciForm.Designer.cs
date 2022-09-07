@@ -57,7 +57,7 @@
             // buttonDodaj
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDodaj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.buttonDodaj.Location = new System.Drawing.Point(11, 274);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
@@ -70,7 +70,7 @@
             // buttonIzmeni
             // 
             this.buttonIzmeni.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonIzmeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIzmeni.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.buttonIzmeni.Location = new System.Drawing.Point(150, 274);
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmeni.Name = "buttonIzmeni";
@@ -83,6 +83,7 @@
             // buttonZatvori
             // 
             this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttonZatvori.Location = new System.Drawing.Point(289, 274);
             this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
             this.buttonZatvori.Name = "buttonZatvori";

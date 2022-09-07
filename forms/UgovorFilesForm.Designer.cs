@@ -53,7 +53,7 @@
             // buttonPrikazi
             // 
             this.buttonPrikazi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonPrikazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrikazi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrikazi.Location = new System.Drawing.Point(12, 414);
             this.buttonPrikazi.Name = "buttonPrikazi";
             this.buttonPrikazi.Size = new System.Drawing.Size(152, 63);
@@ -65,7 +65,7 @@
             // buttonUkloni
             // 
             this.buttonUkloni.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonUkloni.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUkloni.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUkloni.Location = new System.Drawing.Point(428, 414);
             this.buttonUkloni.Name = "buttonUkloni";
             this.buttonUkloni.Size = new System.Drawing.Size(152, 63);
@@ -77,7 +77,7 @@
             // buttonDodaj
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDodaj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDodaj.Location = new System.Drawing.Point(220, 414);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(152, 63);
@@ -89,6 +89,7 @@
             // buttonZatvori
             // 
             this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttonZatvori.Location = new System.Drawing.Point(636, 414);
             this.buttonZatvori.Name = "buttonZatvori";
             this.buttonZatvori.Size = new System.Drawing.Size(152, 63);

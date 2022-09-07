@@ -36,10 +36,11 @@
             this.textBoxUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxUsername.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxUsername.Location = new System.Drawing.Point(68, 40);
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(284, 20);
+            this.textBoxUsername.Size = new System.Drawing.Size(284, 21);
             this.textBoxUsername.TabIndex = 0;
             // 
             // textBoxPassword
@@ -47,16 +48,17 @@
             this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPassword.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxPassword.Location = new System.Drawing.Point(68, 94);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(284, 20);
+            this.textBoxPassword.Size = new System.Drawing.Size(284, 21);
             this.textBoxPassword.TabIndex = 1;
             // 
             // buttonLogin
             // 
             this.buttonLogin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.buttonLogin.Location = new System.Drawing.Point(68, 169);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogin.Name = "buttonLogin";
@@ -79,6 +81,7 @@
             // buttonIzlaz
             // 
             this.buttonIzlaz.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonIzlaz.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttonIzlaz.Location = new System.Drawing.Point(230, 169);
             this.buttonIzlaz.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzlaz.Name = "buttonIzlaz";

@@ -124,7 +124,7 @@
             this.dataGridViewUgovori.RowHeadersWidth = 51;
             this.dataGridViewUgovori.RowTemplate.Height = 24;
             this.dataGridViewUgovori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUgovori.Size = new System.Drawing.Size(949, 529);
+            this.dataGridViewUgovori.Size = new System.Drawing.Size(975, 529);
             this.dataGridViewUgovori.TabIndex = 0;
             this.dataGridViewUgovori.TabStop = false;
             this.dataGridViewUgovori.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUgovori_CellDoubleClick);
@@ -133,8 +133,8 @@
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonDodaj.AutoSize = true;
-            this.buttonDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDodaj.Location = new System.Drawing.Point(319, 567);
+            this.buttonDodaj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDodaj.Location = new System.Drawing.Point(379, 567);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(192, 63);
@@ -147,8 +147,8 @@
             // 
             this.buttonIzmeni.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonIzmeni.AutoSize = true;
-            this.buttonIzmeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIzmeni.Location = new System.Drawing.Point(530, 567);
+            this.buttonIzmeni.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIzmeni.Location = new System.Drawing.Point(588, 567);
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmeni.Name = "buttonIzmeni";
             this.buttonIzmeni.Size = new System.Drawing.Size(192, 63);
@@ -161,10 +161,11 @@
             // 
             this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonRefresh.AutoSize = true;
+            this.buttonRefresh.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttonRefresh.Location = new System.Drawing.Point(9, 567);
             this.buttonRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(56, 63);
+            this.buttonRefresh.Size = new System.Drawing.Size(59, 63);
             this.buttonRefresh.TabIndex = 16;
             this.buttonRefresh.Text = "Osveži";
             this.buttonRefresh.UseVisualStyleBackColor = true;
@@ -174,9 +175,10 @@
             // 
             this.buttonIstorijaPromena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonIstorijaPromena.AutoSize = true;
-            this.buttonIstorijaPromena.Location = new System.Drawing.Point(84, 567);
+            this.buttonIstorijaPromena.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.buttonIstorijaPromena.Location = new System.Drawing.Point(85, 567);
             this.buttonIstorijaPromena.Name = "buttonIstorijaPromena";
-            this.buttonIstorijaPromena.Size = new System.Drawing.Size(92, 63);
+            this.buttonIstorijaPromena.Size = new System.Drawing.Size(122, 63);
             this.buttonIstorijaPromena.TabIndex = 17;
             this.buttonIstorijaPromena.Text = "Istorija Promena";
             this.buttonIstorijaPromena.UseVisualStyleBackColor = true;
@@ -186,10 +188,11 @@
             // 
             this.labelId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelId.AutoSize = true;
-            this.labelId.Location = new System.Drawing.Point(26, 16);
+            this.labelId.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelId.Location = new System.Drawing.Point(30, 16);
             this.labelId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(16, 13);
+            this.labelId.Size = new System.Drawing.Size(18, 16);
             this.labelId.TabIndex = 0;
             this.labelId.Text = "Id";
             // 
@@ -197,10 +200,11 @@
             // 
             this.labelOpstina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelOpstina.AutoSize = true;
-            this.labelOpstina.Location = new System.Drawing.Point(26, 49);
+            this.labelOpstina.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOpstina.Location = new System.Drawing.Point(30, 49);
             this.labelOpstina.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelOpstina.Name = "labelOpstina";
-            this.labelOpstina.Size = new System.Drawing.Size(43, 13);
+            this.labelOpstina.Size = new System.Drawing.Size(50, 16);
             this.labelOpstina.TabIndex = 0;
             this.labelOpstina.Text = "Opština";
             // 
@@ -208,10 +212,11 @@
             // 
             this.labelUrbanista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUrbanista.AutoSize = true;
-            this.labelUrbanista.Location = new System.Drawing.Point(26, 115);
+            this.labelUrbanista.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUrbanista.Location = new System.Drawing.Point(30, 115);
             this.labelUrbanista.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUrbanista.Name = "labelUrbanista";
-            this.labelUrbanista.Size = new System.Drawing.Size(52, 13);
+            this.labelUrbanista.Size = new System.Drawing.Size(59, 16);
             this.labelUrbanista.TabIndex = 0;
             this.labelUrbanista.Text = "Urbanista";
             // 
@@ -219,10 +224,11 @@
             // 
             this.labelNazivPlana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelNazivPlana.AutoSize = true;
-            this.labelNazivPlana.Location = new System.Drawing.Point(26, 82);
+            this.labelNazivPlana.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNazivPlana.Location = new System.Drawing.Point(30, 82);
             this.labelNazivPlana.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNazivPlana.Name = "labelNazivPlana";
-            this.labelNazivPlana.Size = new System.Drawing.Size(63, 13);
+            this.labelNazivPlana.Size = new System.Drawing.Size(74, 16);
             this.labelNazivPlana.TabIndex = 0;
             this.labelNazivPlana.Text = "Naziv plana";
             // 
@@ -230,10 +236,11 @@
             // 
             this.labelDatumUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDatumUgovora.AutoSize = true;
-            this.labelDatumUgovora.Location = new System.Drawing.Point(26, 247);
+            this.labelDatumUgovora.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDatumUgovora.Location = new System.Drawing.Point(30, 243);
             this.labelDatumUgovora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDatumUgovora.Name = "labelDatumUgovora";
-            this.labelDatumUgovora.Size = new System.Drawing.Size(80, 13);
+            this.labelDatumUgovora.Size = new System.Drawing.Size(94, 16);
             this.labelDatumUgovora.TabIndex = 0;
             this.labelDatumUgovora.Text = "Datum ugovora";
             // 
@@ -241,10 +248,11 @@
             // 
             this.labelNapomena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelNapomena.AutoSize = true;
-            this.labelNapomena.Location = new System.Drawing.Point(26, 214);
+            this.labelNapomena.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNapomena.Location = new System.Drawing.Point(30, 214);
             this.labelNapomena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNapomena.Name = "labelNapomena";
-            this.labelNapomena.Size = new System.Drawing.Size(59, 13);
+            this.labelNapomena.Size = new System.Drawing.Size(70, 16);
             this.labelNapomena.TabIndex = 0;
             this.labelNapomena.Text = "Napomena";
             // 
@@ -252,10 +260,11 @@
             // 
             this.labelFaza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelFaza.AutoSize = true;
-            this.labelFaza.Location = new System.Drawing.Point(26, 181);
+            this.labelFaza.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFaza.Location = new System.Drawing.Point(30, 181);
             this.labelFaza.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFaza.Name = "labelFaza";
-            this.labelFaza.Size = new System.Drawing.Size(30, 13);
+            this.labelFaza.Size = new System.Drawing.Size(33, 16);
             this.labelFaza.TabIndex = 0;
             this.labelFaza.Text = "Faza";
             // 
@@ -263,10 +272,11 @@
             // 
             this.labelTipUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTipUgovora.AutoSize = true;
-            this.labelTipUgovora.Location = new System.Drawing.Point(26, 148);
+            this.labelTipUgovora.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTipUgovora.Location = new System.Drawing.Point(30, 148);
             this.labelTipUgovora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTipUgovora.Name = "labelTipUgovora";
-            this.labelTipUgovora.Size = new System.Drawing.Size(64, 13);
+            this.labelTipUgovora.Size = new System.Drawing.Size(72, 16);
             this.labelTipUgovora.TabIndex = 0;
             this.labelTipUgovora.Text = "Tip ugovora";
             // 
@@ -274,10 +284,11 @@
             // 
             this.labelUGuid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUGuid.AutoSize = true;
-            this.labelUGuid.Location = new System.Drawing.Point(26, 478);
+            this.labelUGuid.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUGuid.Location = new System.Drawing.Point(30, 478);
             this.labelUGuid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUGuid.Name = "labelUGuid";
-            this.labelUGuid.Size = new System.Drawing.Size(29, 13);
+            this.labelUGuid.Size = new System.Drawing.Size(34, 16);
             this.labelUGuid.TabIndex = 0;
             this.labelUGuid.Text = "Guid";
             // 
@@ -285,10 +296,11 @@
             // 
             this.labelPrioritet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrioritet.AutoSize = true;
-            this.labelPrioritet.Location = new System.Drawing.Point(26, 379);
+            this.labelPrioritet.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrioritet.Location = new System.Drawing.Point(30, 379);
             this.labelPrioritet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrioritet.Name = "labelPrioritet";
-            this.labelPrioritet.Size = new System.Drawing.Size(42, 13);
+            this.labelPrioritet.Size = new System.Drawing.Size(46, 16);
             this.labelPrioritet.TabIndex = 0;
             this.labelPrioritet.Text = "Prioritet";
             // 
@@ -296,10 +308,11 @@
             // 
             this.labelKrajnjiRok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelKrajnjiRok.AutoSize = true;
-            this.labelKrajnjiRok.Location = new System.Drawing.Point(26, 346);
+            this.labelKrajnjiRok.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKrajnjiRok.Location = new System.Drawing.Point(30, 346);
             this.labelKrajnjiRok.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelKrajnjiRok.Name = "labelKrajnjiRok";
-            this.labelKrajnjiRok.Size = new System.Drawing.Size(53, 13);
+            this.labelKrajnjiRok.Size = new System.Drawing.Size(56, 16);
             this.labelKrajnjiRok.TabIndex = 0;
             this.labelKrajnjiRok.Text = "Krajnji rok";
             // 
@@ -307,10 +320,11 @@
             // 
             this.labelObim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelObim.AutoSize = true;
-            this.labelObim.Location = new System.Drawing.Point(26, 313);
+            this.labelObim.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelObim.Location = new System.Drawing.Point(30, 313);
             this.labelObim.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelObim.Name = "labelObim";
-            this.labelObim.Size = new System.Drawing.Size(31, 13);
+            this.labelObim.Size = new System.Drawing.Size(37, 16);
             this.labelObim.TabIndex = 0;
             this.labelObim.Text = "Obim";
             // 
@@ -318,119 +332,131 @@
             // 
             this.labelRokPoUgovoru.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelRokPoUgovoru.AutoSize = true;
-            this.labelRokPoUgovoru.Location = new System.Drawing.Point(26, 280);
+            this.labelRokPoUgovoru.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRokPoUgovoru.Location = new System.Drawing.Point(30, 278);
             this.labelRokPoUgovoru.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRokPoUgovoru.Name = "labelRokPoUgovoru";
-            this.labelRokPoUgovoru.Size = new System.Drawing.Size(84, 13);
+            this.labelRokPoUgovoru.Size = new System.Drawing.Size(93, 16);
             this.labelRokPoUgovoru.TabIndex = 0;
             this.labelRokPoUgovoru.Text = "Rok po ugovoru";
             // 
             // textBoxId
             // 
-            this.textBoxId.Location = new System.Drawing.Point(110, 12);
+            this.textBoxId.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxId.Location = new System.Drawing.Point(127, 14);
             this.textBoxId.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(199, 20);
+            this.textBoxId.Size = new System.Drawing.Size(199, 21);
             this.textBoxId.TabIndex = 1;
             // 
             // textBoxOpstina
             // 
             this.textBoxOpstina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOpstina.Location = new System.Drawing.Point(110, 45);
+            this.textBoxOpstina.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxOpstina.Location = new System.Drawing.Point(127, 47);
             this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOpstina.Name = "textBoxOpstina";
-            this.textBoxOpstina.Size = new System.Drawing.Size(199, 20);
+            this.textBoxOpstina.Size = new System.Drawing.Size(199, 21);
             this.textBoxOpstina.TabIndex = 2;
             // 
             // textBoxNazivPlana
             // 
             this.textBoxNazivPlana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNazivPlana.Location = new System.Drawing.Point(110, 78);
+            this.textBoxNazivPlana.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxNazivPlana.Location = new System.Drawing.Point(127, 80);
             this.textBoxNazivPlana.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNazivPlana.Name = "textBoxNazivPlana";
-            this.textBoxNazivPlana.Size = new System.Drawing.Size(199, 20);
+            this.textBoxNazivPlana.Size = new System.Drawing.Size(199, 21);
             this.textBoxNazivPlana.TabIndex = 3;
             // 
             // textBoxUrbanista
             // 
             this.textBoxUrbanista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUrbanista.Location = new System.Drawing.Point(110, 111);
+            this.textBoxUrbanista.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxUrbanista.Location = new System.Drawing.Point(127, 113);
             this.textBoxUrbanista.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUrbanista.Name = "textBoxUrbanista";
-            this.textBoxUrbanista.Size = new System.Drawing.Size(199, 20);
+            this.textBoxUrbanista.Size = new System.Drawing.Size(199, 21);
             this.textBoxUrbanista.TabIndex = 4;
             // 
             // textBoxTipUgovora
             // 
             this.textBoxTipUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTipUgovora.Location = new System.Drawing.Point(110, 144);
+            this.textBoxTipUgovora.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxTipUgovora.Location = new System.Drawing.Point(127, 146);
             this.textBoxTipUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTipUgovora.Name = "textBoxTipUgovora";
-            this.textBoxTipUgovora.Size = new System.Drawing.Size(199, 20);
+            this.textBoxTipUgovora.Size = new System.Drawing.Size(199, 21);
             this.textBoxTipUgovora.TabIndex = 5;
             // 
             // textBoxObim
             // 
             this.textBoxObim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxObim.Location = new System.Drawing.Point(110, 309);
+            this.textBoxObim.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxObim.Location = new System.Drawing.Point(127, 311);
             this.textBoxObim.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxObim.Name = "textBoxObim";
-            this.textBoxObim.Size = new System.Drawing.Size(199, 20);
+            this.textBoxObim.Size = new System.Drawing.Size(199, 21);
             this.textBoxObim.TabIndex = 10;
             this.textBoxObim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxObim_KeyPress);
             // 
             // textBoxRokPoUgovoru
             // 
             this.textBoxRokPoUgovoru.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxRokPoUgovoru.Location = new System.Drawing.Point(110, 276);
+            this.textBoxRokPoUgovoru.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxRokPoUgovoru.Location = new System.Drawing.Point(127, 276);
             this.textBoxRokPoUgovoru.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRokPoUgovoru.Name = "textBoxRokPoUgovoru";
-            this.textBoxRokPoUgovoru.Size = new System.Drawing.Size(199, 20);
+            this.textBoxRokPoUgovoru.Size = new System.Drawing.Size(199, 21);
             this.textBoxRokPoUgovoru.TabIndex = 9;
             this.textBoxRokPoUgovoru.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxRokPoUgovoru_KeyPress);
             // 
             // textBoxNapomena
             // 
             this.textBoxNapomena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNapomena.Location = new System.Drawing.Point(110, 210);
+            this.textBoxNapomena.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxNapomena.Location = new System.Drawing.Point(127, 212);
             this.textBoxNapomena.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNapomena.Name = "textBoxNapomena";
-            this.textBoxNapomena.Size = new System.Drawing.Size(199, 20);
+            this.textBoxNapomena.Size = new System.Drawing.Size(199, 21);
             this.textBoxNapomena.TabIndex = 7;
             // 
             // textBoxFaza
             // 
             this.textBoxFaza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxFaza.Location = new System.Drawing.Point(110, 177);
+            this.textBoxFaza.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxFaza.Location = new System.Drawing.Point(127, 179);
             this.textBoxFaza.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFaza.Name = "textBoxFaza";
-            this.textBoxFaza.Size = new System.Drawing.Size(199, 20);
+            this.textBoxFaza.Size = new System.Drawing.Size(199, 21);
             this.textBoxFaza.TabIndex = 6;
             // 
             // textBoxPrioritet
             // 
             this.textBoxPrioritet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPrioritet.Location = new System.Drawing.Point(110, 375);
+            this.textBoxPrioritet.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxPrioritet.Location = new System.Drawing.Point(127, 377);
             this.textBoxPrioritet.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrioritet.Name = "textBoxPrioritet";
-            this.textBoxPrioritet.Size = new System.Drawing.Size(199, 20);
+            this.textBoxPrioritet.Size = new System.Drawing.Size(199, 21);
             this.textBoxPrioritet.TabIndex = 12;
             // 
             // textBoxUGuid
             // 
             this.textBoxUGuid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUGuid.Location = new System.Drawing.Point(110, 474);
+            this.textBoxUGuid.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxUGuid.Location = new System.Drawing.Point(127, 476);
             this.textBoxUGuid.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUGuid.Name = "textBoxUGuid";
-            this.textBoxUGuid.Size = new System.Drawing.Size(199, 20);
+            this.textBoxUGuid.Size = new System.Drawing.Size(199, 21);
             this.textBoxUGuid.TabIndex = 15;
             // 
             // buttonPretraga
             // 
             this.buttonPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPretraga.AutoSize = true;
-            this.buttonPretraga.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPretraga.Location = new System.Drawing.Point(1132, 567);
+            this.buttonPretraga.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPretraga.Location = new System.Drawing.Point(1184, 567);
             this.buttonPretraga.Name = "buttonPretraga";
             this.buttonPretraga.Size = new System.Drawing.Size(161, 63);
             this.buttonPretraga.TabIndex = 23;
@@ -441,25 +467,27 @@
             // dateTimeDatumUgovora
             // 
             this.dateTimeDatumUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimeDatumUgovora.Location = new System.Drawing.Point(110, 243);
+            this.dateTimeDatumUgovora.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.dateTimeDatumUgovora.Location = new System.Drawing.Point(127, 241);
             this.dateTimeDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeDatumUgovora.Name = "dateTimeDatumUgovora";
-            this.dateTimeDatumUgovora.Size = new System.Drawing.Size(199, 20);
+            this.dateTimeDatumUgovora.Size = new System.Drawing.Size(199, 21);
             this.dateTimeDatumUgovora.TabIndex = 8;
             // 
             // dateTimeKrajnjiRok
             // 
             this.dateTimeKrajnjiRok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimeKrajnjiRok.Location = new System.Drawing.Point(110, 342);
+            this.dateTimeKrajnjiRok.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.dateTimeKrajnjiRok.Location = new System.Drawing.Point(127, 344);
             this.dateTimeKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeKrajnjiRok.Name = "dateTimeKrajnjiRok";
-            this.dateTimeKrajnjiRok.Size = new System.Drawing.Size(199, 20);
+            this.dateTimeKrajnjiRok.Size = new System.Drawing.Size(199, 21);
             this.dateTimeKrajnjiRok.TabIndex = 11;
             // 
             // checkBoxDatumUgovora
             // 
             this.checkBoxDatumUgovora.AutoSize = true;
-            this.checkBoxDatumUgovora.Location = new System.Drawing.Point(7, 246);
+            this.checkBoxDatumUgovora.Location = new System.Drawing.Point(7, 244);
             this.checkBoxDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDatumUgovora.Name = "checkBoxDatumUgovora";
             this.checkBoxDatumUgovora.Size = new System.Drawing.Size(15, 14);
@@ -469,7 +497,7 @@
             // checkBoxKrajnjiRok
             // 
             this.checkBoxKrajnjiRok.AutoSize = true;
-            this.checkBoxKrajnjiRok.Location = new System.Drawing.Point(7, 345);
+            this.checkBoxKrajnjiRok.Location = new System.Drawing.Point(7, 347);
             this.checkBoxKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxKrajnjiRok.Name = "checkBoxKrajnjiRok";
             this.checkBoxKrajnjiRok.Size = new System.Drawing.Size(15, 14);
@@ -517,20 +545,21 @@
             this.panelPretraga.Controls.Add(this.textBoxFaza);
             this.panelPretraga.Controls.Add(this.textBoxUrbanista);
             this.panelPretraga.Controls.Add(this.textBoxTipUgovora);
-            this.panelPretraga.Location = new System.Drawing.Point(964, 10);
+            this.panelPretraga.Location = new System.Drawing.Point(995, 10);
             this.panelPretraga.Margin = new System.Windows.Forms.Padding(2);
             this.panelPretraga.Name = "panelPretraga";
-            this.panelPretraga.Size = new System.Drawing.Size(417, 529);
+            this.panelPretraga.Size = new System.Drawing.Size(434, 529);
             this.panelPretraga.TabIndex = 33;
             // 
             // labelStatus
             // 
             this.labelStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelStatus.AutoSize = true;
-            this.labelStatus.Location = new System.Drawing.Point(26, 445);
+            this.labelStatus.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatus.Location = new System.Drawing.Point(30, 445);
             this.labelStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(37, 13);
+            this.labelStatus.Size = new System.Drawing.Size(40, 16);
             this.labelStatus.TabIndex = 31;
             this.labelStatus.Text = "Status";
             // 
@@ -539,7 +568,7 @@
             this.panelCena.Controls.Add(this.radioButtonCenaEqual);
             this.panelCena.Controls.Add(this.radioButtonCenaLesser);
             this.panelCena.Controls.Add(this.radioButtonCenaGreater);
-            this.panelCena.Location = new System.Drawing.Point(317, 406);
+            this.panelCena.Location = new System.Drawing.Point(337, 408);
             this.panelCena.Margin = new System.Windows.Forms.Padding(2);
             this.panelCena.Name = "panelCena";
             this.panelCena.Size = new System.Drawing.Size(86, 24);
@@ -549,7 +578,7 @@
             // 
             this.radioButtonCenaEqual.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonCenaEqual.Checked = true;
-            this.radioButtonCenaEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCenaEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonCenaEqual.Location = new System.Drawing.Point(60, 0);
             this.radioButtonCenaEqual.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonCenaEqual.Name = "radioButtonCenaEqual";
@@ -563,7 +592,7 @@
             // radioButtonCenaLesser
             // 
             this.radioButtonCenaLesser.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonCenaLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCenaLesser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonCenaLesser.Location = new System.Drawing.Point(0, 0);
             this.radioButtonCenaLesser.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonCenaLesser.Name = "radioButtonCenaLesser";
@@ -576,7 +605,7 @@
             // radioButtonCenaGreater
             // 
             this.radioButtonCenaGreater.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonCenaGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCenaGreater.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonCenaGreater.Location = new System.Drawing.Point(30, 0);
             this.radioButtonCenaGreater.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonCenaGreater.Name = "radioButtonCenaGreater";
@@ -590,29 +619,32 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 412);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 412);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 29;
             this.label1.Text = "Cena";
             // 
             // textBoxStatus
             // 
             this.textBoxStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxStatus.Location = new System.Drawing.Point(110, 441);
+            this.textBoxStatus.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxStatus.Location = new System.Drawing.Point(127, 443);
             this.textBoxStatus.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxStatus.Name = "textBoxStatus";
-            this.textBoxStatus.Size = new System.Drawing.Size(199, 20);
+            this.textBoxStatus.Size = new System.Drawing.Size(199, 21);
             this.textBoxStatus.TabIndex = 14;
             // 
             // textBoxCena
             // 
             this.textBoxCena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCena.Location = new System.Drawing.Point(110, 408);
+            this.textBoxCena.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxCena.Location = new System.Drawing.Point(127, 410);
             this.textBoxCena.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCena.Name = "textBoxCena";
-            this.textBoxCena.Size = new System.Drawing.Size(199, 20);
+            this.textBoxCena.Size = new System.Drawing.Size(199, 21);
             this.textBoxCena.TabIndex = 13;
             this.textBoxCena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCena_KeyPress);
             // 
@@ -621,7 +653,7 @@
             this.panelPrioritet.Controls.Add(this.radioButtonPrioritetEqual);
             this.panelPrioritet.Controls.Add(this.radioButtonPrioritetLesser);
             this.panelPrioritet.Controls.Add(this.radioButtonPrioritetGreater);
-            this.panelPrioritet.Location = new System.Drawing.Point(317, 373);
+            this.panelPrioritet.Location = new System.Drawing.Point(337, 375);
             this.panelPrioritet.Margin = new System.Windows.Forms.Padding(2);
             this.panelPrioritet.Name = "panelPrioritet";
             this.panelPrioritet.Size = new System.Drawing.Size(86, 24);
@@ -631,7 +663,7 @@
             // 
             this.radioButtonPrioritetEqual.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonPrioritetEqual.Checked = true;
-            this.radioButtonPrioritetEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonPrioritetEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonPrioritetEqual.Location = new System.Drawing.Point(60, 0);
             this.radioButtonPrioritetEqual.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonPrioritetEqual.Name = "radioButtonPrioritetEqual";
@@ -645,7 +677,7 @@
             // radioButtonPrioritetLesser
             // 
             this.radioButtonPrioritetLesser.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonPrioritetLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonPrioritetLesser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonPrioritetLesser.Location = new System.Drawing.Point(0, 0);
             this.radioButtonPrioritetLesser.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonPrioritetLesser.Name = "radioButtonPrioritetLesser";
@@ -658,7 +690,7 @@
             // radioButtonPrioritetGreater
             // 
             this.radioButtonPrioritetGreater.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonPrioritetGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonPrioritetGreater.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonPrioritetGreater.Location = new System.Drawing.Point(30, 0);
             this.radioButtonPrioritetGreater.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonPrioritetGreater.Name = "radioButtonPrioritetGreater";
@@ -673,7 +705,7 @@
             this.panelKrajnjiRok.Controls.Add(this.radioButtonKrajnjiRokEqual);
             this.panelKrajnjiRok.Controls.Add(this.radioButtonKrajnjiRokLesser);
             this.panelKrajnjiRok.Controls.Add(this.radioButtonKrajnjiRokGreater);
-            this.panelKrajnjiRok.Location = new System.Drawing.Point(317, 340);
+            this.panelKrajnjiRok.Location = new System.Drawing.Point(337, 342);
             this.panelKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
             this.panelKrajnjiRok.Name = "panelKrajnjiRok";
             this.panelKrajnjiRok.Size = new System.Drawing.Size(86, 24);
@@ -683,7 +715,7 @@
             // 
             this.radioButtonKrajnjiRokEqual.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonKrajnjiRokEqual.Checked = true;
-            this.radioButtonKrajnjiRokEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonKrajnjiRokEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKrajnjiRokEqual.Location = new System.Drawing.Point(60, 0);
             this.radioButtonKrajnjiRokEqual.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonKrajnjiRokEqual.Name = "radioButtonKrajnjiRokEqual";
@@ -697,7 +729,7 @@
             // radioButtonKrajnjiRokLesser
             // 
             this.radioButtonKrajnjiRokLesser.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonKrajnjiRokLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonKrajnjiRokLesser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKrajnjiRokLesser.Location = new System.Drawing.Point(0, 0);
             this.radioButtonKrajnjiRokLesser.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonKrajnjiRokLesser.Name = "radioButtonKrajnjiRokLesser";
@@ -710,7 +742,7 @@
             // radioButtonKrajnjiRokGreater
             // 
             this.radioButtonKrajnjiRokGreater.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonKrajnjiRokGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonKrajnjiRokGreater.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKrajnjiRokGreater.Location = new System.Drawing.Point(30, 0);
             this.radioButtonKrajnjiRokGreater.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonKrajnjiRokGreater.Name = "radioButtonKrajnjiRokGreater";
@@ -725,7 +757,7 @@
             this.panelObim.Controls.Add(this.radioButtonObimEqual);
             this.panelObim.Controls.Add(this.radioButtonObimLesser);
             this.panelObim.Controls.Add(this.radioButtonObimGreater);
-            this.panelObim.Location = new System.Drawing.Point(317, 307);
+            this.panelObim.Location = new System.Drawing.Point(337, 309);
             this.panelObim.Margin = new System.Windows.Forms.Padding(2);
             this.panelObim.Name = "panelObim";
             this.panelObim.Size = new System.Drawing.Size(86, 24);
@@ -735,7 +767,7 @@
             // 
             this.radioButtonObimEqual.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonObimEqual.Checked = true;
-            this.radioButtonObimEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonObimEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonObimEqual.Location = new System.Drawing.Point(60, 0);
             this.radioButtonObimEqual.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonObimEqual.Name = "radioButtonObimEqual";
@@ -749,7 +781,7 @@
             // radioButtonObimLesser
             // 
             this.radioButtonObimLesser.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonObimLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonObimLesser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonObimLesser.Location = new System.Drawing.Point(0, 0);
             this.radioButtonObimLesser.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonObimLesser.Name = "radioButtonObimLesser";
@@ -762,7 +794,7 @@
             // radioButtonObimGreater
             // 
             this.radioButtonObimGreater.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonObimGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonObimGreater.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonObimGreater.Location = new System.Drawing.Point(30, 0);
             this.radioButtonObimGreater.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonObimGreater.Name = "radioButtonObimGreater";
@@ -777,7 +809,7 @@
             this.panelDatumUgovora.Controls.Add(this.radioButtonDatumUgovoraEqual);
             this.panelDatumUgovora.Controls.Add(this.radioButtonDatumUgovoraLesser);
             this.panelDatumUgovora.Controls.Add(this.radioButtonDatumUgovoraGreater);
-            this.panelDatumUgovora.Location = new System.Drawing.Point(317, 241);
+            this.panelDatumUgovora.Location = new System.Drawing.Point(337, 239);
             this.panelDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.panelDatumUgovora.Name = "panelDatumUgovora";
             this.panelDatumUgovora.Size = new System.Drawing.Size(86, 24);
@@ -787,7 +819,7 @@
             // 
             this.radioButtonDatumUgovoraEqual.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonDatumUgovoraEqual.Checked = true;
-            this.radioButtonDatumUgovoraEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonDatumUgovoraEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonDatumUgovoraEqual.Location = new System.Drawing.Point(60, 0);
             this.radioButtonDatumUgovoraEqual.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonDatumUgovoraEqual.Name = "radioButtonDatumUgovoraEqual";
@@ -801,7 +833,7 @@
             // radioButtonDatumUgovoraLesser
             // 
             this.radioButtonDatumUgovoraLesser.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonDatumUgovoraLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonDatumUgovoraLesser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonDatumUgovoraLesser.Location = new System.Drawing.Point(0, 0);
             this.radioButtonDatumUgovoraLesser.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonDatumUgovoraLesser.Name = "radioButtonDatumUgovoraLesser";
@@ -814,7 +846,7 @@
             // radioButtonDatumUgovoraGreater
             // 
             this.radioButtonDatumUgovoraGreater.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonDatumUgovoraGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonDatumUgovoraGreater.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonDatumUgovoraGreater.Location = new System.Drawing.Point(30, 0);
             this.radioButtonDatumUgovoraGreater.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonDatumUgovoraGreater.Name = "radioButtonDatumUgovoraGreater";
@@ -829,7 +861,7 @@
             this.panelId.Controls.Add(this.radioButtonIdEqual);
             this.panelId.Controls.Add(this.radioButtonIdLesser);
             this.panelId.Controls.Add(this.radioButtonIdGreater);
-            this.panelId.Location = new System.Drawing.Point(317, 10);
+            this.panelId.Location = new System.Drawing.Point(337, 12);
             this.panelId.Margin = new System.Windows.Forms.Padding(2);
             this.panelId.Name = "panelId";
             this.panelId.Size = new System.Drawing.Size(86, 24);
@@ -839,7 +871,7 @@
             // 
             this.radioButtonIdEqual.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButtonIdEqual.Checked = true;
-            this.radioButtonIdEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonIdEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonIdEqual.Location = new System.Drawing.Point(60, 0);
             this.radioButtonIdEqual.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonIdEqual.Name = "radioButtonIdEqual";
@@ -853,7 +885,7 @@
             // radioButtonIdLesser
             // 
             this.radioButtonIdLesser.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonIdLesser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonIdLesser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonIdLesser.Location = new System.Drawing.Point(0, 0);
             this.radioButtonIdLesser.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonIdLesser.Name = "radioButtonIdLesser";
@@ -866,7 +898,7 @@
             // radioButtonIdGreater
             // 
             this.radioButtonIdGreater.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButtonIdGreater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonIdGreater.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonIdGreater.Location = new System.Drawing.Point(30, 0);
             this.radioButtonIdGreater.Margin = new System.Windows.Forms.Padding(2);
             this.radioButtonIdGreater.Name = "radioButtonIdGreater";
@@ -880,8 +912,8 @@
             // 
             this.buttonObrisi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonObrisi.AutoSize = true;
-            this.buttonObrisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonObrisi.Location = new System.Drawing.Point(741, 567);
+            this.buttonObrisi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonObrisi.Location = new System.Drawing.Point(797, 567);
             this.buttonObrisi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonObrisi.Name = "buttonObrisi";
             this.buttonObrisi.Size = new System.Drawing.Size(192, 63);
@@ -894,9 +926,10 @@
             // 
             this.buttonIstorijaPromenaObrisanihUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonIstorijaPromenaObrisanihUgovora.AutoSize = true;
-            this.buttonIstorijaPromenaObrisanihUgovora.Location = new System.Drawing.Point(195, 567);
+            this.buttonIstorijaPromenaObrisanihUgovora.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.buttonIstorijaPromenaObrisanihUgovora.Location = new System.Drawing.Point(224, 567);
             this.buttonIstorijaPromenaObrisanihUgovora.Name = "buttonIstorijaPromenaObrisanihUgovora";
-            this.buttonIstorijaPromenaObrisanihUgovora.Size = new System.Drawing.Size(105, 63);
+            this.buttonIstorijaPromenaObrisanihUgovora.Size = new System.Drawing.Size(138, 63);
             this.buttonIstorijaPromenaObrisanihUgovora.TabIndex = 18;
             this.buttonIstorijaPromenaObrisanihUgovora.Text = "Istorija Promena\r\nObrisanih Ugovora";
             this.buttonIstorijaPromenaObrisanihUgovora.UseVisualStyleBackColor = true;
@@ -906,7 +939,8 @@
             // 
             this.buttonZatvori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonZatvori.AutoSize = true;
-            this.buttonZatvori.Location = new System.Drawing.Point(1312, 567);
+            this.buttonZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.buttonZatvori.Location = new System.Drawing.Point(1366, 567);
             this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
             this.buttonZatvori.Name = "buttonZatvori";
             this.buttonZatvori.Size = new System.Drawing.Size(63, 63);
@@ -919,8 +953,8 @@
             // 
             this.buttonUgovorFiles.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonUgovorFiles.AutoSize = true;
-            this.buttonUgovorFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUgovorFiles.Location = new System.Drawing.Point(952, 567);
+            this.buttonUgovorFiles.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUgovorFiles.Location = new System.Drawing.Point(1006, 567);
             this.buttonUgovorFiles.Name = "buttonUgovorFiles";
             this.buttonUgovorFiles.Size = new System.Drawing.Size(161, 63);
             this.buttonUgovorFiles.TabIndex = 22;
@@ -936,7 +970,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1390, 641);
+            this.ClientSize = new System.Drawing.Size(1440, 641);
             this.Controls.Add(this.buttonUgovorFiles);
             this.Controls.Add(this.buttonZatvori);
             this.Controls.Add(this.buttonIstorijaPromenaObrisanihUgovora);
@@ -950,7 +984,7 @@
             this.Controls.Add(this.panelPretraga);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(1406, 680);
+            this.MinimumSize = new System.Drawing.Size(1456, 680);
             this.Name = "UgovoriForm";
             this.Text = "Ugovori";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

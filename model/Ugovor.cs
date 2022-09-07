@@ -261,7 +261,7 @@ namespace CSharp_SQL_App.model {
                 }
                 connection.Close();
             }
-            catch (OleDbException e){
+            catch (OleDbException){
                 Application.Exit();
             }
             

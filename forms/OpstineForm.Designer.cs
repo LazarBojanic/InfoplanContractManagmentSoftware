@@ -58,7 +58,7 @@
             // buttonDodaj
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDodaj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.buttonDodaj.Location = new System.Drawing.Point(29, 456);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
@@ -71,10 +71,11 @@
             // textBoxOpstina
             // 
             this.textBoxOpstina.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.textBoxOpstina.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxOpstina.Location = new System.Drawing.Point(68, 426);
             this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOpstina.Name = "textBoxOpstina";
-            this.textBoxOpstina.Size = new System.Drawing.Size(227, 20);
+            this.textBoxOpstina.Size = new System.Drawing.Size(227, 21);
             this.textBoxOpstina.TabIndex = 1;
             // 
             // opstinaBindingSource
@@ -84,6 +85,7 @@
             // buttontZatvori
             // 
             this.buttontZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttontZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttontZatvori.Location = new System.Drawing.Point(198, 456);
             this.buttontZatvori.Margin = new System.Windows.Forms.Padding(2);
             this.buttontZatvori.Name = "buttontZatvori";
