@@ -271,7 +271,7 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(textBoxObim.Text)) {
                 command.Parameters.AddWithValue("@obim", textBoxObim.Text);
             }
-            if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text) && checkBoxDatumUgovora.Checked) {
+            if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text) && checkBoxKrajnjiRok.Checked) {
                 command.Parameters.Add("@krajnjiRok", OleDbType.Date).Value = dateTimeKrajnjiRok.Value.Date;
             }
             if (!string.IsNullOrEmpty(textBoxPrioritet.Text)) {
