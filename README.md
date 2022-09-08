@@ -32,7 +32,7 @@ Korisnik može da radi sve osnovne funkcionalnosti, ali ne može da dodaje, menj
 
 Sa glavnog menija klikom na dugme „Ugovori“ otvara se forma sa prikazom svih ugovora:
 
-Ugovori su obojeni u skladu sa poljem „status“. Podaci u tabelama na svakoj formi mogu da se sortiraju klikom na ime željene kolone. Korisnici mogu da vrše pretragu ugovora po svim poljima. Brojni i datumski podaci mogu se pretraživati sa „manje, veće ili jednako“. Klikom na kvadratiće ispred polja za datume se oni uključuju/isključuju iz pretrage. Pretraga se vrši na dugme „Pretraga“. Dugme „Osveži“ ponovo učitava celu tabelu. „Istorija Promena“ prikazuje istoriju promena svakog polja za izabrani ugovor koji se bira klikom na red u tabeli:
+Ugovori su obojeni u skladu sa poljem „status“. Podaci u tabelama na svakoj formi mogu da se sortiraju klikom na ime željene kolone. Korisnici mogu da vrše pretragu ugovora po svim poljima. Brojni i datumski podaci mogu se pretraživati sa znakovima poređenja. Klikom na kvadratiće ispred polja za datume se oni uključuju/isključuju iz pretrage. Pretraga se vrši na dugme „Pretraga“. Dugme „Osveži“ ponovo učitava celu tabelu. „Istorija Promena“ prikazuje istoriju promena svakog polja za izabrani ugovor koji se bira klikom na red u tabeli:
 
 ![](Manual-SRB-9.png)
 
