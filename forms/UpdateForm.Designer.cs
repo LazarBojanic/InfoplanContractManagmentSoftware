@@ -486,7 +486,7 @@
             this.Controls.Add(this.textBoxNazivPlana);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(731, 444);
+            this.MinimumSize = new System.Drawing.Size(731, 468);
             this.Name = "UpdateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dodavanje/izmena ugovora";

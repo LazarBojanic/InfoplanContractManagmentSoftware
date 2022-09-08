@@ -120,7 +120,7 @@
             this.Controls.Add(this.dataGridViewKorisnici);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(429, 387);
+            this.MinimumSize = new System.Drawing.Size(580, 387);
             this.Name = "KorisniciForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Korisnici";

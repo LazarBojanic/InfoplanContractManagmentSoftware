@@ -98,6 +98,7 @@
             // 
             // labelUsername
             // 
+            this.labelUsername.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsername.Location = new System.Drawing.Point(175, 21);
@@ -108,6 +109,7 @@
             // 
             // labelPassword
             // 
+            this.labelPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPassword.Location = new System.Drawing.Point(176, 88);

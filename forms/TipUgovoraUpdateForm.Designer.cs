@@ -52,6 +52,7 @@
             // 
             // buttonSacuvaj
             // 
+            this.buttonSacuvaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonSacuvaj.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonSacuvaj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSacuvaj.Location = new System.Drawing.Point(58, 123);
@@ -64,6 +65,7 @@
             // 
             // buttonOtkazi
             // 
+            this.buttonOtkazi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonOtkazi.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonOtkazi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOtkazi.Location = new System.Drawing.Point(241, 123);
