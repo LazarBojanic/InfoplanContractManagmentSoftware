@@ -69,6 +69,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1038, 489);
             this.Name = "IstorijaPromenaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Istorija Promena";
             this.Load += new System.EventHandler(this.IstorijaPromenaForm_Load);
             this.ResizeBegin += new System.EventHandler(this.IstorijaPromenaForm_ResizeBegin);

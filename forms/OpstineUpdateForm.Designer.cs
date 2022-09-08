@@ -87,6 +87,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(437, 268);
             this.Name = "OpstineUpdateForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dodavanje/izmena opštine";
             this.Load += new System.EventHandler(this.OpstineUpdateForm_Load);
             this.ResumeLayout(false);

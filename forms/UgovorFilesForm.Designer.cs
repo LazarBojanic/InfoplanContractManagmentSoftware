@@ -112,6 +112,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(816, 528);
             this.Name = "UgovorFilesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Fajlovi ugovora";
             this.Load += new System.EventHandler(this.UgovorFilesForm_Load);
             this.ResizeBegin += new System.EventHandler(this.UgovorFilesForm_ResizeBegin);

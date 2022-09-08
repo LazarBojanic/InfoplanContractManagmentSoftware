@@ -121,6 +121,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(429, 387);
             this.Name = "KorisniciForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Korisnici";
             this.Load += new System.EventHandler(this.KorisniciForm_Load);
             this.ResizeBegin += new System.EventHandler(this.KorisniciForm_ResizeBegin);

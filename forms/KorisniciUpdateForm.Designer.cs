@@ -190,6 +190,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(372, 293);
             this.Name = "KorisniciUpdateForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Izmena podataka za korisnika";
             this.Load += new System.EventHandler(this.KorisniciUpdateForm_Load);
             this.ResumeLayout(false);

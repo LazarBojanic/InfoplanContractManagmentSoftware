@@ -70,6 +70,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1038, 489);
             this.Name = "IstorijaPromenaObrisanihUgovoraForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Istorija Promena Obrisanih Ugovora";
             this.Load += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_Load);
             this.ResizeBegin += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_ResizeBegin);
