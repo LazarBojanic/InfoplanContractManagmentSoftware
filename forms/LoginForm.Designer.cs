@@ -75,10 +75,10 @@
             // 
             this.labelGreska.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelGreska.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGreska.Location = new System.Drawing.Point(117, 244);
+            this.labelGreska.Location = new System.Drawing.Point(68, 244);
             this.labelGreska.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelGreska.Name = "labelGreska";
-            this.labelGreska.Size = new System.Drawing.Size(186, 20);
+            this.labelGreska.Size = new System.Drawing.Size(284, 20);
             this.labelGreska.TabIndex = 3;
             this.labelGreska.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
