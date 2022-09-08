@@ -303,6 +303,8 @@
             // 
             // comboBoxOpstina
             // 
+            this.comboBoxOpstina.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxOpstina.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxOpstina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOpstina.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.comboBoxOpstina.FormattingEnabled = true;
@@ -361,6 +363,8 @@
             // 
             // comboBoxTipUgovora
             // 
+            this.comboBoxTipUgovora.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxTipUgovora.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxTipUgovora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTipUgovora.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.comboBoxTipUgovora.FormattingEnabled = true;

@@ -41,6 +41,7 @@
             this.dataGridViewChangeLogObrisanihUgovora.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewChangeLogObrisanihUgovora.Name = "dataGridViewChangeLogObrisanihUgovora";
             this.dataGridViewChangeLogObrisanihUgovora.ReadOnly = true;
+            this.dataGridViewChangeLogObrisanihUgovora.RowHeadersVisible = false;
             this.dataGridViewChangeLogObrisanihUgovora.RowHeadersWidth = 51;
             this.dataGridViewChangeLogObrisanihUgovora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewChangeLogObrisanihUgovora.Size = new System.Drawing.Size(998, 345);

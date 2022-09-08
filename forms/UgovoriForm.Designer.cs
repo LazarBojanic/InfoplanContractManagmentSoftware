@@ -94,6 +94,18 @@
             this.buttonUgovorFiles = new System.Windows.Forms.Button();
             this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.radioButtonIdLessOrEqual = new System.Windows.Forms.RadioButton();
+            this.radioButtonIdGreaterOrEqual = new System.Windows.Forms.RadioButton();
+            this.radioButtonDatumUgovoraGreaterOrEqual = new System.Windows.Forms.RadioButton();
+            this.radioButtonDatumUgovoraLessOrEqual = new System.Windows.Forms.RadioButton();
+            this.radioButtonObimGreaterOrEqual = new System.Windows.Forms.RadioButton();
+            this.radioButtonObimLessOrEqual = new System.Windows.Forms.RadioButton();
+            this.radioButtonKrajnjiRokGreaterOrEqual = new System.Windows.Forms.RadioButton();
+            this.radioButtonKrajnjiRokLessOrEqual = new System.Windows.Forms.RadioButton();
+            this.radioButtonPrioritetGreaterOrEqual = new System.Windows.Forms.RadioButton();
+            this.radioButtonPrioritetLessOrEqual = new System.Windows.Forms.RadioButton();
+            this.radioButtonCenaGreaterOrEqual = new System.Windows.Forms.RadioButton();
+            this.radioButtonCenaLessOrEqual = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).BeginInit();
             this.panelPretraga.SuspendLayout();
             this.panelCena.SuspendLayout();
@@ -121,10 +133,11 @@
             this.dataGridViewUgovori.MultiSelect = false;
             this.dataGridViewUgovori.Name = "dataGridViewUgovori";
             this.dataGridViewUgovori.ReadOnly = true;
+            this.dataGridViewUgovori.RowHeadersVisible = false;
             this.dataGridViewUgovori.RowHeadersWidth = 51;
             this.dataGridViewUgovori.RowTemplate.Height = 24;
             this.dataGridViewUgovori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUgovori.Size = new System.Drawing.Size(975, 529);
+            this.dataGridViewUgovori.Size = new System.Drawing.Size(924, 529);
             this.dataGridViewUgovori.TabIndex = 0;
             this.dataGridViewUgovori.TabStop = false;
             this.dataGridViewUgovori.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUgovori_CellDoubleClick);
@@ -186,7 +199,9 @@
             // 
             // labelId
             // 
-            this.labelId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelId.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelId.AutoSize = true;
             this.labelId.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelId.Location = new System.Drawing.Point(30, 16);
@@ -198,7 +213,9 @@
             // 
             // labelOpstina
             // 
-            this.labelOpstina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelOpstina.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelOpstina.AutoSize = true;
             this.labelOpstina.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOpstina.Location = new System.Drawing.Point(30, 49);
@@ -210,7 +227,9 @@
             // 
             // labelUrbanista
             // 
-            this.labelUrbanista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelUrbanista.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUrbanista.AutoSize = true;
             this.labelUrbanista.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUrbanista.Location = new System.Drawing.Point(30, 115);
@@ -222,7 +241,9 @@
             // 
             // labelNazivPlana
             // 
-            this.labelNazivPlana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNazivPlana.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelNazivPlana.AutoSize = true;
             this.labelNazivPlana.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNazivPlana.Location = new System.Drawing.Point(30, 82);
@@ -234,7 +255,9 @@
             // 
             // labelDatumUgovora
             // 
-            this.labelDatumUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDatumUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDatumUgovora.AutoSize = true;
             this.labelDatumUgovora.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatumUgovora.Location = new System.Drawing.Point(30, 243);
@@ -246,7 +269,9 @@
             // 
             // labelNapomena
             // 
-            this.labelNapomena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNapomena.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelNapomena.AutoSize = true;
             this.labelNapomena.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNapomena.Location = new System.Drawing.Point(30, 214);
@@ -258,7 +283,9 @@
             // 
             // labelFaza
             // 
-            this.labelFaza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFaza.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelFaza.AutoSize = true;
             this.labelFaza.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFaza.Location = new System.Drawing.Point(30, 181);
@@ -270,7 +297,9 @@
             // 
             // labelTipUgovora
             // 
-            this.labelTipUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTipUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTipUgovora.AutoSize = true;
             this.labelTipUgovora.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTipUgovora.Location = new System.Drawing.Point(30, 148);
@@ -282,7 +311,9 @@
             // 
             // labelUGuid
             // 
-            this.labelUGuid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelUGuid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUGuid.AutoSize = true;
             this.labelUGuid.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUGuid.Location = new System.Drawing.Point(30, 478);
@@ -294,7 +325,9 @@
             // 
             // labelPrioritet
             // 
-            this.labelPrioritet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPrioritet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrioritet.AutoSize = true;
             this.labelPrioritet.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrioritet.Location = new System.Drawing.Point(30, 379);
@@ -306,7 +339,9 @@
             // 
             // labelKrajnjiRok
             // 
-            this.labelKrajnjiRok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelKrajnjiRok.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelKrajnjiRok.AutoSize = true;
             this.labelKrajnjiRok.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKrajnjiRok.Location = new System.Drawing.Point(30, 346);
@@ -318,7 +353,9 @@
             // 
             // labelObim
             // 
-            this.labelObim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelObim.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelObim.AutoSize = true;
             this.labelObim.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelObim.Location = new System.Drawing.Point(30, 313);
@@ -330,7 +367,9 @@
             // 
             // labelRokPoUgovoru
             // 
-            this.labelRokPoUgovoru.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRokPoUgovoru.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelRokPoUgovoru.AutoSize = true;
             this.labelRokPoUgovoru.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRokPoUgovoru.Location = new System.Drawing.Point(30, 278);
@@ -342,6 +381,9 @@
             // 
             // textBoxId
             // 
+            this.textBoxId.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxId.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxId.Location = new System.Drawing.Point(127, 14);
             this.textBoxId.Margin = new System.Windows.Forms.Padding(2);
@@ -351,7 +393,9 @@
             // 
             // textBoxOpstina
             // 
-            this.textBoxOpstina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOpstina.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxOpstina.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxOpstina.Location = new System.Drawing.Point(127, 47);
             this.textBoxOpstina.Margin = new System.Windows.Forms.Padding(2);
@@ -361,7 +405,9 @@
             // 
             // textBoxNazivPlana
             // 
-            this.textBoxNazivPlana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxNazivPlana.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxNazivPlana.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxNazivPlana.Location = new System.Drawing.Point(127, 80);
             this.textBoxNazivPlana.Margin = new System.Windows.Forms.Padding(2);
@@ -371,7 +417,9 @@
             // 
             // textBoxUrbanista
             // 
-            this.textBoxUrbanista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxUrbanista.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxUrbanista.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxUrbanista.Location = new System.Drawing.Point(127, 113);
             this.textBoxUrbanista.Margin = new System.Windows.Forms.Padding(2);
@@ -381,7 +429,9 @@
             // 
             // textBoxTipUgovora
             // 
-            this.textBoxTipUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTipUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxTipUgovora.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxTipUgovora.Location = new System.Drawing.Point(127, 146);
             this.textBoxTipUgovora.Margin = new System.Windows.Forms.Padding(2);
@@ -391,7 +441,9 @@
             // 
             // textBoxObim
             // 
-            this.textBoxObim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxObim.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxObim.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxObim.Location = new System.Drawing.Point(127, 311);
             this.textBoxObim.Margin = new System.Windows.Forms.Padding(2);
@@ -402,7 +454,9 @@
             // 
             // textBoxRokPoUgovoru
             // 
-            this.textBoxRokPoUgovoru.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxRokPoUgovoru.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRokPoUgovoru.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxRokPoUgovoru.Location = new System.Drawing.Point(127, 276);
             this.textBoxRokPoUgovoru.Margin = new System.Windows.Forms.Padding(2);
@@ -413,7 +467,9 @@
             // 
             // textBoxNapomena
             // 
-            this.textBoxNapomena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxNapomena.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxNapomena.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxNapomena.Location = new System.Drawing.Point(127, 212);
             this.textBoxNapomena.Margin = new System.Windows.Forms.Padding(2);
@@ -423,7 +479,9 @@
             // 
             // textBoxFaza
             // 
-            this.textBoxFaza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxFaza.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxFaza.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxFaza.Location = new System.Drawing.Point(127, 179);
             this.textBoxFaza.Margin = new System.Windows.Forms.Padding(2);
@@ -433,7 +491,9 @@
             // 
             // textBoxPrioritet
             // 
-            this.textBoxPrioritet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPrioritet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPrioritet.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxPrioritet.Location = new System.Drawing.Point(127, 377);
             this.textBoxPrioritet.Margin = new System.Windows.Forms.Padding(2);
@@ -443,7 +503,9 @@
             // 
             // textBoxUGuid
             // 
-            this.textBoxUGuid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxUGuid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxUGuid.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxUGuid.Location = new System.Drawing.Point(127, 476);
             this.textBoxUGuid.Margin = new System.Windows.Forms.Padding(2);
@@ -466,7 +528,9 @@
             // 
             // dateTimeDatumUgovora
             // 
-            this.dateTimeDatumUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimeDatumUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimeDatumUgovora.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.dateTimeDatumUgovora.Location = new System.Drawing.Point(127, 241);
             this.dateTimeDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
@@ -476,7 +540,9 @@
             // 
             // dateTimeKrajnjiRok
             // 
-            this.dateTimeKrajnjiRok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimeKrajnjiRok.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimeKrajnjiRok.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.dateTimeKrajnjiRok.Location = new System.Drawing.Point(127, 344);
             this.dateTimeKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
@@ -486,6 +552,9 @@
             // 
             // checkBoxDatumUgovora
             // 
+            this.checkBoxDatumUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxDatumUgovora.AutoSize = true;
             this.checkBoxDatumUgovora.Location = new System.Drawing.Point(7, 244);
             this.checkBoxDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
@@ -496,6 +565,9 @@
             // 
             // checkBoxKrajnjiRok
             // 
+            this.checkBoxKrajnjiRok.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxKrajnjiRok.AutoSize = true;
             this.checkBoxKrajnjiRok.Location = new System.Drawing.Point(7, 347);
             this.checkBoxKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
@@ -545,15 +617,17 @@
             this.panelPretraga.Controls.Add(this.textBoxFaza);
             this.panelPretraga.Controls.Add(this.textBoxUrbanista);
             this.panelPretraga.Controls.Add(this.textBoxTipUgovora);
-            this.panelPretraga.Location = new System.Drawing.Point(995, 10);
+            this.panelPretraga.Location = new System.Drawing.Point(937, 10);
             this.panelPretraga.Margin = new System.Windows.Forms.Padding(2);
             this.panelPretraga.Name = "panelPretraga";
-            this.panelPretraga.Size = new System.Drawing.Size(434, 529);
+            this.panelPretraga.Size = new System.Drawing.Size(492, 529);
             this.panelPretraga.TabIndex = 33;
             // 
             // labelStatus
             // 
-            this.labelStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatus.Location = new System.Drawing.Point(30, 445);
@@ -565,13 +639,18 @@
             // 
             // panelCena
             // 
+            this.panelCena.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelCena.Controls.Add(this.radioButtonCenaGreaterOrEqual);
             this.panelCena.Controls.Add(this.radioButtonCenaEqual);
+            this.panelCena.Controls.Add(this.radioButtonCenaLessOrEqual);
             this.panelCena.Controls.Add(this.radioButtonCenaLesser);
             this.panelCena.Controls.Add(this.radioButtonCenaGreater);
             this.panelCena.Location = new System.Drawing.Point(337, 408);
             this.panelCena.Margin = new System.Windows.Forms.Padding(2);
             this.panelCena.Name = "panelCena";
-            this.panelCena.Size = new System.Drawing.Size(86, 24);
+            this.panelCena.Size = new System.Drawing.Size(146, 24);
             this.panelCena.TabIndex = 32;
             // 
             // radioButtonCenaEqual
@@ -617,7 +696,9 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(30, 412);
@@ -629,7 +710,9 @@
             // 
             // textBoxStatus
             // 
-            this.textBoxStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxStatus.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxStatus.Location = new System.Drawing.Point(127, 443);
             this.textBoxStatus.Margin = new System.Windows.Forms.Padding(2);
@@ -639,7 +722,9 @@
             // 
             // textBoxCena
             // 
-            this.textBoxCena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCena.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCena.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.textBoxCena.Location = new System.Drawing.Point(127, 410);
             this.textBoxCena.Margin = new System.Windows.Forms.Padding(2);
@@ -650,13 +735,18 @@
             // 
             // panelPrioritet
             // 
+            this.panelPrioritet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelPrioritet.Controls.Add(this.radioButtonPrioritetGreaterOrEqual);
             this.panelPrioritet.Controls.Add(this.radioButtonPrioritetEqual);
+            this.panelPrioritet.Controls.Add(this.radioButtonPrioritetLessOrEqual);
             this.panelPrioritet.Controls.Add(this.radioButtonPrioritetLesser);
             this.panelPrioritet.Controls.Add(this.radioButtonPrioritetGreater);
             this.panelPrioritet.Location = new System.Drawing.Point(337, 375);
             this.panelPrioritet.Margin = new System.Windows.Forms.Padding(2);
             this.panelPrioritet.Name = "panelPrioritet";
-            this.panelPrioritet.Size = new System.Drawing.Size(86, 24);
+            this.panelPrioritet.Size = new System.Drawing.Size(146, 24);
             this.panelPrioritet.TabIndex = 31;
             // 
             // radioButtonPrioritetEqual
@@ -702,13 +792,18 @@
             // 
             // panelKrajnjiRok
             // 
+            this.panelKrajnjiRok.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelKrajnjiRok.Controls.Add(this.radioButtonKrajnjiRokGreaterOrEqual);
+            this.panelKrajnjiRok.Controls.Add(this.radioButtonKrajnjiRokLessOrEqual);
             this.panelKrajnjiRok.Controls.Add(this.radioButtonKrajnjiRokEqual);
             this.panelKrajnjiRok.Controls.Add(this.radioButtonKrajnjiRokLesser);
             this.panelKrajnjiRok.Controls.Add(this.radioButtonKrajnjiRokGreater);
             this.panelKrajnjiRok.Location = new System.Drawing.Point(337, 342);
             this.panelKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
             this.panelKrajnjiRok.Name = "panelKrajnjiRok";
-            this.panelKrajnjiRok.Size = new System.Drawing.Size(86, 24);
+            this.panelKrajnjiRok.Size = new System.Drawing.Size(146, 24);
             this.panelKrajnjiRok.TabIndex = 30;
             // 
             // radioButtonKrajnjiRokEqual
@@ -754,13 +849,18 @@
             // 
             // panelObim
             // 
+            this.panelObim.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelObim.Controls.Add(this.radioButtonObimGreaterOrEqual);
             this.panelObim.Controls.Add(this.radioButtonObimEqual);
+            this.panelObim.Controls.Add(this.radioButtonObimLessOrEqual);
             this.panelObim.Controls.Add(this.radioButtonObimLesser);
             this.panelObim.Controls.Add(this.radioButtonObimGreater);
             this.panelObim.Location = new System.Drawing.Point(337, 309);
             this.panelObim.Margin = new System.Windows.Forms.Padding(2);
             this.panelObim.Name = "panelObim";
-            this.panelObim.Size = new System.Drawing.Size(86, 24);
+            this.panelObim.Size = new System.Drawing.Size(146, 24);
             this.panelObim.TabIndex = 28;
             // 
             // radioButtonObimEqual
@@ -773,7 +873,6 @@
             this.radioButtonObimEqual.Name = "radioButtonObimEqual";
             this.radioButtonObimEqual.Size = new System.Drawing.Size(26, 24);
             this.radioButtonObimEqual.TabIndex = 2;
-            this.radioButtonObimEqual.TabStop = true;
             this.radioButtonObimEqual.Text = "=";
             this.radioButtonObimEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButtonObimEqual.UseVisualStyleBackColor = true;
@@ -806,13 +905,18 @@
             // 
             // panelDatumUgovora
             // 
+            this.panelDatumUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDatumUgovora.Controls.Add(this.radioButtonDatumUgovoraGreaterOrEqual);
+            this.panelDatumUgovora.Controls.Add(this.radioButtonDatumUgovoraLessOrEqual);
             this.panelDatumUgovora.Controls.Add(this.radioButtonDatumUgovoraEqual);
             this.panelDatumUgovora.Controls.Add(this.radioButtonDatumUgovoraLesser);
             this.panelDatumUgovora.Controls.Add(this.radioButtonDatumUgovoraGreater);
             this.panelDatumUgovora.Location = new System.Drawing.Point(337, 239);
             this.panelDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.panelDatumUgovora.Name = "panelDatumUgovora";
-            this.panelDatumUgovora.Size = new System.Drawing.Size(86, 24);
+            this.panelDatumUgovora.Size = new System.Drawing.Size(146, 24);
             this.panelDatumUgovora.TabIndex = 27;
             // 
             // radioButtonDatumUgovoraEqual
@@ -858,13 +962,18 @@
             // 
             // panelId
             // 
+            this.panelId.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelId.Controls.Add(this.radioButtonIdGreaterOrEqual);
+            this.panelId.Controls.Add(this.radioButtonIdLessOrEqual);
             this.panelId.Controls.Add(this.radioButtonIdEqual);
             this.panelId.Controls.Add(this.radioButtonIdLesser);
             this.panelId.Controls.Add(this.radioButtonIdGreater);
             this.panelId.Location = new System.Drawing.Point(337, 12);
             this.panelId.Margin = new System.Windows.Forms.Padding(2);
             this.panelId.Name = "panelId";
-            this.panelId.Size = new System.Drawing.Size(86, 24);
+            this.panelId.Size = new System.Drawing.Size(146, 24);
             this.panelId.TabIndex = 25;
             // 
             // radioButtonIdEqual
@@ -877,7 +986,6 @@
             this.radioButtonIdEqual.Name = "radioButtonIdEqual";
             this.radioButtonIdEqual.Size = new System.Drawing.Size(26, 24);
             this.radioButtonIdEqual.TabIndex = 2;
-            this.radioButtonIdEqual.TabStop = true;
             this.radioButtonIdEqual.Text = "=";
             this.radioButtonIdEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButtonIdEqual.UseVisualStyleBackColor = true;
@@ -965,6 +1073,162 @@
             // ugovorBindingSource
             // 
             this.ugovorBindingSource.DataMember = "ugovor";
+            // 
+            // radioButtonIdLessOrEqual
+            // 
+            this.radioButtonIdLessOrEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonIdLessOrEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonIdLessOrEqual.Location = new System.Drawing.Point(90, 0);
+            this.radioButtonIdLessOrEqual.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonIdLessOrEqual.Name = "radioButtonIdLessOrEqual";
+            this.radioButtonIdLessOrEqual.Size = new System.Drawing.Size(26, 24);
+            this.radioButtonIdLessOrEqual.TabIndex = 3;
+            this.radioButtonIdLessOrEqual.Text = "≤";
+            this.radioButtonIdLessOrEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonIdLessOrEqual.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonIdGreaterOrEqual
+            // 
+            this.radioButtonIdGreaterOrEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonIdGreaterOrEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonIdGreaterOrEqual.Location = new System.Drawing.Point(120, 0);
+            this.radioButtonIdGreaterOrEqual.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonIdGreaterOrEqual.Name = "radioButtonIdGreaterOrEqual";
+            this.radioButtonIdGreaterOrEqual.Size = new System.Drawing.Size(26, 24);
+            this.radioButtonIdGreaterOrEqual.TabIndex = 4;
+            this.radioButtonIdGreaterOrEqual.Text = "≥";
+            this.radioButtonIdGreaterOrEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonIdGreaterOrEqual.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonDatumUgovoraGreaterOrEqual
+            // 
+            this.radioButtonDatumUgovoraGreaterOrEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonDatumUgovoraGreaterOrEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonDatumUgovoraGreaterOrEqual.Location = new System.Drawing.Point(120, 0);
+            this.radioButtonDatumUgovoraGreaterOrEqual.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonDatumUgovoraGreaterOrEqual.Name = "radioButtonDatumUgovoraGreaterOrEqual";
+            this.radioButtonDatumUgovoraGreaterOrEqual.Size = new System.Drawing.Size(26, 24);
+            this.radioButtonDatumUgovoraGreaterOrEqual.TabIndex = 4;
+            this.radioButtonDatumUgovoraGreaterOrEqual.Text = "≥";
+            this.radioButtonDatumUgovoraGreaterOrEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonDatumUgovoraGreaterOrEqual.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonDatumUgovoraLessOrEqual
+            // 
+            this.radioButtonDatumUgovoraLessOrEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonDatumUgovoraLessOrEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonDatumUgovoraLessOrEqual.Location = new System.Drawing.Point(90, 0);
+            this.radioButtonDatumUgovoraLessOrEqual.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonDatumUgovoraLessOrEqual.Name = "radioButtonDatumUgovoraLessOrEqual";
+            this.radioButtonDatumUgovoraLessOrEqual.Size = new System.Drawing.Size(26, 24);
+            this.radioButtonDatumUgovoraLessOrEqual.TabIndex = 3;
+            this.radioButtonDatumUgovoraLessOrEqual.Text = "≤";
+            this.radioButtonDatumUgovoraLessOrEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonDatumUgovoraLessOrEqual.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonObimGreaterOrEqual
+            // 
+            this.radioButtonObimGreaterOrEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonObimGreaterOrEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonObimGreaterOrEqual.Location = new System.Drawing.Point(120, 0);
+            this.radioButtonObimGreaterOrEqual.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonObimGreaterOrEqual.Name = "radioButtonObimGreaterOrEqual";
+            this.radioButtonObimGreaterOrEqual.Size = new System.Drawing.Size(26, 24);
+            this.radioButtonObimGreaterOrEqual.TabIndex = 4;
+            this.radioButtonObimGreaterOrEqual.Text = "≥";
+            this.radioButtonObimGreaterOrEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonObimGreaterOrEqual.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonObimLessOrEqual
+            // 
+            this.radioButtonObimLessOrEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonObimLessOrEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonObimLessOrEqual.Location = new System.Drawing.Point(90, 0);
+            this.radioButtonObimLessOrEqual.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonObimLessOrEqual.Name = "radioButtonObimLessOrEqual";
+            this.radioButtonObimLessOrEqual.Size = new System.Drawing.Size(26, 24);
+            this.radioButtonObimLessOrEqual.TabIndex = 3;
+            this.radioButtonObimLessOrEqual.Text = "≤";
+            this.radioButtonObimLessOrEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonObimLessOrEqual.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonKrajnjiRokGreaterOrEqual
+            // 
+            this.radioButtonKrajnjiRokGreaterOrEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonKrajnjiRokGreaterOrEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonKrajnjiRokGreaterOrEqual.Location = new System.Drawing.Point(120, 0);
+            this.radioButtonKrajnjiRokGreaterOrEqual.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonKrajnjiRokGreaterOrEqual.Name = "radioButtonKrajnjiRokGreaterOrEqual";
+            this.radioButtonKrajnjiRokGreaterOrEqual.Size = new System.Drawing.Size(26, 24);
+            this.radioButtonKrajnjiRokGreaterOrEqual.TabIndex = 4;
+            this.radioButtonKrajnjiRokGreaterOrEqual.Text = "≥";
+            this.radioButtonKrajnjiRokGreaterOrEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonKrajnjiRokGreaterOrEqual.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonKrajnjiRokLessOrEqual
+            // 
+            this.radioButtonKrajnjiRokLessOrEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonKrajnjiRokLessOrEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonKrajnjiRokLessOrEqual.Location = new System.Drawing.Point(90, 0);
+            this.radioButtonKrajnjiRokLessOrEqual.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonKrajnjiRokLessOrEqual.Name = "radioButtonKrajnjiRokLessOrEqual";
+            this.radioButtonKrajnjiRokLessOrEqual.Size = new System.Drawing.Size(26, 24);
+            this.radioButtonKrajnjiRokLessOrEqual.TabIndex = 3;
+            this.radioButtonKrajnjiRokLessOrEqual.Text = "≤";
+            this.radioButtonKrajnjiRokLessOrEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonKrajnjiRokLessOrEqual.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPrioritetGreaterOrEqual
+            // 
+            this.radioButtonPrioritetGreaterOrEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonPrioritetGreaterOrEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonPrioritetGreaterOrEqual.Location = new System.Drawing.Point(120, 0);
+            this.radioButtonPrioritetGreaterOrEqual.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonPrioritetGreaterOrEqual.Name = "radioButtonPrioritetGreaterOrEqual";
+            this.radioButtonPrioritetGreaterOrEqual.Size = new System.Drawing.Size(26, 24);
+            this.radioButtonPrioritetGreaterOrEqual.TabIndex = 4;
+            this.radioButtonPrioritetGreaterOrEqual.Text = "≥";
+            this.radioButtonPrioritetGreaterOrEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonPrioritetGreaterOrEqual.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPrioritetLessOrEqual
+            // 
+            this.radioButtonPrioritetLessOrEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonPrioritetLessOrEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonPrioritetLessOrEqual.Location = new System.Drawing.Point(90, 0);
+            this.radioButtonPrioritetLessOrEqual.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonPrioritetLessOrEqual.Name = "radioButtonPrioritetLessOrEqual";
+            this.radioButtonPrioritetLessOrEqual.Size = new System.Drawing.Size(26, 24);
+            this.radioButtonPrioritetLessOrEqual.TabIndex = 3;
+            this.radioButtonPrioritetLessOrEqual.Text = "≤";
+            this.radioButtonPrioritetLessOrEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonPrioritetLessOrEqual.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonCenaGreaterOrEqual
+            // 
+            this.radioButtonCenaGreaterOrEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonCenaGreaterOrEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCenaGreaterOrEqual.Location = new System.Drawing.Point(120, 0);
+            this.radioButtonCenaGreaterOrEqual.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonCenaGreaterOrEqual.Name = "radioButtonCenaGreaterOrEqual";
+            this.radioButtonCenaGreaterOrEqual.Size = new System.Drawing.Size(26, 24);
+            this.radioButtonCenaGreaterOrEqual.TabIndex = 4;
+            this.radioButtonCenaGreaterOrEqual.Text = "≥";
+            this.radioButtonCenaGreaterOrEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonCenaGreaterOrEqual.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonCenaLessOrEqual
+            // 
+            this.radioButtonCenaLessOrEqual.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonCenaLessOrEqual.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCenaLessOrEqual.Location = new System.Drawing.Point(90, 0);
+            this.radioButtonCenaLessOrEqual.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButtonCenaLessOrEqual.Name = "radioButtonCenaLessOrEqual";
+            this.radioButtonCenaLessOrEqual.Size = new System.Drawing.Size(26, 24);
+            this.radioButtonCenaLessOrEqual.TabIndex = 3;
+            this.radioButtonCenaLessOrEqual.Text = "≤";
+            this.radioButtonCenaLessOrEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButtonCenaLessOrEqual.UseVisualStyleBackColor = true;
             // 
             // UgovoriForm
             // 
@@ -1080,5 +1344,17 @@
         private System.Windows.Forms.TextBox textBoxStatus;
         private System.Windows.Forms.Button buttonZatvori;
         private System.Windows.Forms.Button buttonUgovorFiles;
+        private System.Windows.Forms.RadioButton radioButtonIdGreaterOrEqual;
+        private System.Windows.Forms.RadioButton radioButtonIdLessOrEqual;
+        private System.Windows.Forms.RadioButton radioButtonDatumUgovoraGreaterOrEqual;
+        private System.Windows.Forms.RadioButton radioButtonDatumUgovoraLessOrEqual;
+        private System.Windows.Forms.RadioButton radioButtonCenaGreaterOrEqual;
+        private System.Windows.Forms.RadioButton radioButtonCenaLessOrEqual;
+        private System.Windows.Forms.RadioButton radioButtonPrioritetGreaterOrEqual;
+        private System.Windows.Forms.RadioButton radioButtonPrioritetLessOrEqual;
+        private System.Windows.Forms.RadioButton radioButtonKrajnjiRokGreaterOrEqual;
+        private System.Windows.Forms.RadioButton radioButtonKrajnjiRokLessOrEqual;
+        private System.Windows.Forms.RadioButton radioButtonObimGreaterOrEqual;
+        private System.Windows.Forms.RadioButton radioButtonObimLessOrEqual;
     }
 }

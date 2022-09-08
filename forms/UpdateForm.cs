@@ -83,15 +83,15 @@ namespace CSharp_SQL_App {
             }
             else {
                 textBoxRokPoUgovoru.Text = "0";
-                comboBoxRokPoUgovoru.SelectedIndex = 2;
+                comboBoxRokPoUgovoru.Text = oldUgovor.rokPoUgovoru.Substring(oldUgovor.rokPoUgovoru.IndexOf(" ") + 1);
             }
             textBoxObim.Text = oldUgovor.obim.ToString();
             dateTimeKrajnjiRok.Value = oldUgovor.krajnjiRok;
             textBoxPrioritet.Text = oldUgovor.prioritet.ToString();
             textBoxCena.Text = oldUgovor.cena.ToString();
-            comboBoxOpstina.SelectedIndex = 0;
-            comboBoxTipUgovora.SelectedIndex = 0;
-            comboBoxStatus.SelectedIndex = 2;
+            comboBoxOpstina.Text = oldUgovor.opstina;
+            comboBoxTipUgovora.Text = oldUgovor.tipUgovora;
+            comboBoxStatus.Text = oldUgovor.status;
         }
         private void buttonSacuvaj_Click(object sender, EventArgs e) {         
             try {

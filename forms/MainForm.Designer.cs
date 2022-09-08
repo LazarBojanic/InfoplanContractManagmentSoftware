@@ -41,7 +41,7 @@
             this.buttonOpstine.Location = new System.Drawing.Point(72, 72);
             this.buttonOpstine.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOpstine.Name = "buttonOpstine";
-            this.buttonOpstine.Size = new System.Drawing.Size(155, 63);
+            this.buttonOpstine.Size = new System.Drawing.Size(160, 63);
             this.buttonOpstine.TabIndex = 0;
             this.buttonOpstine.Text = "Opštine";
             this.buttonOpstine.UseVisualStyleBackColor = true;
@@ -51,10 +51,10 @@
             // 
             this.buttonPrikazUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPrikazUgovora.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrikazUgovora.Location = new System.Drawing.Point(373, 72);
+            this.buttonPrikazUgovora.Location = new System.Drawing.Point(368, 72);
             this.buttonPrikazUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPrikazUgovora.Name = "buttonPrikazUgovora";
-            this.buttonPrikazUgovora.Size = new System.Drawing.Size(155, 63);
+            this.buttonPrikazUgovora.Size = new System.Drawing.Size(160, 63);
             this.buttonPrikazUgovora.TabIndex = 1;
             this.buttonPrikazUgovora.Text = "Ugovori";
             this.buttonPrikazUgovora.UseVisualStyleBackColor = true;
@@ -123,10 +123,10 @@
             // 
             this.buttonIzmenaUsernamePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonIzmenaUsernamePassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.buttonIzmenaUsernamePassword.Location = new System.Drawing.Point(11, 314);
+            this.buttonIzmenaUsernamePassword.Location = new System.Drawing.Point(368, 176);
             this.buttonIzmenaUsernamePassword.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmenaUsernamePassword.Name = "buttonIzmenaUsernamePassword";
-            this.buttonIzmenaUsernamePassword.Size = new System.Drawing.Size(167, 44);
+            this.buttonIzmenaUsernamePassword.Size = new System.Drawing.Size(160, 63);
             this.buttonIzmenaUsernamePassword.TabIndex = 3;
             this.buttonIzmenaUsernamePassword.Text = "Izmena Username/Password-a";
             this.buttonIzmenaUsernamePassword.UseVisualStyleBackColor = true;
@@ -138,7 +138,7 @@
             this.buttonTipoviUgovora.Location = new System.Drawing.Point(72, 176);
             this.buttonTipoviUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTipoviUgovora.Name = "buttonTipoviUgovora";
-            this.buttonTipoviUgovora.Size = new System.Drawing.Size(155, 63);
+            this.buttonTipoviUgovora.Size = new System.Drawing.Size(160, 63);
             this.buttonTipoviUgovora.TabIndex = 2;
             this.buttonTipoviUgovora.Text = "Tipovi Ugovora";
             this.buttonTipoviUgovora.UseVisualStyleBackColor = true;

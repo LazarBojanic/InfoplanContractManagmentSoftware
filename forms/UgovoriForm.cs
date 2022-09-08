@@ -17,8 +17,8 @@ namespace CSharp_SQL_App {
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dataGridViewUgovori, new object[] { true });
-            dateTimeDatumUgovora.Value = DateTime.Today.AddDays(1);
-            dateTimeKrajnjiRok.Value = DateTime.Today.AddDays(1);
+            dateTimeDatumUgovora.Value = DateTime.Today;
+            dateTimeKrajnjiRok.Value = DateTime.Today;
             if (!MainForm.user.privilegija.Equals("administrator")) {
                 buttonObrisi.Enabled = false;
             }
@@ -26,6 +26,7 @@ namespace CSharp_SQL_App {
                 buttonDodaj.Enabled = false;
                 buttonIzmeni.Enabled = false;
             }
+            this.AcceptButton = buttonPretraga;
         }
         private void UgovoriForm_Load(object sender, EventArgs e) {
             refreshDataGrid();
@@ -109,7 +110,7 @@ namespace CSharp_SQL_App {
             DataTable dt;
             connection = GetConnection();
             String query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
-                " datumUgovora, rokPoUgovoru, obim, krajnjiRok, prioritet, cena, status, uGuid FROM ugovor ORDER BY id";
+                " datumUgovora, rokPoUgovoru, obim, krajnjiRok, prioritet, cena, status, uGuid FROM ugovor WHERE id IS NOT NULL";
             if (!string.IsNullOrEmpty(textBoxId.Text)) {
                 if (radioButtonIdLesser.Checked) {
                     query += " AND id < @id";
@@ -119,6 +120,12 @@ namespace CSharp_SQL_App {
                 }
                 if (radioButtonIdEqual.Checked) {
                     query += " AND id = @id";
+                }
+                if (radioButtonIdLessOrEqual.Checked) {
+                    query += " AND id <= @id";
+                }
+                if (radioButtonIdGreaterOrEqual.Checked) {
+                    query += " AND id >= @id";
                 }
             }
             if (!string.IsNullOrEmpty(textBoxOpstina.Text)) {
@@ -149,6 +156,12 @@ namespace CSharp_SQL_App {
                 if (radioButtonDatumUgovoraEqual.Checked) {
                     query += " AND datumUgovora = @datumUgovora";
                 }
+                if (radioButtonDatumUgovoraLessOrEqual.Checked) {
+                    query += " AND datumUgovora <= @datumUgovora";
+                }
+                if (radioButtonDatumUgovoraGreaterOrEqual.Checked) {
+                    query += " AND datumUgovora >= @datumUgovora";
+                }
             }
             if (!string.IsNullOrEmpty(textBoxRokPoUgovoru.Text)) {
                 query += " AND UCASE(rokPoUgovoru) LIKE '%' + @rokPoUgovoru + '%'";
@@ -163,6 +176,12 @@ namespace CSharp_SQL_App {
                 if (radioButtonObimEqual.Checked) {
                     query += " AND obim = @obim";
                 }
+                if (radioButtonObimLessOrEqual.Checked) {
+                    query += " AND obim <= @obim";
+                }
+                if (radioButtonObimGreaterOrEqual.Checked) {
+                    query += " AND obim >= @obim";
+                }
             }
             if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text) && checkBoxKrajnjiRok.Checked) {
                 if (radioButtonKrajnjiRokLesser.Checked) {
@@ -173,6 +192,12 @@ namespace CSharp_SQL_App {
                 }
                 if (radioButtonKrajnjiRokEqual.Checked) {
                     query += " AND krajnjiRok = @krajnjiRok";
+                }
+                if (radioButtonKrajnjiRokLessOrEqual.Checked) {
+                    query += " AND krajnjiRok <= @krajnjiRok";
+                }
+                if (radioButtonKrajnjiRokGreaterOrEqual.Checked) {
+                    query += " AND krajnjiRok >= @krajnjiRok";
                 }
             }
             if (!string.IsNullOrEmpty(textBoxPrioritet.Text)) {
@@ -185,6 +210,12 @@ namespace CSharp_SQL_App {
                 if (radioButtonPrioritetEqual.Checked) {
                     query += " AND prioritet = @prioritet";
                 }
+                if (radioButtonPrioritetLessOrEqual.Checked) {
+                    query += " AND prioritet <= @prioritet";
+                }
+                if (radioButtonPrioritetGreaterOrEqual.Checked) {
+                    query += " AND prioritet >= @prioritet";
+                }
             }
             if (!string.IsNullOrEmpty(textBoxCena.Text)) {
                 if (radioButtonCenaLesser.Checked) {
@@ -195,6 +226,12 @@ namespace CSharp_SQL_App {
                 }
                 if (radioButtonCenaEqual.Checked) {
                     query += " AND cena = @cena";
+                }
+                if (radioButtonCenaLessOrEqual.Checked) {
+                    query += " AND cena <= @cena";
+                }
+                if (radioButtonCenaGreaterOrEqual.Checked) {
+                    query += " AND cena >= @cena";
                 }
             }
             if (!string.IsNullOrEmpty(textBoxStatus.Text)) {
@@ -251,6 +288,7 @@ namespace CSharp_SQL_App {
             }
             dt = new DataTable();
             bs = new BindingSource();
+            query += " ORDER BY id";
             connection.Open();
             dt.Load(command.ExecuteReader());
             bs.DataSource = dt;

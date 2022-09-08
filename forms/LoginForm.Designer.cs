@@ -29,6 +29,8 @@
             this.buttonLogin = new System.Windows.Forms.Button();
             this.labelGreska = new System.Windows.Forms.Label();
             this.buttonIzlaz = new System.Windows.Forms.Button();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxUsername
@@ -49,7 +51,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPassword.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.textBoxPassword.Location = new System.Drawing.Point(68, 94);
+            this.textBoxPassword.Location = new System.Drawing.Point(68, 107);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(284, 21);
@@ -94,11 +96,33 @@
             this.buttonIzlaz.UseVisualStyleBackColor = true;
             this.buttonIzlaz.Click += new System.EventHandler(this.buttonIzlaz_Click);
             // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Location = new System.Drawing.Point(175, 21);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(71, 17);
+            this.labelUsername.TabIndex = 4;
+            this.labelUsername.Text = "Username";
+            // 
+            // labelPassword
+            // 
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Location = new System.Drawing.Point(176, 88);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(69, 17);
+            this.labelPassword.TabIndex = 5;
+            this.labelPassword.Text = "Password";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(421, 279);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.buttonIzlaz);
             this.Controls.Add(this.labelGreska);
             this.Controls.Add(this.buttonLogin);
@@ -124,5 +148,7 @@
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Label labelGreska;
         private System.Windows.Forms.Button buttonIzlaz;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Label labelPassword;
     }
 }

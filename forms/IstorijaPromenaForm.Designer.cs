@@ -53,6 +53,7 @@
             this.dataGridViewChangeLog.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewChangeLog.Name = "dataGridViewChangeLog";
             this.dataGridViewChangeLog.ReadOnly = true;
+            this.dataGridViewChangeLog.RowHeadersVisible = false;
             this.dataGridViewChangeLog.RowHeadersWidth = 51;
             this.dataGridViewChangeLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewChangeLog.Size = new System.Drawing.Size(998, 345);

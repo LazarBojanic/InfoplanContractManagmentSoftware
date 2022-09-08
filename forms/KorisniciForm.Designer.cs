@@ -47,6 +47,7 @@
             this.dataGridViewKorisnici.MultiSelect = false;
             this.dataGridViewKorisnici.Name = "dataGridViewKorisnici";
             this.dataGridViewKorisnici.ReadOnly = true;
+            this.dataGridViewKorisnici.RowHeadersVisible = false;
             this.dataGridViewKorisnici.RowHeadersWidth = 51;
             this.dataGridViewKorisnici.RowTemplate.Height = 24;
             this.dataGridViewKorisnici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
