@@ -14,11 +14,13 @@ namespace CSharp_SQL_App {
     public partial class UpdateForm : Form {
         private Ugovor oldUgovor;
         private Ugovor newUgovor;
-        public UpdateForm() {
+        private String loadMethod;
+        public UpdateForm(String loadMethod) {
             InitializeComponent();
             loadOpstinaComboBox();
             loadTipUgovoraComboBox();
             loadStatusComboBox();
+            this.loadMethod = loadMethod;
         }
         public void loadUgovor(int id) {
             oldUgovor = new Ugovor();
@@ -92,6 +94,11 @@ namespace CSharp_SQL_App {
             comboBoxOpstina.Text = oldUgovor.opstina;
             comboBoxTipUgovora.Text = oldUgovor.tipUgovora;
             comboBoxStatus.Text = oldUgovor.status;
+            if (loadMethod.Equals("load")) {
+                comboBoxTipUgovora.SelectedIndex = 0;
+                comboBoxRokPoUgovoru.SelectedIndex = 2;
+                comboBoxStatus.SelectedIndex = 2;
+            }
         }
         private void buttonSacuvaj_Click(object sender, EventArgs e) {         
             try {

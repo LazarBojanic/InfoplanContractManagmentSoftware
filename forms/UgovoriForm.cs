@@ -32,21 +32,23 @@ namespace CSharp_SQL_App {
             refreshDataGrid();
         }
         private void buttonDodaj_Click(object sender, EventArgs e) {
-            UpdateForm updateForm1 = new UpdateForm();
-            updateForm1.loadUgovor(0);
-            if (updateForm1.ShowDialog().Equals(DialogResult.OK)) {
+            UpdateForm updateForm = new UpdateForm("load");
+            updateForm.loadUgovor(0);
+            if (updateForm.ShowDialog().Equals(DialogResult.OK)) {
                 refreshDataGrid();
             }
-            dataGridViewUgovori.FirstDisplayedScrollingRowIndex = dataGridViewUgovori.RowCount - 1;
-            dataGridViewUgovori.Rows[dataGridViewUgovori.RowCount - 1].Selected = true;
+            if(dataGridViewUgovori.RowCount != 0) {
+                dataGridViewUgovori.FirstDisplayedScrollingRowIndex = dataGridViewUgovori.RowCount - 1;
+                dataGridViewUgovori.Rows[dataGridViewUgovori.RowCount - 1].Selected = true;
+            }
         }
         private void buttonIzmeni_Click(object sender, EventArgs e) {
             if (dataGridViewUgovori.SelectedRows.Count > 0) {
-                UpdateForm updateForm2 = new UpdateForm();
                 int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells["id"].Value.ToString());
                 int index = dataGridViewUgovori.CurrentRow.Index;
-                updateForm2.loadUgovor(id);
-                if (updateForm2.ShowDialog().Equals(DialogResult.OK)) {
+                UpdateForm updateForm = new UpdateForm("update");
+                updateForm.loadUgovor(id);
+                if (updateForm.ShowDialog().Equals(DialogResult.OK)) {
                     refreshDataGrid();
                 }
                 dataGridViewUgovori.FirstDisplayedScrollingRowIndex = index;
@@ -370,11 +372,11 @@ namespace CSharp_SQL_App {
 
         private void dataGridViewUgovori_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
             if (dataGridViewUgovori.SelectedRows.Count > 0) {
-                UpdateForm updateForm2 = new UpdateForm();
                 int id = int.Parse(dataGridViewUgovori.SelectedRows[0].Cells[0].Value.ToString());
                 int index = dataGridViewUgovori.CurrentRow.Index;
-                updateForm2.loadUgovor(id);
-                if (updateForm2.ShowDialog().Equals(DialogResult.OK)) {
+                UpdateForm updateForm = new UpdateForm("update");
+                updateForm.loadUgovor(id);
+                if (updateForm.ShowDialog().Equals(DialogResult.OK)) {
                     refreshDataGrid();
                 }
                 dataGridViewUgovori.FirstDisplayedScrollingRowIndex = index;
