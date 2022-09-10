@@ -1,22 +1,15 @@
 ﻿using CSharp_SQL_App.forms;
-using CSharp_SQL_App.model;
+using CSharp_SQL_App.util;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class OpstineForm : Form {
         public static String opstina;
         public static String opstinaZaIzmenu;
-
         public OpstineForm() {
             InitializeComponent();
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
@@ -28,8 +21,6 @@ namespace CSharp_SQL_App {
                 buttonIzmeni.Enabled = false;
                 buttonObrisi.Enabled = false;
             }
-        }
-        private void OpstineForm_Load(object sender, EventArgs e) {
         }
         private void buttonDodaj_Click(object sender, EventArgs e) {
             OpstineUpdateForm opstineUpdateForm = new OpstineUpdateForm("dodavanje", "");
@@ -49,21 +40,26 @@ namespace CSharp_SQL_App {
             }
         }
         private void buttonObrisi_Click(object sender, EventArgs e) {
-            ConfirmationForm confirmationForm = new ConfirmationForm();
-            if (dataGridViewOpstine.SelectedRows.Count > 0) {
-                if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
-                    String opstina = dataGridViewOpstine.SelectedRows[0].Cells["opstina"].Value.ToString();
-                    OleDbConnection connection;
-                    OleDbCommand command;
-                    String query = "DELETE FROM opstina WHERE opstina = @opstina";
-                    connection = GetConnection();
-                    connection.Open();
-                    command = new OleDbCommand(query, connection);
-                    command.Parameters.AddWithValue("@opstina", opstina);
-                    command.ExecuteNonQuery();
-                    connection.Close();
-                    fillOpstineDataGrid();
+            try {
+                ConfirmationForm confirmationForm = new ConfirmationForm();
+                if (dataGridViewOpstine.SelectedRows.Count > 0) {
+                    if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
+                        String opstina = dataGridViewOpstine.SelectedRows[0].Cells["opstina"].Value.ToString();
+                        OleDbConnection connection;
+                        OleDbCommand command;
+                        String query = "DELETE FROM opstina WHERE opstina = @opstina";
+                        connection = Util.GetConnection();
+                        connection.Open();
+                        command = new OleDbCommand(query, connection);
+                        command.Parameters.AddWithValue("@opstina", opstina);
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                        fillOpstineDataGrid();
+                    }
                 }
+            }
+            catch (OleDbException ex) {
+                MessageBox.Show(ex.Message);
             }
         }
         public void addOpstina() {
@@ -73,7 +69,7 @@ namespace CSharp_SQL_App {
                     BindingSource bs;
                     OleDbConnection connection;
                     OleDbCommand command;
-                    connection = GetConnection();
+                    connection = Util.GetConnection();
                     connection.Open();
                     String query = "INSERT INTO opstina (opstina) VALUES (@opstina)";
                     command = new OleDbCommand(query, connection);
@@ -86,8 +82,8 @@ namespace CSharp_SQL_App {
                     connection.Close();
                 }
             }
-            catch (OleDbException) {
-                MessageBox.Show("Vrednost već postoji u bazi podataka");
+            catch (OleDbException ex) {
+                MessageBox.Show(ex.Message);
             }
         }
         public void updateOpstina() {
@@ -97,7 +93,7 @@ namespace CSharp_SQL_App {
                     BindingSource bs;
                     OleDbConnection connection;
                     OleDbCommand command;
-                    connection = GetConnection();
+                    connection = Util.GetConnection();
                     connection.Open();
                     String query = "UPDATE opstina SET opstina = @opstina WHERE opstina = @opstinaZaIzmenu";
                     command = new OleDbCommand(query, connection);
@@ -111,47 +107,43 @@ namespace CSharp_SQL_App {
                     connection.Close();
                 }
             }
-            catch (OleDbException) {
-                MessageBox.Show("Vrednost već postoji u bazi podataka");
+            catch (OleDbException ex) {
+                MessageBox.Show(ex.Message);
             }
         }
-
         public void fillOpstineDataGrid() {
-            DataTable dt;
-            BindingSource bs;
-            OleDbConnection connection;
-            OleDbCommand command;
-            connection = GetConnection();
-            connection.Open();
-            String query = "SELECT * FROM opstina ORDER BY opstina";
-            command = new OleDbCommand(query, connection);
-            dt = new DataTable();
-            bs = new BindingSource();
-            dt.Load(command.ExecuteReader());
-            bs.DataSource = dt;
-            dataGridViewOpstine.DataSource = bs;
-            connection.Close();
+            try {
+                DataTable dt;
+                BindingSource bs;
+                OleDbConnection connection;
+                OleDbCommand command;
+                connection = Util.GetConnection();
+                connection.Open();
+                String query = "SELECT * FROM opstina ORDER BY opstina";
+                command = new OleDbCommand(query, connection);
+                dt = new DataTable();
+                bs = new BindingSource();
+                dt.Load(command.ExecuteReader());
+                bs.DataSource = dt;
+                dataGridViewOpstine.DataSource = bs;
+                connection.Close();
+            }
+            catch (OleDbException ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
-        private OleDbConnection GetConnection() {
-            return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
+        private void buttonZatvori_Click(object sender, EventArgs e) {
+            this.Close();
         }
-
         private void OpstineForm_ResizeBegin(object sender, EventArgs e) {
             this.SuspendLayout();
         }
-
         private void OpstineForm_ResizeEnd(object sender, EventArgs e) {
             this.ResumeLayout(true);
         }
-
-        private void buttontZatvori_Click(object sender, EventArgs e) {
-            this.Close();
-        }
-
         private void OpstineForm_Click(object sender, EventArgs e) {
             dataGridViewOpstine.ClearSelection();
         }
-
         private void dataGridViewOpstine_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
             if (dataGridViewOpstine.SelectedRows.Count > 0) {
                 OpstineUpdateForm opstineUpdateForm = new OpstineUpdateForm("izmena",

@@ -72,7 +72,6 @@
             this.Name = "IstorijaPromenaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Istorija Promena";
-            this.Load += new System.EventHandler(this.IstorijaPromenaForm_Load);
             this.ResizeBegin += new System.EventHandler(this.IstorijaPromenaForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.IstorijaPromenaForm_ResizeEnd);
             this.Click += new System.EventHandler(this.IstorijaPromenaForm_Click);

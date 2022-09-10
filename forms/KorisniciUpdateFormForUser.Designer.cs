@@ -193,7 +193,6 @@
             this.Name = "KorisniciUpdateFormForUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Izmena ličnih podataka";
-            this.Load += new System.EventHandler(this.KorisniciUpdateFormForUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

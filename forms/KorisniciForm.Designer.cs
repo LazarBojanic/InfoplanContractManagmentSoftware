@@ -124,7 +124,6 @@
             this.Name = "KorisniciForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Korisnici";
-            this.Load += new System.EventHandler(this.KorisniciForm_Load);
             this.ResizeBegin += new System.EventHandler(this.KorisniciForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.KorisniciForm_ResizeEnd);
             this.Click += new System.EventHandler(this.KorisniciForm_Click);

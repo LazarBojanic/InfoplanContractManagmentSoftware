@@ -1,14 +1,8 @@
 ﻿using CSharp_SQL_App.model;
+using CSharp_SQL_App.util;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
@@ -31,31 +25,38 @@ namespace CSharp_SQL_App {
             }
         }
         public void loadOpstinaComboBox() {
-            OleDbConnection connection = GetConnection();
-            connection.Open();
-            string query = "SELECT * FROM opstina ORDER BY opstina";
-            OleDbCommand command = new OleDbCommand(query, connection);
-            DataTable table = new DataTable ("opstina");
-            table.Load(command.ExecuteReader());
-            foreach (DataRow row in table.Rows) {
-                comboBoxOpstina.Items.Add(row["opstina"].ToString());
+            try {
+                OleDbConnection connection = Util.GetConnection();
+                connection.Open();
+                string query = "SELECT * FROM opstina ORDER BY opstina";
+                OleDbCommand command = new OleDbCommand(query, connection);
+                DataTable table = new DataTable("opstina");
+                table.Load(command.ExecuteReader());
+                foreach (DataRow row in table.Rows) {
+                    comboBoxOpstina.Items.Add(row["opstina"].ToString());
+                }
+                connection.Close();
             }
-            connection.Close();
+            catch (OleDbException ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
         public void loadTipUgovoraComboBox() {
-            OleDbConnection connection = GetConnection();
-            connection.Open();
-            string query = "SELECT * FROM tipUgovora ORDER BY tipUgovora";
-            OleDbCommand command = new OleDbCommand(query, connection);
-            DataTable table = new DataTable("tipUgovora");
-            table.Load(command.ExecuteReader());
-            foreach (DataRow row in table.Rows) {
-                comboBoxTipUgovora.Items.Add(row["tipUgovora"].ToString());
+            try {
+                OleDbConnection connection = Util.GetConnection();
+                connection.Open();
+                string query = "SELECT * FROM tipUgovora ORDER BY tipUgovora";
+                OleDbCommand command = new OleDbCommand(query, connection);
+                DataTable table = new DataTable("tipUgovora");
+                table.Load(command.ExecuteReader());
+                foreach (DataRow row in table.Rows) {
+                    comboBoxTipUgovora.Items.Add(row["tipUgovora"].ToString());
+                }
+                connection.Close();
             }
-            connection.Close();
-        }
-        private OleDbConnection GetConnection() {
-            return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
+            catch (OleDbException ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void UpdateForm_Load(object sender, EventArgs e) {
             manageCheckBoxBehavior();
@@ -98,20 +99,19 @@ namespace CSharp_SQL_App {
             else {
                 dateTimeDatumUsvajanja.Value = oldUgovor.datumUsvajanja;
             }
-            
             textBoxBrojSluzbenogVlasnika.Text = oldUgovor.brojSluzbenogVlasnika;
             textBoxVremeRada.Text = oldUgovor.vremeRada;
         }
-        private void buttonSacuvaj_Click(object sender, EventArgs e) {         
+        private void buttonSacuvaj_Click(object sender, EventArgs e) {
             try {
-                if(oldUgovor.id != 0) {
+                if (oldUgovor.id != 0) {
                     Ugovor dbUgovor = new Ugovor();
                     dbUgovor.loadFromDatabase(oldUgovor.id);
                     if (dbUgovor.vremeUgovora > oldUgovor.vremeUgovora) {
                         MessageBox.Show("Podatke o ovom ugovoru u bazi podataka je neko drugi već izmenio. Morate ponovo da pokrenete formu, osvežiti tabelu i uneti vaše izmene.");
                         return;
                     }
-                }               
+                }
                 newUgovor.id = oldUgovor.id;
                 newUgovor.opstina = comboBoxOpstina.Text;
                 newUgovor.nazivPlana = textBoxNazivPlana.Text;
@@ -120,7 +120,7 @@ namespace CSharp_SQL_App {
                 newUgovor.faza = textBoxFaza.Text;
                 newUgovor.napomena = textBoxNapomena.Text;
                 newUgovor.datumUgovora = dateTimeDatumUgovora.Value;
-                newUgovor.rokPoUgovoru = textBoxRokPoUgovoru.Text + " " + comboBoxRokPoUgovoru.Text;  
+                newUgovor.rokPoUgovoru = textBoxRokPoUgovoru.Text + " " + comboBoxRokPoUgovoru.Text;
                 newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
                 newUgovor.obim = Int32.Parse(textBoxObim.Text);
                 newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
@@ -146,8 +146,8 @@ namespace CSharp_SQL_App {
                 ChangeLog.addChangeLogForUgovor(oldUgovor, newUgovor);
                 this.DialogResult = DialogResult.OK;
             }
-            catch(FormatException) {
-                MessageBox.Show("Nekorektan format podataka.");                
+            catch (FormatException) {
+                MessageBox.Show("Nekorektan format podataka.");
             }
         }
         private void buttonOtkazi_Click(object sender, EventArgs e) {
@@ -182,7 +182,7 @@ namespace CSharp_SQL_App {
                 if (comboBoxRokPoUgovoru.Text.Equals("Meseci")) {
                     dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddMonths(Int32.Parse(textBoxRokPoUgovoru.Text));
                 }
-                if(comboBoxRokPoUgovoru.Text.Equals("Godine")) {
+                if (comboBoxRokPoUgovoru.Text.Equals("Godine")) {
                     dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(Int32.Parse(textBoxRokPoUgovoru.Text));
                 }
             }
@@ -205,7 +205,7 @@ namespace CSharp_SQL_App {
             }
         }
         private void textBoxRokPoUgovoru_KeyPress(object sender, KeyPressEventArgs e) {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)){
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) {
                 e.Handled = true;
             }
         }
@@ -228,7 +228,6 @@ namespace CSharp_SQL_App {
                 e.Handled = true;
             }
         }
-
         private void checkBoxUsvojen_CheckedChanged(object sender, EventArgs e) {
             manageCheckBoxBehavior();
         }

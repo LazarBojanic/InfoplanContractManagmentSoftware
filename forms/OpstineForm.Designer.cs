@@ -27,7 +27,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpstineForm));
             this.dataGridViewOpstine = new System.Windows.Forms.DataGridView();
             this.buttonDodaj = new System.Windows.Forms.Button();
-            this.buttontZatvori = new System.Windows.Forms.Button();
+            this.buttonZatvori = new System.Windows.Forms.Button();
             this.buttonIzmeni = new System.Windows.Forms.Button();
             this.opstinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonObrisi = new System.Windows.Forms.Button();
@@ -71,18 +71,18 @@
             this.buttonDodaj.UseVisualStyleBackColor = true;
             this.buttonDodaj.Click += new System.EventHandler(this.buttonDodaj_Click);
             // 
-            // buttontZatvori
+            // buttonZatvori
             // 
-            this.buttontZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttontZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.buttontZatvori.Location = new System.Drawing.Point(406, 456);
-            this.buttontZatvori.Margin = new System.Windows.Forms.Padding(2);
-            this.buttontZatvori.Name = "buttontZatvori";
-            this.buttontZatvori.Size = new System.Drawing.Size(112, 63);
-            this.buttontZatvori.TabIndex = 3;
-            this.buttontZatvori.Text = "Zatvori";
-            this.buttontZatvori.UseVisualStyleBackColor = true;
-            this.buttontZatvori.Click += new System.EventHandler(this.buttontZatvori_Click);
+            this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.buttonZatvori.Location = new System.Drawing.Point(406, 456);
+            this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonZatvori.Name = "buttonZatvori";
+            this.buttonZatvori.Size = new System.Drawing.Size(112, 63);
+            this.buttonZatvori.TabIndex = 3;
+            this.buttonZatvori.Text = "Zatvori";
+            this.buttonZatvori.UseVisualStyleBackColor = true;
+            this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
             // 
             // buttonIzmeni
             // 
@@ -121,7 +121,7 @@
             this.ClientSize = new System.Drawing.Size(529, 530);
             this.Controls.Add(this.buttonObrisi);
             this.Controls.Add(this.buttonIzmeni);
-            this.Controls.Add(this.buttontZatvori);
+            this.Controls.Add(this.buttonZatvori);
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.dataGridViewOpstine);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -130,7 +130,6 @@
             this.Name = "OpstineForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Opštine";
-            this.Load += new System.EventHandler(this.OpstineForm_Load);
             this.ResizeBegin += new System.EventHandler(this.OpstineForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.OpstineForm_ResizeEnd);
             this.Click += new System.EventHandler(this.OpstineForm_Click);
@@ -145,7 +144,7 @@
         private System.Windows.Forms.DataGridView dataGridViewOpstine;
         private System.Windows.Forms.BindingSource opstinaBindingSource;
         private System.Windows.Forms.Button buttonDodaj;
-        private System.Windows.Forms.Button buttontZatvori;
+        private System.Windows.Forms.Button buttonZatvori;
         private System.Windows.Forms.Button buttonIzmeni;
         private System.Windows.Forms.Button buttonObrisi;
     }

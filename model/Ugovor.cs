@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using CSharp_SQL_App.util;
+using System;
 using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSharp_SQL_App.model {
@@ -28,7 +24,6 @@ namespace CSharp_SQL_App.model {
         public String vremeRada { get; set; }
         public DateTime vremeUgovora { get; set; }
         public String uGuid { get; set; }
-
         public Ugovor(int id, string opstina, string nazivPlana, string urbanista, string faza, string tipUgovora,
             string napomena, DateTime datumUgovora, string rokPoUgovoru, DateTime krajnjiRok, int obim,
             int prioritet, decimal cena, string usvojen, DateTime datumUsvajanja, string brojSluzbenogVlasnika, string vremeRada,
@@ -75,7 +70,7 @@ namespace CSharp_SQL_App.model {
             this.uGuid = Guid.NewGuid().ToString();
         }
         public bool loadFromDatabase(int parId) {
-            OleDbConnection connection = GetConnection();
+            OleDbConnection connection = Util.GetConnection();
             connection.Open();
             string query = "SELECT * FROM ugovor WHERE id = @id";
             OleDbCommand command = new OleDbCommand(query, connection);
@@ -251,7 +246,7 @@ namespace CSharp_SQL_App.model {
             }
         }
         public void saveToDatabase() {
-            OleDbConnection connection = GetConnection();
+            OleDbConnection connection = Util.GetConnection();
             connection.Open();
             vremeUgovora = DateTime.Now;
             try {
@@ -277,7 +272,7 @@ namespace CSharp_SQL_App.model {
                     command.Parameters.AddWithValue("@datumUsvajanja", datumUsvajanja);
                     command.Parameters.AddWithValue("@brojSluzbenogVlasnika", brojSluzbenogVlasnika);
                     command.Parameters.AddWithValue("@vremeRada", vremeRada);
-                    command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = ChangeLog.vremeAkcijeWithoutMilliseconds(vremeUgovora);
+                    command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = Util.dateTimeWithoutMilliseconds(vremeUgovora);
                     command.Parameters.AddWithValue("@uGuid", uGuid);
                     int recordsAffected = command.ExecuteNonQuery();
                 }
@@ -303,19 +298,15 @@ namespace CSharp_SQL_App.model {
                     command.Parameters.AddWithValue("@datumUsvajanja", datumUsvajanja);
                     command.Parameters.AddWithValue("@brojSluzbenogVlasnika", brojSluzbenogVlasnika);
                     command.Parameters.AddWithValue("@vremeRada", vremeRada);
-                    command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = ChangeLog.vremeAkcijeWithoutMilliseconds(vremeUgovora);
+                    command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = Util.dateTimeWithoutMilliseconds(vremeUgovora);
                     command.Parameters.AddWithValue("@id", id);
                     command.ExecuteNonQuery();
                 }
                 connection.Close();
             }
-            catch (OleDbException) {
-                Application.Exit();
+            catch (OleDbException ex) {
+                MessageBox.Show(ex.Message);
             }
-
-        }
-        private static OleDbConnection GetConnection() {
-            return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
     }
 }

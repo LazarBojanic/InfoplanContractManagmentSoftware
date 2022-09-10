@@ -73,7 +73,6 @@
             this.Name = "IstorijaPromenaObrisanihUgovoraForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Istorija Promena Obrisanih Ugovora";
-            this.Load += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_Load);
             this.ResizeBegin += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_ResizeEnd);
             this.Click += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_Click);

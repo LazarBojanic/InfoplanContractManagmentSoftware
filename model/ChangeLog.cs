@@ -1,37 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CSharp_SQL_App.util;
+using System;
 using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSharp_SQL_App.model {
     public class ChangeLog {
         public static void addChangeLogField(String imeTabele, String imePolja, String tipAkcije,
             String primarniKljuc, String staraVrednost, String novaVrednost) {
-            OleDbConnection connection = GetConnection();
-            connection.Open();
-            DateTime vremeAkcije = DateTime.Now;
-            string username = MainForm.user.username;
-            string query = "INSERT INTO changeLog (imeTabele, imePolja, tipAkcije," +
-                " vremeAkcije, username, primarniKljuc, staraVrednost, novaVrednost) VALUES" +
-                " (@imeTabele, @imePolja, @tipAkcije, @vremeAkcije, @username," +
-                " @primarniKljuc, @staraVrednost, @novaVrednost)";
-            OleDbCommand command = new OleDbCommand(query, connection);
-            command.Parameters.AddWithValue("@imeTabele", imeTabele);
-            command.Parameters.AddWithValue("@imePolja", imePolja);
-            command.Parameters.AddWithValue("@tipAkcije", tipAkcije);
-            command.Parameters.Add("@vremeAkcije", OleDbType.DBTimeStamp).Value = vremeAkcijeWithoutMilliseconds(vremeAkcije);
-            command.Parameters.AddWithValue("@username", username);
-            command.Parameters.AddWithValue("@primarniKljuc", primarniKljuc);
-            command.Parameters.AddWithValue("@staraVrednost", staraVrednost);
-            command.Parameters.AddWithValue("@novaVrednost", novaVrednost);
-            command.ExecuteNonQuery();
-            connection.Close();
+            try {
+                OleDbConnection connection = Util.GetConnection();
+                connection.Open();
+                DateTime vremeAkcije = DateTime.Now;
+                string username = MainForm.user.username;
+                string query = "INSERT INTO changeLog (imeTabele, imePolja, tipAkcije," +
+                    " vremeAkcije, username, primarniKljuc, staraVrednost, novaVrednost) VALUES" +
+                    " (@imeTabele, @imePolja, @tipAkcije, @vremeAkcije, @username," +
+                    " @primarniKljuc, @staraVrednost, @novaVrednost)";
+                OleDbCommand command = new OleDbCommand(query, connection);
+                command.Parameters.AddWithValue("@imeTabele", imeTabele);
+                command.Parameters.AddWithValue("@imePolja", imePolja);
+                command.Parameters.AddWithValue("@tipAkcije", tipAkcije);
+                command.Parameters.Add("@vremeAkcije", OleDbType.DBTimeStamp).Value = Util.dateTimeWithoutMilliseconds(vremeAkcije);
+                command.Parameters.AddWithValue("@username", username);
+                command.Parameters.AddWithValue("@primarniKljuc", primarniKljuc);
+                command.Parameters.AddWithValue("@staraVrednost", staraVrednost);
+                command.Parameters.AddWithValue("@novaVrednost", novaVrednost);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (OleDbException ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
         public static void addChangeLogForUgovor(Ugovor oldUgovor, Ugovor newUgovor) {
-            if(oldUgovor.id == 0) {
+            if (oldUgovor.id == 0) {
                 if (!oldUgovor.opstina.Equals(newUgovor.opstina)) {
                     addChangeLogField("ugovor", "opstina", "kreairanje", oldUgovor.uGuid, oldUgovor.opstina, newUgovor.opstina);
                 }
@@ -55,7 +57,7 @@ namespace CSharp_SQL_App.model {
                 }
                 if (!oldUgovor.rokPoUgovoru.Equals(newUgovor.rokPoUgovoru)) {
                     addChangeLogField("ugovor", "rokPoUgovoru", "kreairanje", oldUgovor.uGuid, oldUgovor.rokPoUgovoru, newUgovor.rokPoUgovoru);
-                }  
+                }
                 if (!oldUgovor.krajnjiRok.Equals(newUgovor.krajnjiRok)) {
                     addChangeLogField("ugovor", "krajnjiRok", "kreairanje", oldUgovor.uGuid, oldUgovor.krajnjiRok.ToString(), newUgovor.krajnjiRok.ToString());
                 }
@@ -81,7 +83,7 @@ namespace CSharp_SQL_App.model {
                     addChangeLogField("ugovor", "vremeRada", "kreairanje", oldUgovor.uGuid, oldUgovor.vremeRada.ToString(), newUgovor.vremeRada.ToString());
                 }
             }
-            else if(newUgovor.id == 0) {
+            else if (newUgovor.id == 0) {
                 if (!oldUgovor.opstina.Equals(newUgovor.opstina)) {
                     addChangeLogField("ugovor", "opstina", "brisanje", oldUgovor.uGuid, oldUgovor.opstina, newUgovor.opstina);
                 }
@@ -105,7 +107,7 @@ namespace CSharp_SQL_App.model {
                 }
                 if (!oldUgovor.rokPoUgovoru.Equals(newUgovor.rokPoUgovoru)) {
                     addChangeLogField("ugovor", "rokPoUgovoru", "brisanje", oldUgovor.uGuid, oldUgovor.rokPoUgovoru, newUgovor.rokPoUgovoru);
-                }  
+                }
                 if (!oldUgovor.krajnjiRok.Equals(newUgovor.krajnjiRok)) {
                     addChangeLogField("ugovor", "krajnjiRok", "brisanje", oldUgovor.uGuid, oldUgovor.krajnjiRok.ToString(), newUgovor.krajnjiRok.ToString());
                 }
@@ -181,13 +183,6 @@ namespace CSharp_SQL_App.model {
                     addChangeLogField("ugovor", "vremeRada", "promena", oldUgovor.uGuid, oldUgovor.vremeRada.ToString(), newUgovor.vremeRada.ToString());
                 }
             }
-
-        }
-        private static OleDbConnection GetConnection() {
-            return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
-        }
-        public static DateTime vremeAkcijeWithoutMilliseconds(DateTime vremeAkcije) {
-            return new DateTime(vremeAkcije.Year, vremeAkcije.Month, vremeAkcije.Day, vremeAkcije.Hour, vremeAkcije.Minute, vremeAkcije.Second);
         }
     }
 }

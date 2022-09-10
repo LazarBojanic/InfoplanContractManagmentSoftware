@@ -89,7 +89,6 @@
             this.Name = "OpstineUpdateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dodavanje/izmena opštine";
-            this.Load += new System.EventHandler(this.OpstineUpdateForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

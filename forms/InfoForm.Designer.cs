@@ -51,7 +51,7 @@
             this.buttonZatvori.TabIndex = 0;
             this.buttonZatvori.Text = "Zatvori";
             this.buttonZatvori.UseVisualStyleBackColor = true;
-            this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click_1);
+            this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
             // 
             // InfoForm
             // 
@@ -61,11 +61,10 @@
             this.Controls.Add(this.buttonZatvori);
             this.Controls.Add(this.pictureBoxInfoplan);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(957, 605);
+            this.MinimumSize = new System.Drawing.Size(957, 605);
             this.Name = "InfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Detalji";
-            this.Load += new System.EventHandler(this.InfoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfoplan)).EndInit();
             this.ResumeLayout(false);
 
