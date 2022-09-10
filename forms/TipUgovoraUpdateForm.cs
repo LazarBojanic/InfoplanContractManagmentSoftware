@@ -17,7 +17,7 @@ namespace CSharp_SQL_App.forms {
                 textBoxTipUgovora.Text = izabraniTipUgovora;
                 TipUgovoraForm.tipUgovoraZaIzmenu = textBoxTipUgovora.Text;
             }
-            if(tipAkcije == "dodavenje") {
+            if(tipAkcije == "dodavanje") {
                 textBoxTipUgovora.Text = "";
             }
             this.AcceptButton = buttonSacuvaj;

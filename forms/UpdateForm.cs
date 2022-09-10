@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
@@ -19,7 +20,6 @@ namespace CSharp_SQL_App {
             InitializeComponent();
             loadOpstinaComboBox();
             loadTipUgovoraComboBox();
-            loadStatusComboBox();
             this.loadMethod = loadMethod;
         }
         public void loadUgovor(int id) {
@@ -54,18 +54,6 @@ namespace CSharp_SQL_App {
             }
             connection.Close();
         }
-        public void loadStatusComboBox() {
-            OleDbConnection connection = GetConnection();
-            connection.Open();
-            string query = "SELECT * FROM status ORDER BY status";
-            OleDbCommand command = new OleDbCommand(query, connection);
-            DataTable table = new DataTable("status");
-            table.Load(command.ExecuteReader());
-            foreach (DataRow row in table.Rows) {
-                comboBoxStatus.Items.Add(row["status"].ToString());
-            }
-            connection.Close();
-        }
         private OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
@@ -93,11 +81,15 @@ namespace CSharp_SQL_App {
             textBoxCena.Text = oldUgovor.cena.ToString();
             comboBoxOpstina.Text = oldUgovor.opstina;
             comboBoxTipUgovora.Text = oldUgovor.tipUgovora;
-            comboBoxStatus.Text = oldUgovor.status;
+            if (oldUgovor.usvojen.Equals("Da")) {
+                checkBoxUsvojen.Checked = true;
+            }
+            else {
+                checkBoxUsvojen.Checked = false;
+            }
             if (loadMethod.Equals("load")) {
                 comboBoxTipUgovora.SelectedIndex = 0;
                 comboBoxRokPoUgovoru.SelectedIndex = 2;
-                comboBoxStatus.SelectedIndex = 2;
             }
         }
         private void buttonSacuvaj_Click(object sender, EventArgs e) {         
@@ -123,7 +115,12 @@ namespace CSharp_SQL_App {
                 newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
                 newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
                 newUgovor.cena = Decimal.Parse(textBoxCena.Text);
-                newUgovor.status = comboBoxStatus.Text;
+                if (checkBoxUsvojen.Checked) {
+                    newUgovor.usvojen = "Da";
+                }
+                else {
+                    newUgovor.usvojen = "Ne";
+                }
                 newUgovor.vremeUgovora = DateTime.Now;
                 newUgovor.uGuid = oldUgovor.uGuid;
                 newUgovor.saveToDatabase();

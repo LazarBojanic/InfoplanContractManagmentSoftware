@@ -17,7 +17,7 @@ namespace CSharp_SQL_App.forms {
                 textBoxOpstina.Text = izabranaOpstina;
                 OpstineForm.opstinaZaIzmenu = textBoxOpstina.Text;
             }
-            if (tipAkcije == "dodavenje") {
+            if (tipAkcije == "dodavanje") {
                 textBoxOpstina.Text = "";
             }
             this.AcceptButton = buttonSacuvaj;

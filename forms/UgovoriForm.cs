@@ -64,7 +64,7 @@ namespace CSharp_SQL_App {
             OleDbCommand command;
             DataTable dt;
             String query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
-                " datumUgovora, rokPoUgovoru, obim, krajnjiRok, prioritet, cena, status, uGuid FROM ugovor ORDER BY id";
+                " datumUgovora, rokPoUgovoru, obim, krajnjiRok, prioritet, cena, usvojen, uGuid FROM ugovor ORDER BY id";
             connection = GetConnection();
             connection.Open();
             command = new OleDbCommand(query, connection);
@@ -78,14 +78,11 @@ namespace CSharp_SQL_App {
         }
         private void colorUgovori() {
             foreach (DataGridViewRow row in dataGridViewUgovori.Rows) {
-                if (row.Cells["status"].Value.ToString().Equals("Usvojen") || row.Cells["status"].Value.ToString().Equals("Započet")) {
-                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 0);
-                }
-                if (row.Cells["status"].Value.ToString().Equals("Odbačen") || row.Cells["status"].Value.ToString().Equals("Prekinut")) {
-                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 0, 0);
-                }
-                if (row.Cells["status"].Value.ToString().Equals("Predat") || row.Cells["status"].Value.ToString().Equals("Završen")) {
+                if (row.Cells["usvojen"].Value.ToString().Equals("Da")) {
                     row.DefaultCellStyle.BackColor = Color.FromArgb(0, 255, 0);
+                }
+                else {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 255);
                 }
             }
         }
@@ -103,7 +100,7 @@ namespace CSharp_SQL_App {
             this.SuspendLayout();
         }
         private void UgovoriForm_ResizeEnd(object sender, EventArgs e) {
-            this.ResumeLayout(true);
+            this.ResumeLayout();
         }
         private void buttonPretraga_Click(object sender, EventArgs e) {
             BindingSource bs;
@@ -112,7 +109,7 @@ namespace CSharp_SQL_App {
             DataTable dt;
             connection = GetConnection();
             String query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
-                " datumUgovora, rokPoUgovoru, obim, krajnjiRok, prioritet, cena, status, uGuid FROM ugovor WHERE id IS NOT NULL";
+                " datumUgovora, rokPoUgovoru, obim, krajnjiRok, prioritet, cena, usvojen, uGuid FROM ugovor WHERE id IS NOT NULL";
             if (!string.IsNullOrEmpty(textBoxId.Text)) {
                 if (radioButtonIdLesser.Checked) {
                     query += " AND id < @id";
@@ -148,7 +145,7 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(textBoxNapomena.Text)) {
                 query += " AND UCASE(napomena) LIKE '%' + @napomena + '%'";
             }
-            if (!string.IsNullOrEmpty(dateTimeDatumUgovora.Text) && checkBoxDatumUgovora.Checked) {
+            if (!string.IsNullOrEmpty(dateTimeDatumUgovora.Text) && checkBoxDatumUgovoraIncludeInSearch.Checked) {
                 if (radioButtonDatumUgovoraLesser.Checked) {
                     query += " AND datumUgovora < @datumUgovora";
                 }
@@ -185,7 +182,7 @@ namespace CSharp_SQL_App {
                     query += " AND obim >= @obim";
                 }
             }
-            if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text) && checkBoxKrajnjiRok.Checked) {
+            if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text) && checkBoxKrajnjiRokIncludeInSearch.Checked) {
                 if (radioButtonKrajnjiRokLesser.Checked) {
                     query += " AND krajnjiRok < @krajnjiRok";
                 }
@@ -236,12 +233,14 @@ namespace CSharp_SQL_App {
                     query += " AND cena >= @cena";
                 }
             }
-            if (!string.IsNullOrEmpty(textBoxStatus.Text)) {
-                query += " AND UCASE(status) LIKE '%' + @status + '%'";
+            if (!string.IsNullOrEmpty(textBoxUsvojen.Text)) {
+                query += " AND UCASE(usvojen) LIKE '%' + @usvojen + '%'";
             }
             if (!string.IsNullOrEmpty(textBoxUGuid.Text)) {
                 query += " AND UCASE(uGuid) LIKE '%' + @uGuid + '%'";
             }
+
+
             command = new OleDbCommand(query, connection);
             if (!string.IsNullOrEmpty(textBoxId.Text)) {
                 command.Parameters.AddWithValue("@id", textBoxId.Text.ToUpper());
@@ -264,7 +263,7 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(textBoxNapomena.Text)) {
                 command.Parameters.AddWithValue("@napomena", textBoxNapomena.Text.ToUpper());
             }
-            if (!string.IsNullOrEmpty(dateTimeDatumUgovora.Text) && checkBoxDatumUgovora.Checked) {
+            if (!string.IsNullOrEmpty(dateTimeDatumUgovora.Text) && checkBoxDatumUgovoraIncludeInSearch.Checked) {
                 command.Parameters.Add("@datumUgovora", OleDbType.Date).Value = dateTimeDatumUgovora.Value.Date;
             }
             if (!string.IsNullOrEmpty(textBoxRokPoUgovoru.Text)) {
@@ -273,17 +272,17 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(textBoxObim.Text)) {
                 command.Parameters.AddWithValue("@obim", textBoxObim.Text);
             }
-            if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text) && checkBoxKrajnjiRok.Checked) {
+            if (!string.IsNullOrEmpty(dateTimeKrajnjiRok.Text) && checkBoxKrajnjiRokIncludeInSearch.Checked) {
                 command.Parameters.Add("@krajnjiRok", OleDbType.Date).Value = dateTimeKrajnjiRok.Value.Date;
             }
             if (!string.IsNullOrEmpty(textBoxPrioritet.Text)) {
                 command.Parameters.AddWithValue("@prioritet", textBoxPrioritet.Text);
             }
-            if (!string.IsNullOrEmpty(textBoxStatus.Text)) {
-                command.Parameters.AddWithValue("@status", textBoxStatus.Text);
-            }
             if (!string.IsNullOrEmpty(textBoxCena.Text)) {
                 command.Parameters.AddWithValue("@cena", textBoxCena.Text);
+            }
+            if (!string.IsNullOrEmpty(textBoxUsvojen.Text)) {
+                command.Parameters.AddWithValue("@usvojen", textBoxUsvojen.Text);
             }
             if (!string.IsNullOrEmpty(textBoxUGuid.Text)) {
                 command.Parameters.AddWithValue("@uGuid", textBoxUGuid.Text.ToUpper());
@@ -347,12 +346,7 @@ namespace CSharp_SQL_App {
                 e.Handled = true;
             }
         }
-        private void UgovoriForm_ResizeBegin_1(object sender, EventArgs e) {
-            this.SuspendLayout();            
-        }
-        private void UgovoriForm_ResizeEnd_1(object sender, EventArgs e) {
-            this.ResumeLayout(true);
-        }
+        
 
         private void buttonUgovorFiles_Click(object sender, EventArgs e) {
             if (dataGridViewUgovori.SelectedRows.Count > 0) {
@@ -383,5 +377,7 @@ namespace CSharp_SQL_App {
                 dataGridViewUgovori.Rows[index].Selected = true;
             }           
         }
+
+        
     }
 }

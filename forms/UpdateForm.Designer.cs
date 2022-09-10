@@ -56,10 +56,10 @@
             this.labelTipUgovora = new System.Windows.Forms.Label();
             this.labelCena = new System.Windows.Forms.Label();
             this.textBoxCena = new System.Windows.Forms.TextBox();
-            this.labelStatus = new System.Windows.Forms.Label();
-            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.labelUsvojen = new System.Windows.Forms.Label();
             this.textBoxFaza = new System.Windows.Forms.TextBox();
             this.textBoxNapomena = new System.Windows.Forms.TextBox();
+            this.checkBoxUsvojen = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -407,26 +407,17 @@
             this.textBoxCena.TabIndex = 13;
             this.textBoxCena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCena_KeyPress);
             // 
-            // labelStatus
+            // labelUsvojen
             // 
-            this.labelStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelStatus.AutoSize = true;
-            this.labelStatus.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatus.Location = new System.Drawing.Point(355, 256);
-            this.labelStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(40, 16);
-            this.labelStatus.TabIndex = 38;
-            this.labelStatus.Text = "Status";
-            // 
-            // comboBoxStatus
-            // 
-            this.comboBoxStatus.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.comboBoxStatus.FormattingEnabled = true;
-            this.comboBoxStatus.Location = new System.Drawing.Point(452, 252);
-            this.comboBoxStatus.Name = "comboBoxStatus";
-            this.comboBoxStatus.Size = new System.Drawing.Size(227, 24);
-            this.comboBoxStatus.TabIndex = 14;
+            this.labelUsvojen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelUsvojen.AutoSize = true;
+            this.labelUsvojen.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsvojen.Location = new System.Drawing.Point(355, 256);
+            this.labelUsvojen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelUsvojen.Name = "labelUsvojen";
+            this.labelUsvojen.Size = new System.Drawing.Size(50, 16);
+            this.labelUsvojen.TabIndex = 38;
+            this.labelUsvojen.Text = "Usvojen";
             // 
             // textBoxFaza
             // 
@@ -446,13 +437,22 @@
             this.textBoxNapomena.Size = new System.Drawing.Size(227, 21);
             this.textBoxNapomena.TabIndex = 6;
             // 
+            // checkBoxUsvojen
+            // 
+            this.checkBoxUsvojen.AutoSize = true;
+            this.checkBoxUsvojen.Location = new System.Drawing.Point(452, 257);
+            this.checkBoxUsvojen.Name = "checkBoxUsvojen";
+            this.checkBoxUsvojen.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxUsvojen.TabIndex = 39;
+            this.checkBoxUsvojen.UseVisualStyleBackColor = true;
+            // 
             // UpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 429);
-            this.Controls.Add(this.comboBoxStatus);
-            this.Controls.Add(this.labelStatus);
+            this.Controls.Add(this.checkBoxUsvojen);
+            this.Controls.Add(this.labelUsvojen);
             this.Controls.Add(this.textBoxCena);
             this.Controls.Add(this.labelCena);
             this.Controls.Add(this.labelTipUgovora);
@@ -530,9 +530,9 @@
         private System.Windows.Forms.Label labelTipUgovora;
         private System.Windows.Forms.Label labelCena;
         private System.Windows.Forms.TextBox textBoxCena;
-        private System.Windows.Forms.Label labelStatus;
-        private System.Windows.Forms.ComboBox comboBoxStatus;
+        private System.Windows.Forms.Label labelUsvojen;
         private System.Windows.Forms.TextBox textBoxFaza;
         private System.Windows.Forms.TextBox textBoxNapomena;
+        private System.Windows.Forms.CheckBox checkBoxUsvojen;
     }
 }
