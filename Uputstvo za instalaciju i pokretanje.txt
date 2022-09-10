@@ -1,0 +1,7 @@
+1. Potrebno je preuzeti sa interneta access database engine 2010 i 2016 u odgovarajućoj verziji (x64/x32) i barem .NET Framework 4.8 ili više.
+2. Instalirati oba access database engine-a u zavisnosti od tipa procesora (x64/x32).
+3. Kopirati odgovarajući folder i "ugovori.accdb" fajl na željene destinacije.
+4. Izmeniti "InfoplanUgovori.exe.config" file i promeniti connectionString red da odgovara putanji "ugovori.accdb" fajla npr:
+	connectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Infoplan\Baza\ugovori.accdb"
+5. Pokretanje aplikacije je sa "InfoplanUgovori.exe"
+6. Primedbe i pitanja možete poslati na lazarbojanic5@gmail.com
