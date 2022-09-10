@@ -100,6 +100,7 @@ namespace CSharp_SQL_App {
             }
             
             textBoxUsvajac.Text = oldUgovor.usvajac;
+            textBoxVremeRada.Text = oldUgovor.vremeRada;
         }
         private void buttonSacuvaj_Click(object sender, EventArgs e) {         
             try {
@@ -138,7 +139,7 @@ namespace CSharp_SQL_App {
                     newUgovor.datumUsvajanja = new DateTime(1970, 1, 1);
                     newUgovor.usvajac = "";
                 }
-                
+                newUgovor.vremeRada = textBoxVremeRada.Text;
                 newUgovor.vremeUgovora = DateTime.Now;
                 newUgovor.uGuid = oldUgovor.uGuid;
                 newUgovor.saveToDatabase();

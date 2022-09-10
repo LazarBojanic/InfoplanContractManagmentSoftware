@@ -71,11 +71,14 @@ namespace CSharp_SQL_App.model {
                 if (!oldUgovor.usvojen.Equals(newUgovor.usvojen)) {
                     addChangeLogField("ugovor", "usvojen", "kreairanje", oldUgovor.uGuid, oldUgovor.usvojen.ToString(), newUgovor.usvojen.ToString());
                 }
-                if (!oldUgovor.usvojen.Equals(newUgovor.usvojen)) {
+                if (!oldUgovor.datumUsvajanja.Equals(newUgovor.datumUsvajanja)) {
                     addChangeLogField("ugovor", "datumUsvajanja", "kreairanje", oldUgovor.uGuid, oldUgovor.datumUsvajanja.ToString(), newUgovor.datumUsvajanja.ToString());
                 }
-                if (!oldUgovor.usvojen.Equals(newUgovor.usvojen)) {
+                if (!oldUgovor.usvajac.Equals(newUgovor.usvajac)) {
                     addChangeLogField("ugovor", "usvajac", "kreairanje", oldUgovor.uGuid, oldUgovor.usvajac.ToString(), newUgovor.usvajac.ToString());
+                }
+                if (!oldUgovor.vremeRada.Equals(newUgovor.vremeRada)) {
+                    addChangeLogField("ugovor", "vremeRada", "kreairanje", oldUgovor.uGuid, oldUgovor.vremeRada.ToString(), newUgovor.vremeRada.ToString());
                 }
             }
             else if(newUgovor.id == 0) {
@@ -118,11 +121,14 @@ namespace CSharp_SQL_App.model {
                 if (!oldUgovor.usvojen.Equals(newUgovor.usvojen)) {
                     addChangeLogField("ugovor", "usvojen", "brisanje", oldUgovor.uGuid, oldUgovor.usvojen.ToString(), newUgovor.usvojen.ToString());
                 }
-                if (!oldUgovor.usvojen.Equals(newUgovor.usvojen)) {
+                if (!oldUgovor.datumUsvajanja.Equals(newUgovor.datumUsvajanja)) {
                     addChangeLogField("ugovor", "datumUsvajanja", "brisanje", oldUgovor.uGuid, oldUgovor.datumUsvajanja.ToString(), newUgovor.datumUsvajanja.ToString());
                 }
-                if (!oldUgovor.usvojen.Equals(newUgovor.usvojen)) {
+                if (!oldUgovor.usvajac.Equals(newUgovor.usvajac)) {
                     addChangeLogField("ugovor", "usvajac", "brisanje", oldUgovor.uGuid, oldUgovor.usvajac.ToString(), newUgovor.usvajac.ToString());
+                }
+                if (!oldUgovor.vremeRada.Equals(newUgovor.vremeRada)) {
+                    addChangeLogField("ugovor", "vremeRada", "brisanje", oldUgovor.uGuid, oldUgovor.vremeRada.ToString(), newUgovor.vremeRada.ToString());
                 }
             }
             else {
@@ -165,11 +171,14 @@ namespace CSharp_SQL_App.model {
                 if (!oldUgovor.usvojen.Equals(newUgovor.usvojen)) {
                     addChangeLogField("ugovor", "usvojen", "promena", oldUgovor.uGuid, oldUgovor.usvojen.ToString(), newUgovor.usvojen.ToString());
                 }
-                if (!oldUgovor.usvojen.Equals(newUgovor.usvojen)) {
+                if (!oldUgovor.datumUsvajanja.Equals(newUgovor.datumUsvajanja)) {
                     addChangeLogField("ugovor", "datumUsvajanja", "promena", oldUgovor.uGuid, oldUgovor.datumUsvajanja.ToString(), newUgovor.datumUsvajanja.ToString());
                 }
-                if (!oldUgovor.usvojen.Equals(newUgovor.usvojen)) {
+                if (!oldUgovor.usvajac.Equals(newUgovor.usvajac)) {
                     addChangeLogField("ugovor", "usvajac", "promena", oldUgovor.uGuid, oldUgovor.usvajac.ToString(), newUgovor.usvajac.ToString());
+                }
+                if (!oldUgovor.vremeRada.Equals(newUgovor.vremeRada)) {
+                    addChangeLogField("ugovor", "vremeRada", "promena", oldUgovor.uGuid, oldUgovor.vremeRada.ToString(), newUgovor.vremeRada.ToString());
                 }
             }
 

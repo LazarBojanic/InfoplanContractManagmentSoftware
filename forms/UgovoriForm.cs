@@ -65,7 +65,8 @@ namespace CSharp_SQL_App {
             OleDbCommand command;
             DataTable dt;
             String query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
-                " datumUgovora, rokPoUgovoru, krajnjiRok, obim, prioritet, cena, usvojen, datumUsvajanja, usvajac, uGuid FROM ugovor ORDER BY id";
+                " datumUgovora, rokPoUgovoru, krajnjiRok, obim, prioritet, cena, usvojen, datumUsvajanja," +
+                " usvajac, vremeRada, uGuid FROM ugovor ORDER BY id";
             connection = GetConnection();
             connection.Open();
             command = new OleDbCommand(query, connection);
@@ -110,7 +111,8 @@ namespace CSharp_SQL_App {
             DataTable dt;
             connection = GetConnection();
             String query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
-                " datumUgovora, rokPoUgovoru, krajnjiRok, obim, prioritet, cena, usvojen, datumUsvajanja, usvajac, uGuid FROM ugovor WHERE id IS NOT NULL";
+                " datumUgovora, rokPoUgovoru, krajnjiRok, obim, prioritet, cena, usvojen, datumUsvajanja," +
+                " usvajac, vremeRada, uGuid FROM ugovor WHERE id IS NOT NULL";
             if (!string.IsNullOrEmpty(textBoxId.Text)) {
                 if (radioButtonIdLesser.Checked) {
                     query += " AND id < @id";
@@ -257,6 +259,9 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(textBoxUsvajac.Text)) {
                 query += " AND UCASE(usvajac) LIKE '%' + @usvajac + '%'";
             }
+            if (!string.IsNullOrEmpty(textBoxVremeRada.Text)) {
+                query += " AND UCASE(vremeRada) LIKE '%' + @vremeRada + '%'";
+            }
             if (!string.IsNullOrEmpty(textBoxUGuid.Text)) {
                 query += " AND UCASE(uGuid) LIKE '%' + @uGuid + '%'";
             }
@@ -308,8 +313,11 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(dateTimeDatumUsvajanja.Text) && checkBoxDatumUsvajanjaIncludeInSearch.Checked) {
                 command.Parameters.Add("@datumUsvajanja", OleDbType.Date).Value = dateTimeDatumUsvajanja.Value.Date;
             }
-            if (!string.IsNullOrEmpty(textBoxUsvojen.Text)) {
-                command.Parameters.AddWithValue("@usvojen", textBoxUsvojen.Text);
+            if (!string.IsNullOrEmpty(textBoxUsvajac.Text)) {
+                command.Parameters.AddWithValue("@usvajac", textBoxUsvajac.Text);
+            }
+            if (!string.IsNullOrEmpty(textBoxVremeRada.Text)) {
+                command.Parameters.AddWithValue("@vremeRada", textBoxVremeRada.Text);
             }
             if (!string.IsNullOrEmpty(textBoxUGuid.Text)) {
                 command.Parameters.AddWithValue("@uGuid", textBoxUGuid.Text.ToUpper());
