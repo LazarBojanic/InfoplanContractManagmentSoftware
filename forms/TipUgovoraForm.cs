@@ -63,42 +63,52 @@ namespace CSharp_SQL_App {
             }
         }
         public void addTipUgovora() {
-            if (!string.IsNullOrEmpty(tipUgovora)) {
-                DataTable dt;
-                BindingSource bs;
-                OleDbConnection connection;
-                OleDbCommand command;
-                connection = GetConnection();
-                connection.Open();
-                String query = "INSERT INTO tipUgovora (tipUgovora) VALUES (@tipUgovora)";
-                command = new OleDbCommand(query, connection);
-                command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
-                dt = new DataTable();
-                bs = new BindingSource();
-                dt.Load(command.ExecuteReader());
-                bs.DataSource = dt;
-                dataGridViewTipUgovora.DataSource = bs;
-                connection.Close();
+            try {
+                if (!string.IsNullOrEmpty(tipUgovora)) {
+                    DataTable dt;
+                    BindingSource bs;
+                    OleDbConnection connection;
+                    OleDbCommand command;
+                    connection = GetConnection();
+                    connection.Open();
+                    String query = "INSERT INTO tipUgovora (tipUgovora) VALUES (@tipUgovora)";
+                    command = new OleDbCommand(query, connection);
+                    command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
+                    dt = new DataTable();
+                    bs = new BindingSource();
+                    dt.Load(command.ExecuteReader());
+                    bs.DataSource = dt;
+                    dataGridViewTipUgovora.DataSource = bs;
+                    connection.Close();
+                }
+            }
+            catch (OleDbException) {
+                MessageBox.Show("Vrednost već postoji u bazi podataka");
             }
         }
         public void updateTipUgovora() {
-            if (!string.IsNullOrEmpty(tipUgovora)) {
-                DataTable dt;
-                BindingSource bs;
-                OleDbConnection connection;
-                OleDbCommand command;
-                connection = GetConnection();
-                connection.Open();
-                String query = "UPDATE tipUgovora SET tipUgovora = @tipUgovora WHERE tipUgovora = @tipUgovoraZaIzmenu";
-                command = new OleDbCommand(query, connection);
-                command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
-                command.Parameters.AddWithValue("@tipUgovoraZaIzmenu", tipUgovoraZaIzmenu);
-                dt = new DataTable();
-                bs = new BindingSource();
-                dt.Load(command.ExecuteReader());
-                bs.DataSource = dt;
-                dataGridViewTipUgovora.DataSource = bs;
-                connection.Close();
+            try {
+                if (!string.IsNullOrEmpty(tipUgovora)) {
+                    DataTable dt;
+                    BindingSource bs;
+                    OleDbConnection connection;
+                    OleDbCommand command;
+                    connection = GetConnection();
+                    connection.Open();
+                    String query = "UPDATE tipUgovora SET tipUgovora = @tipUgovora WHERE tipUgovora = @tipUgovoraZaIzmenu";
+                    command = new OleDbCommand(query, connection);
+                    command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
+                    command.Parameters.AddWithValue("@tipUgovoraZaIzmenu", tipUgovoraZaIzmenu);
+                    dt = new DataTable();
+                    bs = new BindingSource();
+                    dt.Load(command.ExecuteReader());
+                    bs.DataSource = dt;
+                    dataGridViewTipUgovora.DataSource = bs;
+                    connection.Close();
+                }
+            }
+            catch (OleDbException) {
+                MessageBox.Show("Vrednost već postoji u bazi podataka");
             }
         }
         public void fillTipUgovoraDataGrid() {

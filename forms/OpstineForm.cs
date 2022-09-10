@@ -67,42 +67,52 @@ namespace CSharp_SQL_App {
             }
         }
         public void addOpstina() {
-            if (!string.IsNullOrEmpty(opstina)) {
-                DataTable dt;
-                BindingSource bs;
-                OleDbConnection connection;
-                OleDbCommand command;
-                connection = GetConnection();
-                connection.Open();
-                String query = "INSERT INTO opstina (opstina) VALUES (@opstina)";
-                command = new OleDbCommand(query, connection);
-                command.Parameters.AddWithValue("@opstina", opstina);
-                dt = new DataTable();
-                bs = new BindingSource();
-                dt.Load(command.ExecuteReader());
-                bs.DataSource = dt;
-                dataGridViewOpstine.DataSource = bs;
-                connection.Close();
+            try {
+                if (!string.IsNullOrEmpty(opstina)) {
+                    DataTable dt;
+                    BindingSource bs;
+                    OleDbConnection connection;
+                    OleDbCommand command;
+                    connection = GetConnection();
+                    connection.Open();
+                    String query = "INSERT INTO opstina (opstina) VALUES (@opstina)";
+                    command = new OleDbCommand(query, connection);
+                    command.Parameters.AddWithValue("@opstina", opstina);
+                    dt = new DataTable();
+                    bs = new BindingSource();
+                    dt.Load(command.ExecuteReader());
+                    bs.DataSource = dt;
+                    dataGridViewOpstine.DataSource = bs;
+                    connection.Close();
+                }
+            }
+            catch (OleDbException) {
+                MessageBox.Show("Vrednost već postoji u bazi podataka");
             }
         }
         public void updateOpstina() {
-            if (!string.IsNullOrEmpty(opstina)) {
-                DataTable dt;
-                BindingSource bs;
-                OleDbConnection connection;
-                OleDbCommand command;
-                connection = GetConnection();
-                connection.Open();
-                String query = "UPDATE opstina SET opstina = @opstina WHERE opstina = @opstinaZaIzmenu";
-                command = new OleDbCommand(query, connection);
-                command.Parameters.AddWithValue("@opstina", opstina);
-                command.Parameters.AddWithValue("@opstinaZaIzmenu", opstinaZaIzmenu);
-                dt = new DataTable();
-                bs = new BindingSource();
-                dt.Load(command.ExecuteReader());
-                bs.DataSource = dt;
-                dataGridViewOpstine.DataSource = bs;
-                connection.Close();
+            try {
+                if (!string.IsNullOrEmpty(opstina)) {
+                    DataTable dt;
+                    BindingSource bs;
+                    OleDbConnection connection;
+                    OleDbCommand command;
+                    connection = GetConnection();
+                    connection.Open();
+                    String query = "UPDATE opstina SET opstina = @opstina WHERE opstina = @opstinaZaIzmenu";
+                    command = new OleDbCommand(query, connection);
+                    command.Parameters.AddWithValue("@opstina", opstina);
+                    command.Parameters.AddWithValue("@opstinaZaIzmenu", opstinaZaIzmenu);
+                    dt = new DataTable();
+                    bs = new BindingSource();
+                    dt.Load(command.ExecuteReader());
+                    bs.DataSource = dt;
+                    dataGridViewOpstine.DataSource = bs;
+                    connection.Close();
+                }
+            }
+            catch (OleDbException) {
+                MessageBox.Show("Vrednost već postoji u bazi podataka");
             }
         }
 
