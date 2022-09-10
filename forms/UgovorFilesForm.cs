@@ -13,6 +13,9 @@ namespace CSharp_SQL_App.forms {
             if (!MainForm.user.privilegija.Equals("administrator")) {
                 buttonUkloni.Enabled = false;
             }
+            if (MainForm.user.privilegija.Equals("turista")) {
+                buttonDodaj.Enabled = false;
+            }
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dataGridViewUgovorFiles, new object[] { true });
