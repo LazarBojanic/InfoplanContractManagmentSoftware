@@ -38,7 +38,7 @@
             // buttonOpstine
             // 
             this.buttonOpstine.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOpstine.Location = new System.Drawing.Point(72, 72);
+            this.buttonOpstine.Location = new System.Drawing.Point(81, 78);
             this.buttonOpstine.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOpstine.Name = "buttonOpstine";
             this.buttonOpstine.Size = new System.Drawing.Size(160, 63);
@@ -51,7 +51,7 @@
             // 
             this.buttonPrikazUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPrikazUgovora.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrikazUgovora.Location = new System.Drawing.Point(368, 72);
+            this.buttonPrikazUgovora.Location = new System.Drawing.Point(359, 78);
             this.buttonPrikazUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPrikazUgovora.Name = "buttonPrikazUgovora";
             this.buttonPrikazUgovora.Size = new System.Drawing.Size(160, 63);
@@ -84,7 +84,7 @@
             // 
             this.buttonLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.buttonLogout.Location = new System.Drawing.Point(518, 311);
+            this.buttonLogout.Location = new System.Drawing.Point(519, 278);
             this.buttonLogout.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(71, 44);
@@ -97,7 +97,7 @@
             // 
             this.buttonKorisnici.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonKorisnici.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.buttonKorisnici.Location = new System.Drawing.Point(368, 311);
+            this.buttonKorisnici.Location = new System.Drawing.Point(369, 278);
             this.buttonKorisnici.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKorisnici.Name = "buttonKorisnici";
             this.buttonKorisnici.Size = new System.Drawing.Size(71, 44);
@@ -110,7 +110,7 @@
             // 
             this.buttonInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInfo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.buttonInfo.Location = new System.Drawing.Point(443, 311);
+            this.buttonInfo.Location = new System.Drawing.Point(444, 278);
             this.buttonInfo.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInfo.Name = "buttonInfo";
             this.buttonInfo.Size = new System.Drawing.Size(71, 44);
@@ -123,7 +123,7 @@
             // 
             this.buttonIzmenaUsernamePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonIzmenaUsernamePassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.buttonIzmenaUsernamePassword.Location = new System.Drawing.Point(368, 176);
+            this.buttonIzmenaUsernamePassword.Location = new System.Drawing.Point(359, 192);
             this.buttonIzmenaUsernamePassword.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmenaUsernamePassword.Name = "buttonIzmenaUsernamePassword";
             this.buttonIzmenaUsernamePassword.Size = new System.Drawing.Size(160, 63);
@@ -134,8 +134,9 @@
             // 
             // buttonTipoviUgovora
             // 
+            this.buttonTipoviUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonTipoviUgovora.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTipoviUgovora.Location = new System.Drawing.Point(72, 176);
+            this.buttonTipoviUgovora.Location = new System.Drawing.Point(81, 192);
             this.buttonTipoviUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTipoviUgovora.Name = "buttonTipoviUgovora";
             this.buttonTipoviUgovora.Size = new System.Drawing.Size(160, 63);
@@ -149,7 +150,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(600, 333);
             this.Controls.Add(this.buttonTipoviUgovora);
             this.Controls.Add(this.buttonIzmenaUsernamePassword);
             this.Controls.Add(this.buttonInfo);
@@ -161,7 +162,7 @@
             this.Controls.Add(this.buttonOpstine);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(616, 405);
+            this.MinimumSize = new System.Drawing.Size(616, 372);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Glavni meni";

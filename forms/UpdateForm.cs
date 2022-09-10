@@ -99,7 +99,7 @@ namespace CSharp_SQL_App {
                 dateTimeDatumUsvajanja.Value = oldUgovor.datumUsvajanja;
             }
             
-            textBoxUsvajac.Text = oldUgovor.usvajac;
+            textBoxBrojSluzbenogVlasnika.Text = oldUgovor.brojSluzbenogVlasnika;
             textBoxVremeRada.Text = oldUgovor.vremeRada;
         }
         private void buttonSacuvaj_Click(object sender, EventArgs e) {         
@@ -133,11 +133,11 @@ namespace CSharp_SQL_App {
                 }
                 if (checkBoxUsvojen.Checked) {
                     newUgovor.datumUsvajanja = dateTimeDatumUsvajanja.Value;
-                    newUgovor.usvajac = textBoxUsvajac.Text;
+                    newUgovor.brojSluzbenogVlasnika = textBoxBrojSluzbenogVlasnika.Text;
                 }
                 else {
                     newUgovor.datumUsvajanja = new DateTime(1970, 1, 1);
-                    newUgovor.usvajac = "";
+                    newUgovor.brojSluzbenogVlasnika = "";
                 }
                 newUgovor.vremeRada = textBoxVremeRada.Text;
                 newUgovor.vremeUgovora = DateTime.Now;
@@ -236,14 +236,14 @@ namespace CSharp_SQL_App {
             if (checkBoxUsvojen.Checked) {
                 labelDatumUsvajanja.Enabled = true;
                 dateTimeDatumUsvajanja.Enabled = true;
-                labelUsvajac.Enabled = true;
-                textBoxUsvajac.Enabled = true;
+                labelBrojSluzbenogVlasnika.Enabled = true;
+                textBoxBrojSluzbenogVlasnika.Enabled = true;
             }
             else {
                 labelDatumUsvajanja.Enabled = false;
                 dateTimeDatumUsvajanja.Enabled = false;
-                labelUsvajac.Enabled = false;
-                textBoxUsvajac.Enabled = false;
+                labelBrojSluzbenogVlasnika.Enabled = false;
+                textBoxBrojSluzbenogVlasnika.Enabled = false;
             }
         }
     }

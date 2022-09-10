@@ -24,14 +24,14 @@ namespace CSharp_SQL_App.model {
         public decimal cena { get; set; }
         public String usvojen { get; set; }
         public DateTime datumUsvajanja { get; set; }
-        public String usvajac { get; set; }
+        public String brojSluzbenogVlasnika { get; set; }
         public String vremeRada { get; set; }
         public DateTime vremeUgovora { get; set; }
         public String uGuid { get; set; }
 
         public Ugovor(int id, string opstina, string nazivPlana, string urbanista, string faza, string tipUgovora,
             string napomena, DateTime datumUgovora, string rokPoUgovoru, DateTime krajnjiRok, int obim,
-            int prioritet, decimal cena, string usvojen, DateTime datumUsvajanja, string usvajac, string vremeRada,
+            int prioritet, decimal cena, string usvojen, DateTime datumUsvajanja, string brojSluzbenogVlasnika, string vremeRada,
             DateTime vremeUgovora, string uGuid) {
             this.id = id;
             this.opstina = opstina;
@@ -48,7 +48,7 @@ namespace CSharp_SQL_App.model {
             this.cena = cena;
             this.usvojen = usvojen;
             this.datumUsvajanja = datumUsvajanja;
-            this.usvajac = usvajac;
+            this.brojSluzbenogVlasnika = brojSluzbenogVlasnika;
             this.vremeRada = vremeRada;
             this.vremeUgovora = vremeUgovora;
             this.uGuid = uGuid;
@@ -69,7 +69,7 @@ namespace CSharp_SQL_App.model {
             this.cena = 0;
             this.usvojen = "Ne";
             this.datumUsvajanja = new DateTime(1970, 1, 1);
-            this.usvajac = "";
+            this.brojSluzbenogVlasnika = "";
             this.vremeRada = "";
             this.vremeUgovora = DateTime.Now;
             this.uGuid = Guid.NewGuid().ToString();
@@ -210,11 +210,11 @@ namespace CSharp_SQL_App.model {
                     }
                 }
                 try {
-                    usvajac = dataReader.GetString(dataReader.GetOrdinal("usvajac"));
+                    brojSluzbenogVlasnika = dataReader.GetString(dataReader.GetOrdinal("brojSluzbenogVlasnika"));
                 }
                 catch (Exception ex) {
                     if (ex is NullReferenceException || ex is InvalidCastException) {
-                        usvajac = "";
+                        brojSluzbenogVlasnika = "";
                     }
                 }
                 try {
@@ -257,9 +257,9 @@ namespace CSharp_SQL_App.model {
             try {
                 if (id == 0) {
                     string query = "INSERT INTO ugovor (opstina, nazivPlana, urbanista, tipUgovora, faza, napomena, datumUgovora," +
-                        " rokPoUgovoru, obim, krajnjiRok, prioritet, cena, usvojen, datumUsvajanja, usvajac, vremeRada, vremeUgovora, uGuid) VALUES" +
+                        " rokPoUgovoru, obim, krajnjiRok, prioritet, cena, usvojen, datumUsvajanja, brojSluzbenogVlasnika, vremeRada, vremeUgovora, uGuid) VALUES" +
                         " (@opstina, @nazivPlana, @urbanista, @tipUgovora, @faza, @napomena, @datumUgovora, @rokPoUgovoru, @obim, @krajnjiRok," +
-                        " @prioritet, @cena, @usvojen, @datumUsvajanja, @usvajac, @vremeRada, @vremeUgovora, @uGuid)";
+                        " @prioritet, @cena, @usvojen, @datumUsvajanja, @brojSluzbenogVlasnika, @vremeRada, @vremeUgovora, @uGuid)";
                     OleDbCommand command = new OleDbCommand(query, connection);
                     command.Parameters.AddWithValue("@opstina", opstina);
                     command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
@@ -275,7 +275,7 @@ namespace CSharp_SQL_App.model {
                     command.Parameters.AddWithValue("@cena", cena);
                     command.Parameters.AddWithValue("@usvojen", usvojen);
                     command.Parameters.AddWithValue("@datumUsvajanja", datumUsvajanja);
-                    command.Parameters.AddWithValue("@usvajac", usvajac);
+                    command.Parameters.AddWithValue("@brojSluzbenogVlasnika", brojSluzbenogVlasnika);
                     command.Parameters.AddWithValue("@vremeRada", vremeRada);
                     command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = ChangeLog.vremeAkcijeWithoutMilliseconds(vremeUgovora);
                     command.Parameters.AddWithValue("@uGuid", uGuid);
@@ -285,7 +285,7 @@ namespace CSharp_SQL_App.model {
                     string query = "UPDATE ugovor SET opstina = @opstina, nazivPlana = @nazivPlana, urbanista = @urbanista, tipUgovora = @tipUgovora," +
                         " faza = @faza, napomena = @napomena, datumUgovora = @datumUgovora, rokPoUgovoru = @rokPoUgovoru, obim = @obim," +
                         " krajnjiRok = @krajnjiRok, prioritet = @prioritet, cena = @cena, usvojen = @usvojen, datumUsvajanja = @datumUsvajanja," +
-                        " usvajac = @usvajac, vremeRada = @vremeRada, vremeUgovora = @vremeUgovora WHERE id = @id";
+                        " brojSluzbenogVlasnika = @brojSluzbenogVlasnika, vremeRada = @vremeRada, vremeUgovora = @vremeUgovora WHERE id = @id";
                     OleDbCommand command = new OleDbCommand(query, connection);
                     command.Parameters.AddWithValue("@opstina", opstina);
                     command.Parameters.AddWithValue("@nazivPlana", nazivPlana);
@@ -301,7 +301,7 @@ namespace CSharp_SQL_App.model {
                     command.Parameters.AddWithValue("@cena", cena);
                     command.Parameters.AddWithValue("@usvojen", usvojen);
                     command.Parameters.AddWithValue("@datumUsvajanja", datumUsvajanja);
-                    command.Parameters.AddWithValue("@usvajac", usvajac);
+                    command.Parameters.AddWithValue("@brojSluzbenogVlasnika", brojSluzbenogVlasnika);
                     command.Parameters.AddWithValue("@vremeRada", vremeRada);
                     command.Parameters.Add("@vremeUgovora", OleDbType.DBTimeStamp).Value = ChangeLog.vremeAkcijeWithoutMilliseconds(vremeUgovora);
                     command.Parameters.AddWithValue("@id", id);

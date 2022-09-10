@@ -59,8 +59,8 @@
             this.checkBoxUsvojen = new System.Windows.Forms.CheckBox();
             this.dateTimeDatumUsvajanja = new System.Windows.Forms.DateTimePicker();
             this.labelDatumUsvajanja = new System.Windows.Forms.Label();
-            this.labelUsvajac = new System.Windows.Forms.Label();
-            this.textBoxUsvajac = new System.Windows.Forms.TextBox();
+            this.labelBrojSluzbenogVlasnika = new System.Windows.Forms.Label();
+            this.textBoxBrojSluzbenogVlasnika = new System.Windows.Forms.TextBox();
             this.textBoxVremeRada = new System.Windows.Forms.TextBox();
             this.labelVremeRada = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -198,7 +198,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(398, 64);
+            this.label8.Location = new System.Drawing.Point(371, 64);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 16);
@@ -210,7 +210,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(398, 26);
+            this.label9.Location = new System.Drawing.Point(371, 26);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 16);
@@ -222,7 +222,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(398, 102);
+            this.label10.Location = new System.Drawing.Point(371, 102);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 16);
@@ -237,7 +237,7 @@
             this.buttonSacuvaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSacuvaj.Name = "buttonSacuvaj";
             this.buttonSacuvaj.Size = new System.Drawing.Size(200, 63);
-            this.buttonSacuvaj.TabIndex = 17;
+            this.buttonSacuvaj.TabIndex = 19;
             this.buttonSacuvaj.Text = "Sačuvaj";
             this.buttonSacuvaj.UseVisualStyleBackColor = true;
             this.buttonSacuvaj.Click += new System.EventHandler(this.buttonSacuvaj_Click);
@@ -251,7 +251,7 @@
             this.buttonOtkazi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOtkazi.Name = "buttonOtkazi";
             this.buttonOtkazi.Size = new System.Drawing.Size(200, 63);
-            this.buttonOtkazi.TabIndex = 18;
+            this.buttonOtkazi.TabIndex = 20;
             this.buttonOtkazi.Text = "Otkaži";
             this.buttonOtkazi.UseVisualStyleBackColor = true;
             this.buttonOtkazi.Click += new System.EventHandler(this.buttonOtkazi_Click);
@@ -315,11 +315,11 @@
             this.labelUGuid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUGuid.AutoSize = true;
             this.labelUGuid.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUGuid.Location = new System.Drawing.Point(398, 330);
+            this.labelUGuid.Location = new System.Drawing.Point(371, 330);
             this.labelUGuid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUGuid.Name = "labelUGuid";
             this.labelUGuid.Size = new System.Drawing.Size(41, 16);
-            this.labelUGuid.TabIndex = 28;
+            this.labelUGuid.TabIndex = 0;
             this.labelUGuid.Text = "uGuid";
             // 
             // textBoxUGuid
@@ -331,7 +331,7 @@
             this.textBoxUGuid.Name = "textBoxUGuid";
             this.textBoxUGuid.ReadOnly = true;
             this.textBoxUGuid.Size = new System.Drawing.Size(227, 21);
-            this.textBoxUGuid.TabIndex = 19;
+            this.textBoxUGuid.TabIndex = 18;
             this.textBoxUGuid.TabStop = false;
             // 
             // comboBoxRokPoUgovoru
@@ -378,7 +378,7 @@
             this.labelCena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCena.AutoSize = true;
             this.labelCena.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCena.Location = new System.Drawing.Point(398, 140);
+            this.labelCena.Location = new System.Drawing.Point(371, 140);
             this.labelCena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCena.Name = "labelCena";
             this.labelCena.Size = new System.Drawing.Size(38, 16);
@@ -401,7 +401,7 @@
             this.labelUsvojen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUsvojen.AutoSize = true;
             this.labelUsvojen.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsvojen.Location = new System.Drawing.Point(398, 178);
+            this.labelUsvojen.Location = new System.Drawing.Point(371, 178);
             this.labelUsvojen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUsvojen.Name = "labelUsvojen";
             this.labelUsvojen.Size = new System.Drawing.Size(50, 16);
@@ -450,34 +450,34 @@
             this.labelDatumUsvajanja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDatumUsvajanja.AutoSize = true;
             this.labelDatumUsvajanja.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDatumUsvajanja.Location = new System.Drawing.Point(398, 216);
+            this.labelDatumUsvajanja.Location = new System.Drawing.Point(371, 216);
             this.labelDatumUsvajanja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDatumUsvajanja.Name = "labelDatumUsvajanja";
             this.labelDatumUsvajanja.Size = new System.Drawing.Size(101, 16);
             this.labelDatumUsvajanja.TabIndex = 0;
             this.labelDatumUsvajanja.Text = "Datum usvajanja";
             // 
-            // labelUsvajac
+            // labelBrojSluzbenogVlasnika
             // 
-            this.labelUsvajac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelUsvajac.AutoSize = true;
-            this.labelUsvajac.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsvajac.Location = new System.Drawing.Point(398, 254);
-            this.labelUsvajac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelUsvajac.Name = "labelUsvajac";
-            this.labelUsvajac.Size = new System.Drawing.Size(52, 16);
-            this.labelUsvajac.TabIndex = 0;
-            this.labelUsvajac.Text = "Usvajač";
+            this.labelBrojSluzbenogVlasnika.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelBrojSluzbenogVlasnika.AutoSize = true;
+            this.labelBrojSluzbenogVlasnika.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBrojSluzbenogVlasnika.Location = new System.Drawing.Point(371, 254);
+            this.labelBrojSluzbenogVlasnika.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelBrojSluzbenogVlasnika.Name = "labelBrojSluzbenogVlasnika";
+            this.labelBrojSluzbenogVlasnika.Size = new System.Drawing.Size(129, 16);
+            this.labelBrojSluzbenogVlasnika.TabIndex = 0;
+            this.labelBrojSluzbenogVlasnika.Text = "Broj službenog vlasnika";
             // 
-            // textBoxUsvajac
+            // textBoxBrojSluzbenogVlasnika
             // 
-            this.textBoxUsvajac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUsvajac.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.textBoxUsvajac.Location = new System.Drawing.Point(504, 252);
-            this.textBoxUsvajac.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxUsvajac.Name = "textBoxUsvajac";
-            this.textBoxUsvajac.Size = new System.Drawing.Size(227, 21);
-            this.textBoxUsvajac.TabIndex = 16;
+            this.textBoxBrojSluzbenogVlasnika.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxBrojSluzbenogVlasnika.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.textBoxBrojSluzbenogVlasnika.Location = new System.Drawing.Point(504, 252);
+            this.textBoxBrojSluzbenogVlasnika.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxBrojSluzbenogVlasnika.Name = "textBoxBrojSluzbenogVlasnika";
+            this.textBoxBrojSluzbenogVlasnika.Size = new System.Drawing.Size(227, 21);
+            this.textBoxBrojSluzbenogVlasnika.TabIndex = 16;
             // 
             // textBoxVremeRada
             // 
@@ -487,18 +487,18 @@
             this.textBoxVremeRada.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxVremeRada.Name = "textBoxVremeRada";
             this.textBoxVremeRada.Size = new System.Drawing.Size(227, 21);
-            this.textBoxVremeRada.TabIndex = 30;
+            this.textBoxVremeRada.TabIndex = 17;
             // 
             // labelVremeRada
             // 
             this.labelVremeRada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelVremeRada.AutoSize = true;
             this.labelVremeRada.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVremeRada.Location = new System.Drawing.Point(398, 292);
+            this.labelVremeRada.Location = new System.Drawing.Point(371, 292);
             this.labelVremeRada.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelVremeRada.Name = "labelVremeRada";
             this.labelVremeRada.Size = new System.Drawing.Size(72, 16);
-            this.labelVremeRada.TabIndex = 29;
+            this.labelVremeRada.TabIndex = 0;
             this.labelVremeRada.Text = "Vrema rada";
             // 
             // UpdateForm
@@ -508,8 +508,8 @@
             this.ClientSize = new System.Drawing.Size(752, 478);
             this.Controls.Add(this.textBoxVremeRada);
             this.Controls.Add(this.labelVremeRada);
-            this.Controls.Add(this.textBoxUsvajac);
-            this.Controls.Add(this.labelUsvajac);
+            this.Controls.Add(this.textBoxBrojSluzbenogVlasnika);
+            this.Controls.Add(this.labelBrojSluzbenogVlasnika);
             this.Controls.Add(this.labelDatumUsvajanja);
             this.Controls.Add(this.dateTimeDatumUsvajanja);
             this.Controls.Add(this.checkBoxUsvojen);
@@ -547,7 +547,7 @@
             this.Controls.Add(this.textBoxNazivPlana);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(731, 468);
+            this.MinimumSize = new System.Drawing.Size(768, 517);
             this.Name = "UpdateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dodavanje/izmena ugovora";
@@ -593,8 +593,8 @@
         private System.Windows.Forms.CheckBox checkBoxUsvojen;
         private System.Windows.Forms.DateTimePicker dateTimeDatumUsvajanja;
         private System.Windows.Forms.Label labelDatumUsvajanja;
-        private System.Windows.Forms.Label labelUsvajac;
-        private System.Windows.Forms.TextBox textBoxUsvajac;
+        private System.Windows.Forms.Label labelBrojSluzbenogVlasnika;
+        private System.Windows.Forms.TextBox textBoxBrojSluzbenogVlasnika;
         private System.Windows.Forms.TextBox textBoxVremeRada;
         private System.Windows.Forms.Label labelVremeRada;
     }

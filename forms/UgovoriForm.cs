@@ -66,7 +66,7 @@ namespace CSharp_SQL_App {
             DataTable dt;
             String query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
                 " datumUgovora, rokPoUgovoru, krajnjiRok, obim, prioritet, cena, usvojen, datumUsvajanja," +
-                " usvajac, vremeRada, uGuid FROM ugovor ORDER BY id";
+                " brojSluzbenogVlasnika, vremeRada, uGuid FROM ugovor ORDER BY id";
             connection = GetConnection();
             connection.Open();
             command = new OleDbCommand(query, connection);
@@ -112,7 +112,7 @@ namespace CSharp_SQL_App {
             connection = GetConnection();
             String query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
                 " datumUgovora, rokPoUgovoru, krajnjiRok, obim, prioritet, cena, usvojen, datumUsvajanja," +
-                " usvajac, vremeRada, uGuid FROM ugovor WHERE id IS NOT NULL";
+                " brojSluzbenogVlasnika, vremeRada, uGuid FROM ugovor WHERE id IS NOT NULL";
             if (!string.IsNullOrEmpty(textBoxId.Text)) {
                 if (radioButtonIdLesser.Checked) {
                     query += " AND id < @id";
@@ -256,8 +256,8 @@ namespace CSharp_SQL_App {
                     query += " AND datumUsvajanja >= @datumUsvajanja";
                 }
             }
-            if (!string.IsNullOrEmpty(textBoxUsvajac.Text)) {
-                query += " AND UCASE(usvajac) LIKE '%' + @usvajac + '%'";
+            if (!string.IsNullOrEmpty(textBoxBrojSluzbenogVlasnika.Text)) {
+                query += " AND UCASE(brojSluzbenogVlasnika) LIKE '%' + @brojSluzbenogVlasnika + '%'";
             }
             if (!string.IsNullOrEmpty(textBoxVremeRada.Text)) {
                 query += " AND UCASE(vremeRada) LIKE '%' + @vremeRada + '%'";
@@ -313,8 +313,8 @@ namespace CSharp_SQL_App {
             if (!string.IsNullOrEmpty(dateTimeDatumUsvajanja.Text) && checkBoxDatumUsvajanjaIncludeInSearch.Checked) {
                 command.Parameters.Add("@datumUsvajanja", OleDbType.Date).Value = dateTimeDatumUsvajanja.Value.Date;
             }
-            if (!string.IsNullOrEmpty(textBoxUsvajac.Text)) {
-                command.Parameters.AddWithValue("@usvajac", textBoxUsvajac.Text);
+            if (!string.IsNullOrEmpty(textBoxBrojSluzbenogVlasnika.Text)) {
+                command.Parameters.AddWithValue("@brojSluzbenogVlasnika", textBoxBrojSluzbenogVlasnika.Text);
             }
             if (!string.IsNullOrEmpty(textBoxVremeRada.Text)) {
                 command.Parameters.AddWithValue("@vremeRada", textBoxVremeRada.Text);
