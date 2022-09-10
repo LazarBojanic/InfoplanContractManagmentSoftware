@@ -58,6 +58,7 @@ namespace CSharp_SQL_App {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);
         }
         private void UpdateForm_Load(object sender, EventArgs e) {
+            manageCheckBoxBehavior();
             textBoxId.Text = oldUgovor.id.ToString();
             textBoxUGuid.Text = oldUgovor.uGuid;
             comboBoxOpstina.Text = oldUgovor.opstina.ToString();
@@ -75,8 +76,8 @@ namespace CSharp_SQL_App {
                 textBoxRokPoUgovoru.Text = "0";
                 comboBoxRokPoUgovoru.Text = oldUgovor.rokPoUgovoru.Substring(oldUgovor.rokPoUgovoru.IndexOf(" ") + 1);
             }
-            textBoxObim.Text = oldUgovor.obim.ToString();
             dateTimeKrajnjiRok.Value = oldUgovor.krajnjiRok;
+            textBoxObim.Text = oldUgovor.obim.ToString();
             textBoxPrioritet.Text = oldUgovor.prioritet.ToString();
             textBoxCena.Text = oldUgovor.cena.ToString();
             comboBoxOpstina.Text = oldUgovor.opstina;
@@ -91,6 +92,14 @@ namespace CSharp_SQL_App {
                 comboBoxTipUgovora.SelectedIndex = 0;
                 comboBoxRokPoUgovoru.SelectedIndex = 2;
             }
+            if (oldUgovor.datumUsvajanja == new DateTime(1970, 1, 1)) {
+                dateTimeDatumUsvajanja.Value = DateTime.Today;
+            }
+            else {
+                dateTimeDatumUsvajanja.Value = oldUgovor.datumUsvajanja;
+            }
+            
+            textBoxUsvajac.Text = oldUgovor.usvajac;
         }
         private void buttonSacuvaj_Click(object sender, EventArgs e) {         
             try {
@@ -110,9 +119,9 @@ namespace CSharp_SQL_App {
                 newUgovor.faza = textBoxFaza.Text;
                 newUgovor.napomena = textBoxNapomena.Text;
                 newUgovor.datumUgovora = dateTimeDatumUgovora.Value;
-                newUgovor.rokPoUgovoru = textBoxRokPoUgovoru.Text + " " + comboBoxRokPoUgovoru.Text;
-                newUgovor.obim = Int32.Parse(textBoxObim.Text);
+                newUgovor.rokPoUgovoru = textBoxRokPoUgovoru.Text + " " + comboBoxRokPoUgovoru.Text;  
                 newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
+                newUgovor.obim = Int32.Parse(textBoxObim.Text);
                 newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
                 newUgovor.cena = Decimal.Parse(textBoxCena.Text);
                 if (checkBoxUsvojen.Checked) {
@@ -121,6 +130,15 @@ namespace CSharp_SQL_App {
                 else {
                     newUgovor.usvojen = "Ne";
                 }
+                if (checkBoxUsvojen.Checked) {
+                    newUgovor.datumUsvajanja = dateTimeDatumUsvajanja.Value;
+                    newUgovor.usvajac = textBoxUsvajac.Text;
+                }
+                else {
+                    newUgovor.datumUsvajanja = new DateTime(1970, 1, 1);
+                    newUgovor.usvajac = "";
+                }
+                
                 newUgovor.vremeUgovora = DateTime.Now;
                 newUgovor.uGuid = oldUgovor.uGuid;
                 newUgovor.saveToDatabase();
@@ -210,6 +228,22 @@ namespace CSharp_SQL_App {
             }
         }
 
-        
+        private void checkBoxUsvojen_CheckedChanged(object sender, EventArgs e) {
+            manageCheckBoxBehavior();
+        }
+        private void manageCheckBoxBehavior() {
+            if (checkBoxUsvojen.Checked) {
+                labelDatumUsvajanja.Enabled = true;
+                dateTimeDatumUsvajanja.Enabled = true;
+                labelUsvajac.Enabled = true;
+                textBoxUsvajac.Enabled = true;
+            }
+            else {
+                labelDatumUsvajanja.Enabled = false;
+                dateTimeDatumUsvajanja.Enabled = false;
+                labelUsvajac.Enabled = false;
+                textBoxUsvajac.Enabled = false;
+            }
+        }
     }
 }
