@@ -151,7 +151,7 @@
             this.dataGridViewUgovori.RowHeadersWidth = 51;
             this.dataGridViewUgovori.RowTemplate.Height = 24;
             this.dataGridViewUgovori.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUgovori.Size = new System.Drawing.Size(917, 612);
+            this.dataGridViewUgovori.Size = new System.Drawing.Size(962, 612);
             this.dataGridViewUgovori.TabIndex = 0;
             this.dataGridViewUgovori.TabStop = false;
             this.dataGridViewUgovori.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUgovori_CellDoubleClick);
@@ -161,7 +161,7 @@
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonDodaj.AutoSize = true;
             this.buttonDodaj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDodaj.Location = new System.Drawing.Point(395, 650);
+            this.buttonDodaj.Location = new System.Drawing.Point(417, 650);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
             this.buttonDodaj.Size = new System.Drawing.Size(192, 63);
@@ -175,7 +175,7 @@
             this.buttonIzmeni.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonIzmeni.AutoSize = true;
             this.buttonIzmeni.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIzmeni.Location = new System.Drawing.Point(604, 650);
+            this.buttonIzmeni.Location = new System.Drawing.Point(626, 650);
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmeni.Name = "buttonIzmeni";
             this.buttonIzmeni.Size = new System.Drawing.Size(192, 63);
@@ -216,7 +216,7 @@
             this.buttonPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPretraga.AutoSize = true;
             this.buttonPretraga.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPretraga.Location = new System.Drawing.Point(1216, 650);
+            this.buttonPretraga.Location = new System.Drawing.Point(1261, 650);
             this.buttonPretraga.Name = "buttonPretraga";
             this.buttonPretraga.Size = new System.Drawing.Size(161, 63);
             this.buttonPretraga.TabIndex = 26;
@@ -229,7 +229,7 @@
             this.buttonObrisi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonObrisi.AutoSize = true;
             this.buttonObrisi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonObrisi.Location = new System.Drawing.Point(813, 650);
+            this.buttonObrisi.Location = new System.Drawing.Point(835, 650);
             this.buttonObrisi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonObrisi.Name = "buttonObrisi";
             this.buttonObrisi.Size = new System.Drawing.Size(192, 63);
@@ -256,7 +256,7 @@
             this.buttonZatvori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonZatvori.AutoSize = true;
             this.buttonZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.buttonZatvori.Location = new System.Drawing.Point(1398, 650);
+            this.buttonZatvori.Location = new System.Drawing.Point(1443, 650);
             this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
             this.buttonZatvori.Name = "buttonZatvori";
             this.buttonZatvori.Size = new System.Drawing.Size(63, 63);
@@ -270,7 +270,7 @@
             this.buttonUgovorFiles.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonUgovorFiles.AutoSize = true;
             this.buttonUgovorFiles.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUgovorFiles.Location = new System.Drawing.Point(1022, 650);
+            this.buttonUgovorFiles.Location = new System.Drawing.Point(1044, 650);
             this.buttonUgovorFiles.Name = "buttonUgovorFiles";
             this.buttonUgovorFiles.Size = new System.Drawing.Size(161, 63);
             this.buttonUgovorFiles.TabIndex = 25;
@@ -1425,7 +1425,7 @@
             this.panelPretraga.Controls.Add(this.textBoxFaza);
             this.panelPretraga.Controls.Add(this.textBoxUrbanista);
             this.panelPretraga.Controls.Add(this.textBoxTipUgovora);
-            this.panelPretraga.Location = new System.Drawing.Point(930, 10);
+            this.panelPretraga.Location = new System.Drawing.Point(975, 10);
             this.panelPretraga.Margin = new System.Windows.Forms.Padding(2);
             this.panelPretraga.Name = "panelPretraga";
             this.panelPretraga.Size = new System.Drawing.Size(531, 612);
@@ -1435,7 +1435,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1472, 724);
+            this.ClientSize = new System.Drawing.Size(1517, 724);
             this.Controls.Add(this.buttonUgovorFiles);
             this.Controls.Add(this.buttonZatvori);
             this.Controls.Add(this.buttonIstorijaPromenaObrisanihUgovora);
@@ -1449,7 +1449,7 @@
             this.Controls.Add(this.panelPretraga);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(1488, 763);
+            this.MinimumSize = new System.Drawing.Size(1506, 763);
             this.Name = "UgovoriForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ugovori";
