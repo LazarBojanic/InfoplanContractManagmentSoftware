@@ -26,6 +26,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UgovoriForm));
             this.dataGridViewUgovori = new System.Windows.Forms.DataGridView();
+            this.contextMenuStripUgovori = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.kopirajPoljeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kopirajRedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonIzmeni = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
@@ -119,7 +122,9 @@
             this.labelVremeRada = new System.Windows.Forms.Label();
             this.textBoxVremeRada = new System.Windows.Forms.TextBox();
             this.panelPretraga = new System.Windows.Forms.Panel();
+            this.buttonExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).BeginInit();
+            this.contextMenuStripUgovori.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).BeginInit();
             this.panelId.SuspendLayout();
@@ -142,6 +147,7 @@
             this.dataGridViewUgovori.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUgovori.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewUgovori.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUgovori.ContextMenuStrip = this.contextMenuStripUgovori;
             this.dataGridViewUgovori.Location = new System.Drawing.Point(9, 10);
             this.dataGridViewUgovori.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewUgovori.MultiSelect = false;
@@ -154,17 +160,40 @@
             this.dataGridViewUgovori.Size = new System.Drawing.Size(962, 612);
             this.dataGridViewUgovori.TabIndex = 0;
             this.dataGridViewUgovori.TabStop = false;
+            this.dataGridViewUgovori.CellContextMenuStripNeeded += new System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler(this.dataGridViewUgovori_CellContextMenuStripNeeded);
             this.dataGridViewUgovori.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUgovori_CellDoubleClick);
+            // 
+            // contextMenuStripUgovori
+            // 
+            this.contextMenuStripUgovori.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kopirajPoljeToolStripMenuItem,
+            this.kopirajRedToolStripMenuItem});
+            this.contextMenuStripUgovori.Name = "contextMenuStrip";
+            this.contextMenuStripUgovori.Size = new System.Drawing.Size(181, 70);
+            // 
+            // kopirajPoljeToolStripMenuItem
+            // 
+            this.kopirajPoljeToolStripMenuItem.Name = "kopirajPoljeToolStripMenuItem";
+            this.kopirajPoljeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kopirajPoljeToolStripMenuItem.Text = "Kopiraj Polje";
+            this.kopirajPoljeToolStripMenuItem.Click += new System.EventHandler(this.kopirajPoljeToolStripMenuItem_Click);
+            // 
+            // kopirajRedToolStripMenuItem
+            // 
+            this.kopirajRedToolStripMenuItem.Name = "kopirajRedToolStripMenuItem";
+            this.kopirajRedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kopirajRedToolStripMenuItem.Text = "Kopiraj Red";
+            this.kopirajRedToolStripMenuItem.Click += new System.EventHandler(this.kopirajRedToolStripMenuItem_Click);
             // 
             // buttonDodaj
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonDodaj.AutoSize = true;
             this.buttonDodaj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDodaj.Location = new System.Drawing.Point(417, 650);
+            this.buttonDodaj.Location = new System.Drawing.Point(436, 649);
             this.buttonDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDodaj.Name = "buttonDodaj";
-            this.buttonDodaj.Size = new System.Drawing.Size(192, 63);
+            this.buttonDodaj.Size = new System.Drawing.Size(145, 63);
             this.buttonDodaj.TabIndex = 22;
             this.buttonDodaj.Text = "Dodaj";
             this.buttonDodaj.UseVisualStyleBackColor = true;
@@ -175,10 +204,10 @@
             this.buttonIzmeni.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonIzmeni.AutoSize = true;
             this.buttonIzmeni.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIzmeni.Location = new System.Drawing.Point(626, 650);
+            this.buttonIzmeni.Location = new System.Drawing.Point(617, 649);
             this.buttonIzmeni.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIzmeni.Name = "buttonIzmeni";
-            this.buttonIzmeni.Size = new System.Drawing.Size(192, 63);
+            this.buttonIzmeni.Size = new System.Drawing.Size(145, 63);
             this.buttonIzmeni.TabIndex = 23;
             this.buttonIzmeni.Text = "Izmeni";
             this.buttonIzmeni.UseVisualStyleBackColor = true;
@@ -203,7 +232,7 @@
             this.buttonIstorijaPromena.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonIstorijaPromena.AutoSize = true;
             this.buttonIstorijaPromena.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.buttonIstorijaPromena.Location = new System.Drawing.Point(85, 650);
+            this.buttonIstorijaPromena.Location = new System.Drawing.Point(104, 650);
             this.buttonIstorijaPromena.Name = "buttonIstorijaPromena";
             this.buttonIstorijaPromena.Size = new System.Drawing.Size(122, 63);
             this.buttonIstorijaPromena.TabIndex = 20;
@@ -216,9 +245,9 @@
             this.buttonPretraga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPretraga.AutoSize = true;
             this.buttonPretraga.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPretraga.Location = new System.Drawing.Point(1261, 650);
+            this.buttonPretraga.Location = new System.Drawing.Point(1160, 649);
             this.buttonPretraga.Name = "buttonPretraga";
-            this.buttonPretraga.Size = new System.Drawing.Size(161, 63);
+            this.buttonPretraga.Size = new System.Drawing.Size(145, 63);
             this.buttonPretraga.TabIndex = 26;
             this.buttonPretraga.Text = "Pretraga";
             this.buttonPretraga.UseVisualStyleBackColor = true;
@@ -229,10 +258,10 @@
             this.buttonObrisi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonObrisi.AutoSize = true;
             this.buttonObrisi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonObrisi.Location = new System.Drawing.Point(835, 650);
+            this.buttonObrisi.Location = new System.Drawing.Point(798, 649);
             this.buttonObrisi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonObrisi.Name = "buttonObrisi";
-            this.buttonObrisi.Size = new System.Drawing.Size(192, 63);
+            this.buttonObrisi.Size = new System.Drawing.Size(145, 63);
             this.buttonObrisi.TabIndex = 24;
             this.buttonObrisi.Text = "Obriši";
             this.buttonObrisi.UseVisualStyleBackColor = true;
@@ -243,7 +272,7 @@
             this.buttonIstorijaPromenaObrisanihUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonIstorijaPromenaObrisanihUgovora.AutoSize = true;
             this.buttonIstorijaPromenaObrisanihUgovora.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.buttonIstorijaPromenaObrisanihUgovora.Location = new System.Drawing.Point(224, 650);
+            this.buttonIstorijaPromenaObrisanihUgovora.Location = new System.Drawing.Point(262, 650);
             this.buttonIstorijaPromenaObrisanihUgovora.Name = "buttonIstorijaPromenaObrisanihUgovora";
             this.buttonIstorijaPromenaObrisanihUgovora.Size = new System.Drawing.Size(138, 63);
             this.buttonIstorijaPromenaObrisanihUgovora.TabIndex = 21;
@@ -256,7 +285,7 @@
             this.buttonZatvori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonZatvori.AutoSize = true;
             this.buttonZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.buttonZatvori.Location = new System.Drawing.Point(1443, 650);
+            this.buttonZatvori.Location = new System.Drawing.Point(1440, 650);
             this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
             this.buttonZatvori.Name = "buttonZatvori";
             this.buttonZatvori.Size = new System.Drawing.Size(63, 63);
@@ -270,9 +299,9 @@
             this.buttonUgovorFiles.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonUgovorFiles.AutoSize = true;
             this.buttonUgovorFiles.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUgovorFiles.Location = new System.Drawing.Point(1044, 650);
+            this.buttonUgovorFiles.Location = new System.Drawing.Point(979, 650);
             this.buttonUgovorFiles.Name = "buttonUgovorFiles";
-            this.buttonUgovorFiles.Size = new System.Drawing.Size(161, 63);
+            this.buttonUgovorFiles.Size = new System.Drawing.Size(145, 63);
             this.buttonUgovorFiles.TabIndex = 25;
             this.buttonUgovorFiles.Text = "Fajlovi Ugovora";
             this.buttonUgovorFiles.UseVisualStyleBackColor = true;
@@ -1431,11 +1460,25 @@
             this.panelPretraga.Size = new System.Drawing.Size(531, 612);
             this.panelPretraga.TabIndex = 0;
             // 
+            // buttonExport
+            // 
+            this.buttonExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExport.AutoSize = true;
+            this.buttonExport.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExport.Location = new System.Drawing.Point(1341, 649);
+            this.buttonExport.Name = "buttonExport";
+            this.buttonExport.Size = new System.Drawing.Size(63, 63);
+            this.buttonExport.TabIndex = 28;
+            this.buttonExport.Text = "Export";
+            this.buttonExport.UseVisualStyleBackColor = true;
+            this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
+            // 
             // UgovoriForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1517, 724);
+            this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.buttonUgovorFiles);
             this.Controls.Add(this.buttonZatvori);
             this.Controls.Add(this.buttonIstorijaPromenaObrisanihUgovora);
@@ -1459,6 +1502,7 @@
             this.ResizeEnd += new System.EventHandler(this.UgovoriForm_ResizeEnd);
             this.Click += new System.EventHandler(this.UgovoriForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).EndInit();
+            this.contextMenuStripUgovori.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).EndInit();
             this.panelId.ResumeLayout(false);
@@ -1571,5 +1615,9 @@
         private System.Windows.Forms.Label labelVremeRada;
         private System.Windows.Forms.TextBox textBoxVremeRada;
         private System.Windows.Forms.Panel panelPretraga;
+        private System.Windows.Forms.Button buttonExport;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripUgovori;
+        private System.Windows.Forms.ToolStripMenuItem kopirajPoljeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kopirajRedToolStripMenuItem;
     }
 }

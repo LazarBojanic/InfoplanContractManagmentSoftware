@@ -23,13 +23,18 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UgovorFilesForm));
             this.dataGridViewUgovorFiles = new System.Windows.Forms.DataGridView();
+            this.contextMenuStripFajloviUgovora = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.kopirajPoljeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kopirajRedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonPrikazi = new System.Windows.Forms.Button();
             this.buttonUkloni = new System.Windows.Forms.Button();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonZatvori = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovorFiles)).BeginInit();
+            this.contextMenuStripFajloviUgovora.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewUgovorFiles
@@ -41,6 +46,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewUgovorFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUgovorFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUgovorFiles.ContextMenuStrip = this.contextMenuStripFajloviUgovora;
             this.dataGridViewUgovorFiles.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewUgovorFiles.MultiSelect = false;
             this.dataGridViewUgovorFiles.Name = "dataGridViewUgovorFiles";
@@ -49,7 +55,30 @@
             this.dataGridViewUgovorFiles.Size = new System.Drawing.Size(776, 386);
             this.dataGridViewUgovorFiles.TabIndex = 0;
             this.dataGridViewUgovorFiles.TabStop = false;
+            this.dataGridViewUgovorFiles.CellContextMenuStripNeeded += new System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler(this.dataGridViewUgovorFiles_CellContextMenuStripNeeded);
             this.dataGridViewUgovorFiles.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUgovorFiles_CellDoubleClick);
+            // 
+            // contextMenuStripFajloviUgovora
+            // 
+            this.contextMenuStripFajloviUgovora.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kopirajPoljeToolStripMenuItem,
+            this.kopirajRedToolStripMenuItem});
+            this.contextMenuStripFajloviUgovora.Name = "contextMenuStripFajloviUgovora";
+            this.contextMenuStripFajloviUgovora.Size = new System.Drawing.Size(141, 48);
+            // 
+            // kopirajPoljeToolStripMenuItem
+            // 
+            this.kopirajPoljeToolStripMenuItem.Name = "kopirajPoljeToolStripMenuItem";
+            this.kopirajPoljeToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.kopirajPoljeToolStripMenuItem.Text = "Kopiraj Polje";
+            this.kopirajPoljeToolStripMenuItem.Click += new System.EventHandler(this.kopirajPoljeToolStripMenuItem_Click);
+            // 
+            // kopirajRedToolStripMenuItem
+            // 
+            this.kopirajRedToolStripMenuItem.Name = "kopirajRedToolStripMenuItem";
+            this.kopirajRedToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.kopirajRedToolStripMenuItem.Text = "Kopiraj Red";
+            this.kopirajRedToolStripMenuItem.Click += new System.EventHandler(this.kopirajRedToolStripMenuItem_Click);
             // 
             // buttonPrikazi
             // 
@@ -119,6 +148,7 @@
             this.ResizeEnd += new System.EventHandler(this.UgovorFilesForm_ResizeEnd);
             this.Click += new System.EventHandler(this.UgovorFilesForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovorFiles)).EndInit();
+            this.contextMenuStripFajloviUgovora.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -130,5 +160,8 @@
         private System.Windows.Forms.Button buttonUkloni;
         private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.Button buttonZatvori;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripFajloviUgovora;
+        private System.Windows.Forms.ToolStripMenuItem kopirajPoljeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kopirajRedToolStripMenuItem;
     }
 }

@@ -7,10 +7,16 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.Excel;
+using DataTable = System.Data.DataTable;
+using TextBox = System.Windows.Forms.TextBox;
+using MenuItem = System.Windows.Forms.MenuItem;
+using Point = System.Drawing.Point;
 
 namespace CSharp_SQL_App {
     public partial class UgovoriForm : Form {
         public Ugovor ugovor { get; set; }
+        private static int cellIndex;
         public UgovoriForm() {
             InitializeComponent();
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
@@ -412,6 +418,56 @@ namespace CSharp_SQL_App {
                 dataGridViewUgovori.FirstDisplayedScrollingRowIndex = index;
                 dataGridViewUgovori.Rows[index].Selected = true;
             }
+        }
+        private void buttonExport_Click(object sender, EventArgs e) {
+            try {
+                _Application app = new Microsoft.Office.Interop.Excel.Application();
+                _Workbook workbook = app.Workbooks.Add(Type.Missing);
+                _Worksheet worksheet = null;
+                worksheet = workbook.Sheets["Sheet1"];
+                worksheet = workbook.ActiveSheet;
+                worksheet.Name = "Eksportovano iz ugovora";
+                for (int i = 1; i < dataGridViewUgovori.Columns.Count + 1; i++) {
+                    worksheet.Cells[1, i] = dataGridViewUgovori.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < dataGridViewUgovori.Rows.Count; i++) {
+                    for (int j = 0; j < dataGridViewUgovori.Columns.Count; j++) {
+                        worksheet.Cells[i + 2, j + 1] = dataGridViewUgovori.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+                worksheet.Columns.AutoFit();
+                app.Visible = true;
+                app.Quit();
+            }
+            catch (Exception) {
+                MessageBox.Show("Nemate instaliran Microsoft Excel");
+            }
+        }
+        private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
+            Ugovor ugovor = Util.getUgovorFromSelectedRow(dataGridViewUgovori);
+            String value = Util.getUgovorCellValue(ugovor, cellIndex);
+            if (this.dataGridViewUgovori.GetCellCount(DataGridViewElementStates.Selected) > 0) {
+                try {
+                    Clipboard.SetText(value);
+                }
+                catch (System.Runtime.InteropServices.ExternalException) {
+                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                }
+            }
+        }
+        private void kopirajRedToolStripMenuItem_Click(object sender, EventArgs e) {
+            Ugovor ugovor = Util.getUgovorFromSelectedRow(dataGridViewUgovori);
+            if (this.dataGridViewUgovori.GetCellCount(DataGridViewElementStates.Selected) > 0) {
+                try {
+                    Clipboard.SetText(Util.buildClipboardUgovorString(ugovor));
+                }
+                catch (System.Runtime.InteropServices.ExternalException) {
+                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                }
+            }
+        }
+        private void dataGridViewUgovori_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e) {
+            cellIndex = e.ColumnIndex;
         }
     }
 }

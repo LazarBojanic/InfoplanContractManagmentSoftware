@@ -5,6 +5,23 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App.model {
     public class ChangeLog {
+        public int id { get;set;}
+        public String imeTabele { get;set; }
+        public String imePolja { get;set; }
+        public String tipAkcije { get;set; }
+        public String primarniKljuc { get;set; }
+        public String staraVrednost { get;set; }
+        public String novaVrednost { get;set; }
+
+        public ChangeLog(int id, String imeTabele, String imePolja, String tipAkcije, String primarniKljuc, String staraVrednost, String novaVrednost) {
+            this.id = id;
+            this.imeTabele = imeTabele;
+            this.imePolja = imePolja;
+            this.tipAkcije = tipAkcije;
+            this.primarniKljuc = primarniKljuc;
+            this.staraVrednost = staraVrednost;
+            this.novaVrednost = novaVrednost;
+        }
         public static void addChangeLogField(String imeTabele, String imePolja, String tipAkcije,
             String primarniKljuc, String staraVrednost, String novaVrednost) {
             try {

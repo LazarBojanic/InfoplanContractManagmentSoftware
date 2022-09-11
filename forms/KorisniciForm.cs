@@ -10,6 +10,7 @@ using System.Windows.Forms;
 namespace CSharp_SQL_App {
     public partial class KorisniciForm : Form {
         public static User user;
+        private static int cellIndex;
         public KorisniciForm() {
             InitializeComponent();
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
@@ -113,6 +114,35 @@ namespace CSharp_SQL_App {
             catch (OleDbException ex) {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
+            User user = Util.getUserFromSelectedRow(dataGridViewKorisnici);
+            String value = Util.getUserCellValue(user, cellIndex);
+            if (this.dataGridViewKorisnici.GetCellCount(DataGridViewElementStates.Selected) > 0) {
+                try {
+                    Clipboard.SetText(value);
+                }
+                catch (System.Runtime.InteropServices.ExternalException) {
+                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                }
+            }
+        }
+
+        private void kopirajRedToolStripMenuItem_Click(object sender, EventArgs e) {
+            User user = Util.getUserFromSelectedRow(dataGridViewKorisnici);
+            if (this.dataGridViewKorisnici.GetCellCount(DataGridViewElementStates.Selected) > 0) {
+                try {
+                    Clipboard.SetText(Util.buildClipboardUserString(user));
+                }
+                catch (System.Runtime.InteropServices.ExternalException) {
+                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                }
+            }
+        }
+
+        private void dataGridViewKorisnici_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e) {
+            cellIndex = e.ColumnIndex;
         }
     }
 }

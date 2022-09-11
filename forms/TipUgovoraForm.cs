@@ -154,5 +154,17 @@ namespace CSharp_SQL_App {
                 }
             }
         }
+
+        private void kopirajToolStripMenuItem_Click(object sender, EventArgs e) {
+            String tipUgovora = dataGridViewTipUgovora.SelectedRows[0].Cells["tipUgovora"].Value.ToString();
+            if (this.dataGridViewTipUgovora.GetCellCount(DataGridViewElementStates.Selected) > 0) {
+                try {
+                    Clipboard.SetText(tipUgovora);
+                }
+                catch (System.Runtime.InteropServices.ExternalException) {
+                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                }
+            }
+        }
     }
 }

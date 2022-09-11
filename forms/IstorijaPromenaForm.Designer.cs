@@ -23,10 +23,15 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IstorijaPromenaForm));
             this.buttonZatvori = new System.Windows.Forms.Button();
             this.dataGridViewChangeLog = new System.Windows.Forms.DataGridView();
+            this.contextMenuStripIstorijaPromena = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.kopirajPoljeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kopirajRedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLog)).BeginInit();
+            this.contextMenuStripIstorijaPromena.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonZatvori
@@ -50,6 +55,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewChangeLog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewChangeLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewChangeLog.ContextMenuStrip = this.contextMenuStripIstorijaPromena;
             this.dataGridViewChangeLog.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewChangeLog.Name = "dataGridViewChangeLog";
             this.dataGridViewChangeLog.ReadOnly = true;
@@ -59,6 +65,29 @@
             this.dataGridViewChangeLog.Size = new System.Drawing.Size(998, 345);
             this.dataGridViewChangeLog.TabIndex = 0;
             this.dataGridViewChangeLog.TabStop = false;
+            this.dataGridViewChangeLog.CellContextMenuStripNeeded += new System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler(this.dataGridViewChangeLog_CellContextMenuStripNeeded);
+            // 
+            // contextMenuStripIstorijaPromena
+            // 
+            this.contextMenuStripIstorijaPromena.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kopirajPoljeToolStripMenuItem,
+            this.kopirajRedToolStripMenuItem});
+            this.contextMenuStripIstorijaPromena.Name = "contextMenuStripIstorijaPromena";
+            this.contextMenuStripIstorijaPromena.Size = new System.Drawing.Size(141, 48);
+            // 
+            // kopirajPoljeToolStripMenuItem
+            // 
+            this.kopirajPoljeToolStripMenuItem.Name = "kopirajPoljeToolStripMenuItem";
+            this.kopirajPoljeToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.kopirajPoljeToolStripMenuItem.Text = "Kopiraj Polje";
+            this.kopirajPoljeToolStripMenuItem.Click += new System.EventHandler(this.kopirajPoljeToolStripMenuItem_Click);
+            // 
+            // kopirajRedToolStripMenuItem
+            // 
+            this.kopirajRedToolStripMenuItem.Name = "kopirajRedToolStripMenuItem";
+            this.kopirajRedToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.kopirajRedToolStripMenuItem.Text = "Kopiraj Red";
+            this.kopirajRedToolStripMenuItem.Click += new System.EventHandler(this.kopirajRedToolStripMenuItem_Click);
             // 
             // IstorijaPromenaForm
             // 
@@ -76,6 +105,7 @@
             this.ResizeEnd += new System.EventHandler(this.IstorijaPromenaForm_ResizeEnd);
             this.Click += new System.EventHandler(this.IstorijaPromenaForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLog)).EndInit();
+            this.contextMenuStripIstorijaPromena.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -84,5 +114,8 @@
 
         private System.Windows.Forms.Button buttonZatvori;
         private System.Windows.Forms.DataGridView dataGridViewChangeLog;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripIstorijaPromena;
+        private System.Windows.Forms.ToolStripMenuItem kopirajPoljeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kopirajRedToolStripMenuItem;
     }
 }

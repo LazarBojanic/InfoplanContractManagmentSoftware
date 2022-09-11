@@ -1,4 +1,5 @@
 ﻿using CSharp_SQL_App.forms;
+using CSharp_SQL_App.model;
 using CSharp_SQL_App.util;
 using System;
 using System.Data;
@@ -151,6 +152,18 @@ namespace CSharp_SQL_App {
                 if (opstineUpdateForm.ShowDialog().Equals(DialogResult.OK)) {
                     updateOpstina();
                     fillOpstineDataGrid();
+                }
+            }
+        }
+
+        private void kopirajToolStripMenuItem_Click(object sender, EventArgs e) {
+            String opstina = dataGridViewOpstine.SelectedRows[0].Cells["opstina"].Value.ToString();
+            if (this.dataGridViewOpstine.GetCellCount(DataGridViewElementStates.Selected) > 0) {
+                try {
+                    Clipboard.SetText(opstina);
+                }
+                catch (System.Runtime.InteropServices.ExternalException) {
+                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
                 }
             }
         }

@@ -24,41 +24,16 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.buttonOpstine = new System.Windows.Forms.Button();
-            this.buttonPrikazUgovora = new System.Windows.Forms.Button();
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelPrivilegija = new System.Windows.Forms.Label();
+            this.buttonOpstine = new System.Windows.Forms.Button();
+            this.buttonPrikazUgovora = new System.Windows.Forms.Button();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonKorisnici = new System.Windows.Forms.Button();
             this.buttonInfo = new System.Windows.Forms.Button();
             this.buttonIzmenaUsernamePassword = new System.Windows.Forms.Button();
             this.buttonTipoviUgovora = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // buttonOpstine
-            // 
-            this.buttonOpstine.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOpstine.Location = new System.Drawing.Point(81, 78);
-            this.buttonOpstine.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonOpstine.Name = "buttonOpstine";
-            this.buttonOpstine.Size = new System.Drawing.Size(160, 63);
-            this.buttonOpstine.TabIndex = 0;
-            this.buttonOpstine.Text = "Opštine";
-            this.buttonOpstine.UseVisualStyleBackColor = true;
-            this.buttonOpstine.Click += new System.EventHandler(this.buttonOpstine_Click);
-            // 
-            // buttonPrikazUgovora
-            // 
-            this.buttonPrikazUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPrikazUgovora.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrikazUgovora.Location = new System.Drawing.Point(359, 78);
-            this.buttonPrikazUgovora.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonPrikazUgovora.Name = "buttonPrikazUgovora";
-            this.buttonPrikazUgovora.Size = new System.Drawing.Size(160, 63);
-            this.buttonPrikazUgovora.TabIndex = 1;
-            this.buttonPrikazUgovora.Text = "Ugovori";
-            this.buttonPrikazUgovora.UseVisualStyleBackColor = true;
-            this.buttonPrikazUgovora.Click += new System.EventHandler(this.buttonPrikazUgovora_Click);
             // 
             // labelUsername
             // 
@@ -80,9 +55,32 @@
             this.labelPrivilegija.Size = new System.Drawing.Size(0, 17);
             this.labelPrivilegija.TabIndex = 4;
             // 
+            // buttonOpstine
+            // 
+            this.buttonOpstine.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOpstine.Location = new System.Drawing.Point(81, 78);
+            this.buttonOpstine.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonOpstine.Name = "buttonOpstine";
+            this.buttonOpstine.Size = new System.Drawing.Size(160, 63);
+            this.buttonOpstine.TabIndex = 0;
+            this.buttonOpstine.Text = "Opštine";
+            this.buttonOpstine.UseVisualStyleBackColor = true;
+            this.buttonOpstine.Click += new System.EventHandler(this.buttonOpstine_Click);
+            // 
+            // buttonPrikazUgovora
+            // 
+            this.buttonPrikazUgovora.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrikazUgovora.Location = new System.Drawing.Point(359, 78);
+            this.buttonPrikazUgovora.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonPrikazUgovora.Name = "buttonPrikazUgovora";
+            this.buttonPrikazUgovora.Size = new System.Drawing.Size(160, 63);
+            this.buttonPrikazUgovora.TabIndex = 1;
+            this.buttonPrikazUgovora.Text = "Ugovori";
+            this.buttonPrikazUgovora.UseVisualStyleBackColor = true;
+            this.buttonPrikazUgovora.Click += new System.EventHandler(this.buttonPrikazUgovora_Click);
+            // 
             // buttonLogout
             // 
-            this.buttonLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttonLogout.Location = new System.Drawing.Point(519, 278);
             this.buttonLogout.Margin = new System.Windows.Forms.Padding(2);
@@ -95,7 +93,6 @@
             // 
             // buttonKorisnici
             // 
-            this.buttonKorisnici.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonKorisnici.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttonKorisnici.Location = new System.Drawing.Point(369, 278);
             this.buttonKorisnici.Margin = new System.Windows.Forms.Padding(2);
@@ -108,7 +105,6 @@
             // 
             // buttonInfo
             // 
-            this.buttonInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInfo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttonInfo.Location = new System.Drawing.Point(444, 278);
             this.buttonInfo.Margin = new System.Windows.Forms.Padding(2);
@@ -121,7 +117,6 @@
             // 
             // buttonIzmenaUsernamePassword
             // 
-            this.buttonIzmenaUsernamePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonIzmenaUsernamePassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.buttonIzmenaUsernamePassword.Location = new System.Drawing.Point(359, 192);
             this.buttonIzmenaUsernamePassword.Margin = new System.Windows.Forms.Padding(2);
@@ -134,7 +129,6 @@
             // 
             // buttonTipoviUgovora
             // 
-            this.buttonTipoviUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonTipoviUgovora.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTipoviUgovora.Location = new System.Drawing.Point(81, 192);
             this.buttonTipoviUgovora.Margin = new System.Windows.Forms.Padding(2);
@@ -173,11 +167,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonOpstine;
-        private System.Windows.Forms.Button buttonPrikazUgovora;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelPrivilegija;
+        private System.Windows.Forms.Button buttonOpstine;
+        private System.Windows.Forms.Button buttonPrikazUgovora;
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Button buttonKorisnici;
         private System.Windows.Forms.Button buttonInfo;

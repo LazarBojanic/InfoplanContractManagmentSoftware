@@ -23,10 +23,15 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IstorijaPromenaObrisanihUgovoraForm));
             this.dataGridViewChangeLogObrisanihUgovora = new System.Windows.Forms.DataGridView();
             this.buttonZatvori = new System.Windows.Forms.Button();
+            this.contextMenuStripIstorijaPromenaObrisanihUgovora = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.kopirajPoljeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kopirajRedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLogObrisanihUgovora)).BeginInit();
+            this.contextMenuStripIstorijaPromenaObrisanihUgovora.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewChangeLogObrisanihUgovora
@@ -38,6 +43,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewChangeLogObrisanihUgovora.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewChangeLogObrisanihUgovora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewChangeLogObrisanihUgovora.ContextMenuStrip = this.contextMenuStripIstorijaPromenaObrisanihUgovora;
             this.dataGridViewChangeLogObrisanihUgovora.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewChangeLogObrisanihUgovora.Name = "dataGridViewChangeLogObrisanihUgovora";
             this.dataGridViewChangeLogObrisanihUgovora.ReadOnly = true;
@@ -47,6 +53,7 @@
             this.dataGridViewChangeLogObrisanihUgovora.Size = new System.Drawing.Size(998, 345);
             this.dataGridViewChangeLogObrisanihUgovora.TabIndex = 0;
             this.dataGridViewChangeLogObrisanihUgovora.TabStop = false;
+            this.dataGridViewChangeLogObrisanihUgovora.CellContextMenuStripNeeded += new System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler(this.dataGridViewChangeLogObrisanihUgovora_CellContextMenuStripNeeded);
             // 
             // buttonZatvori
             // 
@@ -59,6 +66,28 @@
             this.buttonZatvori.Text = "Zatvori";
             this.buttonZatvori.UseVisualStyleBackColor = true;
             this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
+            // 
+            // contextMenuStripIstorijaPromenaObrisanihUgovora
+            // 
+            this.contextMenuStripIstorijaPromenaObrisanihUgovora.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kopirajPoljeToolStripMenuItem,
+            this.kopirajRedToolStripMenuItem});
+            this.contextMenuStripIstorijaPromenaObrisanihUgovora.Name = "contextMenuStripIstorijaPromenaObrisanihUgovora";
+            this.contextMenuStripIstorijaPromenaObrisanihUgovora.Size = new System.Drawing.Size(141, 48);
+            // 
+            // kopirajPoljeToolStripMenuItem
+            // 
+            this.kopirajPoljeToolStripMenuItem.Name = "kopirajPoljeToolStripMenuItem";
+            this.kopirajPoljeToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.kopirajPoljeToolStripMenuItem.Text = "Kopiraj Polje";
+            this.kopirajPoljeToolStripMenuItem.Click += new System.EventHandler(this.kopirajPoljeToolStripMenuItem_Click);
+            // 
+            // kopirajRedToolStripMenuItem
+            // 
+            this.kopirajRedToolStripMenuItem.Name = "kopirajRedToolStripMenuItem";
+            this.kopirajRedToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.kopirajRedToolStripMenuItem.Text = "Kopiraj Red";
+            this.kopirajRedToolStripMenuItem.Click += new System.EventHandler(this.kopirajRedToolStripMenuItem_Click);
             // 
             // IstorijaPromenaObrisanihUgovoraForm
             // 
@@ -77,6 +106,7 @@
             this.ResizeEnd += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_ResizeEnd);
             this.Click += new System.EventHandler(this.IstorijaPromenaObrisanihUgovoraForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLogObrisanihUgovora)).EndInit();
+            this.contextMenuStripIstorijaPromenaObrisanihUgovora.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -85,5 +115,8 @@
 
         private System.Windows.Forms.DataGridView dataGridViewChangeLogObrisanihUgovora;
         private System.Windows.Forms.Button buttonZatvori;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripIstorijaPromenaObrisanihUgovora;
+        private System.Windows.Forms.ToolStripMenuItem kopirajPoljeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kopirajRedToolStripMenuItem;
     }
 }

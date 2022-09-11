@@ -1,4 +1,5 @@
-﻿using CSharp_SQL_App.util;
+﻿using CSharp_SQL_App.model;
+using CSharp_SQL_App.util;
 using System;
 using System.Data;
 using System.Data.OleDb;
@@ -8,6 +9,7 @@ using System.Windows.Forms;
 namespace CSharp_SQL_App {
     public partial class IstorijaPromenaForm : Form {
         private String uGuid { get; set; }
+        private static int cellIndex;
         public IstorijaPromenaForm(String uGuid) {
             InitializeComponent();
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
@@ -49,6 +51,35 @@ namespace CSharp_SQL_App {
         }
         private void IstorijaPromenaForm_Click(object sender, EventArgs e) {
             dataGridViewChangeLog.ClearSelection();
+        }
+
+        private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
+            ChangeLog changeLog = Util.getChangeLogFromSelectedRow(dataGridViewChangeLog);
+            String value = Util.getChangeLogCellValue(changeLog, cellIndex);
+            if (this.dataGridViewChangeLog.GetCellCount(DataGridViewElementStates.Selected) > 0) {
+                try {
+                    Clipboard.SetText(value);
+                }
+                catch (System.Runtime.InteropServices.ExternalException) {
+                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                }
+            }
+        }
+
+        private void kopirajRedToolStripMenuItem_Click(object sender, EventArgs e) {
+            ChangeLog changeLog = Util.getChangeLogFromSelectedRow(dataGridViewChangeLog);
+            if (this.dataGridViewChangeLog.GetCellCount(DataGridViewElementStates.Selected) > 0) {
+                try {
+                    Clipboard.SetText(Util.buildClipboardChangeLogString(changeLog));
+                }
+                catch (System.Runtime.InteropServices.ExternalException) {
+                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                }
+            }
+        }
+
+        private void dataGridViewChangeLog_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e) {
+            cellIndex = e.ColumnIndex;
         }
     }
 }

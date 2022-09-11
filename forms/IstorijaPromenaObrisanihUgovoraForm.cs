@@ -1,4 +1,5 @@
-﻿using CSharp_SQL_App.util;
+﻿using CSharp_SQL_App.model;
+using CSharp_SQL_App.util;
 using System;
 using System.Data;
 using System.Data.OleDb;
@@ -7,6 +8,7 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App.forms {
     public partial class IstorijaPromenaObrisanihUgovoraForm : Form {
+        private static int cellIndex;
         public IstorijaPromenaObrisanihUgovoraForm() {
             InitializeComponent();
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
@@ -46,6 +48,35 @@ namespace CSharp_SQL_App.forms {
         }
         private void IstorijaPromenaObrisanihUgovoraForm_Click(object sender, EventArgs e) {
             dataGridViewChangeLogObrisanihUgovora.ClearSelection();
+        }
+
+        private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
+            ChangeLog changeLog = Util.getChangeLogFromSelectedRow(dataGridViewChangeLogObrisanihUgovora);
+            String value = Util.getChangeLogCellValue(changeLog, cellIndex);
+            if (this.dataGridViewChangeLogObrisanihUgovora.GetCellCount(DataGridViewElementStates.Selected) > 0) {
+                try {
+                    Clipboard.SetText(value);
+                }
+                catch (System.Runtime.InteropServices.ExternalException) {
+                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                }
+            }
+        }
+
+        private void kopirajRedToolStripMenuItem_Click(object sender, EventArgs e) {
+            ChangeLog changeLog = Util.getChangeLogFromSelectedRow(dataGridViewChangeLogObrisanihUgovora);
+            if (this.dataGridViewChangeLogObrisanihUgovora.GetCellCount(DataGridViewElementStates.Selected) > 0) {
+                try {
+                    Clipboard.SetText(Util.buildClipboardChangeLogString(changeLog));
+                }
+                catch (System.Runtime.InteropServices.ExternalException) {
+                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                }
+            }
+        }
+
+        private void dataGridViewChangeLogObrisanihUgovora_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e) {
+            cellIndex = e.ColumnIndex;
         }
     }
 }
