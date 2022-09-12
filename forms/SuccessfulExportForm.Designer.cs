@@ -62,6 +62,7 @@
             this.Controls.Add(this.buttonOk);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SuccessfulExportForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SuccessfulExportForm";
             this.ResumeLayout(false);
             this.PerformLayout();
