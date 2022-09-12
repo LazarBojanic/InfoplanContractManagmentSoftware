@@ -444,8 +444,6 @@ namespace CSharp_SQL_App {
                             currentWorksheet.Cells[rowIndex + 3, cellIndex + 1] = dataGridViewRow.Cells[cellIndex].Value;
                         }
                     }
-                    Range fullTextRange = currentWorksheet.get_Range("A1", "R" + (rowIndex + 1).ToString());
-                    fullTextRange.HorizontalAlignment = XlHAlign.xlHAlignLeft;
                 }
                 else {
                     string timeStamp = DateTime.Now.ToString("s");
@@ -465,17 +463,17 @@ namespace CSharp_SQL_App {
                     if (saveFileDialog.FilterIndex == 1) {
                         currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlExcel8, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
                         currentWorkbook.Saved = true;
-                        MessageBox.Show("Uspešno export-ovan fajl.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Fajl uspešno export-ovan.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     if (saveFileDialog.FilterIndex == 2) {
                         currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlOpenXMLWorkbook, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
                         currentWorkbook.Saved = true;
-                        MessageBox.Show("Uspešno export-ovan fajl.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Fajl uspešno export-ovan.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     if (saveFileDialog.FilterIndex == 3) {
                         currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlCSV, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
                         currentWorkbook.Saved = true;
-                        MessageBox.Show("Uspešno export-ovan fajl.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Fajl uspešno export-ovan.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }

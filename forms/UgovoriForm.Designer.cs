@@ -38,8 +38,6 @@
             this.buttonIstorijaPromenaObrisanihUgovora = new System.Windows.Forms.Button();
             this.buttonZatvori = new System.Windows.Forms.Button();
             this.buttonUgovorFiles = new System.Windows.Forms.Button();
-            this.ugovorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ugovoriDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxTipUgovora = new System.Windows.Forms.TextBox();
             this.textBoxUrbanista = new System.Windows.Forms.TextBox();
             this.textBoxFaza = new System.Windows.Forms.TextBox();
@@ -125,8 +123,6 @@
             this.buttonExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).BeginInit();
             this.contextMenuStripUgovori.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).BeginInit();
             this.panelId.SuspendLayout();
             this.panelDatumUgovora.SuspendLayout();
             this.panelObim.SuspendLayout();
@@ -306,10 +302,6 @@
             this.buttonUgovorFiles.Text = "Fajlovi Ugovora";
             this.buttonUgovorFiles.UseVisualStyleBackColor = true;
             this.buttonUgovorFiles.Click += new System.EventHandler(this.buttonUgovorFiles_Click);
-            // 
-            // ugovorBindingSource
-            // 
-            this.ugovorBindingSource.DataMember = "ugovor";
             // 
             // textBoxTipUgovora
             // 
@@ -1503,8 +1495,6 @@
             this.Click += new System.EventHandler(this.UgovoriForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUgovori)).EndInit();
             this.contextMenuStripUgovori.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ugovorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ugovoriDataSetBindingSource)).EndInit();
             this.panelId.ResumeLayout(false);
             this.panelDatumUgovora.ResumeLayout(false);
             this.panelObim.ResumeLayout(false);
@@ -1524,8 +1514,6 @@
         private System.Windows.Forms.DataGridView dataGridViewUgovori;
         private System.Windows.Forms.Button buttonDodaj;
         private System.Windows.Forms.Button buttonIzmeni;
-        private System.Windows.Forms.BindingSource ugovoriDataSetBindingSource;
-        private System.Windows.Forms.BindingSource ugovorBindingSource;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonIstorijaPromena;
         private System.Windows.Forms.Button buttonPretraga;
