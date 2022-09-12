@@ -3,5 +3,5 @@
 3. Kopirati odgovarajući folder i "ugovori.accdb" fajl na željene destinacije.
 4. Izmeniti "InfoplanUgovori.exe.config" file i promeniti connectionString red da odgovara putanji "ugovori.accdb" fajla npr:
 	connectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Infoplan\Baza\ugovori.accdb"
-5. Pokretanje aplikacije je sa "InfoplanUgovori.exe"
-6. Primedbe i pitanja možete poslati na lazarbojanic5@gmail.com
+5. Pokretanje aplikacije je sa "InfoplanUgovori.exe".
+6. Primedbe i pitanja možete poslati na lazarbojanic5@gmail.com.
