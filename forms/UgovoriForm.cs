@@ -423,6 +423,7 @@ namespace CSharp_SQL_App {
             _Application excelApp = null;
             try {
                 excelApp = new Microsoft.Office.Interop.Excel.Application();
+                excelApp.Visible = false;
                 _Workbook currentWorkbook = excelApp.Workbooks.Add(Type.Missing);
                 _Worksheet currentWorksheet = (_Worksheet)currentWorkbook.ActiveSheet;
                 currentWorksheet.Columns.AutoFit();
@@ -434,9 +435,7 @@ namespace CSharp_SQL_App {
                         ++i;
                     }
                     Range headerColumnRange = currentWorksheet.get_Range("A2", "R5");
-                    headerColumnRange.Font.Bold = true;
                     headerColumnRange.EntireColumn.AutoFit();
-
                     int rowIndex = 0;
                     for (rowIndex = 0; rowIndex < dataGridViewUgovori.Rows.Count; rowIndex++) {
                         DataGridViewRow dataGridViewRow = dataGridViewUgovori.Rows[rowIndex];
@@ -456,15 +455,27 @@ namespace CSharp_SQL_App {
                 }
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Title = "Export tabele";
-                saveFileDialog.Filter = "Excel Workbook|*.xlsx";
+                saveFileDialog.Filter = "Excel 97-2003 Workbook(.xls)|*.xls|Excel Workbook(.xlsx)|*.xlsx|CSV(.csv)|*.csv";
                 if (DialogResult.OK == saveFileDialog.ShowDialog()) {
                     string fullFileName = saveFileDialog.FileName;
                     // currentWorkbook.SaveCopyAs(fullFileName);
                     // indicating that we already saved the workbook, otherwise call to Quit() will pop up
                     // the save file dialogue box
-                    currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlOpenXMLWorkbook, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
-                    currentWorkbook.Saved = true;
-                    MessageBox.Show("Uspešno export-ovan fajl.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (saveFileDialog.FilterIndex == 1) {
+                        currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlExcel8, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
+                        currentWorkbook.Saved = true;
+                        MessageBox.Show("Uspešno export-ovan fajl.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    if (saveFileDialog.FilterIndex == 2) {
+                        currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlOpenXMLWorkbook, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
+                        currentWorkbook.Saved = true;
+                        MessageBox.Show("Uspešno export-ovan fajl.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    if (saveFileDialog.FilterIndex == 3) {
+                        currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlCSV, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
+                        currentWorkbook.Saved = true;
+                        MessageBox.Show("Uspešno export-ovan fajl.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
             catch (Exception ex) {
@@ -476,30 +487,6 @@ namespace CSharp_SQL_App {
                 }
             }
         }
-        /*private void export2(object sender, EventArgs e) {
-            try {
-                _Application app = new Microsoft.Office.Interop.Excel.Application();
-                _Workbook workbook = app.Workbooks.Add(Type.Missing);
-                _Worksheet worksheet = null;
-                worksheet = workbook.Sheets["Sheet1"];
-                worksheet = workbook.ActiveSheet;
-                worksheet.Name = "Eksportovano iz ugovora";
-                for (int i = 1; i < dataGridViewUgovori.Columns.Count + 1; i++) {
-                    worksheet.Cells[1, i] = dataGridViewUgovori.Columns[i - 1].HeaderText;
-                }
-                for (int i = 0; i < dataGridViewUgovori.Rows.Count; i++) {
-                    for (int j = 0; j < dataGridViewUgovori.Columns.Count; j++) {
-                        worksheet.Cells[i + 2, j + 1] = dataGridViewUgovori.Rows[i].Cells[j].Value.ToString();
-                    }
-                }
-                worksheet.Columns.AutoFit();
-                app.Visible = true;
-                app.Quit();
-            }
-            catch (Exception) {
-                MessageBox.Show("Nemate instaliran Microsoft Excel");
-            }
-        }*/
         private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
             Ugovor ugovor = Util.getUgovorFromSelectedRow(dataGridViewUgovori);
             String value = Util.getUgovorCellValue(ugovor, cellIndex);
@@ -508,7 +495,7 @@ namespace CSharp_SQL_App {
                     Clipboard.SetText(value);
                 }
                 catch (System.Runtime.InteropServices.ExternalException) {
-                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                    MessageBox.Show("Neuspešno kopiranje u clipboard.");
                 }
             }
         }
@@ -519,7 +506,7 @@ namespace CSharp_SQL_App {
                     Clipboard.SetText(Util.buildClipboardUgovorString(ugovor));
                 }
                 catch (System.Runtime.InteropServices.ExternalException) {
-                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                    MessageBox.Show("Neuspešno kopiranje u clipboard.");
                 }
             }
         }

@@ -40,7 +40,6 @@ namespace CSharp_SQL_App {
                 dataGridViewKorisnici.DataSource = bs;
                 connection.Close();
             }
-
             catch (OleDbException ex) {
                 MessageBox.Show(ex.Message);
             }
@@ -123,7 +122,7 @@ namespace CSharp_SQL_App {
                     Clipboard.SetText(value);
                 }
                 catch (System.Runtime.InteropServices.ExternalException) {
-                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                    MessageBox.Show("Neuspešno kopiranje u clipboard.");
                 }
             }
         }
@@ -134,7 +133,7 @@ namespace CSharp_SQL_App {
                     Clipboard.SetText(Util.buildClipboardUserString(user));
                 }
                 catch (System.Runtime.InteropServices.ExternalException) {
-                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                    MessageBox.Show("Neuspešno kopiranje u clipboard.");
                 }
             }
         }

@@ -57,7 +57,7 @@ namespace CSharp_SQL_App.forms {
                     Clipboard.SetText(value);
                 }
                 catch (System.Runtime.InteropServices.ExternalException) {
-                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                    MessageBox.Show("Neuspešno kopiranje u clipboard.");
                 }
             }
         }
@@ -68,7 +68,7 @@ namespace CSharp_SQL_App.forms {
                     Clipboard.SetText(Util.buildClipboardChangeLogString(changeLog));
                 }
                 catch (System.Runtime.InteropServices.ExternalException) {
-                    MessageBox.Show("Clipboard could not be accessed. Please try again.");
+                    MessageBox.Show("Neuspešno kopiranje u clipboard.");
                 }
             }
         }
