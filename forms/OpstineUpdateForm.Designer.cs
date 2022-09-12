@@ -46,6 +46,7 @@
             // buttonOtkazi
             // 
             this.buttonOtkazi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonOtkazi.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonOtkazi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOtkazi.Location = new System.Drawing.Point(241, 123);
             this.buttonOtkazi.Name = "buttonOtkazi";

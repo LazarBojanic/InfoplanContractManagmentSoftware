@@ -280,6 +280,7 @@
             // 
             this.buttonZatvori.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonZatvori.AutoSize = true;
+            this.buttonZatvori.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttonZatvori.Location = new System.Drawing.Point(1440, 650);
             this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);

@@ -93,6 +93,7 @@
             // buttonZatvori
             // 
             this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonZatvori.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttonZatvori.Location = new System.Drawing.Point(406, 456);
             this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);

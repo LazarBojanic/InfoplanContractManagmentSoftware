@@ -26,13 +26,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KorisniciForm));
             this.dataGridViewKorisnici = new System.Windows.Forms.DataGridView();
+            this.contextMenuStripKorisnici = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.kopirajPoljeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kopirajRedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonIzmeni = new System.Windows.Forms.Button();
             this.buttonZatvori = new System.Windows.Forms.Button();
             this.buttonObrisi = new System.Windows.Forms.Button();
-            this.contextMenuStripKorisnici = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.kopirajPoljeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kopirajRedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKorisnici)).BeginInit();
             this.contextMenuStripKorisnici.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,28 @@
             this.dataGridViewKorisnici.CellContextMenuStripNeeded += new System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler(this.dataGridViewKorisnici_CellContextMenuStripNeeded);
             this.dataGridViewKorisnici.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKorisnici_CellDoubleClick);
             // 
+            // contextMenuStripKorisnici
+            // 
+            this.contextMenuStripKorisnici.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kopirajPoljeToolStripMenuItem,
+            this.kopirajRedToolStripMenuItem});
+            this.contextMenuStripKorisnici.Name = "contextMenuStripKorisnici";
+            this.contextMenuStripKorisnici.Size = new System.Drawing.Size(141, 48);
+            // 
+            // kopirajPoljeToolStripMenuItem
+            // 
+            this.kopirajPoljeToolStripMenuItem.Name = "kopirajPoljeToolStripMenuItem";
+            this.kopirajPoljeToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.kopirajPoljeToolStripMenuItem.Text = "Kopiraj Polje";
+            this.kopirajPoljeToolStripMenuItem.Click += new System.EventHandler(this.kopirajPoljeToolStripMenuItem_Click);
+            // 
+            // kopirajRedToolStripMenuItem
+            // 
+            this.kopirajRedToolStripMenuItem.Name = "kopirajRedToolStripMenuItem";
+            this.kopirajRedToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.kopirajRedToolStripMenuItem.Text = "Kopiraj Red";
+            this.kopirajRedToolStripMenuItem.Click += new System.EventHandler(this.kopirajRedToolStripMenuItem_Click);
+            // 
             // buttonDodaj
             // 
             this.buttonDodaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -92,6 +114,7 @@
             // buttonZatvori
             // 
             this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonZatvori.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.buttonZatvori.Location = new System.Drawing.Point(441, 274);
             this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
@@ -114,28 +137,6 @@
             this.buttonObrisi.Text = "Obriši";
             this.buttonObrisi.UseVisualStyleBackColor = true;
             this.buttonObrisi.Click += new System.EventHandler(this.buttonObrisi_Click);
-            // 
-            // contextMenuStripKorisnici
-            // 
-            this.contextMenuStripKorisnici.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kopirajPoljeToolStripMenuItem,
-            this.kopirajRedToolStripMenuItem});
-            this.contextMenuStripKorisnici.Name = "contextMenuStripKorisnici";
-            this.contextMenuStripKorisnici.Size = new System.Drawing.Size(141, 48);
-            // 
-            // kopirajPoljeToolStripMenuItem
-            // 
-            this.kopirajPoljeToolStripMenuItem.Name = "kopirajPoljeToolStripMenuItem";
-            this.kopirajPoljeToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.kopirajPoljeToolStripMenuItem.Text = "Kopiraj Polje";
-            this.kopirajPoljeToolStripMenuItem.Click += new System.EventHandler(this.kopirajPoljeToolStripMenuItem_Click);
-            // 
-            // kopirajRedToolStripMenuItem
-            // 
-            this.kopirajRedToolStripMenuItem.Name = "kopirajRedToolStripMenuItem";
-            this.kopirajRedToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.kopirajRedToolStripMenuItem.Text = "Kopiraj Red";
-            this.kopirajRedToolStripMenuItem.Click += new System.EventHandler(this.kopirajRedToolStripMenuItem_Click);
             // 
             // KorisniciForm
             // 
