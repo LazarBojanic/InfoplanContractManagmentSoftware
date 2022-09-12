@@ -289,7 +289,7 @@
             this.buttonZatvori.Margin = new System.Windows.Forms.Padding(2);
             this.buttonZatvori.Name = "buttonZatvori";
             this.buttonZatvori.Size = new System.Drawing.Size(63, 63);
-            this.buttonZatvori.TabIndex = 27;
+            this.buttonZatvori.TabIndex = 28;
             this.buttonZatvori.Text = "Zatvori";
             this.buttonZatvori.UseVisualStyleBackColor = true;
             this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
@@ -621,7 +621,7 @@
             this.checkBoxDatumUgovoraIncludeInSearch.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDatumUgovoraIncludeInSearch.Name = "checkBoxDatumUgovoraIncludeInSearch";
             this.checkBoxDatumUgovoraIncludeInSearch.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxDatumUgovoraIncludeInSearch.TabIndex = 27;
+            this.checkBoxDatumUgovoraIncludeInSearch.TabIndex = 29;
             this.checkBoxDatumUgovoraIncludeInSearch.TabStop = false;
             this.checkBoxDatumUgovoraIncludeInSearch.UseVisualStyleBackColor = true;
             // 
@@ -649,7 +649,7 @@
             this.checkBoxKrajnjiRokIncludeInSearch.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxKrajnjiRokIncludeInSearch.Name = "checkBoxKrajnjiRokIncludeInSearch";
             this.checkBoxKrajnjiRokIncludeInSearch.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxKrajnjiRokIncludeInSearch.TabIndex = 28;
+            this.checkBoxKrajnjiRokIncludeInSearch.TabIndex = 30;
             this.checkBoxKrajnjiRokIncludeInSearch.TabStop = false;
             this.checkBoxKrajnjiRokIncludeInSearch.UseVisualStyleBackColor = true;
             // 
@@ -667,7 +667,7 @@
             this.panelId.Margin = new System.Windows.Forms.Padding(2);
             this.panelId.Name = "panelId";
             this.panelId.Size = new System.Drawing.Size(150, 28);
-            this.panelId.TabIndex = 28;
+            this.panelId.TabIndex = 32;
             // 
             // radioButtonIdGreaterOrEqual
             // 
@@ -776,7 +776,7 @@
             this.panelDatumUgovora.Margin = new System.Windows.Forms.Padding(2);
             this.panelDatumUgovora.Name = "panelDatumUgovora";
             this.panelDatumUgovora.Size = new System.Drawing.Size(150, 28);
-            this.panelDatumUgovora.TabIndex = 29;
+            this.panelDatumUgovora.TabIndex = 33;
             // 
             // radioButtonDatumUgovoraGreaterOrEqual
             // 
@@ -859,7 +859,7 @@
             this.panelObim.Margin = new System.Windows.Forms.Padding(2);
             this.panelObim.Name = "panelObim";
             this.panelObim.Size = new System.Drawing.Size(150, 28);
-            this.panelObim.TabIndex = 30;
+            this.panelObim.TabIndex = 34;
             // 
             // radioButtonObimGreaterOrEqual
             // 
@@ -942,7 +942,7 @@
             this.panelKrajnjiRok.Margin = new System.Windows.Forms.Padding(2);
             this.panelKrajnjiRok.Name = "panelKrajnjiRok";
             this.panelKrajnjiRok.Size = new System.Drawing.Size(150, 28);
-            this.panelKrajnjiRok.TabIndex = 31;
+            this.panelKrajnjiRok.TabIndex = 35;
             // 
             // radioButtonKrajnjiRokGreaterOrEqual
             // 
@@ -1025,7 +1025,7 @@
             this.panelPrioritet.Margin = new System.Windows.Forms.Padding(2);
             this.panelPrioritet.Name = "panelPrioritet";
             this.panelPrioritet.Size = new System.Drawing.Size(150, 28);
-            this.panelPrioritet.TabIndex = 32;
+            this.panelPrioritet.TabIndex = 36;
             // 
             // radioButtonPrioritetGreaterOrEqual
             // 
@@ -1135,7 +1135,7 @@
             this.panelCena.Margin = new System.Windows.Forms.Padding(2);
             this.panelCena.Name = "panelCena";
             this.panelCena.Size = new System.Drawing.Size(150, 28);
-            this.panelCena.TabIndex = 33;
+            this.panelCena.TabIndex = 37;
             // 
             // radioButtonCenaGreaterOrEqual
             // 
@@ -1284,7 +1284,7 @@
             this.panelDatumUsvajanja.Margin = new System.Windows.Forms.Padding(2);
             this.panelDatumUsvajanja.Name = "panelDatumUsvajanja";
             this.panelDatumUsvajanja.Size = new System.Drawing.Size(150, 28);
-            this.panelDatumUsvajanja.TabIndex = 34;
+            this.panelDatumUsvajanja.TabIndex = 8;
             // 
             // radioButtonDatumUsvajanjaGreaterOrEqual
             // 
@@ -1363,7 +1363,7 @@
             this.checkBoxDatumUsvajanjaIncludeInSearch.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxDatumUsvajanjaIncludeInSearch.Name = "checkBoxDatumUsvajanjaIncludeInSearch";
             this.checkBoxDatumUsvajanjaIncludeInSearch.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxDatumUsvajanjaIncludeInSearch.TabIndex = 29;
+            this.checkBoxDatumUsvajanjaIncludeInSearch.TabIndex = 31;
             this.checkBoxDatumUsvajanjaIncludeInSearch.TabStop = false;
             this.checkBoxDatumUsvajanjaIncludeInSearch.UseVisualStyleBackColor = true;
             // 
@@ -1468,7 +1468,7 @@
             this.buttonExport.Location = new System.Drawing.Point(1341, 649);
             this.buttonExport.Name = "buttonExport";
             this.buttonExport.Size = new System.Drawing.Size(63, 63);
-            this.buttonExport.TabIndex = 28;
+            this.buttonExport.TabIndex = 27;
             this.buttonExport.Text = "Export";
             this.buttonExport.UseVisualStyleBackColor = true;
             this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
