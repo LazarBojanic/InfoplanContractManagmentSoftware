@@ -115,7 +115,6 @@ namespace CSharp_SQL_App {
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
             User user = Util.getUserFromSelectedRow(dataGridViewKorisnici);
             String value = Util.getUserCellValue(user, cellIndex);
@@ -128,7 +127,6 @@ namespace CSharp_SQL_App {
                 }
             }
         }
-
         private void kopirajRedToolStripMenuItem_Click(object sender, EventArgs e) {
             User user = Util.getUserFromSelectedRow(dataGridViewKorisnici);
             if (this.dataGridViewKorisnici.GetCellCount(DataGridViewElementStates.Selected) > 0) {
@@ -140,7 +138,6 @@ namespace CSharp_SQL_App {
                 }
             }
         }
-
         private void dataGridViewKorisnici_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e) {
             cellIndex = e.ColumnIndex;
         }

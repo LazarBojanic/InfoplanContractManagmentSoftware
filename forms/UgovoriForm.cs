@@ -420,6 +420,63 @@ namespace CSharp_SQL_App {
             }
         }
         private void buttonExport_Click(object sender, EventArgs e) {
+            _Application excelApp = null;
+            try {
+                excelApp = new Microsoft.Office.Interop.Excel.Application();
+                _Workbook currentWorkbook = excelApp.Workbooks.Add(Type.Missing);
+                _Worksheet currentWorksheet = (_Worksheet)currentWorkbook.ActiveSheet;
+                currentWorksheet.Columns.AutoFit();
+                if (dataGridViewUgovori.Rows.Count > 0) {
+                    currentWorksheet.Cells[1, 1] = DateTime.Now.ToString("s");
+                    int i = 1;
+                    foreach (DataGridViewColumn dataGridViewColumn in dataGridViewUgovori.Columns) {
+                        currentWorksheet.Cells[2, i] = dataGridViewColumn.Name;
+                        ++i;
+                    }
+                    Range headerColumnRange = currentWorksheet.get_Range("A2", "R5");
+                    headerColumnRange.Font.Bold = true;
+                    headerColumnRange.EntireColumn.AutoFit();
+
+                    int rowIndex = 0;
+                    for (rowIndex = 0; rowIndex < dataGridViewUgovori.Rows.Count; rowIndex++) {
+                        DataGridViewRow dataGridViewRow = dataGridViewUgovori.Rows[rowIndex];
+                        for (int cellIndex = 0; cellIndex < dataGridViewRow.Cells.Count; cellIndex++) {
+                            currentWorksheet.Cells[rowIndex + 3, cellIndex + 1] = dataGridViewRow.Cells[cellIndex].Value;
+                        }
+                    }
+                    Range fullTextRange = currentWorksheet.get_Range("A1", "R" + (rowIndex + 1).ToString());
+                    fullTextRange.HorizontalAlignment = XlHAlign.xlHAlignLeft;
+                }
+                else {
+                    string timeStamp = DateTime.Now.ToString("s");
+                    timeStamp = timeStamp.Replace(':', '-');
+                    timeStamp = timeStamp.Replace("T", "__");
+                    currentWorksheet.Cells[1, 1] = timeStamp;
+                    currentWorksheet.Cells[1, 2] = "Nema grešaka";
+                }
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Title = "Export tabele";
+                saveFileDialog.Filter = "Excel Workbook|*.xlsx";
+                if (DialogResult.OK == saveFileDialog.ShowDialog()) {
+                    string fullFileName = saveFileDialog.FileName;
+                    // currentWorkbook.SaveCopyAs(fullFileName);
+                    // indicating that we already saved the workbook, otherwise call to Quit() will pop up
+                    // the save file dialogue box
+                    currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlOpenXMLWorkbook, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
+                    currentWorkbook.Saved = true;
+                    MessageBox.Show("Uspešno export-ovan fajl.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+            finally {
+                if (excelApp != null) {
+                    excelApp.Quit();
+                }
+            }
+        }
+        /*private void export2(object sender, EventArgs e) {
             try {
                 _Application app = new Microsoft.Office.Interop.Excel.Application();
                 _Workbook workbook = app.Workbooks.Add(Type.Missing);
@@ -442,7 +499,7 @@ namespace CSharp_SQL_App {
             catch (Exception) {
                 MessageBox.Show("Nemate instaliran Microsoft Excel");
             }
-        }
+        }*/
         private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
             Ugovor ugovor = Util.getUgovorFromSelectedRow(dataGridViewUgovori);
             String value = Util.getUgovorCellValue(ugovor, cellIndex);

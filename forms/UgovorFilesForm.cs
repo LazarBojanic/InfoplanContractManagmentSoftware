@@ -120,7 +120,6 @@ namespace CSharp_SQL_App.forms {
                 System.Diagnostics.Process.Start(filePath);
             }
         }
-
         private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
             UgovorFile ugovorFile = Util.getUgovorFileFromSelectedRow(dataGridViewUgovorFiles);
             String value = Util.getUgovorFileCellValue(ugovorFile, cellIndex);
@@ -133,7 +132,6 @@ namespace CSharp_SQL_App.forms {
                 }
             }
         }
-
         private void kopirajRedToolStripMenuItem_Click(object sender, EventArgs e) {
             UgovorFile ugovorFile = Util.getUgovorFileFromSelectedRow(dataGridViewUgovorFiles);
             if (this.dataGridViewUgovorFiles.GetCellCount(DataGridViewElementStates.Selected) > 0) {
@@ -145,7 +143,6 @@ namespace CSharp_SQL_App.forms {
                 }
             }
         }
-
         private void dataGridViewUgovorFiles_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e) {
             cellIndex = e.ColumnIndex;
         }

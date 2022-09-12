@@ -155,7 +155,6 @@ namespace CSharp_SQL_App {
                 }
             }
         }
-
         private void kopirajToolStripMenuItem_Click(object sender, EventArgs e) {
             String opstina = dataGridViewOpstine.SelectedRows[0].Cells["opstina"].Value.ToString();
             if (this.dataGridViewOpstine.GetCellCount(DataGridViewElementStates.Selected) > 0) {

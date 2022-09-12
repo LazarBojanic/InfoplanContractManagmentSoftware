@@ -122,7 +122,6 @@ namespace CSharp_SQL_App.util {
             }
             return clipboard.Trim(',');
         }
-
         public static String getUserCellValue(User user, int index) {
             int i = 0;
             foreach (PropertyInfo propertyInfo in user.GetType().GetProperties()) {

@@ -49,7 +49,6 @@ namespace CSharp_SQL_App.forms {
         private void IstorijaPromenaObrisanihUgovoraForm_Click(object sender, EventArgs e) {
             dataGridViewChangeLogObrisanihUgovora.ClearSelection();
         }
-
         private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
             ChangeLog changeLog = Util.getChangeLogFromSelectedRow(dataGridViewChangeLogObrisanihUgovora);
             String value = Util.getChangeLogCellValue(changeLog, cellIndex);
@@ -62,7 +61,6 @@ namespace CSharp_SQL_App.forms {
                 }
             }
         }
-
         private void kopirajRedToolStripMenuItem_Click(object sender, EventArgs e) {
             ChangeLog changeLog = Util.getChangeLogFromSelectedRow(dataGridViewChangeLogObrisanihUgovora);
             if (this.dataGridViewChangeLogObrisanihUgovora.GetCellCount(DataGridViewElementStates.Selected) > 0) {
@@ -74,7 +72,6 @@ namespace CSharp_SQL_App.forms {
                 }
             }
         }
-
         private void dataGridViewChangeLogObrisanihUgovora_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e) {
             cellIndex = e.ColumnIndex;
         }

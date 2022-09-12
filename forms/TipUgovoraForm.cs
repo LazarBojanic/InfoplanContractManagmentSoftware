@@ -154,7 +154,6 @@ namespace CSharp_SQL_App {
                 }
             }
         }
-
         private void kopirajToolStripMenuItem_Click(object sender, EventArgs e) {
             String tipUgovora = dataGridViewTipUgovora.SelectedRows[0].Cells["tipUgovora"].Value.ToString();
             if (this.dataGridViewTipUgovora.GetCellCount(DataGridViewElementStates.Selected) > 0) {

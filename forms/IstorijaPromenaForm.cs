@@ -52,7 +52,6 @@ namespace CSharp_SQL_App {
         private void IstorijaPromenaForm_Click(object sender, EventArgs e) {
             dataGridViewChangeLog.ClearSelection();
         }
-
         private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
             ChangeLog changeLog = Util.getChangeLogFromSelectedRow(dataGridViewChangeLog);
             String value = Util.getChangeLogCellValue(changeLog, cellIndex);
@@ -65,7 +64,6 @@ namespace CSharp_SQL_App {
                 }
             }
         }
-
         private void kopirajRedToolStripMenuItem_Click(object sender, EventArgs e) {
             ChangeLog changeLog = Util.getChangeLogFromSelectedRow(dataGridViewChangeLog);
             if (this.dataGridViewChangeLog.GetCellCount(DataGridViewElementStates.Selected) > 0) {
@@ -77,7 +75,6 @@ namespace CSharp_SQL_App {
                 }
             }
         }
-
         private void dataGridViewChangeLog_CellContextMenuStripNeeded(object sender, DataGridViewCellContextMenuStripNeededEventArgs e) {
             cellIndex = e.ColumnIndex;
         }
