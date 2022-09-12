@@ -423,60 +423,65 @@ namespace CSharp_SQL_App {
         private void buttonExport_Click(object sender, EventArgs e) {
             _Application excelApp = null;
             try {
-                excelApp = new Microsoft.Office.Interop.Excel.Application();
-                excelApp.Visible = false;
-                _Workbook currentWorkbook = excelApp.Workbooks.Add(Type.Missing);
-                _Worksheet currentWorksheet = (_Worksheet)currentWorkbook.ActiveSheet;
-                currentWorksheet.Columns.AutoFit();
-                if (dataGridViewUgovori.Rows.Count > 0) {
-                    currentWorksheet.Cells[1, 1] = DateTime.Now.ToString("s");
-                    int i = 1;
-                    foreach (DataGridViewColumn dataGridViewColumn in dataGridViewUgovori.Columns) {
-                        currentWorksheet.Cells[2, i] = dataGridViewColumn.Name;
-                        ++i;
+                if(dataGridViewUgovori.Rows.Count > 0) {
+                    excelApp = new Microsoft.Office.Interop.Excel.Application();
+                    excelApp.Visible = false;
+                    _Workbook currentWorkbook = excelApp.Workbooks.Add(Type.Missing);
+                    _Worksheet currentWorksheet = (_Worksheet)currentWorkbook.ActiveSheet;
+                    currentWorksheet.Columns.AutoFit();
+                    if (dataGridViewUgovori.Rows.Count > 0) {
+                        currentWorksheet.Cells[1, 1] = DateTime.Now.ToString("s");
+                        int i = 1;
+                        foreach (DataGridViewColumn dataGridViewColumn in dataGridViewUgovori.Columns) {
+                            currentWorksheet.Cells[2, i] = dataGridViewColumn.Name;
+                            ++i;
+                        }
+                        Range headerColumnRange = currentWorksheet.get_Range("A2", "R5");
+                        headerColumnRange.EntireColumn.AutoFit();
+                        int rowIndex = 0;
+                        for (rowIndex = 0; rowIndex < dataGridViewUgovori.Rows.Count; rowIndex++) {
+                            DataGridViewRow dataGridViewRow = dataGridViewUgovori.Rows[rowIndex];
+                            for (int cellIndex = 0; cellIndex < dataGridViewRow.Cells.Count; cellIndex++) {
+                                currentWorksheet.Cells[rowIndex + 3, cellIndex + 1] = dataGridViewRow.Cells[cellIndex].Value;
+                            }
+                        }
                     }
-                    Range headerColumnRange = currentWorksheet.get_Range("A2", "R5");
-                    headerColumnRange.EntireColumn.AutoFit();
-                    int rowIndex = 0;
-                    for (rowIndex = 0; rowIndex < dataGridViewUgovori.Rows.Count; rowIndex++) {
-                        DataGridViewRow dataGridViewRow = dataGridViewUgovori.Rows[rowIndex];
-                        for (int cellIndex = 0; cellIndex < dataGridViewRow.Cells.Count; cellIndex++) {
-                            currentWorksheet.Cells[rowIndex + 3, cellIndex + 1] = dataGridViewRow.Cells[cellIndex].Value;
+                    else {
+                        string timeStamp = DateTime.Now.ToString("s");
+                        timeStamp = timeStamp.Replace(':', '-');
+                        timeStamp = timeStamp.Replace("T", "__");
+                        currentWorksheet.Cells[1, 1] = timeStamp;
+                        currentWorksheet.Cells[1, 2] = "Nema grešaka";
+                    }
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Title = "Export tabele";
+                    saveFileDialog.Filter = "Excel 97-2003 Workbook(.xls)|*.xls|Excel Workbook(.xlsx)|*.xlsx|CSV(.csv)|*.csv";
+                    if (DialogResult.OK == saveFileDialog.ShowDialog()) {
+                        string fullFileName = saveFileDialog.FileName;
+                        // currentWorkbook.SaveCopyAs(fullFileName);
+                        // indicating that we already saved the workbook, otherwise call to Quit() will pop up
+                        // the save file dialogue box
+                        if (saveFileDialog.FilterIndex == 1) {
+                            currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlExcel8, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
+                            currentWorkbook.Saved = true;
+                            MessageBox.Show("Fajl uspešno export-ovan.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        if (saveFileDialog.FilterIndex == 2) {
+                            currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlOpenXMLWorkbook, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
+                            currentWorkbook.Saved = true;
+                            MessageBox.Show("Fajl uspešno export-ovan.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        if (saveFileDialog.FilterIndex == 3) {
+                            currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlCSV, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
+                            currentWorkbook.Saved = true;
+                            MessageBox.Show("Fajl uspešno export-ovan.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
                 else {
-                    string timeStamp = DateTime.Now.ToString("s");
-                    timeStamp = timeStamp.Replace(':', '-');
-                    timeStamp = timeStamp.Replace("T", "__");
-                    currentWorksheet.Cells[1, 1] = timeStamp;
-                    currentWorksheet.Cells[1, 2] = "Nema grešaka";
+                    MessageBox.Show("Trenutna tabela nema redova.");
                 }
-                SaveFileDialog saveFileDialog = new SaveFileDialog();
-                saveFileDialog.Title = "Export tabele";
-                saveFileDialog.Filter = "Excel 97-2003 Workbook(.xls)|*.xls|Excel Workbook(.xlsx)|*.xlsx|CSV(.csv)|*.csv";
-                if (DialogResult.OK == saveFileDialog.ShowDialog()) {
-                    string fullFileName = saveFileDialog.FileName;
-                    // currentWorkbook.SaveCopyAs(fullFileName);
-                    // indicating that we already saved the workbook, otherwise call to Quit() will pop up
-                    // the save file dialogue box
-                    if (saveFileDialog.FilterIndex == 1) {
-                        currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlExcel8, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
-                        currentWorkbook.Saved = true;
-                        MessageBox.Show("Fajl uspešno export-ovan.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    if (saveFileDialog.FilterIndex == 2) {
-                        currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlOpenXMLWorkbook, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
-                        currentWorkbook.Saved = true;
-                        MessageBox.Show("Fajl uspešno export-ovan.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    if (saveFileDialog.FilterIndex == 3) {
-                        currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlCSV, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
-                        currentWorkbook.Saved = true;
-                        MessageBox.Show("Fajl uspešno export-ovan.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-            }
+            }      
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
