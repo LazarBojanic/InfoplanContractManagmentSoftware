@@ -53,7 +53,7 @@ namespace CSharp_SQL_App {
                 return found;
             }
             catch (Exception) {
-                MessageBox.Show("Nemate instaliran Microsoft Access Database Driver.");
+                MessageBox.Show("Nemate instaliran Microsoft Access Database Driver ili niste otvorili odgovarajuću verziju programa.");
                 return -1;
             }
         }
