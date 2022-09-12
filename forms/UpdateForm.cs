@@ -144,7 +144,6 @@ namespace CSharp_SQL_App {
                 newUgovor.uGuid = oldUgovor.uGuid;
                 newUgovor.saveToDatabase();
                 ChangeLog.addChangeLogForUgovor(oldUgovor, newUgovor);
-                this.DialogResult = DialogResult.OK;
             }
             catch (FormatException) {
                 MessageBox.Show("Nekorektan format podataka.");

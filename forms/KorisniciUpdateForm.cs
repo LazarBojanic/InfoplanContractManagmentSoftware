@@ -38,7 +38,6 @@ namespace CSharp_SQL_App {
             string privilegija = comboBoxPrivilegija.Text;
             user = new User(id, username, password, privilegija);
             saveToDatabase(user);
-            this.DialogResult = DialogResult.OK;
         }
         private void buttonOtkazi_Click(object sender, EventArgs e) {
             this.Close();

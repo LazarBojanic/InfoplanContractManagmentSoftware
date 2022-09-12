@@ -232,6 +232,7 @@
             // buttonSacuvaj
             // 
             this.buttonSacuvaj.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonSacuvaj.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonSacuvaj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSacuvaj.Location = new System.Drawing.Point(118, 383);
             this.buttonSacuvaj.Margin = new System.Windows.Forms.Padding(2);

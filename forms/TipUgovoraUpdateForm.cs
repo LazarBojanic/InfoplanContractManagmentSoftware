@@ -16,7 +16,6 @@ namespace CSharp_SQL_App.forms {
         }
         private void buttonSacuvaj_Click(object sender, EventArgs e) {
             TipUgovoraForm.tipUgovora = textBoxTipUgovora.Text;
-            this.DialogResult = DialogResult.OK;
         }
         private void buttonOtkazi_Click(object sender, EventArgs e) {
             this.Close();

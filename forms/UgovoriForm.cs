@@ -423,7 +423,7 @@ namespace CSharp_SQL_App {
         private void buttonExport_Click(object sender, EventArgs e) {
             _Application excelApp = null;
             try {
-                if(dataGridViewUgovori.Rows.Count > 0) {
+                if(dataGridViewUgovori.Rows.Count > 0) {       
                     excelApp = new Microsoft.Office.Interop.Excel.Application();
                     excelApp.Visible = false;
                     _Workbook currentWorkbook = excelApp.Workbooks.Add(Type.Missing);
@@ -436,8 +436,6 @@ namespace CSharp_SQL_App {
                             currentWorksheet.Cells[2, i] = dataGridViewColumn.Name;
                             ++i;
                         }
-                        Range headerColumnRange = currentWorksheet.get_Range("A2", "R5");
-                        headerColumnRange.EntireColumn.AutoFit();
                         int rowIndex = 0;
                         for (rowIndex = 0; rowIndex < dataGridViewUgovori.Rows.Count; rowIndex++) {
                             DataGridViewRow dataGridViewRow = dataGridViewUgovori.Rows[rowIndex];
@@ -445,6 +443,9 @@ namespace CSharp_SQL_App {
                                 currentWorksheet.Cells[rowIndex + 3, cellIndex + 1] = dataGridViewRow.Cells[cellIndex].Value;
                             }
                         }
+                        Range fullTextRange = currentWorksheet.get_Range("A1", "R" + (rowIndex + 2).ToString());
+                        fullTextRange.EntireColumn.AutoFit();
+                        fullTextRange.HorizontalAlignment = XlHAlign.xlHAlignLeft;
                     }
                     else {
                         string timeStamp = DateTime.Now.ToString("s");
@@ -461,20 +462,21 @@ namespace CSharp_SQL_App {
                         // currentWorkbook.SaveCopyAs(fullFileName);
                         // indicating that we already saved the workbook, otherwise call to Quit() will pop up
                         // the save file dialogue box
+                        SuccessfulExportForm successfulExportForm = new SuccessfulExportForm();
                         if (saveFileDialog.FilterIndex == 1) {
                             currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlExcel8, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
                             currentWorkbook.Saved = true;
-                            MessageBox.Show("Fajl uspešno export-ovan.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            successfulExportForm.ShowDialog();
                         }
                         if (saveFileDialog.FilterIndex == 2) {
                             currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlOpenXMLWorkbook, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
                             currentWorkbook.Saved = true;
-                            MessageBox.Show("Fajl uspešno export-ovan.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            successfulExportForm.ShowDialog();
                         }
                         if (saveFileDialog.FilterIndex == 3) {
                             currentWorkbook.SaveAs(fullFileName, XlFileFormat.xlCSV, Missing.Value, Missing.Value, false, false, XlSaveAsAccessMode.xlNoChange, XlSaveConflictResolution.xlUserResolution, true, Missing.Value, Missing.Value, Missing.Value);
                             currentWorkbook.Saved = true;
-                            MessageBox.Show("Fajl uspešno export-ovan.", "Uspešan Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            successfulExportForm.ShowDialog();
                         }
                     }
                 }
