@@ -26,16 +26,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpstineForm));
             this.dataGridViewOpstine = new System.Windows.Forms.DataGridView();
+            this.contextMenuStripOpstine = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.kopirajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonZatvori = new System.Windows.Forms.Button();
             this.buttonIzmeni = new System.Windows.Forms.Button();
             this.opstinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonObrisi = new System.Windows.Forms.Button();
-            this.contextMenuStripOpstine = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.kopirajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOpstine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).BeginInit();
             this.contextMenuStripOpstine.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewOpstine
@@ -54,6 +54,7 @@
             this.dataGridViewOpstine.MultiSelect = false;
             this.dataGridViewOpstine.Name = "dataGridViewOpstine";
             this.dataGridViewOpstine.ReadOnly = true;
+            this.dataGridViewOpstine.RowHeadersVisible = false;
             this.dataGridViewOpstine.RowHeadersWidth = 51;
             this.dataGridViewOpstine.RowTemplate.Height = 24;
             this.dataGridViewOpstine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -61,6 +62,20 @@
             this.dataGridViewOpstine.TabIndex = 0;
             this.dataGridViewOpstine.TabStop = false;
             this.dataGridViewOpstine.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOpstine_CellDoubleClick);
+            // 
+            // contextMenuStripOpstine
+            // 
+            this.contextMenuStripOpstine.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kopirajToolStripMenuItem});
+            this.contextMenuStripOpstine.Name = "contextMenuStripOpstine";
+            this.contextMenuStripOpstine.Size = new System.Drawing.Size(112, 26);
+            // 
+            // kopirajToolStripMenuItem
+            // 
+            this.kopirajToolStripMenuItem.Name = "kopirajToolStripMenuItem";
+            this.kopirajToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.kopirajToolStripMenuItem.Text = "Kopiraj";
+            this.kopirajToolStripMenuItem.Click += new System.EventHandler(this.kopirajToolStripMenuItem_Click);
             // 
             // buttonDodaj
             // 
@@ -118,20 +133,6 @@
             this.buttonObrisi.UseVisualStyleBackColor = true;
             this.buttonObrisi.Click += new System.EventHandler(this.buttonObrisi_Click);
             // 
-            // contextMenuStripOpstine
-            // 
-            this.contextMenuStripOpstine.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kopirajToolStripMenuItem});
-            this.contextMenuStripOpstine.Name = "contextMenuStripOpstine";
-            this.contextMenuStripOpstine.Size = new System.Drawing.Size(181, 48);
-            // 
-            // kopirajToolStripMenuItem
-            // 
-            this.kopirajToolStripMenuItem.Name = "kopirajToolStripMenuItem";
-            this.kopirajToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kopirajToolStripMenuItem.Text = "Kopiraj";
-            this.kopirajToolStripMenuItem.Click += new System.EventHandler(this.kopirajToolStripMenuItem_Click);
-            // 
             // OpstineForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,8 +153,8 @@
             this.ResizeEnd += new System.EventHandler(this.OpstineForm_ResizeEnd);
             this.Click += new System.EventHandler(this.OpstineForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOpstine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).EndInit();
             this.contextMenuStripOpstine.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.opstinaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

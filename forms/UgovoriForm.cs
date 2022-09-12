@@ -31,6 +31,7 @@ namespace CSharp_SQL_App {
             if (MainForm.user.privilegija.Equals("turista")) {
                 buttonDodaj.Enabled = false;
                 buttonIzmeni.Enabled = false;
+                buttonExport.Enabled = false;
             }
             this.AcceptButton = buttonPretraga;
         }

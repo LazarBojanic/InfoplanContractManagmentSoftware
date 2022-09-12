@@ -169,19 +169,19 @@
             this.kopirajPoljeToolStripMenuItem,
             this.kopirajRedToolStripMenuItem});
             this.contextMenuStripUgovori.Name = "contextMenuStrip";
-            this.contextMenuStripUgovori.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStripUgovori.Size = new System.Drawing.Size(141, 48);
             // 
             // kopirajPoljeToolStripMenuItem
             // 
             this.kopirajPoljeToolStripMenuItem.Name = "kopirajPoljeToolStripMenuItem";
-            this.kopirajPoljeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kopirajPoljeToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.kopirajPoljeToolStripMenuItem.Text = "Kopiraj Polje";
             this.kopirajPoljeToolStripMenuItem.Click += new System.EventHandler(this.kopirajPoljeToolStripMenuItem_Click);
             // 
             // kopirajRedToolStripMenuItem
             // 
             this.kopirajRedToolStripMenuItem.Name = "kopirajRedToolStripMenuItem";
-            this.kopirajRedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kopirajRedToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.kopirajRedToolStripMenuItem.Text = "Kopiraj Red";
             this.kopirajRedToolStripMenuItem.Click += new System.EventHandler(this.kopirajRedToolStripMenuItem_Click);
             // 
@@ -1492,7 +1492,7 @@
             this.Controls.Add(this.panelPretraga);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(1506, 763);
+            this.MinimumSize = new System.Drawing.Size(1533, 763);
             this.Name = "UgovoriForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ugovori";

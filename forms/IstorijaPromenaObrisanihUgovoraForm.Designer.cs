@@ -26,10 +26,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IstorijaPromenaObrisanihUgovoraForm));
             this.dataGridViewChangeLogObrisanihUgovora = new System.Windows.Forms.DataGridView();
-            this.buttonZatvori = new System.Windows.Forms.Button();
             this.contextMenuStripIstorijaPromenaObrisanihUgovora = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.kopirajPoljeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kopirajRedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonZatvori = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChangeLogObrisanihUgovora)).BeginInit();
             this.contextMenuStripIstorijaPromenaObrisanihUgovora.SuspendLayout();
             this.SuspendLayout();
@@ -42,6 +42,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewChangeLogObrisanihUgovora.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewChangeLogObrisanihUgovora.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewChangeLogObrisanihUgovora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewChangeLogObrisanihUgovora.ContextMenuStrip = this.contextMenuStripIstorijaPromenaObrisanihUgovora;
             this.dataGridViewChangeLogObrisanihUgovora.Location = new System.Drawing.Point(12, 12);
@@ -54,18 +55,6 @@
             this.dataGridViewChangeLogObrisanihUgovora.TabIndex = 0;
             this.dataGridViewChangeLogObrisanihUgovora.TabStop = false;
             this.dataGridViewChangeLogObrisanihUgovora.CellContextMenuStripNeeded += new System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler(this.dataGridViewChangeLogObrisanihUgovora_CellContextMenuStripNeeded);
-            // 
-            // buttonZatvori
-            // 
-            this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.buttonZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.buttonZatvori.Location = new System.Drawing.Point(428, 375);
-            this.buttonZatvori.Name = "buttonZatvori";
-            this.buttonZatvori.Size = new System.Drawing.Size(165, 63);
-            this.buttonZatvori.TabIndex = 1;
-            this.buttonZatvori.Text = "Zatvori";
-            this.buttonZatvori.UseVisualStyleBackColor = true;
-            this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
             // 
             // contextMenuStripIstorijaPromenaObrisanihUgovora
             // 
@@ -88,6 +77,18 @@
             this.kopirajRedToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.kopirajRedToolStripMenuItem.Text = "Kopiraj Red";
             this.kopirajRedToolStripMenuItem.Click += new System.EventHandler(this.kopirajRedToolStripMenuItem_Click);
+            // 
+            // buttonZatvori
+            // 
+            this.buttonZatvori.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonZatvori.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.buttonZatvori.Location = new System.Drawing.Point(428, 375);
+            this.buttonZatvori.Name = "buttonZatvori";
+            this.buttonZatvori.Size = new System.Drawing.Size(165, 63);
+            this.buttonZatvori.TabIndex = 1;
+            this.buttonZatvori.Text = "Zatvori";
+            this.buttonZatvori.UseVisualStyleBackColor = true;
+            this.buttonZatvori.Click += new System.EventHandler(this.buttonZatvori_Click);
             // 
             // IstorijaPromenaObrisanihUgovoraForm
             // 

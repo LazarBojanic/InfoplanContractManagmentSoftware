@@ -59,6 +59,7 @@ namespace CSharp_SQL_App.forms {
             try {
                 OpenFileDialog openFileDialog = new OpenFileDialog();
                 openFileDialog.Multiselect = false;
+                openFileDialog.Title = "Dodavanje fajla";
                 openFileDialog.ShowDialog();
                 String fajlPutanja = openFileDialog.FileName;
                 if (!fajlPutanja.Equals("")) {

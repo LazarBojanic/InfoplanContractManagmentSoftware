@@ -26,12 +26,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TipUgovoraForm));
             this.dataGridViewTipUgovora = new System.Windows.Forms.DataGridView();
+            this.contextMenuStripTipUgovora = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.kopirajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonZatvori = new System.Windows.Forms.Button();
             this.buttonDodaj = new System.Windows.Forms.Button();
             this.buttonIzmeni = new System.Windows.Forms.Button();
             this.buttonObrisi = new System.Windows.Forms.Button();
-            this.contextMenuStripTipUgovora = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.kopirajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTipUgovora)).BeginInit();
             this.contextMenuStripTipUgovora.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +52,7 @@
             this.dataGridViewTipUgovora.MultiSelect = false;
             this.dataGridViewTipUgovora.Name = "dataGridViewTipUgovora";
             this.dataGridViewTipUgovora.ReadOnly = true;
+            this.dataGridViewTipUgovora.RowHeadersVisible = false;
             this.dataGridViewTipUgovora.RowHeadersWidth = 51;
             this.dataGridViewTipUgovora.RowTemplate.Height = 24;
             this.dataGridViewTipUgovora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -59,6 +60,20 @@
             this.dataGridViewTipUgovora.TabIndex = 0;
             this.dataGridViewTipUgovora.TabStop = false;
             this.dataGridViewTipUgovora.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTipUgovora_CellDoubleClick);
+            // 
+            // contextMenuStripTipUgovora
+            // 
+            this.contextMenuStripTipUgovora.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kopirajToolStripMenuItem});
+            this.contextMenuStripTipUgovora.Name = "contextMenuStripTipUgovora";
+            this.contextMenuStripTipUgovora.Size = new System.Drawing.Size(112, 26);
+            // 
+            // kopirajToolStripMenuItem
+            // 
+            this.kopirajToolStripMenuItem.Name = "kopirajToolStripMenuItem";
+            this.kopirajToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.kopirajToolStripMenuItem.Text = "Kopiraj";
+            this.kopirajToolStripMenuItem.Click += new System.EventHandler(this.kopirajToolStripMenuItem_Click);
             // 
             // buttonZatvori
             // 
@@ -111,20 +126,6 @@
             this.buttonObrisi.Text = "Obriši";
             this.buttonObrisi.UseVisualStyleBackColor = true;
             this.buttonObrisi.Click += new System.EventHandler(this.buttonObrisi_Click);
-            // 
-            // contextMenuStripTipUgovora
-            // 
-            this.contextMenuStripTipUgovora.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kopirajToolStripMenuItem});
-            this.contextMenuStripTipUgovora.Name = "contextMenuStripTipUgovora";
-            this.contextMenuStripTipUgovora.Size = new System.Drawing.Size(181, 48);
-            // 
-            // kopirajToolStripMenuItem
-            // 
-            this.kopirajToolStripMenuItem.Name = "kopirajToolStripMenuItem";
-            this.kopirajToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kopirajToolStripMenuItem.Text = "Kopiraj";
-            this.kopirajToolStripMenuItem.Click += new System.EventHandler(this.kopirajToolStripMenuItem_Click);
             // 
             // TipUgovoraForm
             // 

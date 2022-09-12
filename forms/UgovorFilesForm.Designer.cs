@@ -45,12 +45,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewUgovorFiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewUgovorFiles.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewUgovorFiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUgovorFiles.ContextMenuStrip = this.contextMenuStripFajloviUgovora;
             this.dataGridViewUgovorFiles.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewUgovorFiles.MultiSelect = false;
             this.dataGridViewUgovorFiles.Name = "dataGridViewUgovorFiles";
             this.dataGridViewUgovorFiles.ReadOnly = true;
+            this.dataGridViewUgovorFiles.RowHeadersVisible = false;
             this.dataGridViewUgovorFiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewUgovorFiles.Size = new System.Drawing.Size(776, 386);
             this.dataGridViewUgovorFiles.TabIndex = 0;
