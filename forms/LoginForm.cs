@@ -14,7 +14,6 @@ namespace CSharp_SQL_App {
         public LoginForm() {
             InitializeComponent();
             textBoxPassword.PasswordChar = '●';
-            this.AcceptButton = buttonLogin;
         }
         public static LoginForm getInstance() {
             if (instance == null) {
@@ -24,7 +23,8 @@ namespace CSharp_SQL_App {
         }
         private async void buttonLogin_Click(object sender, EventArgs e) {
             username = textBoxUsername.Text;
-            password = textBoxPassword.Text;
+            //password = textBoxPassword.Text;
+            password = Util.encrypt(textBoxPassword.Text);
             if (login() > 0) {
                 id = getId();
                 privilegija = getPrivilegija();
@@ -44,7 +44,7 @@ namespace CSharp_SQL_App {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT COUNT(*) FROM korisnik WHERE username = @username AND [password] = @password";
+                String query = "SELECT COUNT(*) FROM korisnik WHERE [username] = @username AND [password] = @password";
                 command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@password", password);
@@ -63,7 +63,7 @@ namespace CSharp_SQL_App {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT privilegija FROM korisnik WHERE username = @username AND [password] = @password";
+                String query = "SELECT privilegija FROM korisnik WHERE [username] = @username AND [password] = @password";
                 command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@password", password);
@@ -82,7 +82,7 @@ namespace CSharp_SQL_App {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT id FROM korisnik WHERE username = @username AND [password] = @password";
+                String query = "SELECT id FROM korisnik WHERE [username] = @username AND [password] = @password";
                 command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@password", password);

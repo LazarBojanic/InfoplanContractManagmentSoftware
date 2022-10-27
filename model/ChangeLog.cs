@@ -29,8 +29,8 @@ namespace CSharp_SQL_App.model {
                 connection.Open();
                 DateTime vremeAkcije = DateTime.Now;
                 string username = MainForm.user.username;
-                string query = "INSERT INTO changeLog (imeTabele, imePolja, tipAkcije," +
-                    " vremeAkcije, username, primarniKljuc, staraVrednost, novaVrednost) VALUES" +
+                string query = "INSERT INTO [changeLog] (imeTabele, imePolja, tipAkcije," +
+                    " vremeAkcije, [username], primarniKljuc, staraVrednost, novaVrednost) VALUES" +
                     " (@imeTabele, @imePolja, @tipAkcije, @vremeAkcije, @username," +
                     " @primarniKljuc, @staraVrednost, @novaVrednost)";
                 OleDbCommand command = new OleDbCommand(query, connection);

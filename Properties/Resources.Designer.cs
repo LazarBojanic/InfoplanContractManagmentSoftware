@@ -59,5 +59,14 @@ namespace CSharp_SQL_App.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to QcHiFlNp0nF6xJgo.
+        /// </summary>
+        internal static string passwordEnryptionKey {
+            get {
+                return ResourceManager.GetString("passwordEnryptionKey", resourceCulture);
+            }
+        }
     }
 }

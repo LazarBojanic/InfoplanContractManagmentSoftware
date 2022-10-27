@@ -31,7 +31,7 @@ namespace CSharp_SQL_App {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT id, username, privilegija FROM korisnik ORDER BY id";
+                String query = "SELECT id, [username], privilegija FROM korisnik ORDER BY id";
                 command = new OleDbCommand(query, connection);
                 dt = new DataTable();
                 bs = new BindingSource();
