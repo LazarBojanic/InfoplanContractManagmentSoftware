@@ -71,7 +71,7 @@ namespace CSharp_SQL_App {
                 OleDbConnection connection;
                 OleDbCommand command;
                 DataTable dt;
-                String query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
+                string query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
                     " datumUgovora, rokPoUgovoru, krajnjiRok, obim, prioritet, cena, usvojen, datumUsvajanja," +
                     " brojSluzbenogVlasnika, vremeRada, uGuid FROM ugovor ORDER BY id";
                 connection = Util.GetConnection();
@@ -101,7 +101,7 @@ namespace CSharp_SQL_App {
         }
         private void buttonIstorijaPromena_Click(object sender, EventArgs e) {
             if (dataGridViewUgovori.SelectedRows.Count > 0) {
-                String uGuid = dataGridViewUgovori.SelectedRows[0].Cells["uGuid"].Value.ToString();
+                string uGuid = dataGridViewUgovori.SelectedRows[0].Cells["uGuid"].Value.ToString();
                 IstorijaPromenaForm i = new IstorijaPromenaForm(uGuid);
                 i.ShowDialog();
             }
@@ -119,7 +119,7 @@ namespace CSharp_SQL_App {
                 OleDbCommand command;
                 DataTable dt;
                 connection = Util.GetConnection();
-                String query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
+                string query = "SELECT id, opstina, nazivPlana, urbanista, tipUgovora, faza, napomena," +
                     " datumUgovora, rokPoUgovoru, krajnjiRok, obim, prioritet, cena, usvojen, datumUsvajanja," +
                     " brojSluzbenogVlasnika, vremeRada, uGuid FROM ugovor WHERE id IS NOT NULL";
                 if (!string.IsNullOrEmpty(textBoxId.Text)) {
@@ -355,7 +355,7 @@ namespace CSharp_SQL_App {
                         oldUgovor.loadFromDatabase(id);
                         OleDbConnection connection;
                         OleDbCommand command;
-                        String query = "DELETE FROM ugovor WHERE id = @id";
+                        string query = "DELETE FROM ugovor WHERE id = @id";
                         connection = Util.GetConnection();
                         connection.Open();
                         command = new OleDbCommand(query, connection);
@@ -396,7 +396,7 @@ namespace CSharp_SQL_App {
         }
         private void buttonUgovorFiles_Click(object sender, EventArgs e) {
             if (dataGridViewUgovori.SelectedRows.Count > 0) {
-                String uGuid = dataGridViewUgovori.SelectedRows[0].Cells["uGuid"].Value.ToString();
+                string uGuid = dataGridViewUgovori.SelectedRows[0].Cells["uGuid"].Value.ToString();
                 UgovorFilesForm ugovorFilesForm = new UgovorFilesForm(uGuid);
                 ugovorFilesForm.ShowDialog();
             }
@@ -495,7 +495,7 @@ namespace CSharp_SQL_App {
         }
         private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
             Ugovor ugovor = Util.getUgovorFromSelectedRow(dataGridViewUgovori);
-            String value = Util.getUgovorCellValue(ugovor, cellIndex);
+            string value = Util.getUgovorCellValue(ugovor, cellIndex);
             if (this.dataGridViewUgovori.GetCellCount(DataGridViewElementStates.Selected) > 0) {
                 try {
                     Clipboard.SetText(value);

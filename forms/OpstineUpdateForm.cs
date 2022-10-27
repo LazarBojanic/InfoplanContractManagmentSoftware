@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App.forms {
     public partial class OpstineUpdateForm : Form {
-        public OpstineUpdateForm(String tipAkcije, String izabranaOpstina) {
+        public OpstineUpdateForm(String tipAkcije, string izabranaOpstina) {
             InitializeComponent();
             if (tipAkcije == "izmena") {
                 textBoxOpstina.Text = izabranaOpstina;

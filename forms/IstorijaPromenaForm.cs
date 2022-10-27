@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class IstorijaPromenaForm : Form {
-        private String uGuid { get; set; }
+        private string uGuid { get; set; }
         private static int cellIndex;
         public IstorijaPromenaForm(String uGuid) {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace CSharp_SQL_App {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT * FROM changeLog WHERE primarniKljuc = @uGuid";
+                string query = "SELECT * FROM changeLog WHERE primarniKljuc = @uGuid";
                 command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@uGuid", uGuid);
                 dt = new DataTable();
@@ -54,7 +54,7 @@ namespace CSharp_SQL_App {
         }
         private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
             ChangeLog changeLog = Util.getChangeLogFromSelectedRow(dataGridViewChangeLog);
-            String value = Util.getChangeLogCellValue(changeLog, cellIndex);
+            string value = Util.getChangeLogCellValue(changeLog, cellIndex);
             if (this.dataGridViewChangeLog.GetCellCount(DataGridViewElementStates.Selected) > 0) {
                 try {
                     Clipboard.SetText(value);

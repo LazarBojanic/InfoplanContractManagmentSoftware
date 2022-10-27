@@ -31,7 +31,7 @@ namespace CSharp_SQL_App {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT id, [username], privilegija FROM korisnik ORDER BY id";
+                string query = "SELECT id, [username], privilegija FROM korisnik ORDER BY id";
                 command = new OleDbCommand(query, connection);
                 dt = new DataTable();
                 bs = new BindingSource();
@@ -99,7 +99,7 @@ namespace CSharp_SQL_App {
                         int id = int.Parse(dataGridViewKorisnici.SelectedRows[0].Cells["id"].Value.ToString());
                         OleDbConnection connection;
                         OleDbCommand command;
-                        String query = "DELETE FROM korisnik WHERE id = @id";
+                        string query = "DELETE FROM korisnik WHERE id = @id";
                         connection = Util.GetConnection();
                         connection.Open();
                         command = new OleDbCommand(query, connection);
@@ -116,7 +116,7 @@ namespace CSharp_SQL_App {
         }
         private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
             User user = Util.getUserFromSelectedRow(dataGridViewKorisnici);
-            String value = Util.getUserCellValue(user, cellIndex);
+            string value = Util.getUserCellValue(user, cellIndex);
             if (this.dataGridViewKorisnici.GetCellCount(DataGridViewElementStates.Selected) > 0) {
                 try {
                     Clipboard.SetText(value);

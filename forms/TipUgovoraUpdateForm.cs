@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App.forms {
     public partial class TipUgovoraUpdateForm : Form {
-        public TipUgovoraUpdateForm(String tipAkcije, String izabraniTipUgovora) {
+        public TipUgovoraUpdateForm(String tipAkcije, string izabraniTipUgovora) {
             InitializeComponent();
             if (tipAkcije == "izmena") {
                 textBoxTipUgovora.Text = izabraniTipUgovora;

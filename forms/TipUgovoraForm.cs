@@ -8,8 +8,8 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class TipUgovoraForm : Form {
-        public static String tipUgovoraZaIzmenu;
-        public static String tipUgovora;
+        public static string tipUgovoraZaIzmenu;
+        public static string tipUgovora;
         public TipUgovoraForm() {
             InitializeComponent();
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
@@ -44,10 +44,10 @@ namespace CSharp_SQL_App {
                 ConfirmationForm confirmationForm = new ConfirmationForm();
                 if (dataGridViewTipUgovora.SelectedRows.Count > 0) {
                     if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
-                        String tipUgovora = dataGridViewTipUgovora.SelectedRows[0].Cells["tipUgovora"].Value.ToString();
+                        string tipUgovora = dataGridViewTipUgovora.SelectedRows[0].Cells["tipUgovora"].Value.ToString();
                         OleDbConnection connection;
                         OleDbCommand command;
-                        String query = "DELETE FROM tipUgovora WHERE tipUgovora = @tipUgovora";
+                        string query = "DELETE FROM tipUgovora WHERE tipUgovora = @tipUgovora";
                         connection = Util.GetConnection();
                         connection.Open();
                         command = new OleDbCommand(query, connection);
@@ -71,7 +71,7 @@ namespace CSharp_SQL_App {
                     OleDbCommand command;
                     connection = Util.GetConnection();
                     connection.Open();
-                    String query = "INSERT INTO tipUgovora (tipUgovora) VALUES (@tipUgovora)";
+                    string query = "INSERT INTO tipUgovora (tipUgovora) VALUES (@tipUgovora)";
                     command = new OleDbCommand(query, connection);
                     command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
                     dt = new DataTable();
@@ -95,7 +95,7 @@ namespace CSharp_SQL_App {
                     OleDbCommand command;
                     connection = Util.GetConnection();
                     connection.Open();
-                    String query = "UPDATE tipUgovora SET tipUgovora = @tipUgovora WHERE tipUgovora = @tipUgovoraZaIzmenu";
+                    string query = "UPDATE tipUgovora SET tipUgovora = @tipUgovora WHERE tipUgovora = @tipUgovoraZaIzmenu";
                     command = new OleDbCommand(query, connection);
                     command.Parameters.AddWithValue("@tipUgovora", tipUgovora);
                     command.Parameters.AddWithValue("@tipUgovoraZaIzmenu", tipUgovoraZaIzmenu);
@@ -119,7 +119,7 @@ namespace CSharp_SQL_App {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT * FROM tipUgovora ORDER BY tipUgovora";
+                string query = "SELECT * FROM tipUgovora ORDER BY tipUgovora";
                 command = new OleDbCommand(query, connection);
                 dt = new DataTable();
                 bs = new BindingSource();
@@ -155,7 +155,7 @@ namespace CSharp_SQL_App {
             }
         }
         private void kopirajToolStripMenuItem_Click(object sender, EventArgs e) {
-            String tipUgovora = dataGridViewTipUgovora.SelectedRows[0].Cells["tipUgovora"].Value.ToString();
+            string tipUgovora = dataGridViewTipUgovora.SelectedRows[0].Cells["tipUgovora"].Value.ToString();
             if (this.dataGridViewTipUgovora.GetCellCount(DataGridViewElementStates.Selected) > 0) {
                 try {
                     Clipboard.SetText(tipUgovora);

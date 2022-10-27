@@ -9,7 +9,7 @@ namespace CSharp_SQL_App {
     public partial class UpdateForm : Form {
         private Ugovor oldUgovor;
         private Ugovor newUgovor;
-        private String loadMethod;
+        private string loadMethod;
         public UpdateForm(String loadMethod) {
             InitializeComponent();
             loadOpstinaComboBox();
@@ -122,8 +122,8 @@ namespace CSharp_SQL_App {
                 newUgovor.datumUgovora = dateTimeDatumUgovora.Value;
                 newUgovor.rokPoUgovoru = textBoxRokPoUgovoru.Text + " " + comboBoxRokPoUgovoru.Text;
                 newUgovor.krajnjiRok = dateTimeKrajnjiRok.Value;
-                newUgovor.obim = Int32.Parse(textBoxObim.Text);
-                newUgovor.prioritet = Int32.Parse(textBoxPrioritet.Text);
+                newUgovor.obim = int.Parse(textBoxObim.Text);
+                newUgovor.prioritet = int.Parse(textBoxPrioritet.Text);
                 newUgovor.cena = Decimal.Parse(textBoxCena.Text);
                 if (checkBoxUsvojen.Checked) {
                     newUgovor.usvojen = "Da";
@@ -156,16 +156,16 @@ namespace CSharp_SQL_App {
             dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value;
             if (!textBoxRokPoUgovoru.Text.Equals("")) {
                 if (comboBoxRokPoUgovoru.Text.Equals("Dani")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text));
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(int.Parse(textBoxRokPoUgovoru.Text));
                 }
                 if (comboBoxRokPoUgovoru.Text.Equals("Nedelje")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text) * 7);
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(int.Parse(textBoxRokPoUgovoru.Text) * 7);
                 }
                 if (comboBoxRokPoUgovoru.Text.Equals("Meseci")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddMonths(Int32.Parse(textBoxRokPoUgovoru.Text));
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddMonths(int.Parse(textBoxRokPoUgovoru.Text));
                 }
                 if (comboBoxRokPoUgovoru.Text.Equals("Godine")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(Int32.Parse(textBoxRokPoUgovoru.Text));
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(int.Parse(textBoxRokPoUgovoru.Text));
                 }
             }
         }
@@ -173,16 +173,16 @@ namespace CSharp_SQL_App {
             dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value;
             if (!textBoxRokPoUgovoru.Text.Equals("")) {
                 if (comboBoxRokPoUgovoru.Text.Equals("Dani")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text));
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(int.Parse(textBoxRokPoUgovoru.Text));
                 }
                 if (comboBoxRokPoUgovoru.Text.Equals("Nedelje")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text) * 7);
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(int.Parse(textBoxRokPoUgovoru.Text) * 7);
                 }
                 if (comboBoxRokPoUgovoru.Text.Equals("Meseci")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddMonths(Int32.Parse(textBoxRokPoUgovoru.Text));
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddMonths(int.Parse(textBoxRokPoUgovoru.Text));
                 }
                 if (comboBoxRokPoUgovoru.Text.Equals("Godine")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(Int32.Parse(textBoxRokPoUgovoru.Text));
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(int.Parse(textBoxRokPoUgovoru.Text));
                 }
             }
         }
@@ -190,16 +190,16 @@ namespace CSharp_SQL_App {
             dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value;
             if (!textBoxRokPoUgovoru.Text.Equals("")) {
                 if (comboBoxRokPoUgovoru.Text.Equals("Dani")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text));
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(int.Parse(textBoxRokPoUgovoru.Text));
                 }
                 if (comboBoxRokPoUgovoru.Text.Equals("Nedelje")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(Int32.Parse(textBoxRokPoUgovoru.Text) * 7);
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddDays(int.Parse(textBoxRokPoUgovoru.Text) * 7);
                 }
                 if (comboBoxRokPoUgovoru.Text.Equals("Meseci")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddMonths(Int32.Parse(textBoxRokPoUgovoru.Text));
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddMonths(int.Parse(textBoxRokPoUgovoru.Text));
                 }
                 if (comboBoxRokPoUgovoru.Text.Equals("Godine")) {
-                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(Int32.Parse(textBoxRokPoUgovoru.Text));
+                    dateTimeKrajnjiRok.Value = dateTimeDatumUgovora.Value.AddYears(int.Parse(textBoxRokPoUgovoru.Text));
                 }
             }
         }

@@ -44,11 +44,11 @@ namespace CSharp_SQL_App {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT COUNT(*) FROM korisnik WHERE [username] = @username AND [password] = @password";
+                string query = "SELECT COUNT(*) FROM korisnik WHERE [username] = @username AND [password] = @password";
                 command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@password", password);
-                int found = Int32.Parse(command.ExecuteScalar().ToString());
+                int found = int.Parse(command.ExecuteScalar().ToString());
                 connection.Close();
                 return found;
             }
@@ -63,7 +63,7 @@ namespace CSharp_SQL_App {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT privilegija FROM korisnik WHERE [username] = @username AND [password] = @password";
+                string query = "SELECT privilegija FROM korisnik WHERE [username] = @username AND [password] = @password";
                 command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@password", password);
@@ -82,11 +82,11 @@ namespace CSharp_SQL_App {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT id FROM korisnik WHERE [username] = @username AND [password] = @password";
+                string query = "SELECT id FROM korisnik WHERE [username] = @username AND [password] = @password";
                 command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@password", password);
-                int id = Int32.Parse(command.ExecuteScalar().ToString());
+                int id = int.Parse(command.ExecuteScalar().ToString());
                 connection.Close();
                 return id;
             }

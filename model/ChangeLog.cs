@@ -6,14 +6,14 @@ using System.Windows.Forms;
 namespace CSharp_SQL_App.model {
     public class ChangeLog {
         public int id { get;set;}
-        public String imeTabele { get;set; }
-        public String imePolja { get;set; }
-        public String tipAkcije { get;set; }
-        public String primarniKljuc { get;set; }
-        public String staraVrednost { get;set; }
-        public String novaVrednost { get;set; }
+        public string imeTabele { get;set; }
+        public string imePolja { get;set; }
+        public string tipAkcije { get;set; }
+        public string primarniKljuc { get;set; }
+        public string staraVrednost { get;set; }
+        public string novaVrednost { get;set; }
 
-        public ChangeLog(int id, String imeTabele, String imePolja, String tipAkcije, String primarniKljuc, String staraVrednost, String novaVrednost) {
+        public ChangeLog(int id, string imeTabele, string imePolja, string tipAkcije, string primarniKljuc, string staraVrednost, string novaVrednost) {
             this.id = id;
             this.imeTabele = imeTabele;
             this.imePolja = imePolja;
@@ -22,8 +22,8 @@ namespace CSharp_SQL_App.model {
             this.staraVrednost = staraVrednost;
             this.novaVrednost = novaVrednost;
         }
-        public static void addChangeLogField(String imeTabele, String imePolja, String tipAkcije,
-            String primarniKljuc, String staraVrednost, String novaVrednost) {
+        public static void addChangeLogField(String imeTabele, string imePolja, string tipAkcije,
+            string primarniKljuc, string staraVrednost, string novaVrednost) {
             try {
                 OleDbConnection connection = Util.GetConnection();
                 connection.Open();

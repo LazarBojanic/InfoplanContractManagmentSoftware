@@ -15,7 +15,7 @@ namespace CSharp_SQL_App {
             textBoxPrivilegija.Text = MainForm.user.privilegija;
         }
         private void buttonSacuvaj_Click(object sender, EventArgs e) {
-            int id = Int32.Parse(textBoxId.Text);
+            int id = int.Parse(textBoxId.Text);
             string username = textBoxUsername.Text;
             string password = Util.encrypt(textBoxPassword.Text);
             string privilegija = textBoxPrivilegija.Text;

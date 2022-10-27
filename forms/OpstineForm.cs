@@ -9,8 +9,8 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App {
     public partial class OpstineForm : Form {
-        public static String opstina;
-        public static String opstinaZaIzmenu;
+        public static string opstina;
+        public static string opstinaZaIzmenu;
         public OpstineForm() {
             InitializeComponent();
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
@@ -45,10 +45,10 @@ namespace CSharp_SQL_App {
                 ConfirmationForm confirmationForm = new ConfirmationForm();
                 if (dataGridViewOpstine.SelectedRows.Count > 0) {
                     if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
-                        String opstina = dataGridViewOpstine.SelectedRows[0].Cells["opstina"].Value.ToString();
+                        string opstina = dataGridViewOpstine.SelectedRows[0].Cells["opstina"].Value.ToString();
                         OleDbConnection connection;
                         OleDbCommand command;
-                        String query = "DELETE FROM opstina WHERE opstina = @opstina";
+                        string query = "DELETE FROM opstina WHERE opstina = @opstina";
                         connection = Util.GetConnection();
                         connection.Open();
                         command = new OleDbCommand(query, connection);
@@ -72,7 +72,7 @@ namespace CSharp_SQL_App {
                     OleDbCommand command;
                     connection = Util.GetConnection();
                     connection.Open();
-                    String query = "INSERT INTO opstina (opstina) VALUES (@opstina)";
+                    string query = "INSERT INTO opstina (opstina) VALUES (@opstina)";
                     command = new OleDbCommand(query, connection);
                     command.Parameters.AddWithValue("@opstina", opstina);
                     dt = new DataTable();
@@ -96,7 +96,7 @@ namespace CSharp_SQL_App {
                     OleDbCommand command;
                     connection = Util.GetConnection();
                     connection.Open();
-                    String query = "UPDATE opstina SET opstina = @opstina WHERE opstina = @opstinaZaIzmenu";
+                    string query = "UPDATE opstina SET opstina = @opstina WHERE opstina = @opstinaZaIzmenu";
                     command = new OleDbCommand(query, connection);
                     command.Parameters.AddWithValue("@opstina", opstina);
                     command.Parameters.AddWithValue("@opstinaZaIzmenu", opstinaZaIzmenu);
@@ -120,7 +120,7 @@ namespace CSharp_SQL_App {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT * FROM opstina ORDER BY opstina";
+                string query = "SELECT * FROM opstina ORDER BY opstina";
                 command = new OleDbCommand(query, connection);
                 dt = new DataTable();
                 bs = new BindingSource();
@@ -156,7 +156,7 @@ namespace CSharp_SQL_App {
             }
         }
         private void kopirajToolStripMenuItem_Click(object sender, EventArgs e) {
-            String opstina = dataGridViewOpstine.SelectedRows[0].Cells["opstina"].Value.ToString();
+            string opstina = dataGridViewOpstine.SelectedRows[0].Cells["opstina"].Value.ToString();
             if (this.dataGridViewOpstine.GetCellCount(DataGridViewElementStates.Selected) > 0) {
                 try {
                     Clipboard.SetText(opstina);
