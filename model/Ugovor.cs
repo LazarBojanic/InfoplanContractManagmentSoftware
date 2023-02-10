@@ -6,24 +6,24 @@ using System.Windows.Forms;
 namespace CSharp_SQL_App.model {
     public class Ugovor {
         public int id { get; set; }
-        public String opstina { get; set; }
-        public String nazivPlana { get; set; }
-        public String urbanista { get; set; }
-        public String tipUgovora { get; set; }
-        public String faza { get; set; }
-        public String napomena { get; set; }
+        public string opstina { get; set; }
+        public string nazivPlana { get; set; }
+        public string urbanista { get; set; }
+        public string tipUgovora { get; set; }
+        public string faza { get; set; }
+        public string napomena { get; set; }
         public DateTime datumUgovora { get; set; }
-        public String rokPoUgovoru { get; set; }
+        public string rokPoUgovoru { get; set; }
         public DateTime krajnjiRok { get; set; }
         public int obim { get; set; }
         public int prioritet { get; set; }
         public decimal cena { get; set; }
-        public String usvojen { get; set; }
+        public string usvojen { get; set; }
         public DateTime datumUsvajanja { get; set; }
-        public String brojSluzbenogVlasnika { get; set; }
-        public String vremeRada { get; set; }
+        public string brojSluzbenogVlasnika { get; set; }
+        public string vremeRada { get; set; }
         public DateTime vremeUgovora { get; set; }
-        public String uGuid { get; set; }
+        public string uGuid { get; set; }
         public Ugovor(int id, string opstina, string nazivPlana, string urbanista, string faza, string tipUgovora,
             string napomena, DateTime datumUgovora, string rokPoUgovoru, DateTime krajnjiRok, int obim,
             int prioritet, decimal cena, string usvojen, DateTime datumUsvajanja, string brojSluzbenogVlasnika, string vremeRada,

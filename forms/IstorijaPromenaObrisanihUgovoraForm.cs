@@ -24,7 +24,7 @@ namespace CSharp_SQL_App.forms {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT * FROM changeLog WHERE tipAkcije = 'brisanje'";
+                string query = "SELECT * FROM changeLog WHERE tipAkcije = 'brisanje'";
                 command = new OleDbCommand(query, connection);
                 dt = new DataTable();
                 bs = new BindingSource();
@@ -51,7 +51,7 @@ namespace CSharp_SQL_App.forms {
         }
         private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
             ChangeLog changeLog = Util.getChangeLogFromSelectedRow(dataGridViewChangeLogObrisanihUgovora);
-            String value = Util.getChangeLogCellValue(changeLog, cellIndex);
+            string value = Util.getChangeLogCellValue(changeLog, cellIndex);
             if (this.dataGridViewChangeLogObrisanihUgovora.GetCellCount(DataGridViewElementStates.Selected) > 0) {
                 try {
                     Clipboard.SetText(value);

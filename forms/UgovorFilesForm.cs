@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CSharp_SQL_App.forms {
     public partial class UgovorFilesForm : Form {
-        private static String uGuid;
+        private static string uGuid;
         private static int cellIndex;
         public UgovorFilesForm(String parUGuid) {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace CSharp_SQL_App.forms {
                 OleDbCommand command;
                 connection = Util.GetConnection();
                 connection.Open();
-                String query = "SELECT * FROM ugovorFiles WHERE uGuid = @uGuid ORDER BY id";
+                string query = "SELECT * FROM ugovorFiles WHERE uGuid = @uGuid ORDER BY id";
                 command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@uGuid", uGuid);
                 dt = new DataTable();
@@ -49,7 +49,7 @@ namespace CSharp_SQL_App.forms {
             }
         }
         private void buttonPrikazi_Click(object sender, EventArgs e) {
-            String filePath;
+            string filePath;
             if (dataGridViewUgovorFiles.SelectedRows.Count > 0) {
                 filePath = dataGridViewUgovorFiles.SelectedRows[0].Cells["fajlPutanja"].Value.ToString();
                 System.Diagnostics.Process.Start(filePath);
@@ -61,13 +61,13 @@ namespace CSharp_SQL_App.forms {
                 openFileDialog.Multiselect = false;
                 openFileDialog.Title = "Dodavanje fajla";
                 openFileDialog.ShowDialog();
-                String fajlPutanja = openFileDialog.FileName;
+                string fajlPutanja = openFileDialog.FileName;
                 if (!fajlPutanja.Equals("")) {
                     OleDbConnection connection;
                     OleDbCommand command;
                     connection = Util.GetConnection();
                     connection.Open();
-                    String query = "INSERT INTO ugovorFiles (uGuid, fajlPutanja) VALUES (@uGuid, @fajlPutanja)";
+                    string query = "INSERT INTO ugovorFiles (uGuid, fajlPutanja) VALUES (@uGuid, @fajlPutanja)";
                     command = new OleDbCommand(query, connection);
                     command.Parameters.AddWithValue("@uGuid", uGuid);
                     command.Parameters.AddWithValue("@fajlPutanja", fajlPutanja);
@@ -85,11 +85,11 @@ namespace CSharp_SQL_App.forms {
                 ConfirmationForm confirmationForm = new ConfirmationForm();
                 if (dataGridViewUgovorFiles.SelectedRows.Count > 0) {
                     if (confirmationForm.ShowDialog().Equals(DialogResult.Yes)) {
-                        int id = Int32.Parse(dataGridViewUgovorFiles.SelectedRows[0].Cells["id"].Value.ToString()); OleDbConnection connection;
+                        int id = int.Parse(dataGridViewUgovorFiles.SelectedRows[0].Cells["id"].Value.ToString()); OleDbConnection connection;
                         OleDbCommand command;
                         connection = Util.GetConnection();
                         connection.Open();
-                        String query = "DELETE FROM ugovorFiles WHERE id = @id";
+                        string query = "DELETE FROM ugovorFiles WHERE id = @id";
                         command = new OleDbCommand(query, connection);
                         command.Parameters.AddWithValue("@id", id);
                         command.ExecuteNonQuery();
@@ -115,7 +115,7 @@ namespace CSharp_SQL_App.forms {
             this.ResumeLayout();
         }
         private void dataGridViewUgovorFiles_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
-            String filePath;
+            string filePath;
             if (dataGridViewUgovorFiles.SelectedRows.Count > 0) {
                 filePath = dataGridViewUgovorFiles.SelectedRows[0].Cells["fajlPutanja"].Value.ToString();
                 System.Diagnostics.Process.Start(filePath);
@@ -123,7 +123,7 @@ namespace CSharp_SQL_App.forms {
         }
         private void kopirajPoljeToolStripMenuItem_Click(object sender, EventArgs e) {
             UgovorFile ugovorFile = Util.getUgovorFileFromSelectedRow(dataGridViewUgovorFiles);
-            String value = Util.getUgovorFileCellValue(ugovorFile, cellIndex);
+            string value = Util.getUgovorFileCellValue(ugovorFile, cellIndex);
             if (this.dataGridViewUgovorFiles.GetCellCount(DataGridViewElementStates.Selected) > 0) {
                 try {
                     Clipboard.SetText(value);

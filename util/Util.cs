@@ -1,7 +1,10 @@
 ﻿using CSharp_SQL_App.model;
 using System;
 using System.Data.OleDb;
+using System.IO;
 using System.Reflection;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace CSharp_SQL_App.util {
@@ -14,7 +17,7 @@ namespace CSharp_SQL_App.util {
         }
         public static Ugovor getUgovorFromSelectedRow(DataGridView dataGridView) {
             return new Ugovor(
-                Int32.Parse(dataGridView.SelectedRows[0].Cells["id"].Value.ToString()),
+                int.Parse(dataGridView.SelectedRows[0].Cells["id"].Value.ToString()),
                 dataGridView.SelectedRows[0].Cells["opstina"].Value.ToString(),
                 dataGridView.SelectedRows[0].Cells["nazivPlana"].Value.ToString(),
                 dataGridView.SelectedRows[0].Cells["urbanista"].Value.ToString(),
@@ -24,8 +27,8 @@ namespace CSharp_SQL_App.util {
                 Convert.ToDateTime(dataGridView.SelectedRows[0].Cells["datumUgovora"].Value),
                 dataGridView.SelectedRows[0].Cells["rokPoUgovoru"].Value.ToString(),
                 Convert.ToDateTime(dataGridView.SelectedRows[0].Cells["krajnjiRok"].Value),
-                Int32.Parse(dataGridView.SelectedRows[0].Cells["obim"].Value.ToString()),
-                Int32.Parse(dataGridView.SelectedRows[0].Cells["prioritet"].Value.ToString()),
+                int.Parse(dataGridView.SelectedRows[0].Cells["obim"].Value.ToString()),
+                int.Parse(dataGridView.SelectedRows[0].Cells["prioritet"].Value.ToString()),
                 Decimal.Parse(dataGridView.SelectedRows[0].Cells["cena"].Value.ToString()),
                 dataGridView.SelectedRows[0].Cells["usvojen"].Value.ToString(),
                 Convert.ToDateTime(dataGridView.SelectedRows[0].Cells["datumUsvajanja"].Value),
@@ -36,7 +39,7 @@ namespace CSharp_SQL_App.util {
         }
         public static ChangeLog getChangeLogFromSelectedRow(DataGridView dataGridView) {
             return new ChangeLog(
-                Int32.Parse(dataGridView.SelectedRows[0].Cells["id"].Value.ToString()),
+                int.Parse(dataGridView.SelectedRows[0].Cells["id"].Value.ToString()),
                 dataGridView.SelectedRows[0].Cells["imeTabele"].Value.ToString(),
                 dataGridView.SelectedRows[0].Cells["imePolja"].Value.ToString(),
                 dataGridView.SelectedRows[0].Cells["tipAkcije"].Value.ToString(),
@@ -46,18 +49,18 @@ namespace CSharp_SQL_App.util {
         }
         public static User getUserFromSelectedRow(DataGridView dataGridView) {
             return new User(
-                Int32.Parse(dataGridView.SelectedRows[0].Cells["id"].Value.ToString()),
+                int.Parse(dataGridView.SelectedRows[0].Cells["id"].Value.ToString()),
                 dataGridView.SelectedRows[0].Cells["username"].Value.ToString(),
                 "",
                 dataGridView.SelectedRows[0].Cells["privilegija"].Value.ToString());
         }
         public static UgovorFile getUgovorFileFromSelectedRow(DataGridView dataGridView) {
             return new UgovorFile(
-                Int32.Parse(dataGridView.SelectedRows[0].Cells["id"].Value.ToString()),
+                int.Parse(dataGridView.SelectedRows[0].Cells["id"].Value.ToString()),
                 dataGridView.SelectedRows[0].Cells["fajlPutanja"].Value.ToString(),
                 dataGridView.SelectedRows[0].Cells["uGuid"].Value.ToString());
         }
-        public static String getUgovorCellValue(Ugovor ugovor, int index) {
+        public static string getUgovorCellValue(Ugovor ugovor, int index) {
             int i = 0;
             foreach (PropertyInfo propertyInfo in ugovor.GetType().GetProperties()) {
                 if (propertyInfo.Name.Equals("vremeUgovora")) {
@@ -79,8 +82,8 @@ namespace CSharp_SQL_App.util {
             }
             return "null";
         }
-        public static String buildClipboardUgovorString(Ugovor ugovor) {
-            String clipboard = "";
+        public static string buildClipboardUgovorString(Ugovor ugovor) {
+            string clipboard = "";
             foreach (PropertyInfo propertyInfo in ugovor.GetType().GetProperties()) {
                 if (!propertyInfo.Name.Equals("vremeUgovora")) {
                     if (!string.IsNullOrEmpty(propertyInfo.GetValue(ugovor).ToString())) {
@@ -93,7 +96,7 @@ namespace CSharp_SQL_App.util {
             }
             return clipboard.Trim(',');
         }
-        public static String getChangeLogCellValue(ChangeLog changeLog, int index) {
+        public static string getChangeLogCellValue(ChangeLog changeLog, int index) {
             int i = 0;
             foreach (PropertyInfo propertyInfo in changeLog.GetType().GetProperties()) {
                 if (!string.IsNullOrEmpty(propertyInfo.GetValue(changeLog).ToString())) {
@@ -110,8 +113,8 @@ namespace CSharp_SQL_App.util {
             }
             return "null";
         }
-        public static String buildClipboardChangeLogString(ChangeLog changeLog) {
-            String clipboard = "";
+        public static string buildClipboardChangeLogString(ChangeLog changeLog) {
+            string clipboard = "";
             foreach (PropertyInfo propertyInfo in changeLog.GetType().GetProperties()) {
                 if (!string.IsNullOrEmpty(propertyInfo.GetValue(changeLog).ToString())) {
                     clipboard += propertyInfo.GetValue(changeLog).ToString() + ",";
@@ -122,7 +125,7 @@ namespace CSharp_SQL_App.util {
             }
             return clipboard.Trim(',');
         }
-        public static String getUserCellValue(User user, int index) {
+        public static string getUserCellValue(User user, int index) {
             int i = 0;
             foreach (PropertyInfo propertyInfo in user.GetType().GetProperties()) {
                 if (propertyInfo.Name.Equals("password")) {
@@ -144,8 +147,8 @@ namespace CSharp_SQL_App.util {
             }
             return "null";
         }
-        public static String buildClipboardUserString(User user) {
-            String clipboard = "";
+        public static string buildClipboardUserString(User user) {
+            string clipboard = "";
             foreach (PropertyInfo propertyInfo in user.GetType().GetProperties()) {
                 if (!string.IsNullOrEmpty(propertyInfo.GetValue(user).ToString())) {
                     clipboard += propertyInfo.GetValue(user).ToString() + ",";
@@ -156,7 +159,7 @@ namespace CSharp_SQL_App.util {
             }
             return clipboard.Trim(',');
         }
-        public static String getUgovorFileCellValue(UgovorFile ugovorFile, int index) {
+        public static string getUgovorFileCellValue(UgovorFile ugovorFile, int index) {
             int i = 0;
             foreach (PropertyInfo propertyInfo in ugovorFile.GetType().GetProperties()) {
                 if (!string.IsNullOrEmpty(propertyInfo.GetValue(ugovorFile).ToString())) {
@@ -174,8 +177,8 @@ namespace CSharp_SQL_App.util {
             }
             return "null";
         }
-        public static String buildClipboardUgovorFileString(UgovorFile ugovorFile) {
-            String clipboard = "";
+        public static string buildClipboardUgovorFileString(UgovorFile ugovorFile) {
+            string clipboard = "";
             foreach (PropertyInfo propertyInfo in ugovorFile.GetType().GetProperties()) {
                 if (!string.IsNullOrEmpty(propertyInfo.GetValue(ugovorFile).ToString())) {
                     clipboard += propertyInfo.GetValue(ugovorFile).ToString() + ",";
@@ -185,6 +188,50 @@ namespace CSharp_SQL_App.util {
                 }
             }
             return clipboard.Trim(',');
+        }
+        public static string encrypt(string clearText) {
+            try {
+                string encryptionKey = Properties.Resources.passwordEnryptionKey;
+                byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);
+                using (Aes encryptor = Aes.Create()) {
+                    Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(encryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
+                    encryptor.Key = pdb.GetBytes(32);
+                    encryptor.IV = pdb.GetBytes(16);
+                    using (MemoryStream ms = new MemoryStream()) {
+                        using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write)) {
+                            cs.Write(clearBytes, 0, clearBytes.Length);
+                            cs.Close();
+                        }
+                        clearText = Convert.ToBase64String(ms.ToArray());
+                    }
+                }
+            }
+            catch (CryptographicException) {
+                MessageBox.Show("Neuspešno snimanje password-a");
+            }
+            return clearText;
+        }
+        public static string decrypt(string cipherText) {
+            try {
+                string encryptionKey = Properties.Resources.passwordEnryptionKey;
+                byte[] cipherBytes = Convert.FromBase64String(cipherText);
+                using (Aes encryptor = Aes.Create()) {
+                    Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(encryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6e, 0x20, 0x4d, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x76 });
+                    encryptor.Key = pdb.GetBytes(32);
+                    encryptor.IV = pdb.GetBytes(16);
+                    using (MemoryStream ms = new MemoryStream()) {
+                        using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateDecryptor(), CryptoStreamMode.Write)) {
+                            cs.Write(cipherBytes, 0, cipherBytes.Length);
+                            cs.Close();
+                        }
+                        cipherText = Encoding.Unicode.GetString(ms.ToArray());
+                    }
+                }
+            }
+            catch (CryptographicException) {
+                MessageBox.Show("Neuspešno učitavanje password-a");
+            }
+            return cipherText;
         }
     }
 }
