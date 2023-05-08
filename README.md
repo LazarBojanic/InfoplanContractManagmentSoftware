@@ -1,5 +1,7 @@
 **Instructions for using the Infoplan contract software**
 
+(C# winforms, MS Access database)
+
 After opening the program, the user must enter his username and password set by the administrator:
 
 ![](Manual-SRB-1.png)

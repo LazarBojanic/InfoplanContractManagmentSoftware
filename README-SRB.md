@@ -1,5 +1,7 @@
 ﻿**Uputstvo za korišćenje softvera za ugovore Infoplana**
 
+(C# winforms, MS Access database)
+
 Nakon otvaranja programa, korisnik mora uneti svoj username i password koji su podesili kod administratora:
 
 ![](Manual-SRB-1.png)
