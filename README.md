@@ -1,67 +1,59 @@
-﻿**Uputstvo za korišćenje softvera za ugovore Infoplana**
+**Instructions for using the Infoplan contract software**
 
-Nakon otvaranja programa, korisnik mora uneti svoj username i password koji su podesili kod administratora:
+After opening the program, the user must enter his username and password set by the administrator:
 
 ![](Manual-SRB-1.png)
 
-Nakon uspešnog prijavljivanja otvara se glavni meni:
+After successful login, the main menu opens:
 
 ![](Manual-SRB-2.png)
 
-„Detalji“ otvara prozor o detaljima softvera a „Logout“ odjavljuje korisnika i vraća se na „Login“ formu.
-
-Klikom na dugmad „Opštine“  i  „Tipovi Ugovora“ mogu se videti opštine i tipovi ugovora. Funkcionalnosti dodavanja, izmene i brisanja imaju samo administratori: 
+"Details" opens the software details window and "Logout" logs the user out and returns to the "Login" form.
+By clicking on the "Municipalities" and "Types of Contracts" buttons, municipalities and contract types can be viewed. Add, edit and delete functionalities are available only to administrators:
 
 ![](Manual-SRB-3.png) ![](Manual-SRB-4.png)
 
-Klikom na dugme „Dodaj“ korisnici mogu da dodaju nove opštine, na „Izmeni“ da izmene izabranu opštinu a na „Obriši“ da je obrišu. Izmena takođe može da se izvrši dvoklikom na željeni red. Svako dugme za brisanje u aplikaciji prikazuje prozor za potvrdu. Slični prozori se otvaraju za tipove ugovora.
-
-Sa glavnog menija korisnici mogu da izmene svoj username i password, dok mogućnost menjanja privilegije imaju samo administratori:
+By clicking the "Add" button, users can add new municipalities, click "Edit" to change the selected municipality, and click "Delete" to delete it. Editing can also be done by double-clicking on the desired row. Each delete button in the application displays a confirmation window. Similar windows open for contract types.
+From the main menu, users can change their username and password, while only administrators can change privileges:
 
 ![](Manual-SRB-5.png)
 
-Sa glavnog menija administrator mogu da vide sve korisnike i njihove privilegije ali ne I njihove password-e:
+From the main menu, the administrator can see all users and their privileges, but not their passwords:
 
 ![](Manual-SRB-6.png)
 
-Administratori takođe ovde mogu da prave, menjaju i brišu korisnike:
+Administrators can also create, modify and delete users here:
 
 ![](Manual-SRB-7.png)
 
-Klikom na dugme izmeni takođe ostavlja prazno polje na mesto passworda, ovo je namenjeno u slučaju da korisnik zaboravi svoj password ili ne može da se uloguje, tada administrator može da stavi novi.
-
-Korisnik može da radi sve osnovne funkcionalnosti, ali ne može da dodaje, menja ili briše tabele opština, tipova ugovora i korisnika za razliku od administratora koji može sve da radi. Turista može samo da gleda tabele i vrši pretragu nad ugovorima.
-
-Sa glavnog menija klikom na dugme „Ugovori“, otvara se forma sa prikazom svih ugovora:
+Clicking on the edit button also leaves an empty field in place of the password, this is intended in case the user forgets his password or cannot log in, then the administrator can enter a new one.
+The user can do all the basic functions, but cannot add, change or delete tables of municipalities, types of contracts and users, unlike the administrator who can do everything. The tourist can only look at the tables and search the contracts.
+From the main menu, by clicking on the "Contracts" button, a form with the display of all contracts opens:
 
 ![](Manual-SRB-8.png)
 
-Ugovori su obojeni u skladu sa poljem „usvojen“. Podaci u tabelama na svakoj formi mogu da se sortiraju klikom na ime željene kolone. Korisnici mogu da vrše pretragu ugovora po svim poljima, i da export-uju rezultujuću ili inicijalnu tabelu u željenom Excel formatu: 
+Contracts are colored according to the "adopted" field. The data in the tables on each form can be sorted by clicking on the name of the desired column. Users can search for contracts by all fields, and export the resulting or initial table in the desired Excel format:
 
 ![](Manual-SRB-9.png)
 
- Na svakoj formi sa tabelom, korisnici mogu da desnim klikom kopiraju sadržaj polja ili sadržaj celog reda, odvojenog zarezima, u „Clipboard“. Brojni i datumski podaci mogu se pretraživati sa znakovima poređenja. Klikom na kvadratiće ispred polja za datume se oni uključuju/isključuju iz pretrage. Pretraga se vrši na dugme „Pretraga“ ili klikom na taster „Enter“. Dugme „Osveži“ ponovo učitava celu tabelu. „Istorija Promena“ prikazuje istoriju promena svakog polja za izabrani ugovor koji se bira klikom na red u tabeli:
- 
- ![](Manual-SRB-10.png)
+On any form with a table, users can right-click to copy the contents of a field or the contents of an entire row, separated by commas, to the Clipboard. Numeric and date data can be searched with comparison characters. By clicking on the squares in front of the date fields, they are included/excluded from the search. The search is performed on the "Search" button or by clicking on the "Enter" key. The "Refresh" button reloads the entire table. "History of Changes" shows the history of changes of each field for the selected contract that is selected by clicking on a row in the table:
 
-„Istorija Promena Obrisanih Ugovora“ radi isto, samo za obrisane ugovore koji se na tabeli ne vide.
+![](Manual-SRB-10.png)
 
-„Dodaj“ otvara novu formu gde korisnici mogu da dodaju novi ugovor sa različitim parametrima:
+"Change History of Deleted Contracts" works the same, only for deleted contracts that are not visible in the table.
+"Add" opens a new form where users can add a new contract with different parameters:
 
 ![](Manual-SRB-11.png)
 
-Polja „Opština“, „Tip Ugovora“, „Rok po ugovoru (interval), gde mogu da se izaberu odgovarajuće vrednosti. Polje „Krajnji rok“ se automatski menja u odnosu na datum ugovora u zavisnosti od roka po ugovoru. Klikom na check box „Usvojen“ otkriva ili sakriva polja „Datum usvajanja“ i „Broj službenog vlasnika“. Ako je ovaj check box isključen, ugovor koji se dodaje ili menja će imati vrednost datuma usvajanja 01/01/1970 koji označava nepostojeći datum. Kod svih formi menjanja ili dodavanja, „Sačuvaj“ vrši zadate promene a „Otkaži“ ih odbacuje i ne menja tabele.
-
-Sa forme „Ugovori“, „Izmeni“, otvara istu formu kao i za dodavanje, samo za odabrani ugovor sa forme. Ovde korisnici mogu da menjaju podatke o ugovoru. Otvaranje forme za izmenu takođe može da se izvrši duplim klikom na željeni ugovor. Ako korisnik otvori formu za dodavanje ili izmenu a u među vremenu neki drugi korisnik izvrši promenu nad istim ugovorom, pojavljuje se prozor greške. Ovim se omogućava ispravan rad nad bazom podataka.
-
-Dugme „Obriši“, na formi „Ugovori“, briše odabrani ugovor i ovo mogu samo administratori da rade.
+Fields "Municipality", "Contract Type", "Contract term (interval), where appropriate values can be selected. The "End date" field is automatically changed in relation to the date of the contract, depending on the term of the contract. Clicking on the "Adopted" check box reveals or hides the "Date of adoption" and "Official owner number" fields. If this check box is unchecked, the contract being added or modified will have the value of the adoption date 01/01/1970 which indicates a non-existent date. For all forms of changes or additions, "Save" makes the given changes and "Cancel" discards them and does not change the tables.
+From the "Contracts" form, "Edit", opens the same form as for adding, only for the selected contract from the form. Here users can change contract information. Opening the modification form can also be done by double-clicking on the desired contract. If the user opens the add or edit form and in the meantime another user makes a change to the same contract, an error window appears. This enables the correct operation of the database.
+The "Delete" button, on the "Contracts" form, deletes the selected contract and only administrators can do this:
 
 ![](Manual-SRB-12.png)
 
-„Fajlovi ugovora“ otvara formu gde su prikazani svi vezani fajlovi i njihove putanje za izabrani ugovor:
-
-Klikom na „Prikaži“ ili duplim klikom na željeni ugovor, otvara se izabrani ugovor u odgovarajućem programu u skladu sa tipom fajla. Klikom na „Dodaj“ otvara se prozor gde može da se izabere jedan željeni fajl za dodavanje:
+"Contract files" opens a form where all related files and their paths for the selected contract are displayed:
 
 ![](Manual-SRB-13.png)
 
-Na formi „Fajlovi ugovora“ „Ukloni“ briše fajl iz tabele ali ne fajl na disku. Ovo takođe samo administratori mogu da urade.
+By clicking on "Show" or double-clicking on the desired contract, the selected contract is opened in the appropriate program according to the file type. Clicking on "Add" opens a window where you can select one desired file to add:
+On the "Contract files" form, "Remove" deletes the file from the table but not the file on disk. Also only administrators can do this.
