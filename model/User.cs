@@ -1,4 +1,4 @@
-﻿namespace CSharp_SQL_App.model {
+﻿namespace InfoplanContractManagmentSoftware.model {
     public class User {
         public int id { get; set; }
         public string username { get; set; }

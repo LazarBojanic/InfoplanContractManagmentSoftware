@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace CSharp_SQL_App.forms {
+namespace InfoplanContractManagmentSoftware.forms {
     public partial class ConfirmationForm : Form {
         public ConfirmationForm() {
             InitializeComponent();

@@ -1,10 +1,10 @@
-﻿using CSharp_SQL_App.util;
+﻿using InfoplanContractManagmentSoftware.util;
 using System;
 using System.Data.OleDb;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CSharp_SQL_App {
+namespace InfoplanContractManagmentSoftware {
     public partial class LoginForm : Form {
         public static int id { get; set; }
         public static string username { get; set; }

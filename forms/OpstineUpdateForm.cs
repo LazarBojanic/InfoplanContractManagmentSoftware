@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace CSharp_SQL_App.forms {
+namespace InfoplanContractManagmentSoftware.forms {
     public partial class OpstineUpdateForm : Form {
         public OpstineUpdateForm(String tipAkcije, string izabranaOpstina) {
             InitializeComponent();

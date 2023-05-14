@@ -1,4 +1,4 @@
-﻿namespace CSharp_SQL_App.forms {
+﻿namespace InfoplanContractManagmentSoftware.forms {
     partial class UgovorFilesForm {
         /// <summary>
         /// Required designer variable.

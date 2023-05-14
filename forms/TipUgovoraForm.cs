@@ -1,12 +1,12 @@
-﻿using CSharp_SQL_App.forms;
-using CSharp_SQL_App.util;
+﻿using InfoplanContractManagmentSoftware.forms;
+using InfoplanContractManagmentSoftware.util;
 using System;
 using System.Data;
 using System.Data.OleDb;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace CSharp_SQL_App {
+namespace InfoplanContractManagmentSoftware {
     public partial class TipUgovoraForm : Form {
         public static string tipUgovoraZaIzmenu;
         public static string tipUgovora;

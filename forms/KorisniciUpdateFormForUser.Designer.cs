@@ -1,4 +1,4 @@
-﻿namespace CSharp_SQL_App {
+﻿namespace InfoplanContractManagmentSoftware {
     partial class KorisniciUpdateFormForUser {
         /// <summary>
         /// Required designer variable.

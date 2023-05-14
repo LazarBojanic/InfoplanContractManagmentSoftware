@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp-SQL-App", "CSharp-SQL-App.csproj", "{EBBBC89F-EC4C-498E-B688-FD2A177541F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoplanContractManagmentSoftware", "InfoplanContractManagmentSoftware.csproj", "{EBBBC89F-EC4C-498E-B688-FD2A177541F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

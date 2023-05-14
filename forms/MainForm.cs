@@ -1,8 +1,8 @@
-﻿using CSharp_SQL_App.model;
+﻿using InfoplanContractManagmentSoftware.model;
 using System;
 using System.Windows.Forms;
 
-namespace CSharp_SQL_App {
+namespace InfoplanContractManagmentSoftware {
     public partial class MainForm : Form {
         public static User user { get; set; }
         public MainForm() {

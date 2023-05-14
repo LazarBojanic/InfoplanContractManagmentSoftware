@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSharp_SQL_App.Properties {
+namespace InfoplanContractManagmentSoftware.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace CSharp_SQL_App.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CSharp_SQL_App.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("InfoplanContractManagmentSoftware.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace CSharp_SQL_App.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to QcHiFlNp0nF6xJgo.
+        ///   Looks up a localized string similar to insertKeyHere.
         /// </summary>
         internal static string passwordEnryptionKey {
             get {

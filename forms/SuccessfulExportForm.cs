@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CSharp_SQL_App.forms {
+namespace InfoplanContractManagmentSoftware.forms {
     public partial class SuccessfulExportForm : Form {
         public SuccessfulExportForm() {
             InitializeComponent();

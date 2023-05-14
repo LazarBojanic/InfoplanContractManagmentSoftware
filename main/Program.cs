@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace CSharp_SQL_App {
+namespace InfoplanContractManagmentSoftware {
     internal static class Program {
         [STAThread]
         static void Main() {

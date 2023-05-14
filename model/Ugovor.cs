@@ -1,9 +1,9 @@
-﻿using CSharp_SQL_App.util;
+﻿using InfoplanContractManagmentSoftware.util;
 using System;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-namespace CSharp_SQL_App.model {
+namespace InfoplanContractManagmentSoftware.model {
     public class Ugovor {
         public int id { get; set; }
         public string opstina { get; set; }

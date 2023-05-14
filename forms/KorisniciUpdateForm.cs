@@ -1,11 +1,11 @@
-﻿using CSharp_SQL_App.model;
-using CSharp_SQL_App.util;
+﻿using InfoplanContractManagmentSoftware.model;
+using InfoplanContractManagmentSoftware.util;
 using System;
 using System.Data;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-namespace CSharp_SQL_App {
+namespace InfoplanContractManagmentSoftware {
     public partial class KorisniciUpdateForm : Form {
         public User user { get; set; }
         public KorisniciUpdateForm() {

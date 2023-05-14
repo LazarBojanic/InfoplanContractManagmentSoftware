@@ -1,4 +1,4 @@
-﻿using CSharp_SQL_App.model;
+﻿using InfoplanContractManagmentSoftware.model;
 using System;
 using System.Data.OleDb;
 using System.IO;
@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CSharp_SQL_App.util {
+namespace InfoplanContractManagmentSoftware.util {
     public static class Util {
         public static OleDbConnection GetConnection() {
             return new OleDbConnection(Properties.Settings.Default.ugovoriConnectionString);

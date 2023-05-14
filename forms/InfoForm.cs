@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace CSharp_SQL_App {
+namespace InfoplanContractManagmentSoftware {
     public partial class InfoForm : Form {
         public InfoForm() {
             InitializeComponent();

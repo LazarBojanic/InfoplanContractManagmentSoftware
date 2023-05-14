@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp_SQL_App.model {
+namespace InfoplanContractManagmentSoftware.model {
     public class UgovorFile {
         public int id { get; set; }
         public string uGuid { get; set; }
